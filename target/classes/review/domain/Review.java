@@ -2,12 +2,20 @@ package review.domain;
 
 import java.util.Date;
 
-public class ReviewBean {
+public class Review {
 	private int goodsId;
 	private int score;
 	private int count;
 	private Date createAt;
-	public ReviewBean() {}
+	public Review() {}
+	
+	public Review(int goodsId, int score, int count, Date createAt) {
+		this.goodsId = goodsId;
+		this.score = score;
+		this.count = count;
+		this.createAt = createAt;
+	}
+
 	public int getGoodsId() {
 		return goodsId;
 	}

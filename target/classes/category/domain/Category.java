@@ -1,10 +1,15 @@
 package category.domain;
 
-public class CategoryBean {
-	private String bottomKind;
+public class Category {
 	private String topKind;
 	private String middleKind;
-	public CategoryBean() {}
+	private String bottomKind;
+	public Category() {}
+	public Category(String topKind, String middleKind, String bottomKind) {
+		this.topKind = topKind;
+		this.middleKind = middleKind;
+		this.bottomKind = bottomKind;
+	}
 	public String getTopKind() {
 		return topKind;
 	}

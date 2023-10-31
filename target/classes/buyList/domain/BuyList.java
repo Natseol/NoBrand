@@ -2,13 +2,22 @@ package buyList.domain;
 
 import java.util.Date;
 
-public class BuyListBean {
+public class BuyList {
 	private int id;
 	private String name;
 	private int count;
 	private int price;
 	private Date createAt;
-	public BuyListBean() {}
+	public BuyList() {}
+	
+	public BuyList(int id, String name, int count, int price, Date createAt) {
+		this.id = id;
+		this.name = name;
+		this.count = count;
+		this.price = price;
+		this.createAt = createAt;
+	}
+
 	public int getId() {
 		return id;
 	}

@@ -1,6 +1,6 @@
 package goods.domain;
 
-public class GoodsBean {
+public class Goods {
 	private int id;
 	private int price;
 	private int searchCount;
@@ -12,7 +12,23 @@ public class GoodsBean {
 	private String options;
 	private String delivery;
 	private String content;
-	public GoodsBean() {};
+	public Goods() {};
+	public Goods(int id, int price, int searchCount, int cellCount, String name, String bottomKind, String info,
+			String imgAdress, String options, String delivery, String content) {
+		super();
+		this.id = id;
+		this.price = price;
+		this.searchCount = searchCount;
+		this.cellCount = cellCount;
+		this.name = name;
+		this.bottomKind = bottomKind;
+		this.info = info;
+		this.imgAdress = imgAdress;
+		this.options = options;
+		this.delivery = delivery;
+		this.content = content;
+	}
+
 	public void setId(int id) {
 		this.id=id;
 	}

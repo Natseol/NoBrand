@@ -1,14 +1,17 @@
 package goods.dao;
 
-import javax.sql.DataSource;
+import java.util.List;
 
-import org.springframework.jdbc.core.JdbcTemplate;
+import goods.domain.Goods;
 
-public class GoodsDAO {
-	private JdbcTemplate jdbcTemplate;
-	public void setDataSource(DataSource dataSource) {
-		jdbcTemplate=new JdbcTemplate(dataSource);
-	}
+public interface GoodsDAO {
+	public void add(Goods goods);
+	public Goods get(int id);
+	public List<Goods> getAll();
+	public void update(Goods goods);
+	public void delete(int id);
+	
+
 
 
 }
