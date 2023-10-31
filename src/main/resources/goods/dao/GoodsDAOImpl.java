@@ -20,34 +20,34 @@ public class GoodsDAOImpl implements GoodsDAO {
 		@Override
 		public Goods mapRow(ResultSet rs, int rowNum) throws SQLException{
 			return new Goods(
-					rs.getInt("id"),
-					rs.getInt("price"),
-					rs.getInt("searchCount"),
-					rs.getInt("cellCount"),
-					rs.getString("name"),
-					rs.getString("bottomKind"),
-					rs.getString("info"),
-					rs.getString("imgAdress"),
-					rs.getString("options"),
-					rs.getString("delivery"),
-					rs.getString("content")
+					rs.getInt("ID"),
+					rs.getInt("PRICE"),
+					rs.getInt("SEARCHCOUNT"),
+					rs.getInt("CELLCOUNT"),
+					rs.getString("NAME"),
+					rs.getString("BOTTOMKIND"),
+					rs.getString("INFO"),
+					rs.getString("IMGADRESS"),
+					rs.getString("OPTION"),
+					rs.getString("DELIVERY"),
+					rs.getString("CONTENT")
 					);
 		}
 	};
 	@Override
 	public void add(Goods goods) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("insert into goods (id,"
-							+ "price,"
-							+ "searchCount,"
-							+ "cellCount,"
-							+ "name,"
-							+ "bottomKind,"
-							+ "info,"
-							+ "imgAdress,"
-							+ "options,"
-							+ "delivery,"
-							+ "content) values (?, ?, ? ,? ,? ,? ,? ,? ,? ,?, ?)",
+		jdbcTemplate.update("insert into goods (\"ID\","
+							+ "\"PRICE\","
+							+ "\"SEARCHCOUNT\","
+							+ "\"CELLCOUNT\","
+							+ "\"NAME\","
+							+ "\"BOTTOMKIND\","
+							+ "\"INFO\","
+							+ "\"IMGADRESS\","
+							+ "\"OPTION\","
+							+ "\"DELIVERY\","
+							+ "\"CONTENT\") values (?, ?, ? ,? ,? ,? ,? ,? ,? ,?, ?)",
 							goods.getId(),
 							goods.getPrice(),
 							goods.getSearchCount(),
@@ -64,7 +64,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 	@Override
 	public Goods get(int id) {
 		// TODO Auto-generated method stub
-		return jdbcTemplate.queryForObject("select * from goods where id=?", new Object[] { id }, mapper);
+		return jdbcTemplate.queryForObject("select * from goods where \"ID\"=?", new Object[] { id }, mapper);
 	}
 	@Override
 	public List<Goods> getAll() {
@@ -75,17 +75,17 @@ public class GoodsDAOImpl implements GoodsDAO {
 	@Override
 	public void update(Goods goods) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("update goods set (id,"
-				+ "price,"
-				+ "searchCount,"
-				+ "cellCount,"
-				+ "name,"
-				+ "bottomKind,"
-				+ "info,"
-				+ "imgAdress,"
-				+ "options,"
-				+ "delivery,"
-				+ "content)",
+		jdbcTemplate.update("update goods set (\"ID\"=?,"
+				+ "\"PRICE\"=?,"
+				+ "\"SEARCHCOUNT\"=?,"
+				+ "\"CELLCOUNT\"=?,"
+				+ "\"NAME\"=?,"
+				+ "\"BOTTOMKIND\"=?,"
+				+ "\"INFO\"=?,"
+				+ "\"IMGADRESS\"=?,"
+				+ "\"OPTION\"=?,"
+				+ "\"DELIVERY\"=?,"
+				+ "\"CONTENT\"=?)",
 				goods.getId(),
 				goods.getPrice(),
 				goods.getSearchCount(),
@@ -102,5 +102,5 @@ public class GoodsDAOImpl implements GoodsDAO {
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("delete from goods where id=?");
+		jdbcTemplate.update("delete from goods where \"ID\"=?");
 	}}

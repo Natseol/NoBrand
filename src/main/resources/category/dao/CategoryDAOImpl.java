@@ -19,20 +19,17 @@ public class CategoryDAOImpl implements CategoryDAO {
 	private RowMapper<Category> mapper=new RowMapper<Category>() {
 		public Category mapRow(ResultSet rs, int rowNum) throws SQLException{
 			return new Category(
-					rs.getString("topKind"),
-					rs.getString("middleKind"),
-					rs.getString("bottomKind")
+					rs.getString("TOPKIND"),
+					rs.getString("BOTTOMKIND")
 					);
 		}
 	};
-
 	@Override
 	public void add(Category category) {
 		jdbctemplate.update("insert into category ( "
-				+ "topkind, middlekind,bottomkind) "
-				+ "values(?, ?, ?) ",
+				+ "\"TOPKIND\",\"BOTTOMKIND\") "
+				+ "values(?, ?) ",
 				category.getTopKind(),
-				category.getMiddleKind(),
 				category.getBottomKind()
 				);
 		// TODO Auto-generated method stub
@@ -40,7 +37,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Override
 	public Category get(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from category where id=?", new Object[] { id },mapper);
+		return jdbctemplate.queryForObject("select * from category where \"ID\"=?", new Object[] { id },mapper);
 	}
 
 	@Override
@@ -52,11 +49,9 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Override
 	public void update(Category category) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("update category set(topkind,"
-				+ "middlekind,"
-				+ "bottomkind",
+		jdbctemplate.update("update category set(\"TOBKIND\"=?,"
+				+ "\"BOTTOMKIND\"=?",
 				category.getTopKind(),
-				category.getMiddleKind(),
 				category.getBottomKind()
 				);
 	}
@@ -64,7 +59,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("delete from category where id=?");
+		jdbctemplate.update("delete from category where \"ID\"=?");
 	}
 
 }

@@ -19,18 +19,18 @@ public class BuyListDAOImpl implements BuyListDAO {
 	private RowMapper<BuyList> mapper=new RowMapper<BuyList>() {
 		public BuyList mapRow(ResultSet rs, int rowNum) throws SQLException{
 			return new BuyList(
-					rs.getInt("id"),
-					rs.getString("name"),
-					rs.getInt("count"),
-					rs.getInt("price"),
-					rs.getDate("createAt")
+					rs.getInt("ID"),
+					rs.getString("NAME"),
+					rs.getInt("COUNT"),
+					rs.getInt("PRICE"),
+					rs.getDate("CREATEAT")
 					);
 		}
 	};
 	@Override
 	public void add(BuyList buyList) {
 		jdbctemplate.update("insert into buyList ( "
-				+ "id, name, count,price,createAt) "
+				+ "\"ID\", \"NAME\", \"COUNT\",\"PRICE\",\"CREATEAT\") "
 				+ "values( ?, ?, ?, ?,? )",
 				buyList.getId(),
 				buyList.getName(),
@@ -43,7 +43,7 @@ public class BuyListDAOImpl implements BuyListDAO {
 	@Override
 	public BuyList get(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from buyList where id=?", new Object[] { id },mapper);
+		return jdbctemplate.queryForObject("select * from buyList where \"ID\"=?", new Object[] { id },mapper);
 	}
 
 	@Override
@@ -54,11 +54,11 @@ public class BuyListDAOImpl implements BuyListDAO {
 
 	@Override
 	public void update(BuyList buyList) {
-		jdbctemplate.update("update buyList set(id,"
-				+ "name,"
-				+ "count,"
-				+ "price"
-				+ "createAt)",
+		jdbctemplate.update("update buyList set(\"ID\","
+				+ "\"NAME\"=?,"
+				+ "\"COUNT\"=?,"
+				+ "\"PRICE\"=?,"
+				+ "\"CREATEAT\"=?)",
 				buyList.getId(),
 				buyList.getName(),
 				buyList.getCount(),
@@ -70,7 +70,7 @@ public class BuyListDAOImpl implements BuyListDAO {
 
 	@Override
 	public void delete(int id) {
-		jdbctemplate.update("delete from review where id=?");
+		jdbctemplate.update("delete from review where \"ID\"=?");
 		// TODO Auto-generated method stub
 	}
 

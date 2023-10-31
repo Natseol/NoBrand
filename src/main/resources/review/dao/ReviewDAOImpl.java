@@ -19,10 +19,10 @@ public class ReviewDAOImpl implements ReviewDAO{
 	private RowMapper<Review> mapper=new RowMapper<Review>() {
 		public Review mapRow(ResultSet rs, int rowNum) throws SQLException{
 			return new Review(
-					rs.getInt("goodsId"),
-					rs.getInt("score"),
-					rs.getInt("count"),
-					rs.getDate("createAt")
+					rs.getInt("GOODSID"),
+					rs.getInt("SCORE"),
+					rs.getInt("COUNT"),
+					rs.getDate("CREATEAT")
 					);
 		}
 	};
@@ -31,7 +31,7 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void add(Review review) {
 		jdbctemplate.update("insert into review ( "
-				+ "goodsid, score, count, createat ) "
+				+ "\"GOODSID\", \"SCORE\", \"COUNT\", \"CREATEAT\" ) "
 				+ "values( ?, ?, ?, ? )",
 				review.getGoodsId(),
 				review.getScore(),
@@ -43,7 +43,7 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public Review get(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from review where id=?", new Object[] { id },mapper);
+		return jdbctemplate.queryForObject("select * from review where \"GOODSID\"=?", new Object[] { id },mapper);
 	}
 
 	@Override
@@ -55,10 +55,10 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void update(Review review) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("update review set(goodsid,"
-				+ "score,"
-				+ "count,"
-				+ "createAt)",
+		jdbctemplate.update("update review set(\"GOODSID\"=?,"
+				+ "\"SCORE\"=?,"
+				+ "\"COUNT\"=?,"
+				+ "\"CREATEAT\"=?)",
 				review.getGoodsId(),
 				review.getScore(),
 				review.getCount(),
@@ -69,7 +69,7 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("delete from review where id=?");
+		jdbctemplate.update("delete from review where \"GOODSID\"=?");
 	}
 
 }
