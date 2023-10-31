@@ -40,4 +40,10 @@ public class HomeController {
 	public String bottom(Model model) {
 		return "bottompage";
 	}
+
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	public String index(Locale locale, Model model) {
+		
+		return "index";
+	}
 }

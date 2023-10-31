@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+} 
+
+body {
+	margin: 0;
+}
+
+#root {
+	position: relative;
+	max-width: 100%;
+	min-width: 1280px;
+	max-height: 730px;
+	margin: 0 auto;
+	
+	
+}
+
+.top {
+	max-width: 100%;
+	height: 730px;
+	margin: 0 auto;
+}
+
+.top-main {
+	display: inline;
+	max-height: 5%;
+	white-space: nowrap;
+}
+
+.title {
+	position: relative;
+	display: flex;
+	width: 1280px;
+	-webkit-box-align: center;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px 0 20px;
+}
+
+.title-main {
+	width: auto;
+    height: auto;
+    display: flex;
+    padding: 0 0 0 11px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 11px 0 0;
+}
+
+.title-searchbox {
+	margin: 0 25% 0 0;
+}
+
+.user-menu {
+	-webkit-box-align: center;
+}
+
+.searchbox-emall {
+	position: relative;
+    width: 320px;
+    height: 40px;
+    z-index: 200;
+}
+
+.input {
+	height: 1.8em;
+	
+}
+
+.search-box {
+	position: relative;
+    width: 320px;
+    height: 40px;
+    align-items: center;
+    gap: 12px;
+}
+
+::placeholder {
+	color: #84B1ED;
+}
+
+.block {
+	display: inline-block;
+	
+}
+
+.etc {
+	margin-right: 300px;
+}
+
+.event {
+	background-color: rgb(255, 216, 0);
+	max-height: 95%;
+	text-align: center;
+	white-space: nowrap;
+}
+
+input.rounded {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+.emart-searchbox {
+	margin: 0 27% 0 0;
+}
+
+.emart-delivery {
+	position: relative;
+	padding: 9px 120px 9px 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 234, 60, 0.6);
+}
+
+.img_down {
+	position: absoulte;
+	right: 0;
+}
+
+.banner {
+	background-color: rgb(255, 207, 2);
+	
+}
+
+.banner-box {
+	position: relative;
+	display: flex;
+	width: 1280px;
+	height: 88px;
+	-webkit-box-align: center;
+	align-items: center;
+	gap: 12px;
+	margin: 0 auto
+}
+
+.category-delivery {
+	
+	background-color: rgb(255, 207, 2);
+	margin: 5px 0 0 0;
+
+}
+
+.category-box{
+	display: flex;
+	width: 1280px;
+	margin: 0 auto;
+	-webkit-box-align: stretch;
+	align-items: stretch;
+	height: 100%;
+}
+
+.delivery {
+	display: inline-block;
+	width: 170px;
+	height: 50px;
+}
