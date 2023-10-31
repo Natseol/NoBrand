@@ -1,6 +1,8 @@
 package buyList.dao;
 
+
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -54,12 +56,11 @@ public class BuyListDAOImpl implements BuyListDAO {
 
 	@Override
 	public void update(BuyList buyList) {
-		jdbctemplate.update("update buyList set(\"ID\","
+		jdbctemplate.update("update buyList set("
 				+ "\"NAME\"=?,"
 				+ "\"COUNT\"=?,"
 				+ "\"PRICE\"=?,"
-				+ "\"CREATEAT\"=?)",
-				buyList.getId(),
+				+ "\"CREATEAT\"=?) where \"ID\"=?",
 				buyList.getName(),
 				buyList.getCount(),
 				buyList.getPrice(),

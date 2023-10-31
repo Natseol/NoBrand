@@ -49,8 +49,9 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Override
 	public void update(Category category) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("update category set(\"TOBKIND\"=?,"
-				+ "\"BOTTOMKIND\"=?",
+		jdbctemplate.update("update category set("
+				+ "\"TOPKIND\"=?,"
+				+ "\"BOTTOMKIND\"=? where \"TOPKIND\"=? ",
 				category.getTopKind(),
 				category.getBottomKind()
 				);

@@ -63,16 +63,14 @@ public class UserDAOImpl implements UserDAO {
 	public void update(User user) {
 		// TODO Auto-generated method stub
 		jdbctemplate.update("update USERS set ("
-				+ "\"ID\"=?,"
 				+ "\"NAME\"=?,"
 				+ "\"USERID\"=?,"
 				+ "\"PASSWORD\"=?,"
 				+ "\"PHONENUMBER\"=?,"
 				+ "\"EMAILADDRESS\"=?,"
 				+ "\"ADDRESS\"=?,"
-				+ "\"CREATEAT\"=?)"
+				+ "\"CREATEAT\"=?) where \"ID\"=?"
 				,
-				user.getId(),
 				user.getName(),
 				user.getUserId(),
 				user.getPassword(),

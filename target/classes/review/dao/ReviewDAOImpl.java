@@ -55,11 +55,10 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void update(Review review) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("update review set(\"GOODSID\"=?,"
+		jdbctemplate.update("update review set("
 				+ "\"SCORE\"=?,"
 				+ "\"COUNT\"=?,"
-				+ "\"CREATEAT\"=?)",
-				review.getGoodsId(),
+				+ "\"CREATEAT\"=?) where \"ID\"=?",
 				review.getScore(),
 				review.getCount(),
 				review.getCreateAt()

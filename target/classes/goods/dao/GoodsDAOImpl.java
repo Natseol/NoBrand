@@ -75,7 +75,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 	@Override
 	public void update(Goods goods) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("update goods set (\"ID\"=?,"
+		jdbcTemplate.update("update goods set ("
 				+ "\"PRICE\"=?,"
 				+ "\"SEARCHCOUNT\"=?,"
 				+ "\"CELLCOUNT\"=?,"
@@ -85,8 +85,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 				+ "\"IMGADRESS\"=?,"
 				+ "\"OPTION\"=?,"
 				+ "\"DELIVERY\"=?,"
-				+ "\"CONTENT\"=?)",
-				goods.getId(),
+				+ "\"CONTENT\"=?) where \"ID\"=? ",
 				goods.getPrice(),
 				goods.getSearchCount(),
 				goods.getCellCount(),
