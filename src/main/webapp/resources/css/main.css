@@ -1,12 +1,23 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "opensans";
+  src: url("fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("fonts/fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
     box-sizing: border-box;
 } 
 
 body {
 	margin: 0;
+	font-family: "opensans";
 }
+
+/* 최상위 div */
 
 #root {
 	position: relative;
@@ -18,17 +29,22 @@ body {
 	
 }
 
+/* 차상위 */
+
 .top {
 	max-width: 100%;
 	height: 730px;
 	margin: 0 auto;
 }
 
+/* 신세계몰 베너 */
+
 .top-main {
 	display: inline;
 	max-height: 5%;
 	white-space: nowrap;
 }
+
 
 .title {
 	position: relative;
@@ -54,46 +70,15 @@ body {
     margin: 0 11px 0 0;
 }
 
-.title-searchbox {
-	margin: 0 25% 0 0;
+.title-img {
+	width: 100px;
 }
 
-.user-menu {
-	-webkit-box-align: center;
+.title_menu {
+	width: 20px;
 }
 
-.searchbox-emall {
-	position: relative;
-    width: 320px;
-    height: 40px;
-    z-index: 200;
-}
-
-.input {
-	height: 1.8em;
-	
-}
-
-.search-box {
-	position: relative;
-    width: 320px;
-    height: 40px;
-    align-items: center;
-    gap: 12px;
-}
-
-::placeholder {
-	color: #84B1ED;
-}
-
-.block {
-	display: inline-block;
-	
-}
-
-.etc {
-	margin-right: 300px;
-}
+/* 노란 배경이 시작되는 div */
 
 .event {
 	background-color: rgb(255, 216, 0);
@@ -108,6 +93,9 @@ input.rounded {
 	border-radius: 10px;
 }
 .emart-searchbox {
+	position: relative;
+    width: 320px;
+    height: 40px;
 	margin: 0 27% 0 0;
 }
 
@@ -119,8 +107,10 @@ input.rounded {
 }
 
 .img_down {
-	position: absoulte;
+	position: absolute;
+	width: 9px;
 	right: 0;
+	margin: 7px 10px 0 0;
 }
 
 .banner {
@@ -133,30 +123,140 @@ input.rounded {
 	display: flex;
 	width: 1280px;
 	height: 88px;
-	-webkit-box-align: center;
 	align-items: center;
 	gap: 12px;
 	margin: 0 auto
 }
 
-.category-delivery {
-	
-	background-color: rgb(255, 207, 2);
-	margin: 5px 0 0 0;
+/* 배달 카테고리 */
 
+.category-delivery {
+	position: relative;
+	background-color: rgb(255, 207, 2);
+	margin: 3px 0 0 0;
 }
 
 .category-box{
 	display: flex;
 	width: 1280px;
 	margin: 0 auto;
-	-webkit-box-align: stretch;
-	align-items: stretch;
-	height: 100%;
+	height: 40px;
+	align-items: flex-end;
 }
 
 .delivery {
 	display: inline-block;
 	width: 170px;
 	height: 50px;
+	padding: 0 5px 0 5px ;
 }
+
+.store {
+	display: inline-block;
+	width: 170px;
+	height: 50px;
+	padding: 10px 0 10px 0;
+}
+
+.delivery-img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* 노브랜드 배너(노브랜드의 시작) */
+
+.middle {
+	height: 100px;
+    line-height: 100px;
+}
+
+/* 로고를 포함한 검색창과 툴 */
+
+.nobrand-logo-block {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.title-nobrand {
+	max-width: 470px;
+    max-height: 76px;
+    vertical-align: middle;
+    margin: 0 10% 0 25%;
+}
+
+.nobrand-searchbox {
+	position: relative;
+}
+
+.nobrand-searchbox {
+	float: left;
+    width: 210px;
+    height: 38px;
+    background: #fff;
+    padding: 0 0 0 9px;
+    border: none;
+    border-bottom: 2px solid #222;
+}
+
+
+.search-icon{
+	position: absolute;
+	float: right;
+	background-color: #fff;
+	padding: 7px 7px 5px;
+	border-bottom: 2px solid #222;
+}
+
+.tools {
+	position: relative;
+}
+
+.search-tool {
+	position: absolute;
+	left: 255px;
+	top: 5px;
+	width: 30px;
+	align-items: center;
+	align-items: baseline;
+}
+
+.material-symbols-outlined {
+	position: absolute;
+	left: 300px;
+	top: 7px;
+	align-items: baseline;
+}
+
+
+.category-delivery-box {
+	align-items: center;
+	margin: 0 auto;
+}
+
+.category-main {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+
+.title-searchbox {
+	margin: 0 25% 0 0;
+}
+
+.list {
+	padding: 0 10px 0 10px;
+}
+
+::placeholder {
+	color: gray;
+}
+
+.block {
+	display: inline-block;
+	position: relative;
+}
+
+.etc {
+	margin-right: 300px;
+}
+
