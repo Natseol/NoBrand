@@ -1,0 +1,161 @@
+.bottompage {
+    width : 1280px;
+    margin: auto;
+    font-size: 11px;
+    color:#777;
+}
+
+.bottompage-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottompage-menuleft {
+    display: flex;
+    font-size: 12px;
+    width: 900px;
+    justify-content: space-around;
+    padding: 8px;
+}
+
+.bottompage-content {
+	display: flex;
+	justify-content :space-between;
+	margin: 20px 0px;
+}
+
+.bottompage-icon {
+	display: flex;
+}
+
+.text-bold {
+    font-weight: bold;
+	color:#000;
+}
+
+.text-red {
+    color:#ff5b59;
+}
+
+.text-grey {
+    color:#777;
+}
+
+.anchor-none {
+	color:#777;
+	text-decoration: none;	
+}
+
+.anchor-nonered {
+	color:#ff5b59;
+	text-decoration: none;	
+}
+
+.anchor-none:hover {
+	text-decoration: underline;
+}
+
+.anchor-nonered:hover {
+	text-decoration: underline;
+}
+
+.bottompage-sgdotcom {
+	font-size:10px;
+}
+
+.bottomapge-address {
+	line-height: 23px;	
+}
+
+.bottompage-button {
+    background-color: white;
+    font-size: 11px;
+    border: 1px solid lightgray;
+}
+
+.bottompage-icon {
+	display : flex;
+    justify-content: right;
+    align-items: center;
+    padding: 5px;
+    line-height: 23px;
+}
+
+.bottompage-button::after {
+    display: inline-block;
+    margin: 4px 0 0 6px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 4px solid #ff5b59;
+    vertical-align: top;
+    content: "";
+}
+
+.bottompage-facebook {
+    background-image: url("../images/sp_cmfooter_sns.png");    
+    width: 45px;
+    height: 45px;
+    margin-left: 25px;
+    background-position: 0 0px;
+    display: inline-block;
+}
+
+.bottompage-instagram {
+    background-image: url("../images/sp_cmfooter_sns.png");    
+    width: 45px;
+    height: 45px;
+    margin-left: 5px;
+    background-position: 0 -50px;
+    display: inline-block;
+}
+
+.bottompage-qr {
+    display: flex;
+}
+
+.bottompage-qrcode {
+    background-image: url("../images/sp_cmfooter.webp");
+	width: 70px;
+    height: 70px;
+    margin-left: 15px;
+    background-position: -200px -250px;
+    display: inline-block;
+}
+
+.bottompage-bottom {
+	margin: 10px -15px
+}
+
+.bottompage-sgphone {
+	font-size:26px;
+}
+
+.bottompage-smalltext {
+    font-size:9px;
+}
+
+.bottompage-icon2 {
+    display: flex;
+}
+
+.bottompage-koreanshop {
+    background-image: url("../images/sp_cmfooter.webp");
+    margin-left: 15px;
+    width: 48px;
+    height: 30px;
+    background-position: 0 -150px;
+    display: inline-block;
+}
+
+.bottompage-koreanshop2 {
+    background-image: url("../images/sp_cmfooter.webp");
+    margin: 0px 20px;
+	width: 97px;
+    height: 30px;
+    background-position: 0 -50px;
+    display: inline-block;
+}
+
+.bottompage-icon2inner {
+    display: flex;
+}
