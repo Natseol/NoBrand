@@ -41,9 +41,13 @@ public class HomeController {
 		return "bottompage";
 	}
 
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	@RequestMapping(value = "/top", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
-		
-		return "index";
+		return "topPage";
+	}
+	
+	@RequestMapping(value = "/cartbanner", method = RequestMethod.GET)
+	public String topPage(Locale locale, Model model) {
+		return "topPage-ssg";
 	}
 }

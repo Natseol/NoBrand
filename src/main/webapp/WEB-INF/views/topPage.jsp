@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="<c:url value="resources/css/main.css" />" rel="stylesheet">
+<link href="resources/css/main.css" rel="stylesheet">
  <meta charset="UTF-8">
 <title>top</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -36,7 +36,7 @@
 						<img alt="관심있는 상품" src="resources/img/menu/heart.svg">
 						<img alt="유저정보" src="resources/img/menu/user.svg">
 						<img alt="배송정보" src="resources/img/menu/delivery.svg">
-						<img alt="장바구니" src="resources/img/menu/cart.svg">
+						<a href="/nobrand/cart"><img alt="장바구니" src="resources/img/menu/cart.svg"></a>
 						<img alt="최근 본 상품" src="resources/img/menu/recently.svg">
 					</div>
 				</div>
@@ -102,7 +102,7 @@
 							<div class="delivery">
 								<h5>이벤트</h5>
 							</div>
-							<div class="store block">
+							<div class="delivery">
 								<h5>공식스토어</h5>
 							</div>
 						</div>
