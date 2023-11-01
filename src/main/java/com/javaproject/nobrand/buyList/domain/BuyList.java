@@ -17,6 +17,17 @@ public class BuyList {
 		this.price = price;
 		this.createAt = createAt;
 	}
+	public BuyList(String name, int count, int price, Date createAt) {
+		this.name = name;
+		this.count = count;
+		this.price = price;
+		this.createAt = createAt;
+	}
+	public BuyList(String name, int count, int price) {
+		this.name = name;
+		this.count = count;
+		this.price = price;
+	}
 
 	public int getId() {
 		return id;

@@ -13,7 +13,7 @@ public class User {
 	private Date createAt;
 	public User() {};
 	public User(int id, String name, String userId, String password, String phoneNumber, String emailAddress,
-			String address, Date createAt) {
+			String address) {
 		this.id = id;
 		this.name = name;
 		this.userId = userId;
@@ -21,7 +21,26 @@ public class User {
 		this.phoneNumber = phoneNumber;
 		this.emailAddress = emailAddress;
 		this.address = address;
-		this.createAt = createAt;
+	}
+	public User(int id, String name, String userId, String password, String phoneNumber, String emailAddress,
+			String address,Date createAt) {
+		this.id = id;
+		this.name = name;
+		this.userId = userId;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
+		this.emailAddress = emailAddress;
+		this.address = address;
+		this.createAt=createAt;
+	}
+	public User(String name, String userId, String password, String phoneNumber, String emailAddress,
+			String address) {
+		this.name = name;
+		this.userId = userId;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
+		this.emailAddress = emailAddress;
+		this.address = address;
 	}
 	public void setId(int id) {
 		this.id=id;

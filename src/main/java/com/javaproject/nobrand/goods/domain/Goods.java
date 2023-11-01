@@ -5,6 +5,7 @@ public class Goods {
 	private int price;
 	private int searchCount;
 	private int cellCount;
+	private int goodsCount;
 	private String name;
 	private String bottomKind;
 	private String info;
@@ -13,13 +14,27 @@ public class Goods {
 	private String delivery;
 	private String content;
 	public Goods() {};
-	public Goods(int id, int price, int searchCount, int cellCount, String name, String bottomKind, String info,
+	public Goods(int id, int price, int searchCount, int cellCount,int goodsCount, String name, String bottomKind, String info,
 			String imgAdress, String options, String delivery, String content) {
-		super();
 		this.id = id;
 		this.price = price;
 		this.searchCount = searchCount;
 		this.cellCount = cellCount;
+		this.goodsCount=goodsCount;
+		this.name = name;
+		this.bottomKind = bottomKind;
+		this.info = info;
+		this.imgAdress = imgAdress;
+		this.options = options;
+		this.delivery = delivery;
+		this.content = content;
+	}
+	public Goods(int price, int searchCount, int cellCount,int goodsCount, String name, String bottomKind, String info,
+			String imgAdress, String options, String delivery, String content) {
+		this.price = price;
+		this.searchCount = searchCount;
+		this.cellCount = cellCount;
+		this.goodsCount=goodsCount;
 		this.name = name;
 		this.bottomKind = bottomKind;
 		this.info = info;
@@ -40,6 +55,12 @@ public class Goods {
 	}
 	public void setCellCount(int cellCount) {
 		this.cellCount=cellCount;
+	}
+	public void setGoodsCount(int goodsCount) {
+		this.goodsCount=goodsCount;
+	}
+	public int getGoodsCount() {
+		return goodsCount;
 	}
 	public void setName(String name) {
 		this.name=name;

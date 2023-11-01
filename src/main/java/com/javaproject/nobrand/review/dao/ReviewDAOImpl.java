@@ -7,18 +7,20 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.javaproject.nobrand.review.domain.Review;
 
-@Repository
+@Repository("reviewDAO")
 public class ReviewDAOImpl implements ReviewDAO{
+	@Autowired
 	private JdbcTemplate jdbctemplate;
-	public void setDataSource(DataSource dataSource) {
-		jdbctemplate=new JdbcTemplate(dataSource);
-	}
+//	public void setDataSource(DataSource dataSource) {
+//		jdbctemplate=new JdbcTemplate(dataSource);
+//	}
 	private RowMapper<Review> mapper=new RowMapper<Review>() {
 		public Review mapRow(ResultSet rs, int rowNum) throws SQLException{
 			return new Review(
@@ -34,19 +36,18 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void add(Review review) {
 		jdbctemplate.update("insert into review ( "
-				+ "\"GOODSID\", \"SCORE\", \"COUNT\", \"CREATEAT\" ) "
-				+ "values( ?, ?, ?, ? )",
+				+ "\"GOODS_ID\", \"SCORE\", \"COUNT\") "
+				+ "values( ?, ?, ?)",
 				review.getGoodsId(),
 				review.getScore(),
-				review.getCount(),
-				review.getCreateAt()
+				review.getCount()
 				);
 		// TODO Auto-generated method stub
 	}
 	@Override
 	public Review get(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from review where \"GOODSID\"=?", new Object[] { id },mapper);
+		return jdbctemplate.queryForObject("select * from review where \"GOODS_ID\"=?", new Object[] { id },mapper);
 	}
 
 	@Override
@@ -59,9 +60,11 @@ public class ReviewDAOImpl implements ReviewDAO{
 	public void update(Review review) {
 		// TODO Auto-generated method stub
 		jdbctemplate.update("update review set("
+				+"\"GOODS_ID\"=?,"
 				+ "\"SCORE\"=?,"
 				+ "\"COUNT\"=?,"
-				+ "\"CREATEAT\"=?) where \"ID\"=?",
+				+ "\"CREATEAT\"=?) where \"GOODS_ID\"=?",
+				review.getGoodsId(),
 				review.getScore(),
 				review.getCount(),
 				review.getCreateAt()
@@ -71,7 +74,7 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("delete from review where \"GOODSID\"=?");
+		jdbctemplate.update("delete from review where \"GOODS_ID\"=?");
 	}
 
 }

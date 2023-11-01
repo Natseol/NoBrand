@@ -5,20 +5,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.sql.DataSource;
+//import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.javaproject.nobrand.user.domain.User;
 
-@Repository
+@Repository("userDAO")
 public class UserDAOImpl implements UserDAO {
+	@Autowired
 	private JdbcTemplate jdbctemplate;
-	public void setDataSource(DataSource dataSource) {
-		jdbctemplate=new JdbcTemplate(dataSource);
-	}
+//	public void setDataSource(DataSource dataSource) {
+//		jdbctemplate=new JdbcTemplate(dataSource);
+//	}
 	
 	private RowMapper<User> mapper=new RowMapper<User>() {
 		public User mapRow(ResultSet rs, int rowNum) throws SQLException{
@@ -37,23 +39,26 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public void add(User user) {
 		jdbctemplate.update("insert into USERS ( "
-				+ "\"ID\",\"NAME\",\"USERID\",\"PASSWORD\",\"PHONENUMBER\",\"EMAILADDRESS\",\"ADDRESS\",\"CREATEAT\") "
-				+ "values( ?, ?, ?, ?, ?, ?, ?, ?) ",
-				user.getId(),
+				+ "\"NAME\",\"USERID\",\"PASSWORD\",\"PHONENUMBER\",\"EMAILADDRESS\",\"ADDRESS\")"
+				+ "values( ?, ?, ?, ?, ?, ?)",
 				user.getName(),
 				user.getUserId(),
 				user.getPassword(),
 				user.getPhoneNumber(),
 				user.getEmailAddress(),
-				user.getAddress(),
-				user.getDate()
+				user.getAddress()
 				);
 		// TODO Auto-generated method stub
 	}
 	@Override
 	public User get(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from USERS where \"ID\"=?", new Object[] { id },mapper);
+		try {
+			return jdbctemplate.queryForObject("select * from USERS where \"ID\"=?", new Object[] { id },mapper);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	@Override

@@ -15,6 +15,16 @@ public class Review {
 		this.count = count;
 		this.createAt = createAt;
 	}
+	public Review(int score, int count, Date createAt) {
+		this.score = score;
+		this.count = count;
+		this.createAt = createAt;
+	}
+	public Review(int goodsId, int score, int count) {
+		this.goodsId = goodsId;
+		this.score = score;
+		this.count = count;
+	}
 
 	public int getGoodsId() {
 		return goodsId;

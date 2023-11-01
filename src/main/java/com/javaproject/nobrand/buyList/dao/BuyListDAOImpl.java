@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -15,12 +16,13 @@ import org.springframework.stereotype.Repository;
 import com.javaproject.nobrand.buyList.domain.BuyList;
 
 
-@Repository
+@Repository("buylistDAO")
 public class BuyListDAOImpl implements BuyListDAO {
+	@Autowired
 	private JdbcTemplate jdbctemplate;
-	public void setDataSource(DataSource dataSource) {
-		jdbctemplate=new JdbcTemplate(dataSource);
-	}
+//	public void setDataSource(DataSource dataSource) {
+//		jdbctemplate=new JdbcTemplate(dataSource);
+//	}
 	private RowMapper<BuyList> mapper=new RowMapper<BuyList>() {
 		public BuyList mapRow(ResultSet rs, int rowNum) throws SQLException{
 			return new BuyList(
@@ -34,32 +36,30 @@ public class BuyListDAOImpl implements BuyListDAO {
 	};
 	@Override
 	public void add(BuyList buyList) {
-		jdbctemplate.update("insert into buyList ( "
-				+ "\"ID\", \"NAME\", \"COUNT\",\"PRICE\",\"CREATEAT\") "
-				+ "values( ?, ?, ?, ?,? )",
-				buyList.getId(),
+		jdbctemplate.update("insert into BUYLIST ( "
+				+ "\"NAME\", \"COUNT\",\"PRICE\") "
+				+ "values(?, ?, ?)",
 				buyList.getName(),
 				buyList.getCount(),
-				buyList.getPrice(),
-				buyList.getCreateAt()
+				buyList.getPrice()
 				);
 	}
 
 	@Override
 	public BuyList get(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from buyList where \"ID\"=?", new Object[] { id },mapper);
+		return jdbctemplate.queryForObject("select * from BUYLIST where \"ID\"=?", new Object[] { id },mapper);
 	}
 
 	@Override
 	public List<BuyList> getAll() {
 		// TODO Auto-generated method stub
-		return jdbctemplate.query("select * from buyList", mapper);
+		return jdbctemplate.query("select * from BUYLIST", mapper);
 	}
 
 	@Override
 	public void update(BuyList buyList) {
-		jdbctemplate.update("update buyList set("
+		jdbctemplate.update("update BUYLIST set("
 				+ "\"NAME\"=?,"
 				+ "\"COUNT\"=?,"
 				+ "\"PRICE\"=?,"
@@ -74,7 +74,7 @@ public class BuyListDAOImpl implements BuyListDAO {
 
 	@Override
 	public void delete(int id) {
-		jdbctemplate.update("delete from review where \"ID\"=?");
+		jdbctemplate.update("delete from BUYLIST where \"ID\"=?");
 		// TODO Auto-generated method stub
 	}
 
