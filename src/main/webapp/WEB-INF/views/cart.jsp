@@ -13,7 +13,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<jsp:include page='toppage-ssg.jsp' />
+	<jsp:include page='topPage-ssg.jsp' />
 	<!-- 여기부터 시작 -->
 	<div class="goods-list"></div>
 	<div class="card-event"></div>
