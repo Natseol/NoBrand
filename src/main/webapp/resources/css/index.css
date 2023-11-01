@@ -147,11 +147,16 @@
     color: lightgray;
 }
 
+.more-items {
+    text-align: center;
+    margin: 0px 0px 150px;
+}
+
 .button-more-items {
     background-color: white;
-    padding: 10px;
-    width: 800px;
-    border: 1px solid
+    padding: 20px;
+    width: 900px;
+    border: 1px solid;
 }
 
 .more-items-text {
@@ -164,6 +169,11 @@
 }
 
 .itemlist2 {
+	display: flex;
+    justify-content: space-between;
+}
+
+.itemlist3 {
 	display: flex;
     justify-content: space-between;
 }

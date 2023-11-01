@@ -98,7 +98,7 @@
 				class="visually-hidden">Next</span>
 		</button>
 	</div>
-	
+
 	<div class="index-content">
 		<hr>
 		<div class="index-limited">
@@ -209,9 +209,11 @@
 					</div>
 				</div>
 			</div>
-			<div style="text-align: center;">
+			<div class="more-items">
 				<button name="moreItems" class="button-more-items">
-					<div class="more-items-text">더보기</div>
+					<div class="more-items-text">
+						더보기<img src="resources/images/ico_moreitem.svg">
+					</div>
 				</button>
 			</div>
 		</div>
@@ -250,18 +252,58 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<hr>
+		<hr>
 	<div class="index-musthave">
 		<div>
 			<img src="resources/images/2017072515100880483608043460_44.jpg">
 		</div>
-		<div>
-			<div>노브랜드 떡볶이</div>
-			<div>노브랜드 치즈케익</div>
+		<div class="itemlist3">
+			<div class="itemlist-item" style="width: 25rem;">
+				<div>
+					<a><img
+						src="resources/images/2017050210160409676670961767_272.jpg"
+						class="card-img-top" alt="썸네일"></a>
+				</div>
+				<div class="itemlist-body">
+					<p class="card-text">
+					<div class="text-bold">제목</div>
+					내용
+					</p>
+				</div>
+			</div>
+
+			<div class="itemlist" style="width: 25rem;">
+				<div>
+					<a><img
+						src="resources/images/2017050210160409676670961767_272.jpg"
+						class="card-img-top" alt="썸네일"></a>
+				</div>
+				<div class="itemlist-body">
+					<p class="card-text">
+					<div class="text-bold">제목</div>
+					내용
+					</p>
+				</div>
+			</div>
+
+			<div class="itemlist" style="width: 25rem;">
+				<div>
+					<a><img
+						src="resources/images/2017050210160409676670961767_272.jpg"
+						class="card-img-top" alt="썸네일"></a>
+				</div>
+				<div class="itemlist-body">
+					<p class="card-text">
+					<div class="text-bold">제목</div>
+					내용
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	</div>
+	</div>
+	
 
 
 	<!-- 여기부터 끝 -->
