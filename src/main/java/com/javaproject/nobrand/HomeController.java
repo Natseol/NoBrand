@@ -48,6 +48,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/cartbanner", method = RequestMethod.GET)
 	public String topPage(Locale locale, Model model) {
-		return "topPage-ssg";
+		return "toppage-ssg";
 	}
+
 }

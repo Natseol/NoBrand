@@ -19,7 +19,7 @@
 					<div class="block title-main">
 						<img class="title-img" alt="ssg_logo"
 							src="resources/img/ssg_logo.svg"> <img class="title_menu"
-							alt="ssg_logo" src="resources/img/title_menu.svg">
+							alt="ssg_logo" src="resources/images/title_menu.svg">
 					</div>
 					<div class="block title-searchbox">
 						<input type="text" placeholder="" />
@@ -35,10 +35,10 @@
 					<div class="service-center block">고객센터 |</div>
 					<div class="etc block">
 						<img alt="관심있는 상품" src="resources/img/menu/heart.svg"> <img
-							alt="유저정보" src="resources/img/menu/user.svg"> <img
-							alt="배송정보" src="resources/img/menu/delivery.svg"> <img
-							alt="장바구니" src="resources/img/menu/cart.svg"> <img
-							alt="최근 본 상품" src="resources/img/menu/recently.svg">
+							alt="유저정보" src="resources/images/user.svg"> <img
+							alt="배송정보" src="resources/images/delivery.svg"> <img
+							alt="장바구니" src="resources/images/cart.svg"> <img
+							alt="최근 본 상품" src="resources/images/recently.svg">
 					</div>
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 				<div class="banner">
 					<div class="banner-box">
 						<div class="block emart">
-							<img alt="emart" src="resources/img/em_logo.png">
+							<img alt="emart" src="resources/images/em_logo.png">
 						</div>
 						<div class="block emart-searchbox">
 							<input class="emart-searchbox" type="text" placeholder="" />
@@ -57,9 +57,9 @@
 							</div>
 						</div>
 						<div class="block emart-delivery">
-							<img alt="emart" src="resources/img/location.svg"> 로그인 후
+							<img alt="emart" src="resources/images/location.svg"> 로그인 후
 							배송시간을 확인해보세요 <img class="img_down" alt="down"
-								src="resources/img/ico_arrow.png">
+								src="resources/images/ico_arrow.png">
 						</div>
 					</div>
 				</div>
@@ -70,22 +70,22 @@
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
-								src="resources/img/delivery/ssg_delivery.svg">
+								src="resources/images/ssg_delivery.svg">
 							<h5 class="block">쓱배송</h5>
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
-								src="resources/img/delivery/morning.svg">
+								src="resources/images/morning.svg">
 							<h5 class="block">새벽배송</h5>
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
-								src="resources/img/delivery/ssg_oneday.svg">
+								src="resources/images/ssg_oneday.svg">
 							<h5 class="block">쓱1DAY배송</h5>
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
-								src="resources/img/delivery/trade.svg">
+								src="resources/images/trade.svg">
 							<h5 class="block">트레이더스</h5>
 						</div>
 						<div class="delivery">
