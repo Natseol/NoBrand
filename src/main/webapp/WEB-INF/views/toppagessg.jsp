@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="resources/css/topPage-ssg.css" rel="stylesheet">
+<link href="resources/css/toppagessg.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>장바구니</title>
 </head>

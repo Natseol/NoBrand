@@ -43,7 +43,7 @@ public class HomeController {
 
 	@RequestMapping(value = "/top", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
-		return "topPage";
+		return "toppage";
 	}
 	
 	@RequestMapping(value = "/cartbanner", method = RequestMethod.GET)
