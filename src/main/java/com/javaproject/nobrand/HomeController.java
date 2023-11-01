@@ -41,9 +41,9 @@ public class HomeController {
 		return "bottompage";
 	}
 
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	@RequestMapping(value = "/top", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
 		
-		return "index";
+		return "toppage";
 	}
 }
