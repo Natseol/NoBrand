@@ -66,51 +66,71 @@
 				<div class="category-delivery">
 					<div class="category-box">
 						<div class="delivery all-categori">
-							<h5>전체 카테고리</h5>
+							<div>전체 카테고리</div>
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
+<<<<<<< Upstream, based on develop
 								src="resources/images/ssg_delivery.svg">
 							<h5 class="block">쓱배송</h5>
+=======
+								src="resources/img/delivery/ssg_delivery.svg">
+							<div class="block">쓱배송</div>
+>>>>>>> f131650 feat : made mainpageMid
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
+<<<<<<< Upstream, based on develop
 								src="resources/images/morning.svg">
 							<h5 class="block">새벽배송</h5>
+=======
+								src="resources/img/delivery/morning.svg">
+							<div class="block">새벽배송</div>
+>>>>>>> f131650 feat : made mainpageMid
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
+<<<<<<< Upstream, based on develop
 								src="resources/images/ssg_oneday.svg">
 							<h5 class="block">쓱1DAY배송</h5>
+=======
+								src="resources/img/delivery/ssg_oneday.svg">
+							<div class="block">쓱1DAY배송</div>
+>>>>>>> f131650 feat : made mainpageMid
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
+<<<<<<< Upstream, based on develop
 								src="resources/images/trade.svg">
 							<h5 class="block">트레이더스</h5>
+=======
+								src="resources/img/delivery/trade.svg">
+							<div class="block">트레이더스</div>
+>>>>>>> f131650 feat : made mainpageMid
 						</div>
 						<div class="delivery">
-							<h5>자주구매</h5>
+							<div>자주구매</div>
 						</div>
 						<div class="delivery">
-							<h5>세일중</h5>
+							<div>세일중</div>
 						</div>
 						<div class="delivery">
-							<h5>오반장</h5>
+							<div>오반장</div>
 						</div>
 						<div class="delivery">
-							<h5>베스트</h5>
+							<div>베스트</div>
 						</div>
 						<div class="delivery">
-							<h5>신상품</h5>
+							<div>신상품</div>
 						</div>
 						<div class="delivery">
-							<h5>프리미엄식품관</h5>
+							<div>프리미엄식품관</div>
 						</div>
 						<div class="delivery">
-							<h5>이벤트</h5>
+							<div>이벤트</div>
 						</div>
 						<div class="delivery">
-							<h5>공식스토어</h5>
+							<div>공식스토어</div>
 						</div>
 					</div>
 				</div>

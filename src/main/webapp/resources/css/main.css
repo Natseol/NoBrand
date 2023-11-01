@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "opensans";
-  src: url("fonts/fontawesome-webfont.woff2") format("woff2"),
-    url("fonts/fontawesome-webfont.woff") format("woff");
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("../fonts/fontawesome-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -132,23 +132,23 @@ input.rounded {
 /* 배달 카테고리 */
 
 .category-delivery {
-	position: relative;
-	background-color: rgb(255, 207, 2);
-	margin: 3px 0 0 0;
+	display: flex;
+    background-color: rgb(255, 207, 2);
+    margin: 3px 0 0 0;
+    height: 50px;
+    align-items: center;
 }
 
 .category-box{
 	display: flex;
 	width: 1280px;
 	margin: 0 auto;
-	height: 40px;
 	align-items: flex-end;
 }
 
 .delivery {
 	display: inline-block;
 	width: 170px;
-	height: 50px;
 	padding: 0 5px 0 5px ;
 }
 
@@ -162,104 +162,5 @@ input.rounded {
 .delivery-img {
 	display: inline-block;
 	vertical-align: middle;
-}
-
-/* 노브랜드 배너(노브랜드의 시작) */
-
-.middle {
-	height: 100px;
-    line-height: 100px;
-}
-
-/* 로고를 포함한 검색창과 툴 */
-
-.nobrand-logo-block {
-	width: 1280px;
-	margin: 0 auto;
-}
-
-.title-nobrand {
-	max-width: 470px;
-    max-height: 76px;
-    vertical-align: middle;
-    margin: 0 10% 0 25%;
-}
-
-.nobrand-searchbox {
-	position: relative;
-}
-
-.nobrand-searchbox {
-	float: left;
-    width: 210px;
-    height: 38px;
-    background: #fff;
-    padding: 0 0 0 9px;
-    border: none;
-    border-bottom: 2px solid #222;
-}
-
-
-.search-icon{
-	position: absolute;
-	float: right;
-	background-color: #fff;
-	padding: 7px 7px 5px;
-	border-bottom: 2px solid #222;
-}
-
-.tools {
-	position: relative;
-}
-
-.search-tool {
-	position: absolute;
-	left: 255px;
-	top: 5px;
-	width: 30px;
-	align-items: center;
-	align-items: baseline;
-}
-
-.material-symbols-outlined {
-	position: absolute;
-	left: 300px;
-	top: 7px;
-	align-items: baseline;
-}
-
-
-.category-delivery-box {
-	align-items: center;
-	margin: 0 auto;
-	display: flex;
-    justify-content: center;
-	
-}
-
-.category-main {
-	margin: 0 auto;
-}
-
-
-.title-searchbox {
-	margin: 0 25% 0 0;
-}
-
-.list {
-	padding: 0 10px 0 10px;
-}
-
-::placeholder {
-	color: gray;
-}
-
-.block {
-	display: inline-block;
-	position: relative;
-}
-
-.etc {
-	margin-right: 300px;
 }
 
