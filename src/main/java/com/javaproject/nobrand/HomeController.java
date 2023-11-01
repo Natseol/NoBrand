@@ -43,16 +43,11 @@ public class HomeController {
 
 	@RequestMapping(value = "/top", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
-<<<<<<< Upstream, based on develop
 		return "topPage";
 	}
 	
 	@RequestMapping(value = "/cartbanner", method = RequestMethod.GET)
 	public String topPage(Locale locale, Model model) {
 		return "topPage-ssg";
-=======
-		
-		return "toppage";
->>>>>>> 84184c8 feat : create main page
 	}
 }
