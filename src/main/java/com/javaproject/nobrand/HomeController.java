@@ -36,21 +36,6 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public String postHome(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate);
-
-		return "home";
-	}
-	
-	
 	@RequestMapping(value = "/bottom", method = RequestMethod.GET)
 	public String bottom(Model model) {
 		return "bottompage";
@@ -58,6 +43,7 @@ public class HomeController {
 
 	@RequestMapping(value = "/top", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
+		
 		return "toppage";
 	}
 	
