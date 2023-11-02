@@ -11,7 +11,7 @@
 				<div class="title">
 					<div class="block title-main">
 						<img class="title-img" alt="ssg_logo"
-							src="resources/img/ssg_logo.svg"> <img class="title_menu"
+							src="resources/images/ssg_logo.svg"> <img class="title_menu"
 							alt="ssg_logo" src="resources/images/title_menu.svg">
 					</div>
 					<div class="block title-searchbox">
@@ -27,7 +27,7 @@
 					<div class="regist block">회원가입</div>
 					<div class="service-center block">고객센터 |</div>
 					<div class="etc block">
-						<img alt="관심있는 상품" src="resources/img/menu/heart.svg"> <img
+						<img alt="관심있는 상품" src="resources/images/menu/heart.svg"> <img
 							alt="유저정보" src="resources/images/user.svg"> <img
 							alt="배송정보" src="resources/images/delivery.svg"> <img
 							alt="장바구니" src="resources/images/cart.svg"> <img
