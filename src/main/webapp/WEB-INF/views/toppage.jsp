@@ -63,43 +63,23 @@
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
-<<<<<<< Upstream, based on develop
 								src="resources/images/ssg_delivery.svg">
-							<h5 class="block">쓱배송</h5>
-=======
-								src="resources/img/delivery/ssg_delivery.svg">
 							<div class="block">쓱배송</div>
->>>>>>> f131650 feat : made mainpageMid
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
-<<<<<<< Upstream, based on develop
 								src="resources/images/morning.svg">
-							<h5 class="block">새벽배송</h5>
-=======
-								src="resources/img/delivery/morning.svg">
 							<div class="block">새벽배송</div>
->>>>>>> f131650 feat : made mainpageMid
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
-<<<<<<< Upstream, based on develop
 								src="resources/images/ssg_oneday.svg">
-							<h5 class="block">쓱1DAY배송</h5>
-=======
-								src="resources/img/delivery/ssg_oneday.svg">
 							<div class="block">쓱1DAY배송</div>
->>>>>>> f131650 feat : made mainpageMid
 						</div>
 						<div class="delivery">
 							<img class="delivery-img" alt="ssg_delivery"
-<<<<<<< Upstream, based on develop
 								src="resources/images/trade.svg">
-							<h5 class="block">트레이더스</h5>
-=======
-								src="resources/img/delivery/trade.svg">
 							<div class="block">트레이더스</div>
->>>>>>> f131650 feat : made mainpageMid
 						</div>
 						<div class="delivery">
 							<div>자주구매</div>
