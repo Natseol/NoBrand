@@ -2,16 +2,9 @@
 	errorPage="./exception.jsp" pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html>
-<head>
-<link href="<c:url value="resources/css/main.css" />" rel="stylesheet">
-<meta charset="UTF-8">
-<title>top</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-</head>
-<body>
+
 	<div id="root">
 		<div class="top">
 			<div class="top-main">
@@ -137,5 +130,3 @@
 			</div>
 		</div>
 	</div>
-</body>
-</html>

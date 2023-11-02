@@ -1,15 +1,104 @@
-@charset "UTF-8";
+.middle {
+	height: 100px;
+	line-height: 100px;
+}
 
-.midle {
-	width: 100%;	
-	margin-top: 50px;
+/* 로고를 포함한 검색창과 툴 */
+.nobrand-logo-block {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.nobrand-searchbox {
+	position: relative;
+}
+
+.nobrand-searchbox {
+	float: left;
+	width: 210px;
+	height: 38px;
+	background: #fff;
+	padding: 0 0 0 9px;
+	border: none;
+	border-bottom: 2px solid #222;
+}
+
+.search-icon {
+	position: absolute;
+	float: right;
+	background-color: #fff;
+	padding: 7px 7px 5px;
+	border-bottom: 2px solid #222;
+}
+
+.tools {
+	position: relative;
+}
+
+.search-tool {
+	position: absolute;
+	left: 255px;
+	top: 5px;
+	width: 30px;
+	align-items: center;
+	align-items: baseline;
+}
+
+.share_windows {
+    position: absolute;
+	left: 300px;
+	top: 7px;
+	align-items: baseline;
+}
+
+.category-delivery-box {
+    align-items: center;
+    margin: 30px auto 0px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.category-main {
+	margin: 0 auto;
+}
+
+.title-searchbox {
+	margin: 0 25% 0 0;
+}
+
+.list {
+	padding: 0 10px 0 10px;
+}
+
+::placeholder {
+	color: gray;
+}
+
+.block {
+	display: inline-block;
+	position: relative;
+}
+
+.etc {
+	margin-right: 300px;
+}
+
+.nobrand-title {
+	padding: 20px;
+}
+
+.nobrand-logo-block {
+	position: relative;
 	text-align: center;
 }
 
 .title-nobrand {
-	margin: 0 200px 0 200px;
+	max-height: 76px;
 }
 
-.list {
-	margin: 0 20px 0 20px;
+.nobrand-search {
+	position: absolute;
+    right: 140px;
+    bottom: 13px;
 }
