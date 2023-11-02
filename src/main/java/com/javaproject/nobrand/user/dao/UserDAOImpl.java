@@ -60,6 +60,15 @@ public class UserDAOImpl implements UserDAO {
 			return null;
 		}
 	}
+	@Override
+	public User get(String userId) {
+		try {
+			return jdbctemplate.queryForObject("select * from USERS where \"USERID\"=?", new Object[] { userId },mapper);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+	}
 
 	@Override
 	public List<User> getAll() {
@@ -93,5 +102,6 @@ public class UserDAOImpl implements UserDAO {
 		// TODO Auto-generated method stub
 		jdbctemplate.update("delete from USERS where \"id\"=?");
 	}
+
 
 }

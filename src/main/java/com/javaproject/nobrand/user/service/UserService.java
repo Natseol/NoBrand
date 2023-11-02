@@ -2,12 +2,15 @@ package com.javaproject.nobrand.user.service;
 
 import java.security.MessageDigest;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.javaproject.nobrand.user.dao.UserDAO;
 import com.javaproject.nobrand.user.domain.User;
 
-
+@Service
 public class UserService {
 	@Autowired
 	UserDAO userDAO;
@@ -32,11 +35,15 @@ public class UserService {
 
 	}
 	public User login(User user) {
-		User tempUser = (userDAO.get(user.getId()));
+		
+		User tempUser = userDAO.get(user.getUserId());
 		if(tempUser!=null&&tempUser.getPassword().equals(cryptoPassword(user.getPassword()))){
 			return tempUser;	
 		}
 		else return null;
+	}
+	public void logOut(HttpSession session) {
+		session.invalidate();
 	}
 
 }

@@ -8,8 +8,7 @@
 </head>
 <body>
 
-<!-- 회원가입 페이지 임시주소(연결요망) -->
-<form action="/regist" method="post">
+<form action="/nobrand/regist" method="post">
 	<label for="USERID">USERID:
 		<input type="text" name ="USERID" id="USERID">
 	</label>
