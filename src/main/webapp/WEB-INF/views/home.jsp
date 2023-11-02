@@ -201,6 +201,7 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< Upstream, based on develop
 		<hr>
 	<div class="index-musthave">
 		<div>
@@ -212,13 +213,25 @@
 					<a><img
 						src="resources/images/2017050210160409676670961767_272.jpg"
 						class="card-img-top" alt="썸네일"></a>
+=======
+		<div class="category-delivery-box">
+			<div class="category-main">
+				<div class="list best block">
+					<div>베스트</div>
+>>>>>>> 982e736 feat: null cart
 				</div>
+<<<<<<< Upstream, based on develop
 				<div class="itemlist-body">
 					<p class="card-text">
 					<div class="text-bold">제목</div>
 					내용
 					</p>
+=======
+				<div class="list sale block">
+					<div>세일중</div>
+>>>>>>> 982e736 feat: null cart
 				</div>
+<<<<<<< Upstream, based on develop
 			</div>
 
 			<div class="itemlist" style="width: 25rem;">
@@ -226,13 +239,23 @@
 					<a><img
 						src="resources/images/2017050210160409676670961767_272.jpg"
 						class="card-img-top" alt="썸네일"></a>
+=======
+				<div class="list fresh block">
+					<div>신선식품</div>
+>>>>>>> 982e736 feat: null cart
 				</div>
+<<<<<<< Upstream, based on develop
 				<div class="itemlist-body">
 					<p class="card-text">
 					<div class="text-bold">제목</div>
 					내용
 					</p>
+=======
+				<div class="list made block">
+					<div>가공식품</div>
+>>>>>>> 982e736 feat: null cart
 				</div>
+<<<<<<< Upstream, based on develop
 			</div>
 
 			<div class="itemlist" style="width: 25rem;">
@@ -240,12 +263,27 @@
 					<a><img
 						src="resources/images/2017050210160409676670961767_272.jpg"
 						class="card-img-top" alt="썸네일"></a>
+=======
+				<div class="list house-goods block">
+					<div>생활용품</div>
+>>>>>>> 982e736 feat: null cart
 				</div>
+<<<<<<< Upstream, based on develop
 				<div class="itemlist-body">
 					<p class="card-text">
 					<div class="text-bold">제목</div>
 					내용
 					</p>
+=======
+				<div class="list interior block">
+					<div>가전/인테리어</div>
+				</div>
+				<div class="list fashion block">
+					<div>페션잡화</div>
+				</div>
+				<div class="list sports block">
+					<div>스포츠/캠핑용품</div>
+>>>>>>> 982e736 feat: null cart
 				</div>
 			</div>
 		</div>

@@ -11,9 +11,9 @@
 	<div id="root">
 		<div class="top-banner">
 			<div class="service-box">
-				<div class="user-service top-common"><h6>로그인 ·</h6></div>
-				<div class="user-service top-common"><h6>회원가입 ·</h6></div>
-				<div class="user-service top-common"><h6>고객센터 |</h6></div>
+				<div class="user-service top-common"><div class="font-logo">로그인 ·</div></div>
+				<div class="user-service top-common"><div class="font-logo">회원가입 ·</div></div>
+				<div class="user-service top-common"><div class="font-logo">고객센터 |</div></div>
 				<div class="user-heart top-img-margin"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></div>
 				<div class="user-user top-img-margin"><img class="top-img-size" alt="유저정보" src="resources/images/user.svg"></div>
 				<div class="user-delivery top-img-margin"><img class="top-img-size" alt="배송정보" src="resources/images/delivery.svg"></div>
@@ -24,7 +24,7 @@
 					<div class="ssg-logo">
 						<img alt="" src="resources/images/ssg_logo.svg">
 						<div class="logo-script">
-							<h6 class="font-weight">믿고 사는 즐거움</h6>
+							<div class="font-weight font-logo">믿고 사는 즐거움</div>
 						</div>
 					</div>
 					<div class="logo-menu">
@@ -46,19 +46,19 @@
 					<div class="emart-logo">
 						<img class="emart-logo-size" alt="" src="resources/images/oncolored_emart_logo.png">
 					</div>
-					<h4 class="text-color">·</h4>
+					<div class="text-color font-and">·</div>
 					<div class="ssg-mall-logo">
-						<h5>신세계몰</h5>
+						<div class="font-mall">신세계몰</div>
 					</div>
-					<h4 class="text-color">·</h4>
+					<div class="text-color font-and">·</div>
 					<div class="ssg-mall-logo">
-						<h5>신세계백화점</h5>
+						<div class="font-mall">신세계백화점</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="line"></div>
-		<script type="text/javascript" src="resources/javascript/searchbox-border.js"></script>
+		<script type="text/javascript" src="resources/scripts/searchbox-border.js"></script>
 	</div>
 </body>
 </html>
