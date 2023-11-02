@@ -36,9 +36,13 @@
 	display: inline;
 }
 
-.include-box {
-	float: left;
+.container-box {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 980px;
 }
+
 
 /* include한 내용 아래쪽 */
 
@@ -74,6 +78,7 @@ li::before {
 
 .order {
 	position: sticky;
+	top: 0;
 	float: right;
 	width: 300px;
 }

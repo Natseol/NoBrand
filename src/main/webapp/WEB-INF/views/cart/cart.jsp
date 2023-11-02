@@ -36,8 +36,9 @@
 						</div>
 					</div>
 				</div>
+				<div class="container-box"></div>
 				<!-- 여기서 목록에 따라 include -->
-				<jsp:include page='cartnullgoods.jsp' />
+				<jsp:include page='goodsnull.jsp' />
 				<div class="order">
 						<div id="scroll-responsive-buy-menu">
 							<div class="menu-box">
