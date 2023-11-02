@@ -12,6 +12,14 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 </head>
+<%-- 임시로 설정해둔 값이니 푸후 스크립트로 교체하기 --%>
+<script type="text/javascript">
+	var count = 0;
+	var cash = 0;
+	var discount = 0;
+	var delivery = 0;
+	var total = 0;
+</script>
 <body>
 	<jsp:include page='toppagessg.jsp' />
 	<!-- 여기부터 시작 -->
@@ -23,7 +31,8 @@
 					<div class="tip"></div>
 				</div>
 			</div>
-			
+			<!-- 여기서 목록에 따라 include -->
+			<jsp:include page='cartnullgoods.jsp' />
 		<div class="card-event">
 			<div class="card-event-box">
 				<div class="card-first">

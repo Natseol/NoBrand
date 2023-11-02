@@ -12,15 +12,6 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 </head>
-<%-- 임시로 설정해둔 값이니 푸후 스크립트로 교체하기 --%>
-<script type="text/javascript">
-	var count = 0;
-	var cash = 0;
-	var discount = 0;
-	var delivery = 0;
-	var total = 0;
-</script>
-
 <body>
 	<div id="root">
 		<div class="nullgoods-script">
