@@ -13,7 +13,7 @@
 		<div class="nobrand-logo-block">
 			<div class="title-nobrand-box">
                 <img class="title-nobrand" alt="nobrand_logo"
-				src="resources/img/nobrand_logo.png">
+				src="resources/images/nobrand_logo.png">
             </div>
             <div class="nobrand-search">
                 <div class="block nobrand-search-box">
@@ -26,11 +26,11 @@
                     </div>
                     <div class="icon-box">
                         <img class="search-icon" alt="icon"
-                            src="resources/img/search-icon.svg">
+                            src="resources/images/search-icon.svg">
                     </div>
                     <div class="tools">
                         <img class="search-tool" alt="관심있는 상품"
-                            src="resources/img/search_tool1.svg"> <span
+                            src="resources/images/search_tool1.svg"> <span
                             class="material-symbols-outlined share_windows">
                             share_windows </span>
                     </div>
