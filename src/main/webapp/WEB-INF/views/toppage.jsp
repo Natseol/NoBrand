@@ -27,6 +27,7 @@
 					<div class="regist block">회원가입</div>
 					<div class="service-center block">고객센터 |</div>
 					<div class="etc block">
+<<<<<<< HEAD
 <<<<<<< Upstream, based on develop
 						<img alt="관심있는 상품" src="resources/img/menu/heart.svg"> 
 						<img alt="유저정보" src="resources/images/user.svg"> 
@@ -34,6 +35,8 @@
 						<img alt="장바구니" src="resources/images/cart.svg">
 						<img alt="최근 본 상품" src="resources/images/recently.svg">
 =======
+=======
+>>>>>>> branch 'subpage' of https://github.com/Natseol/ProjectNoBrand.git
 						<img alt="관심있는 상품" src="resources/images/menu/heart.svg"> <img
 							alt="유저정보" src="resources/images/user.svg"> <img
 							alt="배송정보" src="resources/images/delivery.svg"> <img
