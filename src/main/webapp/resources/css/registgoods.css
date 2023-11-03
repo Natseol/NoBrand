@@ -1,0 +1,74 @@
+.hr-bold {
+    height: 2px;
+    background: black;
+    border: 0;
+    opacity: 1;
+}
+
+.hr-thin {
+    height: 1px;
+    background: gray;
+    border: 0;
+}
+
+.registgoods-main {
+    width: 1280px;
+    margin: auto;
+}
+
+.registgoods-title {
+    font-size: x-large;
+    margin: 40px 0px 0px;
+}
+
+.registgoods-info {
+    margin: 40px 0px 0px;
+}
+
+.registgoods-container-title {
+    font-weight: bold;
+}
+
+.registgoods-input-box {
+    display: flex;
+}
+
+.registgoods-input-info {
+    margin: 0px 0px 0px 10px;
+    width: 130px;
+    font-weight: bold;
+    font-size: small;
+}
+
+.registgoods-input{
+    width: 40%;
+    border: lightgray solid 1px;
+    height: 35px;
+}
+
+.registgoods-content {
+    margin: 40px 0px 0px;
+}
+
+.registgoods-textarea{
+    width: 80%;
+    border: lightgray solid 1px;
+    height: 600px;
+    word-wrap:break-word;
+}
+
+.registgoods-info2 {
+    margin: 40px 0px 0px;
+}
+
+.registgoodsd-button-box {
+    text-align: center;
+}
+
+.registgoods-button {
+    background-color: #ff5b59;
+    border: none;
+    padding: 20px 145px;
+    color: white;
+    margin: 50px;
+}
