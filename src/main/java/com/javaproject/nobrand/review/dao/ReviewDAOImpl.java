@@ -36,9 +36,8 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void add(Review review) {
 		jdbctemplate.update("insert into review ( "
-				+ "\"GOODS_ID\", \"SCORE\", \"COUNT\") "
-				+ "values( ?, ?, ?)",
-				review.getGoodsId(),
+				+ "\"SCORE\", \"COUNT\") "
+				+ "values(?, ?)",
 				review.getScore(),
 				review.getCount()
 				);

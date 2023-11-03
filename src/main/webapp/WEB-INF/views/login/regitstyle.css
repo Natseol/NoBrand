@@ -1,0 +1,73 @@
+.regit_dl {
+    min-height: 40px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+  }
+  .regit_dl:first-child {
+    border: none;
+  }
+  .regit_dl .regit_dt {
+    float: left;
+    position: relative;
+    width: 146px;
+    min-height: 40px;
+  }
+  .regit_dl .regit_dt_tit {
+    display: inline-block;
+    position: relative;
+    padding-top: 12px;
+    font-family: "Spoqa-Medium", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
+    vertical-align: middle;
+  }
+  .regit_dl .regit_dd {
+    position: relative;
+    min-height: 40px;
+    margin-left: 146px;
+  }
+  .regit_dl .regit_dd_cont {
+    display: inline-block;
+    padding-top: 12px;
+    vertical-align: middle;
+  }
+  .regit_dl:after,
+  .regit_dl .regit_dd:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+  .regit_dl2 {
+    min-height: 40px;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+  }
+  .regit_dl2:not(:first-child) {
+    margin-top: 16px;
+  }
+  .regit_dl2 .regit_dt {
+    float: left;
+    position: relative;
+    width: 98px;
+    min-height: 40px;
+  }
+  .regit_dl2 .regit_dt_tit {
+    display: inline-block;
+    position: relative;
+    padding-top: 12px;
+    font-family: "Spoqa-Medium", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #777;
+    letter-spacing: -0.8px;
+  }
+  .regit_dl2 .regit_dd {
+    position: relative;
+    min-height: 40px;
+    margin-left: 98px;
+  }
+  .regit_dl2 .regit_dd_cont {
+    display: inline-block;
+    padding-top: 9px;
+    vertical-align: middle;
+  }
