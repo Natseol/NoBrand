@@ -76,6 +76,10 @@ body {
 	width: 20px;
 }
 
+.title-left {
+	display: flex;
+}
+
 .title-right {
 	display: flex;
 }

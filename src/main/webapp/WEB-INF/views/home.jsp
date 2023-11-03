@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <link href="resources/css/main.css" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
 <link href="resources/css/index.css" rel="stylesheet" type="text/css">
 <title>top</title>
 <link rel="stylesheet"
