@@ -50,6 +50,8 @@ body {
 	align-items: center;
 	margin: 0 auto;
 	padding: 20px 0 20px;
+	justify-content: space-between;
+
 }
 
 .title-main {

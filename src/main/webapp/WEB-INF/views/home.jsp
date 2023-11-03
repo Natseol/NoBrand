@@ -57,11 +57,11 @@
 			<div class="index-limited-items">
 
 				<div class="itemlist4" style="width: 18rem;">
-					<div>
+					<div class="card-img-box">
 						<a><img src="resources/images/1000517346294_i1_290.jpg"
 							class="card-img-top" alt="썸네일"></a>
 						<div class="card-img-bag rounded-3">
-							<span class="material-symbols-outlined">shopping_bag</span>
+							<span class="card-img-icon material-symbols-outlined">shopping_bag</span>
 						</div>
 					</div>
 					<div class="card-body">
@@ -83,7 +83,7 @@
 				</div>
 
 				<div class="itemlist4" style="width: 18rem;">
-					<div>
+					<div class="card-img-box">
 						<a><img src="resources/images/1000517346294_i1_290.jpg"
 							class="card-img-top" alt="썸네일"></a>
 						<div class="card-img-bag rounded-3">
@@ -108,7 +108,7 @@
 					</div>
 				</div>
 				<div class="itemlist4" style="width: 18rem;">
-					<div>
+					<div class="card-img-box">
 						<a><img src="resources/images/1000517346294_i1_290.jpg"
 							class="card-img-top" alt="썸네일"></a>
 						<div class="card-img-bag rounded-3">
@@ -133,7 +133,7 @@
 					</div>
 				</div>
 				<div class="itemlist4" style="width: 18rem;">
-					<div>
+					<div class="card-img-box">
 						<a><img src="resources/images/1000517346294_i1_290.jpg"
 							class="card-img-top" alt="썸네일"></a>
 						<div class="card-img-bag rounded-3">
@@ -201,7 +201,6 @@
 				</div>
 			</div>
 		</div>
-<<<<<<< Upstream, based on develop
 		<hr>
 	<div class="index-musthave">
 		<div>
@@ -213,25 +212,13 @@
 					<a><img
 						src="resources/images/2017050210160409676670961767_272.jpg"
 						class="card-img-top" alt="썸네일"></a>
-=======
-		<div class="category-delivery-box">
-			<div class="category-main">
-				<div class="list best block">
-					<div>베스트</div>
->>>>>>> 982e736 feat: null cart
 				</div>
-<<<<<<< Upstream, based on develop
 				<div class="itemlist-body">
 					<p class="card-text">
 					<div class="text-bold">제목</div>
 					내용
 					</p>
-=======
-				<div class="list sale block">
-					<div>세일중</div>
->>>>>>> 982e736 feat: null cart
 				</div>
-<<<<<<< Upstream, based on develop
 			</div>
 
 			<div class="itemlist" style="width: 25rem;">
@@ -239,23 +226,13 @@
 					<a><img
 						src="resources/images/2017050210160409676670961767_272.jpg"
 						class="card-img-top" alt="썸네일"></a>
-=======
-				<div class="list fresh block">
-					<div>신선식품</div>
->>>>>>> 982e736 feat: null cart
 				</div>
-<<<<<<< Upstream, based on develop
 				<div class="itemlist-body">
 					<p class="card-text">
 					<div class="text-bold">제목</div>
 					내용
 					</p>
-=======
-				<div class="list made block">
-					<div>가공식품</div>
->>>>>>> 982e736 feat: null cart
 				</div>
-<<<<<<< Upstream, based on develop
 			</div>
 
 			<div class="itemlist" style="width: 25rem;">
@@ -263,27 +240,12 @@
 					<a><img
 						src="resources/images/2017050210160409676670961767_272.jpg"
 						class="card-img-top" alt="썸네일"></a>
-=======
-				<div class="list house-goods block">
-					<div>생활용품</div>
->>>>>>> 982e736 feat: null cart
 				</div>
-<<<<<<< Upstream, based on develop
 				<div class="itemlist-body">
 					<p class="card-text">
 					<div class="text-bold">제목</div>
 					내용
 					</p>
-=======
-				<div class="list interior block">
-					<div>가전/인테리어</div>
-				</div>
-				<div class="list fashion block">
-					<div>페션잡화</div>
-				</div>
-				<div class="list sports block">
-					<div>스포츠/캠핑용품</div>
->>>>>>> 982e736 feat: null cart
 				</div>
 			</div>
 		</div>

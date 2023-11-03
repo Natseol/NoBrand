@@ -39,75 +39,74 @@
     justify-content: space-between;
 }
 
-.category {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-  }
-  
-  .category ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .category li {
-    position: relative;
-    padding: 10px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-  
-  .category li:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .category-sub {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid #ccc;
-  }
-  
-  .category li.active .category-sub {
-    display: block;
-  }
-  
-  .category-sub li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .category-sub li:last-child {
-    border-bottom: none;
-  }
-
-
-  .sub-list-container {
-    display: flex;
-  }
-
-  .sublist4 {
-    width: 14rem;
-    margin: 0px 0px 0px 43px;
-  }
-
-  .card-img-bag {
-    height: 50px;
-    width: 50px;
-    background-color: white;
-    position: relative;
-    margin: -60px 227px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.category-title {
+  font-weight: bold;
+  margin: 0px 0px 10px;
+  font-size: 14px;
 }
 
-.card-body {
-    margin: 73px 2px;
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.category li {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;  
+}
+
+.category-item>li {
+  border-bottom: 1px solid #f3f1f1;
+}
+
+.category-item>li:last-child {
+  border-bottom: none;
+}
+
+.menu-item {
+  font-size:smaller;
+}
+
+.menu-item:hover {
+  font-weight: bold;
+}
+.menu-item:hover * {
+  font-weight: normal;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font-size: small;
+  margin: 5px 0px 0px;
+  background-color: #f3f3f3;
+}
+
+.category li.active .dropdown {
+  display: block;  
+}
+
+.dropdown>li:hover {
+  text-decoration: underline;
+}
+
+.sub-list-container {
+  display: flex;
+}
+
+.sublist4 {
+  width: 14rem;
+  margin: 0px 0px 0px 43px;
 }
 
 .card-text-trans {

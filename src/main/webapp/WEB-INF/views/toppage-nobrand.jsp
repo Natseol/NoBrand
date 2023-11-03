@@ -12,8 +12,8 @@
     <div class="midle background-color nobrand-title">
 		<div class="nobrand-logo-block">
 			<div class="title-nobrand-box">
-                <img class="title-nobrand" alt="nobrand_logo"
-				src="resources/images/nobrand_logo.png">
+                <a href="/nobrand"><img class="title-nobrand" alt="nobrand_logo"
+				src="resources/images/nobrand_logo.png"></a>
             </div>
             <div class="nobrand-search">
                 <div class="block nobrand-search-box">
@@ -40,28 +40,28 @@
 		<div class="category-delivery-box">
 			<div class="category-main">
 				<div class="list best block">
-					<div>베스트</div>
+					<a class="category-main-anchor" href="/nobrand/sub"><div>베스트</div></a>
 				</div>
 				<div class="list sale block">
-					<div>세일중</div>
+					<a class="category-main-anchor" href="/nobrand/sub"><div>세일중</div></a>
 				</div>
 				<div class="list fresh block">
-					<div>신선식품</div>
+					<a class="category-main-anchor" href="/nobrand/sub"><div>신선식품</div></a>
 				</div>
 				<div class="list made block">
-					<div>가공식품</div>
+					<a class="category-main-anchor" href="/nobrand/sub"><div>가공식품</div></a>
 				</div>
 				<div class="list house-goods block">
-					<div>생활용품</div>
+					<a class="category-main-anchor" href="/nobrand/sub"><div>생활용품</div></a>
 				</div>
 				<div class="list interior block">
-					<div>가전/인테리어</div>
+					<a class="category-main-anchor" href="/nobrand/sub"><div>가전/인테리어</div></a>
 				</div>
 				<div class="list fashion block">
-					<div>페션잡화</div>
+					<a class="category-main-anchor" href="/nobrand/sub"><div>페션잡화</div></a>
 				</div>
 				<div class="list sports block">
-					<div>스포츠/캠핑용품</div>
+					<a class="category-main-anchor" href="/nobrand/sub"><div>스포츠/캠핑용품</div></a>
 				</div>
 			</div>
 		</div>

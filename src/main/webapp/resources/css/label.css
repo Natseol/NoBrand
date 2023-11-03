@@ -58,9 +58,18 @@
     justify-content: center;
 
 }
-
+ 
 .category-main {
 	margin: 0 auto;
+}
+
+.category-main-anchor {
+    text-decoration: none;
+    color: black;
+}
+
+.category-main-anchor:hover {
+	color: gray;
 }
 
 .title-searchbox {
@@ -78,10 +87,6 @@
 .block {
 	display: inline-block;
 	position: relative;
-}
-
-.etc {
-	margin-right: 300px;
 }
 
 .nobrand-title {
