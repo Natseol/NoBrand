@@ -3,6 +3,7 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<link href="resources/css/label.css" rel="stylesheet" type="text/css">
 <link href="resources/css/main.css" rel="stylesheet" type="text/css">
 <link href="resources/css/index.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet"
