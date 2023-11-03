@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<link href="resources/css/cartnullgoods.css" rel="stylesheet" type="text/css">
+<link href="resources/css/goodsnull.css" rel="stylesheet" type="text/css">
 	<div id="root">
 		<div class="left-box">
 			<div class="nullgoods-box">

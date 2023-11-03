@@ -38,7 +38,7 @@
 				</div>
 				<div class="container-box"></div>
 				<!-- 여기서 목록에 따라 include -->
-				<jsp:include page='goodsnull.jsp' />
+				<jsp:include page='goodsexist.jsp' />
 				<div class="order">
 						<div id="scroll-responsive-buy-menu">
 							<div class="menu-box">
@@ -159,7 +159,6 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="resources/scripts/respositivescroll.js"></script>
 	<!-- 여기부터 끝 -->
 	<jsp:include page='../bottompage.jsp' />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
