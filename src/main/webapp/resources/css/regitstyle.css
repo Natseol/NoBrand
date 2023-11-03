@@ -1,0 +1,275 @@
+body {
+    position: relative;
+    line-height: 1.5em;
+    font-size: 0.75em;
+    font-family: "Spoqa-Regular", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
+}
+h4 {
+	font-size:1.0rem;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 40px;
+}
+.regit_header{
+	margin-top: 3rem;
+	margin-bottom:3rem;
+}
+
+.regit_content_dl:after, .regit_content_dl .regit_content_dd:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.regit_content_dl {
+    min-height: 40px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+  }
+  .regit_dl:first-child {
+    border: none;
+  }
+  .regit_content_dl .regit_content_dt {
+    float: left;
+    position: relative;
+    width: 146px;
+    min-height: 40px;
+  }
+  .regit_content_dl .regit_content_dt_tit {
+    display: inline-block;
+    position: relative;
+    padding-top: 12px;
+    font-family: "Spoqa-Medium", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
+    vertical-align: middle;
+  }
+  .regit_content_dl .regit_content_dd {
+    position: relative;
+    min-height: 40px;
+    margin-left: 146px;
+  }
+  .regit_content_dl .regit_content_dd_cont {
+    display: inline-block;
+    padding-top: 12px;
+    vertical-align: middle;
+  }
+  .regit_content_dl:after,
+  .regit_content_dl .regit_content_dd:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+  .regit_content_dl {
+    min-height: 40px;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+  }
+  .regit_content_dl2:not(:first-child) {
+    margin-top: 16px;
+  }
+  .regit_content_dl2 .regit_dt {
+    float: left;
+    position: relative;
+    width: 98px;
+    min-height: 40px;
+  }
+  .regit_content_dl2 .regit_content_dt_tit {
+    display: inline-block;
+    position: relative;
+    padding-top: 12px;
+    font-family: "Spoqa-Medium", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #777;
+    letter-spacing: -0.8px;
+  }
+  .regit_content_dl2 .regit_dd {
+    position: relative;
+    min-height: 40px;
+    margin-left: 98px;
+  }
+  .regit_content_dl2 .regit_content_dd_cont {
+    display: inline-block;
+    padding-top: 9px;
+    vertical-align: middle;
+  }
+  .bottomlines{
+  	margin-bottom:1.5re	m;
+    border-bottom: 1px solid #eee;
+  }
+  .bottomlines_regit{
+    border-bottom: 2px solid black;
+  }
+  #container{
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+    min-height: 300px;
+  }
+  .regitButton_output{
+    width: 250px;
+    height: 59px;
+  	border: 1px solid #ff5b59;
+    background: #ff5b59;
+    color: #fff;
+    font-size: medium;
+  }
+  .regitButton {
+      display: inline-block;
+      position: relative;
+      min-width: 263px;
+      height: 52px;
+      padding: 0 5px;
+      font-family: "Spoqa-Regular", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 50px;
+      letter-spacing: -0.3px;
+      color: #222;
+      text-align: center;
+      text-decoration: none;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  button {
+    overflow: visible;
+    border: 0 none;
+    border-radius: 0;
+    cursor: pointer;
+}
+.btnarea{
+    position: relative;
+    margin-top: 60px;
+    font-size: 0;
+    text-align: center;
+}
+.regit_content_dl{
+    min-height: 40px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+}
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.regit_content_dl:first-child {
+  border: none;
+}
+.regit_content_dl .regit_content_dt {
+  float: left;
+  position: relative;
+  width: 146px;
+  min-height: 40px;
+}
+.regit_txt input {
+  width: 100%;
+  height: 40px;
+  padding: 13px 15px 11px;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  background: transparent;
+  color: #222;
+  font-size: 13px;
+  line-height: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.regit_txt {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  width:330px;
+  background: #fff;
+  vertical-align: top;
+}
+.regit_btn{
+    min-width: 90px;
+    height: 40px;
+    margin-left: 5px;
+    font-size: 13px;
+    line-height: 38px;
+}
+.regit_sec_cont {
+	margin-top:1rem;
+  border-bottom: 1px solid #eee;
+}
+.regit_terms.ty_left {
+  position: relative;
+  padding-left: 152px;
+}
+.regit_terms.ty_left .regit_term_tit {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 120px;
+}
+.regit_terms .regit_term_tit {
+  margin-bottom: 13px;
+  font-size: 13px;
+  letter-spacing: -0.3px;
+  color: #222;
+}
+.regit_terms {
+  margin: 17px 0;
+}
+.regit_subtit {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #222;
+  font-family: "Spoqa-Medium", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  color: #222;
+}
+.regit_term_box {
+  position: relative;
+  min-height: 30px;
+  margin: 7px 0;
+  padding-right: 120px;
+  font-size: 13px;
+  letter-spacing: -0.3px;
+}
+.regit_chk input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input.checkbox, input.radio {
+  width: 13px;
+  height: 13px;
+  margin: -1px 0 1px;
+  vertical-align: middle;
+}
+.regit_chk label {
+  display: inline-block;
+  position: relative;
+  min-height: 18px;
+  padding-left: 25px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.regit_chk {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
