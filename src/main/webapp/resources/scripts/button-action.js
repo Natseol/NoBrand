@@ -1,5 +1,3 @@
-
-
 function count(type)  {
 	//자동 콤마 찍기
 	// 결과를 표시할 element
@@ -25,6 +23,8 @@ function count(type)  {
 	const cost = number*price;
 	const cn1 = cost.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 	costElement.innerText = cn1;
+	
+	let totalPrice = cost;
 }
 
 

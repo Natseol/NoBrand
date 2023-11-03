@@ -14,7 +14,7 @@
 </head>
 <%-- 임시로 설정해둔 값이니 푸후 스크립트로 교체하기 --%>
 <script type="text/javascript">
-	var count = 0;
+	var goodscount = 0;
 	var cash = 0;
 	var discount = 0;
 	var delivery = 0;
@@ -36,10 +36,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="container-box"></div>
-				<!-- 여기서 목록에 따라 include -->
-				<jsp:include page='goodsexist.jsp' />
-				<div class="order">
+				<div class="container-box">
+					<div class="order">
 						<div id="scroll-responsive-buy-menu">
 							<div class="menu-box">
 								<div class="login-box">
@@ -60,9 +58,9 @@
 												</div>
 												<div class="font-size-6">전체상품</div>
 												<div class="text-gray font-size-6"> : </div>
-												<div id="count" class="font-size-6">
+												<div id="goodscount" class="font-size-6">
 													<script type="text/javascript">
-														document.getElementById("count").innerHTML = count;
+														document.getElementById("goodscount").innerHTML = goodscount;
 													</script>개
 												</div>
 												
@@ -143,18 +141,12 @@
 						</div>
 					</div>	
 				</div>
-				<div class="cart-bottom">
-					<div class="info">
-						<div class="info-script-box">
-							<div class="info-script">
-								<div class="font-size-6">장바구니 상품 안내</div>
-								<ul class="">
-									<li><div class="font-size-6">장바구니에 담은 상품은 최대 150개까지 보관됩니다.</div>
-									<li><div class="font-size-6">상품 우측의 '계속 담아두기'를 설정해 두시면 시간이 지나고 상품이 삭제되지 않습니다.</div>
-								</ul>
-							</div>
-						</div>
-					</div>
+				</div>
+				<!-- 여기서 목록에 따라 include -->
+				<jsp:include page='goodsexist.jsp' />
+				
+				<div class="footer">
+
 				</div>
 			</div>
 		</div>

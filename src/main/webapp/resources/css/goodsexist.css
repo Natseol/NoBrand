@@ -7,19 +7,24 @@
   font-style: normal;
 }
 
+#root-goods {
+	display: table;
+}
+
 .left-box{
 	float: left;
     width: 930px;
 }
 
 .select-all-delete{
-	display:flex;
-	padding: 0 10px 10px 10px;
+	display: flex;
+	position: sticky;
+	padding: 0 20px 10px 10px;
+	justify-content: space-between
 }
 
 .set-delete {
 	display: flex;
-	margin: 0 0 0 650px;
 }
 
 .line-bold {
@@ -31,6 +36,8 @@
 }
 
 .delivery-goods-box {
+	width: 930px;
+	top: 35px;
 	padding: 10px;
 }
 
@@ -126,7 +133,7 @@
 	height: 28px;
 }
 
-.plus {
+.minus {
     position: absolute;
 	border: none;
     background: white;
@@ -134,7 +141,7 @@
     border-right: 1px solid #d1d1d1;
 }
 
-.minus {
+.plus {
 	position: absolute;
 	border: none;
     right: 0;
@@ -219,6 +226,14 @@ ol, ul {
     margin-top: 70px;
 }
 
+.card-event {
+	margin-top: 20px;
+}
+
+.card-event-banner {
+	width: 100%;
+}
+
 /* 폰트&이미지 사이즈 모음 */
 
 .font-select-delete{
@@ -277,4 +292,22 @@ ol, ul {
 
 .heart-img {
 	width: 20px;
+}
+
+/* 체크 박스 설정 */
+input[type="check1"] {
+	display: none;
+}
+input[type="check1"] + labal:before {
+	position: relative;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 2px solid black;
+}
+
+input[type="check1"]:checked + labal::after {
+	content:'✔';
+	background-color: red;
+	
 }

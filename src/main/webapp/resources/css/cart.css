@@ -40,15 +40,13 @@
 	position: absolute;
 	top: 0;
 	height: 100%;
-	width: 980px;
+	width: 100%;
+    max-width: 1280px;
 }
 
 
 /* include한 내용 아래쪽 */
 
-.cart-bottom {
-	margin-top: 480px;
-}
 
 .info {
 	margin-bottom: 20px;

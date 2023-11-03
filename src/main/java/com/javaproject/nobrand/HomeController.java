@@ -65,10 +65,5 @@ public class HomeController {
 	public String topPage(Locale locale, Model model) {
 		return "toppagessg";
 	}
-	
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String test(Locale locale, Model model) {
-		return "test";
-	}
 
 }
