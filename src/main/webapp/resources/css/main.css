@@ -76,6 +76,10 @@ body {
 	width: 20px;
 }
 
+.title-right {
+	display: flex;
+}
+
 /* 노란 배경이 시작되는 div */
 
 .background-color {
