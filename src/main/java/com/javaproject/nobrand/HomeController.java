@@ -58,6 +58,7 @@ public class HomeController {
 
 	@RequestMapping(value = "/top", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
+
 		return "toppage";
 	}
 	
