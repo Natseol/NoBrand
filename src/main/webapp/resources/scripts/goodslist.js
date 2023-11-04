@@ -4,10 +4,10 @@ let idLength = [];
 idLength.length = 5;
 let idName = "";
 let idImg = "";
-let idPrice = 0;
+let idPrice = 3000;
 const array = [];
 
-function test(name, price, img){
+function test(name, img){
 	const topBox = document.createElement('div');
 	topBox.innerHTML = '<div class="goods-box">'
 +	'<div class="img-box">'
@@ -58,7 +58,6 @@ function test(name, price, img){
 +		'</div>'
 +	'</div>'
 +'</div>';
-	document.getElementById("cost").innerHTML = price;
 	document.querySelector(".goods-list").prepend(topBox);
 	array.push(numberSet);
 	numberSet++;
@@ -66,7 +65,8 @@ function test(name, price, img){
 
 function addList(){
 	for (let index = 0; index < idLength.length; index++) {
-		test(idName, 3000, idImg);
+		test(idName, idImg);
+		document.getElementById("cost").innerHTML = idPrice;
 	}
 }
 

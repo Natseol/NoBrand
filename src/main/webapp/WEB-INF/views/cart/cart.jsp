@@ -14,11 +14,7 @@
 </head>
 <%-- 임시로 설정해둔 값이니 푸후 스크립트로 교체하기 --%>
 <script type="text/javascript">
-	var goodscount = 0;
-	var cash = 0;
 	var discount = 0;
-	var deliverycost = 0;
-	var totalcost = 0;
 </script>
 <body>
 	<jsp:include page='../toppagessg.jsp' />
@@ -72,75 +68,67 @@
 													<div class="list-script">
 														<div class="font-size-6">주문금액</div>
 													</div>
-													<div class="won"><div id="cash" class="side font-size-6">
-														<script type="text/javascript">
-															document.getElementById("cash").innerHTML = cash;
-														</script>원
+													<div class="my-result font-size-6">
+														
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="discount">
-											<div class="discount-box">
-												<div class="list-script"><div class="font-size-6">상품할인</div></div>
-												<div class="won">
-													<div id="discount" class="side font-size-6">
+											<div class="discount">
+												<div class="discount-box">
+													<div class="list-script">
+														<div class="font-size-6">상품할인</div>
+													</div>
+													<div id="discount" class=" font-size-6">
 													<script type="text/javascript">
-															document.getElementById("discount").innerHTML = "-"+discount;
+														document.getElementById("discount").innerHTML = "-"+discount;
 													</script>원
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="delivery-cost">
-										<div class="delivery-cost-box">
-											<div class="list-script"><div class="font-size-6">배송비</div></div>
-											<div class="won">
-												<div id="deliverycost" class="side font-size-6">
-													<script type="text/javascript">
-															document.getElementById("deliverycost").innerHTML = "+"+deliverycost;
-													</script>원
+										<div class="delivery-cost">
+											<div class="delivery-cost-box">
+												<div class="list-script">
+													<div class="font-size-6">배송비</div>
+												</div>
+												<div class="delivery-result font-size-6">
+														
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="line"></div>
-								<div class="order-box">
-									<div class="total-cash">
-										<div class="total-script">
-											<div class="total-script-box">
-											 	<div class="font-size-6 font-if-buy">결제예정금액</div>
-												 	<div class="won">
-												 		<div id="total-cost" class="side font-buy font-if-buy">
-												 			<div class="total-size">
-													 			<script type="text/javascript">
-																	document.getElementById("total-cost").innerHTML = totalcost;
-																</script>
-															</div>원
+									<div class="line"></div>
+									<div class="order-box">
+										<div class="total-cash">
+											<div class="total-script">
+												<div class="total-script-box">
+												 	<div class="font-size-6 font-if-buy">결제예정금액</div>
+													 	<div class=" font-buy">
+													 		<div class="total-cost total-size">
+	
+															</div>
+															<div class="font-if-buy">원</div>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="order-btn-box">
 											<div class="order-btn-box">
-												<button class="order-btn">
-													<div class="font-size-5">주문하기</div>
-												</button>
-											</div>
-											<div class="present-btn-box">
-												<button class="present-btn">
-													<div class="font-size-6">선물하기</div>
-												</button>
+												<div class="order-btn-box">
+													<button class="order-btn">
+														<div class="font-size-5">주문하기</div>
+													</button>
+												</div>
+												<div class="present-btn-box">
+													<button class="present-btn">
+														<div class="font-size-6">선물하기</div>
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>	
-				</div>
+						</div>	
+					</div>
 				</div>
 				<!-- 여기서 목록에 따라 include -->
 				<jsp:include page='goodsexist.jsp' />
@@ -151,6 +139,7 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="resources/scripts/goodsevent.js"></script>
 	<!-- 여기부터 끝 -->
 	<jsp:include page='../bottompage.jsp' />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

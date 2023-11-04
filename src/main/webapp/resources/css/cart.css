@@ -134,29 +134,29 @@ li::before {
 .cash-box {
 	display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .discount-box {
 	display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .delivery-cost-box {
 	display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .total-script-box {
 	display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .won {
 	display: contents;
-}
-
-.side {
-	margin-left: auto
 }
 
 .order-box {
@@ -183,10 +183,14 @@ li::before {
 
 .font-buy {
 	font-size: 15px;
+	display: flex;
+    align-items: center;
 }
 
 .total-size {
+	color: red;
 	font-size: 19px;
+	font-weight: 900;
 }
 
 .login-script{
@@ -248,7 +252,7 @@ li::before {
 
 .present-btn {
 	border: none;
-	padding: 9px 96px 9px 95px;
+	padding: 9px 96px 9px 96px;
 	outline: 1px solid #cacaca;
     background: white;
     margin-left: 1px;

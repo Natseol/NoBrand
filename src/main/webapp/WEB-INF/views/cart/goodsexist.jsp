@@ -1,12 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<script type="text/javascript">
-	var deliverygoods = 0;
-	var total = 0;
-	var delivery = 0;
-	var price = 5480;
-</script>
+
 <link href="resources/css/goodsexist.css" rel="stylesheet" type="text/css">
 	<div id="root-goods">
 		<div class="left-box">
@@ -53,25 +48,16 @@
 										<div class="total-banner-box">
 											<div class="total-banner">
 												<div class="total-box">
-													<div id="total" class="font-total">
-														<script type="text/javascript">
-															document.getElementById("total").innerHTML = total;
-														</script>
-													</div>
+													<div class="total-order font-total"></div>
 													<div class="font-total">원+</div>
 													<div class="font-total">배송비</div>
-													<div id="delivery" class="font-total">
-														<script type="text/javascript">
-															document.getElementById("delivery").innerHTML = delivery;
-														</script>
+													<div class="cost-plus font-total">
+							
 													</div>
-													<div class="font-total">원=</div>
-													<div id="result-cost" class="font-total">
-														<script type="text/javascript">
-															document.getElementById("result-cost").innerHTML = total+delivery;
-														</script>
+													<div class="font-total">=</div>
+													<div class="result-cost font-total">
 													</div>
-													<div class="font-total-notbold">원(4만원이상 무료배송)</div>
+													<div class="font-total-notbold">(4만원이상 무료배송)</div>
 												</div>
 												<div class="delivery-save-box">
 													<div class="delivery-save font-total">배송비SAVE 상품보기 <img class="arrow-size" alt="" src="resources/images/right_arrow.svg"> </div>
@@ -111,5 +97,4 @@
 		</div>
 	</div>
 <script type="text/javascript" src="resources/scripts/goodslist.js"></script>
-<script type="text/javascript" src="resources/scripts/goodsevent.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
