@@ -29,9 +29,6 @@
 										새벽배송/쓱배송 상품:&nbsp;
 								</div>
 								<div id="goods" class="goods-count font-delivery">
-									<script type="text/javascript">
-											document.getElementById("goods").innerHTML = deliverygoods;
-									</script>
 								</div>
 								<div class="delivery-script font-delivery">개</div>
 							</div>

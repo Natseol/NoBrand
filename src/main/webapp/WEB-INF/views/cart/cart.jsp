@@ -15,6 +15,7 @@
 <%-- 임시로 설정해둔 값이니 푸후 스크립트로 교체하기 --%>
 <script type="text/javascript">
 	var discount = 0;
+	var goodscount = 0;
 </script>
 <body>
 	<jsp:include page='../toppagessg.jsp' />
