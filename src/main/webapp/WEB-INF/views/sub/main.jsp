@@ -24,7 +24,7 @@
 			<div class="sub-title-text">베스트</div>
 			<div class="sub-title-info">
 				<div class="sub-title-number">
-					숫자 <span class="sub-title-goods">개의 상품이 있습니다</span>
+					<span id="sub-totalgoods">숫자</span> <span class="sub-title-goods">개의 상품이 있습니다</span>
 				</div>
 			</div>
 		</div>
@@ -170,7 +170,11 @@
 	<!-- 여기부터 끝 -->
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
 	<script>
-		console.log(${goodsList});
+		let goodslist = ${applicationScope.list}.list;
+		
+		console.log(goodslist);
+		let totalcount = document.getElementById("sub-totalgoods");
+		totalcount.textContent = goodslist.length;
 	</script>
 	<script src="resources/scripts/sub.js"></script>
 	<script

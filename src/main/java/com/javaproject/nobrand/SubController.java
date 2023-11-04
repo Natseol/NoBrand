@@ -3,8 +3,10 @@ package com.javaproject.nobrand;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,14 +18,21 @@ import com.javaproject.nobrand.goods.domain.Goods;
 
 @Controller
 public class SubController {
+	
+	@Autowired
+	ServletContext context;
+	
 	@Autowired
 	private GoodsDAO goodsDAO;
 
 	@RequestMapping(value = "/sub", method = RequestMethod.GET)
 	public String sub(@RequestParam Map<String,String> map,HttpSession session) {
 		List<Goods> goodsList = goodsDAO.getAll();
-		session.setAttribute("goodsList", goodsList);		
-		System.out.println(goodsList.get(0).getName());
+		
+		JSONObject json = new JSONObject();
+		json.put("list", goodsList);
+		context.setAttribute("list", json.toString());		
+		
 		return "sub/main";
 	}
 	
