@@ -169,7 +169,9 @@
 	</div>
 	<!-- 여기부터 끝 -->
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
-
+	<script>
+		console.log(${goodsList});
+	</script>
 	<script src="resources/scripts/sub.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

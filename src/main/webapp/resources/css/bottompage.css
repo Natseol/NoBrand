@@ -1,6 +1,6 @@
 .bottompage {
     width : 1280px;
-    margin: auto;
+    margin: 0px auto 150px;
     font-size: 11px;
     color:#777;
 }
@@ -64,7 +64,8 @@
 }
 
 .bottomapge-address {
-	line-height: 23px;	
+	line-height: 23px;
+	margin : 0px;	
 }
 
 .bottompage-button {
@@ -86,8 +87,7 @@
     margin: 4px 0 0 6px;
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
-    border-left: 4px solid #ff5b59;
-    vertical-align: top;
+    border-left: 4px solid #ff5b59;    
     content: "";
 }
 

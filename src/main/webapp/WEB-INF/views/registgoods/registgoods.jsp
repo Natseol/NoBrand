@@ -12,6 +12,22 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 </head>
+<style>
+    #container {
+        width: 1100px;        
+        margin: 20px auto;
+    }
+    .ck-editor__editable[role="textbox"] {
+        /* editing area */
+        min-height: 500px;
+        width : 1100px;     
+    }
+    .ck-content .image {
+        /* block images */
+        max-width: 80%;
+        margin: 20px auto;
+    }
+</style>
 <body>
 	<jsp:include page='/WEB-INF/views/toppage.jsp' />
 	<!-- 여기부터 시작 -->
@@ -19,36 +35,36 @@
 		<div class="registgoods-title">
 			상품등록
 		</div>		
-		<form class="registgoods-container">
+		<form action="/nobrand/registgoods" method="post" class="registgoods-container">
 			<div class="registgoods-info">				
 				<div class="registgoods-container-title">기본정보</div>
 				<hr class="hr-bold">
 
-				<div class="registgoods-input-box"><div class="registgoods-input-info">상품명</div><input class="registgoods-input"></div>
+				<div class="registgoods-input-box"><div class="registgoods-input-info">상품명</div><input class="registgoods-input" name="goods-name"></div>
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">가격</div><input class="registgoods-input"></div>
+				<div class="registgoods-input-box"><div class="registgoods-input-info">가격</div><input class="registgoods-input" name="goods-price"></div>
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">카테고리</div><input class="registgoods-input"></div>
+				<div class="registgoods-input-box"><div class="registgoods-input-info">카테고리</div><input class="registgoods-input" name="goods-kind"></div>
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">옵션명</div><input class="registgoods-input"></div>
+				<div class="registgoods-input-box"><div class="registgoods-input-info">옵션명</div><input class="registgoods-input" name="goods-options"></div>
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">수량</div><input class="registgoods-input"></div>
+				<div class="registgoods-input-box"><div class="registgoods-input-info">수량</div><input class="registgoods-input" name="goods-cellcount"></div>
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">배송정보</div><input class="registgoods-input"></div>				
+				<div class="registgoods-input-box"><div class="registgoods-input-info">배송정보</div><input class="registgoods-input" name="goods-delivery"></div>				
 				<hr class="hr-thin">
 			</div>			
 			<div class="registgoods-content">
 				<div class="registgoods-container-title">상세페이지</div>
 				<hr class="hr-bold">				
 
-				<div class="registgoods-input-box"><div class="registgoods-input-info">내용</div><textarea class="registgoods-textarea"></textarea></div>					
+				<div class="registgoods-input-box"><div class="registgoods-input-info">내용</div><textarea id="editor" class="registgoods-textarea" name="goods-content"></textarea></div>					
 				<hr class="hr-thin">
 			</div>			
 			<div class="registgoods-info2">
 				<div class="registgoods-container-title">상세정보</div>
 				<hr class="hr-bold">				
 
-				<div class="registgoods-input-box"><div class="registgoods-input-info">원산지</div><input class="registgoods-input"></div>						
+				<div class="registgoods-input-box"><div class="registgoods-input-info">원산지</div><input class="registgoods-input" name="goods-info"></div>						
 				<hr class="hr-thin">
 			</div>
 			<div class="registgoodsd-button-box">
@@ -58,6 +74,14 @@
 	</div>
 	<!-- 여기부터 끝 -->
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
+<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

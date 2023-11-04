@@ -172,9 +172,6 @@ input.rounded {
 .delivery-img {
 	display: inline-block;
 	vertical-align: middle;
-<<<<<<< Upstream, based on develop
-}
-=======
 }
 
 /* 노브랜드 배너(노브랜드의 시작) */
@@ -195,7 +192,6 @@ input.rounded {
 	max-width: 470px;
     max-height: 76px;
     vertical-align: middle;
-    margin: 0 10% 0 25%;
 }
 
 .nobrand-searchbox {
@@ -234,14 +230,6 @@ input.rounded {
 	align-items: baseline;
 }
 
-.material-symbols-outlined {
-	position: absolute;
-	left: 300px;
-	top: 7px;
-	align-items: baseline;
-}
-
-
 .category-delivery-box {
 	align-items: center;
 	margin: 0 auto;
@@ -271,9 +259,3 @@ input.rounded {
 	display: inline-block;
 	position: relative;
 }
-
-.etc {
-	margin-right: 300px;
-}
-
->>>>>>> 84184c8 feat : create main page

@@ -1,6 +1,8 @@
 package com.javaproject.nobrand.goods.domain;
 
-public class Goods {
+import java.io.Serializable;
+
+public class Goods implements Serializable {
 	private int id;
 	private int price;
 	private int searchCount;
@@ -43,7 +45,20 @@ public class Goods {
 		this.delivery = delivery;
 		this.content = content;
 	}
+	
 
+	public Goods(String name, int price, String bottomKind, String options, int goodsCount, String delivery,
+			String content, String info) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.bottomKind = bottomKind;
+		this.options = options;
+		this.goodsCount = goodsCount;
+		this.delivery = delivery;
+		this.content = content;
+		this.info = info;
+	}
 	public void setId(int id) {
 		this.id=id;
 	}

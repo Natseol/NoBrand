@@ -84,9 +84,10 @@
 					대표자 이인영 서울특별시 강남구 테헤란로 231 사업자등록번호:870:88-01143 통신판매업
 					신고번호:제2022-서울강남-03751호<br> 개인정보보호책임자:김우진 Fax-02-2068-7188
 					ssg@ssg.com <br>
+					</p>
 					<button class="bottompage-button">사업자 정보확인</button>
 					<button class="bottompage-button">소비자분쟁해결기준</button>
-				</p>
+				
 			</div>
 			<div class="bottompage-icondiv">
 				<div class="bottompage-icon">ssg.com
