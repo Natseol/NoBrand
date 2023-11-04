@@ -141,7 +141,7 @@ li::before {
     align-items: center;
 }
 
-.delivery-box {
+.delivery-cost-box {
 	display: flex;
     align-items: center;
 }

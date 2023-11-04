@@ -1,22 +1,41 @@
 const goodsBox = document.getElementsByClassName('goods-count-box');
-let count = 0;
-
-console.log(goodsBox);
+const boxNumber = document.getElementsByClassName('box-number');
 
 function add(){
-	for(let i =0; i<goodsBox.length; i++){
-		let countBox = goodsBox[i].children[0];
-		console.log(countBox.children[0])
-		countBox.children[0].addEventListener('click', function(){
-		count++;
-		countBox.children[1].textContent = count;
-		console.log(countBox.children[1])
-		
-		console.log(count);
-	})
+	for (let index = 0; index < goodsBox.length; index++) {
+		let countBox = goodsBox[index].children[0];
+		addEvent(countBox);
 	}
-	
-	
+}
+
+function addEvent(count) {
+	let countGoods = 1;
+	count.children[2].addEventListener('click', function(){
+		countGoods++;
+		count.children[1].textContent = countGoods;
+	})
+}
+
+function discount(){
+	for (let index = 0; index < goodsBox.length; index++) {
+			let countBox = goodsBox[index].children[0];
+			discountEvent(countBox);
+	}
+}
+
+function discountEvent(count) {
+	let countGoods = 1;
+	count.children[0].addEventListener('click', function(){
+		countGoods = count.children[1].textContent;
+		if(countGoods > 1){
+			countGoods--;
+		}
+		else{
+			countGoods = 1;
+		}
+		count.children[1].textContent = countGoods;
+	})
 }
 
 add();
+discount();

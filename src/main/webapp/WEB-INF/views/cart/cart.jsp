@@ -17,8 +17,8 @@
 	var goodscount = 0;
 	var cash = 0;
 	var discount = 0;
-	var delivery = 0;
-	var total = 0;
+	var deliverycost = 0;
+	var totalcost = 0;
 </script>
 <body>
 	<jsp:include page='../toppagessg.jsp' />
@@ -92,13 +92,13 @@
 											</div>
 										</div>
 									</div>
-									<div class="delivery">
-										<div class="delivery-box">
+									<div class="delivery-cost">
+										<div class="delivery-cost-box">
 											<div class="list-script"><div class="font-size-6">배송비</div></div>
 											<div class="won">
-												<div id="delivery" class="side font-size-6">
+												<div id="deliverycost" class="side font-size-6">
 													<script type="text/javascript">
-															document.getElementById("delivery").innerHTML = "+"+delivery;
+															document.getElementById("deliverycost").innerHTML = "+"+deliverycost;
 													</script>원
 												</div>
 											</div>
@@ -112,10 +112,10 @@
 											<div class="total-script-box">
 											 	<div class="font-size-6 font-if-buy">결제예정금액</div>
 												 	<div class="won">
-												 		<div id="total" class="side font-buy font-if-buy">
+												 		<div id="total-cost" class="side font-buy font-if-buy">
 												 			<div class="total-size">
 													 			<script type="text/javascript">
-																	document.getElementById("total").innerHTML = total;
+																	document.getElementById("total-cost").innerHTML = totalcost;
 																</script>
 															</div>원
 														</div>

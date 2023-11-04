@@ -29,6 +29,19 @@
 							</div>
 						</div>
 					</div>
+					<div class="cart-bottom">
+						<div class="info">
+							<div class="info-script-box">
+								<div class="info-script">
+									<div class="font-size-6">장바구니 상품 안내</div>
+									<ul class="">
+										<li><div class="font-size-6">장바구니에 담은 상품은 최대 150개까지 보관됩니다.</div>
+										<li><div class="font-size-6">상품 우측의 '계속 담아두기'를 설정해 두시면 시간이 지나고 상품이 삭제되지 않습니다.</div>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
