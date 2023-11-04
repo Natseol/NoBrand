@@ -1,8 +1,7 @@
 package com.javaproject.nobrand.goods.domain;
 
-import java.io.Serializable;
 
-public class Goods implements Serializable {
+public class Goods{
 	private int id;
 	private int price;
 	private int searchCount;
