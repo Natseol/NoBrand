@@ -93,7 +93,31 @@
 	</div>
 	<!-- 여기부터 끝 -->
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
+
+<!-- simple -->
+<script src="resources/ckeditor5simple/ckeditor.js"></script>
+<script src="resources/scripts/UploadAdapter.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+<script>
+	function MyCustomUploadAdapterPlugin(editor) {
+		editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+			return new UploadAdapter(loader)
+		}
+	}
+
+	ClassicEditor.create(document.querySelector('#editor'), {
+		language:'ko',
+		extraPlugins: [MyCustomUploadAdapterPlugin]
+	}).then(editor => {
+		window.editor = editor;
+	}).catch( error => {
+		console.error( error );
+	});
+</script>
+
+
+<!-- 업로드컨트롤러 윗부분 -->
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 <script>
 	ClassicEditor
 	.create(document.querySelector('#editor'), {
@@ -107,7 +131,8 @@
 	.catch(error => {
 		console.error(error);
 	});
-</script>
+</script> -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

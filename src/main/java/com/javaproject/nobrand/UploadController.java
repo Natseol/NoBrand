@@ -79,38 +79,79 @@ public class UploadController {
 //	@Value("#{props['editor.img.load.url']}")
 //	private String loadUrl;
 
-	@RequestMapping(value = "/image/upload")
-	public ModelAndView image(@RequestParam Map<String, Object> map, MultipartHttpServletRequest request)
-			throws Exception {
-		ModelAndView mv = new ModelAndView("jsonView");
+//	@RequestMapping(value = "/image/upload")
+//	public ModelAndView image(@RequestParam Map<String, Object> map, MultipartHttpServletRequest request)
+//			throws Exception {
+//		ModelAndView mv = new ModelAndView("jsonView");
+//
+//		List<MultipartFile> fileList = request.getFiles("upload");
+//
+//		String imgPath = null;
+//
+//		for (MultipartFile mf : fileList) {
+//			if (fileList.get(0).getSize() > 0) {
+//				String originFileName = mf.getOriginalFilename(); // 원본 파일 명
+//				String ext = FilenameUtils.getExtension(originFileName);
+//				String newInfImgFileName = "img_" + UUID.randomUUID() + "." + ext;
+//
+//				imgPath = "C:/Users/jewel/jdk11/ProjectNoBrand/src/main/webapp/resources/goods/" + newInfImgFileName;
+//
+//				File file = new File(imgPath);
+//
+//				mf.transferTo(file);
+//
+//			}
+//		}
+//
+//		mv.addObject("uploaded", true);
+//		mv.addObject("url", imgPath);
+//		return mv;
+//	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/common/fms/ckeditor5Upload.do", method = RequestMethod.POST)
+    public void fileUpload(MultipartHttpServletRequest multiRequest, HttpServletRequest request, HttpServletResponse response) {
+		try {
 
-		List<MultipartFile> fileList = request.getFiles("upload");
+			MultipartFile uploadFile = multiRequest.getFile("upload");
 
-		String imgPath = null;
+			String originalFileName = uploadFile.getOriginalFilename();
 
-		for (MultipartFile mf : fileList) {
-			if (fileList.get(0).getSize() > 0) {
-				String originFileName = mf.getOriginalFilename(); // 원본 파일 명
-				String ext = FilenameUtils.getExtension(originFileName);
-				String newInfImgFileName = "img_" + UUID.randomUUID() + "." + ext;
+			String ext = originalFileName.substring(originalFileName.indexOf("."));
 
-				imgPath = "C:/Users/jewel/jdk11/ProjectNoBrand/src/main/webapp/resources/goods/" + newInfImgFileName;
+			String newFileName = UUID.randomUUID() + ext;
 
-				File file = new File(imgPath);
+			String realPath2 = "C:/Users/jewel/jdk11/ProjectNoBrand/src/main/webapp/resources/goods/";
+			System.out.println("리얼패스");
+			System.out.println(realPath2);
+			String savePath = realPath2 + newFileName;
 
-				mf.transferTo(file);
+			String uploadPath = "http://localhost/nobrand/resources/goods/" + newFileName;
+			System.out.println("업로드패스");
+			System.out.println(uploadPath);
 
-			}
-		}
+			File file = new File(savePath);
+			System.out.println("뉴파일");
 
-		mv.addObject("uploaded", true);
-		mv.addObject("url", imgPath);
-		return mv;
+			uploadFile.transferTo(file);
+			System.out.println("트랜스퍼");
+
+			JSONObject json = new JSONObject();
+			json.put("uploaded", true);
+			json.put("url", uploadPath);
+			System.out.println(json);
+
+			response.setContentType("application/json");
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().print(json.toString());
+		} catch (Exception e) {
+	    	System.out.println("오류발생");
+	    }
 	}
 		
 //	@ResponseBody
 //	@RequestMapping(value = "/common/fms/ckeditor5Upload.do", method = RequestMethod.POST)
-//    public void fileUpload(@RequestParam("file") MultipartFile file, MultipartHttpServletRequest multiRequest, HttpServletRequest request, HttpServletResponse response) {
+//    public void fileUpload(MultipartHttpServletRequest multiRequest, HttpServletRequest request, HttpServletResponse response) {
 //		try {
 //	    	final String real_save_path = "/contents/";
 //
@@ -188,9 +229,9 @@ public class UploadController {
 //	        response.getOutputStream().close();
 //
 //	    } finally {
-//	    	fis.close();
-//	    	in.close();
-//	    	bStream.close();        
+////	    	fis.close();
+////	    	in.close();
+////	    	bStream.close();        
 //	    }
 //	}
 	
