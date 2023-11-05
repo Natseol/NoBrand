@@ -46,7 +46,26 @@
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">카테고리</div><input class="registgoods-input" name="goods-kind"></div>
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">옵션명</div><input class="registgoods-input" name="goods-options"></div>
+				<div class="registgoods-input-box"><div class="registgoods-input-info">옵션명</div>
+					<select>
+						<option>베스트</option>
+						<option>세일중</option>
+						<option>신선식품</option>
+						<option>가공식품</option>
+						<option>가공식품</option>
+						<option>생활용품</option>
+						<option>가전/인테리어</option>
+						<option>패션잡화</option>
+						<option>스포츠/캠핑용품</option>
+					</select>			
+					<select name="goods-options">
+						<option>FAMILY SITE</option>
+						<option>신세계그룹</option>
+						<option>신세계포인트</option>
+						<option>신세계백화점</option>
+						<option>이마트</option>
+					</select>			
+				</div>
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">수량</div><input class="registgoods-input" name="goods-cellcount"></div>
 				<hr class="hr-thin">
@@ -76,11 +95,18 @@
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
 <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+	ClassicEditor
+	.create(document.querySelector('#editor'), {
+		ckfinder: {
+			uploadUrl : '/nobrand/image/upload'
+		}
+	})
+	.then(editor => {
+		console.log('Editor was initialized');
+	})
+	.catch(error => {
+		console.error(error);
+	});
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
