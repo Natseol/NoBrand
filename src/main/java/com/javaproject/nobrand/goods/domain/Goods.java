@@ -43,9 +43,8 @@ public class Goods{
 		this.delivery = delivery;
 		this.content = content;
 	}
-	
 
-	public Goods(String name, int price, String bottomKind, String options, int goodsCount, String delivery,
+	public Goods(String name, int price, String bottomKind, String options, int goodsCount, String delivery, String imgAdress,
 			String content, String info) {
 		super();
 		this.name = name;
@@ -54,9 +53,12 @@ public class Goods{
 		this.options = options;
 		this.goodsCount = goodsCount;
 		this.delivery = delivery;
+		this.imgAdress = imgAdress;
 		this.content = content;
 		this.info = info;
 	}
+	
+	
 	public void setId(int id) {
 		this.id=id;
 	}

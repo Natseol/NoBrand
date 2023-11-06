@@ -17,12 +17,6 @@
         width: 1100px;        
         margin: 20px auto;
     }
-    .ck-editor__editable[role="input"] {
-        /* editing area */
-        min-height: 500px;
-        width : 400px;     
-    }
-
     .ck-editor__editable[role="textbox"] {
         /* editing area */
         min-height: 500px;
@@ -89,7 +83,7 @@
 			<div class="registgoods-content">
 				<div class="registgoods-container-title">상세페이지</div>
 				<hr class="hr-bold">				
-				<div class="registgoods-input-box"><div class="registgoods-input-info">섬네일</div><input id="thumbnail" class="registgoods-textarea" name="goods-content"></input></div>					
+				<div class="registgoods-input-box"><div class="registgoods-input-info">섬네일</div><textarea id="thumbnail" class="registgoods-textarea" name="goods-thumbnail"></textarea></div>					
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">내용</div><textarea id="editor" class="registgoods-textarea" name="goods-content"></textarea></div>					
 				<hr class="hr-thin">

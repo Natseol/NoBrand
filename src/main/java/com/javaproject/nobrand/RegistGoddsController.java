@@ -33,6 +33,7 @@ public class RegistGoddsController {
 				map.get("goods-options"),
 				Integer.parseInt(map.get("goods-cellcount")),
 				map.get("goods-delivery"),
+				map.get("goods-thumbnail"),
 				map.get("goods-content"),
 				map.get("goods-info")
 				));
