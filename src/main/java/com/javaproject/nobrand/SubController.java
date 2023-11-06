@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +26,15 @@ public class SubController {
 	private GoodsDAO goodsDAO;
 
 	@RequestMapping(value = "/sub", method = RequestMethod.GET)
-	public String sub(@RequestParam Map<String,String> map,HttpSession session) {
+	public String sub(@RequestParam Map<String,String> map, HttpServletRequest request) {
 		List<Goods> goodsList = goodsDAO.getAll();
+		
 		
 		JSONObject json = new JSONObject();
 		json.put("list", goodsList);
-		context.setAttribute("list", json.toString());		
 		
+		request.setAttribute("list", json.get("list"));		
+		System.out.println(json.get("list"));
 		return "sub/main";
 	}
 	

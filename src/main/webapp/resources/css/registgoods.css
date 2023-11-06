@@ -46,6 +46,12 @@
     height: 35px;
 }
 
+.registgoods-input-select{
+    height: 35px;
+    margin: 0px;
+    width: 40%;
+}
+
 .registgoods-content {
     margin: 40px 0px 0px;
 }

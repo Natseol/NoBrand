@@ -16,7 +16,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<jsp:include page='toppage.jsp' />
+	<jsp:include page='toppagessg.jsp' />
 	<jsp:include page='toppage-nobrand.jsp' />
 	<!-- 여기부터 시작 -->
 	

@@ -10,7 +10,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -31,6 +34,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UploadController {
+	@Autowired
+	ServletContext context;
 		
 //	@RequestMapping(value = "/image/upload", method = RequestMethod.POST)
 //	public ModelAndView image(MultipartHttpServletRequest request) throws Exception {
@@ -120,17 +125,38 @@ public class UploadController {
 			String ext = originalFileName.substring(originalFileName.indexOf("."));
 
 			String newFileName = UUID.randomUUID() + ext;
-
-			String realPath2 = "C:/Users/jewel/jdk11/ProjectNoBrand/src/main/webapp/resources/goods/";
+						
+			String realPath = "main/webapp/resources/goods/";
+			
+			//임시
+			String realPath2 = "C:/Users/KGA/jdk11/nobrand/src/main/webapp/resources/goods/";			
+			String absolutePath = realPath2+ newFileName;
+			//		
+			
 			System.out.println("리얼패스");
-			System.out.println(realPath2);
-			String savePath = realPath2 + newFileName;
+			System.out.println(realPath);
+			
+			String savePath = realPath + newFileName;
+			
+			Path path = Paths.get(savePath).toAbsolutePath();
+			
+			System.out.println(path);
+			System.out.println(context.getRealPath("/goods"));
+			
+			System.out.println(multiRequest.getServletPath());
+			path=Paths.get(multiRequest.getServletPath()).toAbsolutePath();
+			System.out.println(path);
+			System.out.println(multiRequest.getContextPath());
+			path=Paths.get(multiRequest.getContextPath()).toAbsolutePath();
+			System.out.println(path);
+			
 
 			String uploadPath = "http://localhost/nobrand/resources/goods/" + newFileName;
 			System.out.println("업로드패스");
 			System.out.println(uploadPath);
 
-			File file = new File(savePath);
+			File file = new File(absolutePath);
+//			File file = new File(savePath);
 			System.out.println("뉴파일");
 
 			uploadFile.transferTo(file);

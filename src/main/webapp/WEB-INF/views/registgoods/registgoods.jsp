@@ -47,23 +47,31 @@
 				<div class="registgoods-input-box"><div class="registgoods-input-info">카테고리</div><input class="registgoods-input" name="goods-kind"></div>
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">옵션명</div>
-					<select>
-						<option>베스트</option>
-						<option>세일중</option>
-						<option>신선식품</option>
-						<option>가공식품</option>
-						<option>가공식품</option>
-						<option>생활용품</option>
-						<option>가전/인테리어</option>
-						<option>패션잡화</option>
+					<select class="registgoods-input-select" name="goods-options">
+						<option>과일/채소/양곡</option>
+						<option>축산/수산/건식품</option>
+						<option>과자/초콜릿</option>
+						<option>라면/통조림</option>
+						<option>조미료/장류</option>
+						<option>생수/음료</option>
+						<option>커피/차</option>
+						<option>냉동냉장/HMR</option>
+						<option>유제품</option>
+						<option>화장지/위생용품</option>
+						<option>헤어/바디/구강/용품</option>
+						<option>화장품</option>
+						<option>세제</option>
+						<option>주방용품/일회용품</option>
+						<option>청소/욕실용품</option>>
+						<option>생활/디지털가전</option>
+						<option>문구/완구</option>
+						<option>가구/홈데코</option>
+						<option>조명/공구</option>
+						<option>침구/수예</option>
+						<option>자동차용품</option>
+						<option>애완</option>
+						<option>잡화</option>
 						<option>스포츠/캠핑용품</option>
-					</select>			
-					<select name="goods-options">
-						<option>FAMILY SITE</option>
-						<option>신세계그룹</option>
-						<option>신세계포인트</option>
-						<option>신세계백화점</option>
-						<option>이마트</option>
 					</select>			
 				</div>
 				<hr class="hr-thin">
@@ -95,7 +103,7 @@
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
 
 <!-- simple -->
-<script src="resources/ckeditor5simple/ckeditor.js"></script>
+<!-- <script src="resources/ckeditor5simple/ckeditor.js"></script> -->
 <script src="resources/scripts/UploadAdapter.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 <script>

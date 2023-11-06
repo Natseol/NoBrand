@@ -15,7 +15,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<jsp:include page='/WEB-INF/views/toppage.jsp' />
+	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
 	<jsp:include page='/WEB-INF/views/toppage-nobrand.jsp' />
 	<!-- 여기부터 시작 -->
 	<div class="sub-content">
@@ -170,7 +170,7 @@
 	<!-- 여기부터 끝 -->
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
 	<script>
-		let goodslist = ${applicationScope.list}.list;
+		let goodslist = ${requestScope.list};
 		
 		console.log(goodslist);
 		let totalcount = document.getElementById("sub-totalgoods");
