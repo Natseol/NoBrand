@@ -47,29 +47,29 @@
 				<div class="registgoods-input-box"><div class="registgoods-input-info">카테고리</div>
 				<select class="registgoods-input-select" name="goods-kind">
 					<option>과일채소양곡</option>
-					<option>축산/수산/건식품</option>
-					<option>과자/초콜릿</option>
-					<option>라면/통조림</option>
-					<option>조미료/장류</option>
-					<option>생수/음료</option>
-					<option>커피/차</option>
-					<option>냉동냉장/HMR</option>
+					<option>축산수산건식품</option>
+					<option>과자초콜릿</option>
+					<option>라면통조림</option>
+					<option>조미료장류</option>
+					<option>생수음료</option>
+					<option>커피차</option>
+					<option>냉동냉장HMR</option>
 					<option>유제품</option>
-					<option>화장지/위생용품</option>
-					<option>헤어/바디/구강/용품</option>
+					<option>화장지위생용품</option>
+					<option>헤어바디구강용품</option>
 					<option>화장품</option>
 					<option>세제</option>
-					<option>주방용품/일회용품</option>
-					<option>청소/욕실용품</option>>
-					<option>생활/디지털가전</option>
-					<option>문구/완구</option>
-					<option>가구/홈데코</option>
-					<option>조명/공구</option>
-					<option>침구/수예</option>
+					<option>주방용품일회용품</option>
+					<option>청소욕실용품</option>>
+					<option>생활디지털가전</option>
+					<option>문구완구</option>
+					<option>가구홈데코</option>
+					<option>조명공구</option>
+					<option>침구수예</option>
 					<option>자동차용품</option>
 					<option>애완</option>
 					<option>잡화</option>
-					<option>스포츠/캠핑용품</option>
+					<option>스포츠캠핑용품</option>
 				</select>
 				</div>
 				<hr class="hr-thin">

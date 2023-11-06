@@ -15,7 +15,7 @@ import com.javaproject.nobrand.goods.dao.GoodsDAO;
 import com.javaproject.nobrand.goods.domain.Goods;
 
 @Controller
-public class RegistGoddsController {
+public class RegistGoodsController {
 	@Autowired
 	GoodsDAO goodsDAO;
 

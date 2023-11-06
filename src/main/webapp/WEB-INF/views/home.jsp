@@ -24,16 +24,25 @@
 		data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active" data-bs-interval="3000">
-				<img src="resources/images/2017081013263780463968040496_758.jpg"
-					class="d-block w-100" alt="...">
+				<div class="carousel-slide">
+					<div><img class="carousel-img" src="resources/images/2017080914294880459338041043_788.jpg"></div>
+					<div><img class="carousel-img" src="resources/images/2017081013263780463968040496_758.jpg"></div>					
+					<div><img class="carousel-img" src="resources/images/2017082217372409091120907212_436.jpg"></div>
+				</div>
 			</div>
 			<div class="carousel-item" data-bs-interval="3000">
-				<img src="resources/images/2017082217372409091120907212_436.jpg"
-					class="d-block w-100" alt="...">
+				<div class="carousel-slide">
+					<div><img class="carousel-img" src="resources/images/2017081013263780463968040496_758.jpg"></div>					
+					<div><img class="carousel-img" src="resources/images/2017082217372409091120907212_436.jpg"></div>
+					<div><img class="carousel-img" src="resources/images/2017080914294880459338041043_788.jpg"></div>
+				</div>
 			</div>
 			<div class="carousel-item" data-bs-interval="3000">
-				<img src="resources/images/2017080914294880459338041043_788.jpg"
-					class="d-block w-100" alt="...">
+				<div class="carousel-slide">
+					<div><img class="carousel-img" src="resources/images/2017081013263780463968040496_758.jpg"></div>					
+					<div><img class="carousel-img" src="resources/images/2017080914294880459338041043_788.jpg"></div>
+					<div><img class="carousel-img" src="resources/images/2017082217372409091120907212_436.jpg"></div>
+				</div>
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button"
@@ -54,9 +63,9 @@
 			<div>
 				<img src="resources/images/2022021713341653781759442275_847.png">
 			</div>
-			<div class="index-limited-items">
+			<div class="index-limited-items" id="cardContainer">
 
-				<div class="itemlist4" style="width: 18rem;">
+				<!-- <div class="itemlist4" style="width: 18rem;">
 					<div class="card-img-box">
 						<a><img src="resources/images/1000517346294_i1_290.jpg"
 							class="card-img-top" alt="썸네일"></a>
@@ -80,9 +89,9 @@
 						<div class="card-text-score">★ 별점</div>
 						</p>
 					</div>
-				</div>
+				</div> -->
 
-				<div class="itemlist4" style="width: 18rem;">
+				<!-- <div class="itemlist4" style="width: 18rem;">
 					<div class="card-img-box">
 						<a><img src="resources/images/1000517346294_i1_290.jpg"
 							class="card-img-top" alt="썸네일"></a>
@@ -156,7 +165,8 @@
 						<div class="card-text-score">★ 별점</div>
 						</p>
 					</div>
-				</div>
+				</div> -->
+
 			</div>
 			<div class="more-items">
 				<button name="moreItems" class="button-more-items">
@@ -257,9 +267,14 @@
 
 	<!-- 여기부터 끝 -->
 	<jsp:include page='bottompage.jsp' />
+<script>
+const goodslist = ${requestScope.list};
+console.log(goodslist);
+</script>	
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-		crossorigin="anonymous"></script>		
+		crossorigin="anonymous"></script>
+<script src="resources/scripts/home.js"></script>
 </body>
 </html>
