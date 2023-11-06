@@ -122,7 +122,7 @@ console.log( ${requestScope.goodsJson});
 								<div class="like-img">
 									<img class="like-ico" alt="관심있는 상품" src="resources/images/heart.svg">
 								</div>
-								<button class="cart-btn">장바구니</button>
+								<button class="cart-btn" onclick="createCookie('goodsId', goodsData.id, 30)">장바구니</button>
 								<button class="buy-btn">
 									<div class="logo-s">
 										<div>S</div>
