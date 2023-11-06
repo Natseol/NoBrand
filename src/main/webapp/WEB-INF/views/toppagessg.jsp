@@ -17,7 +17,9 @@
 				<div class="user-heart top-img-margin"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></div>
 				<div class="user-user top-img-margin"><img class="top-img-size" alt="유저정보" src="resources/images/user.svg"></div>
 				<div class="user-delivery top-img-margin"><img class="top-img-size" alt="배송정보" src="resources/images/delivery.svg"></div>
-				<div class="user-cart top-img-margin"><a href="/nobrand/cart"><img class="top-img-size" alt="장바구니" src="resources/images/cart.svg"></a></div>
+				<div class="user-cart top-img-margin">
+					<a href="/nobrand/cart"><img alt="장바구니" src="resources/images/cart.svg"></a>
+				</div>
 			</div>
 			<div class="main-box">
 				<div class="logo-box">

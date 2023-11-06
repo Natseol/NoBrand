@@ -1,0 +1,336 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "opensans";
+    src: url("fonts/fontawesome-webfont.woff2") format("woff2"),
+      url("fonts/fontawesome-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .goods-root {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  .goods-main {
+    display: flex;
+    padding: 15px 0 15px 8px;
+    font-size: 14px;
+  }
+  
+  .goods-category {
+  	display: flex;
+  }
+
+  .center-slash {
+    padding: 0 8px;
+    color: #c9c9c9;
+  }
+
+  .left-img{
+    width: 660px;
+    padding-right: 110px;
+  }
+
+  .right-info {
+    width: 560px;
+    white-space: nowrap
+  }
+
+  .goods-img-left {
+    width: 550px;
+  }
+
+  .main-goods-position {
+    display: flex;
+  }
+
+  .emart {
+    font-size: 10px;
+    padding-top: 20px
+    px
+    ;
+  }
+
+  .brand {
+    display: flex;
+  }
+
+  .font-nobrand {
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  .arrow-right {
+    margin-left: 10px;
+  }
+
+  .public-store {
+    border: 1px solid #e0dbdb;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+
+  .goods-name{
+    font-size: 23px;
+    font-weight: 550;
+  }
+
+  .goods-star {
+    display: flex;
+  }
+
+  .made-in-box {
+    display: flex;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .banner-position {
+    width: 100%;
+}
+
+  .font-won {
+    font-size: 23px;
+    font-weight: 547;
+  }
+
+  .goods-price-box {
+    display: flex;
+    align-items: center
+  }
+
+  .goods-price {
+    font-size: 35px;
+  }
+
+  .goods-volume {
+    display: flex;
+    font-size: 13px;
+    font-weight: 547;
+    color: #616161;
+  }
+
+  .line {
+    border-bottom: 1px solid #d8d7d7;
+  }
+
+  .delivery-banner {
+    border-bottom: 1px solid #d1d1d1;
+  }
+
+  .routine-delivery {
+    display: flex;
+    font-size: 13px;
+    padding: 15px 0;
+    border-bottom: 1px solid #d1d1d1;
+    justify-content: space-between
+  }
+
+  .unit {
+    display: flex;
+    font-size: 13px;
+  }
+
+  .calculate-box {
+    width: 560px;
+    height: 100px;
+    background: #f8f8f8;
+    padding: 10px 20px 10px 15px;
+  }
+
+  
+.counter {
+	position: relative;
+	display: flex;
+    border: 1px solid #d1d1d1;
+    width: 100px;
+	height: 28px;
+}
+
+.minus {
+    position: absolute;
+	border: none;
+    background: white;
+    width: 30px;
+    border-right: 1px solid #d1d1d1;
+}
+
+.plus {
+	position: absolute;
+	border: none;
+    right: 0;
+    background: white;
+    width: 30px;
+    border-left: 1px solid #d1d1d1;
+}
+
+.count-position {
+	position: absolute;
+    right: 45px;
+}
+
+.calculate-position {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+.font-cal {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.price-positoin {
+    display: flex;
+    align-items: center;
+}
+
+.total-goods-price {
+    font-size: 20px;
+}
+
+.font-total-goods {
+    font-size: 15px;
+}
+
+.total-price-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid gray;
+}
+
+.font-total {
+    font-size: 17px;
+}
+
+.font-price-bold {
+    color: #ff3b3b;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.font-total-goods-bold {
+    color: #ff3b3b;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.ont-total-goods-bold {
+    font-size: 17px;
+}
+
+.buy-btn-box {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.like-img {
+    padding: 10px;
+    border: 1px solid #e3e3e3;
+}
+
+.like-ico {
+    width: 28px;
+}
+
+.buy-btn {
+    display: flex;
+    background: #ff3b3b;
+    color: white;
+    padding: 13px 90px;
+    border: none;
+    align-items: center;
+}
+
+.cart-btn {
+    border: none;
+    color: white;
+    background: black;
+    padding: 12px 90px;
+}
+
+.logo-s {
+    border: 1px solid white;
+    border-radius: 100%;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.card-event-box {
+    padding-top: 110px;
+    width: 100%;;
+}
+
+.ssg-tip {
+    display: flex;
+    align-items: center;
+}
+
+.font-ssg {
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 30px;
+}
+
+.bold-line {
+    border-bottom: 3px solid rgb(150, 150, 150);
+    width: 1120px;
+}
+
+.title-goods{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.line-bold {
+    border-bottom: 2px solid rgb(101, 101, 101);
+}
+
+.info-line {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.content {
+    font-size: 17px;
+    font-weight: bold;
+    width: 250px;
+    padding-right: 80px;
+}
+
+.form-content {
+    padding: 20px 0;
+    display: flex;
+}
+
+.sub-title-box {
+    width: 100%;
+}
+
+.font-content-bold {
+    font-weight: bold;
+}
+
+.bootom-text {
+    padding: 10px 0 30px 0;
+}
+
+.goods-img-first {
+    width: 930px;
+}
+
+.goods-img-second {
+    width: 930px;
+}

@@ -65,7 +65,7 @@ function sumEvent(){
 	let total = totalPrice[0];
 	let cash  = cashBox[0];
 	total.textContent = sum;
-	cash.innerHTML = sum+"원";
+	cash.textContent = sum+"원";
 }
 
 function sumResult(){
