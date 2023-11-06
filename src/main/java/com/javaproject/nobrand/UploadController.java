@@ -129,8 +129,8 @@ public class UploadController {
 			String realPath = "main/webapp/resources/goods/";
 			
 			//�엫�떆
-//			String realPath2 = "C:/Users/KGA/jdk11/nobrand/src/main/webapp/resources/goods/";	
-			String realPath2 = "C:/Users/oooon/nobrand/ProjectNoBrand/src/main/webapp/resources/goods/";			
+			String realPath2 = "C:/Users/KGA/jdk11/nobrand/src/main/webapp/resources/goods/";	
+//			String realPath2 = "C:/Users/oooon/nobrand/ProjectNoBrand/src/main/webapp/resources/goods/";			
 			String absolutePath = realPath2+ newFileName;
 			//		
 			

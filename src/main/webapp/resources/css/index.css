@@ -4,8 +4,18 @@
 }
 
 .carousel-main {
-	width: 1280px;
 	margin: auto;
+    position: relative;
+}
+.carousel-slide {
+    margin: auto;
+    text-wrap:nowrap;
+    display: flex;
+    justify-content: center;
+}
+.carousel-img {
+    width: 1280px;
+    margin : 0px 20px;
 }
 
 .index-content {
@@ -41,7 +51,7 @@
 }
 
 .card-body {
-    margin: -10px 2px;
+    margin: 5px 2px;
 }
 
 .card-text-trans {
@@ -95,3 +105,7 @@
 	display: flex;
     justify-content: space-between;
 }
+
+.itemlist4 {
+    width: 18rem;
+  }

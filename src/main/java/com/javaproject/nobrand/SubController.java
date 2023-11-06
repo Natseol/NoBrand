@@ -32,9 +32,7 @@ public class SubController {
 			
 		} else {
 			List<Goods> goodsList = cs.getAllList();
-//			json.put("list", goodsList);
-			json.put("one", goodsList.get(0));
-			System.out.println(json);
+			json.put("list", goodsList);			
 		}
 		
 		request.setAttribute("list", json.get("list"));		

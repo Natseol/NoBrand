@@ -43,50 +43,50 @@
 							<li class="menu-item">세일중</li>
 							<li class="menu-item">신선식품
 								<ul class="dropdown">
-									<li><button name="category" value="과일채소양곡">과일/채소/양곡</button></li>
-									<li>축산/수산/건식품</li>
+									<li><button class="category-button" name="category" value="과일채소양곡">과일/채소/양곡</button></li>
+									<li><button class="category-button" name="category" value="축산수산건식품">축산/수산/건식품</button></li>
 								</ul>
 							</li>
 							<li class="menu-item">가공식품
 								<ul class="dropdown">
-									<li>과자/초콜릿</li>
-									<li>라면/통조림</li>
-									<li>조미료/장류</li>
-									<li>생수/음료</li>
-									<li>커피/차</li>
-									<li>냉동냉장/HMR</li>
-									<li>유제품</li>
+									<li><button class="category-button" name="category" value="과자초콜릿">과자/초콜릿</button></li>
+									<li><button class="category-button" name="category" value="라면통조림">라면/통조림</button></li>
+									<li><button class="category-button" name="category" value="조미료장류">조미료/장류</button></li>
+									<li><button class="category-button" name="category" value="생수음료">생수/음료</button></li>
+									<li><button class="category-button" name="category" value="커피차">커피/차</button></li>
+									<li><button class="category-button" name="category" value="냉동냉장HMR">냉동냉장/HMR</button></li>
+									<li><button class="category-button" name="category" value="유제품">유제품</button></li>
 								</ul>
 							</li>
 							<li class="menu-item">생활용품
 								<ul class="dropdown">
-									<li>화장지/위생용품</li>
-									<li>헤어/바디/구강용품</li>
-									<li>화장품</li>
-									<li>세제</li>
-									<li>주방용품/일회용품</li>
-									<li>청소/욕실용품</li>
+									<li><button class="category-button" name="category" value="화장지위생용품">화장지/위생용품</button></li>
+									<li><button class="category-button" name="category" value="헤어바디구강용품">헤어/바디/구강용품</button></li>
+									<li><button class="category-button" name="category" value="화장품">화장품</button></li>
+									<li><button class="category-button" name="category" value="세제">세제</button></li>
+									<li><button class="category-button" name="category" value="주방용품일회용품">주방용품/일회용품</button></li>
+									<li><button class="category-button" name="category" value="청소욕실용품">청소/욕실용품</button></li>
 								</ul>
 							</li>
 							<li class="menu-item"><div>가전/인테리어</div>
 								<ul class="dropdown">
-									<li>생활/디지털가전</li>
-									<li>문구/완구</li>
-									<li>가구/홈데코</li>
-									<li>조명/공구</li>
-									<li>침구/수예</li>
-									<li>자동차용품</li>
-									<li>애완</li>
+									<li><button class="category-button" name="category" value="생활디지털가전">생활/디지털가전</button></li>
+									<li><button class="category-button" name="category" value="문구완구">문구/완구</button></li>
+									<li><button class="category-button" name="category" value="가구홈데코">가구/홈데코</button></li>
+									<li><button class="category-button" name="category" value="조명공구">조명/공구</button></li>
+									<li><button class="category-button" name="category" value="침구수예">침구/수예</button></li>
+									<li><button class="category-button" name="category" value="자동차용품">자동차용품</button></li>
+									<li><button class="category-button" name="category" value="애완">애완</button></li>
 								</ul>
 							</li>
 							<li class="menu-item">패션잡화
 								<ul class="dropdown">
-									<li>잡화</li>									
+									<li><button class="category-button" name="category" value="잡화">잡화</button></li>									
 								</ul>
 							</li>
 							<li class="menu-item">스포츠/캠핑용품
 								<ul class="dropdown">
-									<li>스포츠/캠핑용품</li>									
+									<li><button class="category-button" name="category" value="스포츠캠핑용품">스포츠/캠핑용품</button></li>									
 								</ul>
 							</li>
 						</ul>
@@ -98,9 +98,9 @@
 			<!--상품-->
 			<div>
 
-				<div class="sub-list-container">
+				<div class="sub-list-container" id="cardContainer">
 
-					<div class="sublist4">
+				<!-- <div class="sublist4">
 						<div class="card-img-box">
 							<a><img src="resources/images/1000014798997_i1_290.jpg"
 								class="card-img-top" alt="썸네일"></a>
@@ -201,7 +201,7 @@
 							</p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 			</div>
 		</div>
