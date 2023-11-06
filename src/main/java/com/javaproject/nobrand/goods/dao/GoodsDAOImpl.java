@@ -74,6 +74,11 @@ public class GoodsDAOImpl implements GoodsDAO {
 		return jdbcTemplate.queryForObject("select * from GOODS where \"ID\"=?", new Object[] { id }, mapper);
 	}
 	@Override
+	public List<Goods> getUsingCategory(String kind) {
+		// TODO Auto-generated method stub		
+		return jdbcTemplate.query("select * from GOODS where \"KIND_BOTTOM\"=?", mapper, kind);
+	}
+	@Override
 	public List<Goods> getAll() {
 		// TODO Auto-generated method stub
 		return jdbcTemplate.query("select * from GOODS",mapper);

@@ -13,28 +13,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.javaproject.nobrand.goods.dao.GoodsDAO;
+import com.javaproject.nobrand.category.service.CategorySerivce;
 import com.javaproject.nobrand.goods.domain.Goods;
 
 @Controller
 public class SubController {
-	
 	@Autowired
-	ServletContext context;
+	private CategorySerivce cs;
 	
-	@Autowired
-	private GoodsDAO goodsDAO;
-
 	@RequestMapping(value = "/sub", method = RequestMethod.GET)
 	public String sub(@RequestParam Map<String,String> map, HttpServletRequest request) {
-		List<Goods> goodsList = goodsDAO.getAll();
-		
-		
 		JSONObject json = new JSONObject();
-		json.put("list", goodsList);
+		
+		if (request.getParameter("category")!=null) {
+			String kind = request.getParameter("category");
+			List<Goods> goodsList = cs.getCategoryList(kind);
+			json.put("list", goodsList);
+			
+		} else {
+			List<Goods> goodsList = cs.getAllList();
+//			json.put("list", goodsList);
+			json.put("one", goodsList.get(0));
+			System.out.println(json);
+		}
 		
 		request.setAttribute("list", json.get("list"));		
-		System.out.println(json.get("list"));
 		return "sub/main";
 	}
 	
