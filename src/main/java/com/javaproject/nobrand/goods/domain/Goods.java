@@ -1,6 +1,5 @@
 package com.javaproject.nobrand.goods.domain;
 
-
 public class Goods{
 	private int id;
 	private int price;

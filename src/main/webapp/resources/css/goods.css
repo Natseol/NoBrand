@@ -37,10 +37,6 @@
     white-space: nowrap
   }
 
-  .goods-img-left {
-    width: 550px;
-  }
-
   .main-goods-position {
     display: flex;
   }
@@ -307,7 +303,7 @@
     font-size: 17px;
     font-weight: bold;
     width: 250px;
-    padding-right: 80px;
+    margin-right: 50px;
 }
 
 .form-content {

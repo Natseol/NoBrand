@@ -11,6 +11,10 @@
 	rel="stylesheet"
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
+<script>
+let goodsData = ${requestScope.goodsJson}
+console.log( ${requestScope.goodsJson});
+</script>
 </head>
 <body>
 	<jsp:include page='/WEB-INF/views/toppage.jsp' />
@@ -133,13 +137,8 @@
 				<div class="goods-sub">
 					<div class="container-box">
 						<div class="goods-img">
-							<div class="goods-img-first">
+							<div class="goods-img-box-content">
 							</div>
-							<div class="ssg-tip">
-								<div class="font-ssg">SSG TIPS</div>
-								<div class="bold-line"></div>
-							</div>
-							<div class="goods-img-second"></div>
 						</div>
 						<jsp:include page='/WEB-INF/views/goods/goodsinfo.jsp' />
 						<jsp:include page='/WEB-INF/views/goods/review.jsp' />

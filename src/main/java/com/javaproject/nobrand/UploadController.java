@@ -52,20 +52,20 @@ public class UploadController {
 //		
 //		String realPath = request.getServletPath();
 //		String realPath2 = "C:/Users/jewel/jdk11/ProjectNoBrand/src/main/webapp/resources/goods/";
-//		System.out.println("리얼패스");
+//		System.out.println("由ъ뼹�뙣�뒪");
 //		System.out.println(realPath2);
 //		String savePath = realPath2 + newFileName;
 ////		String savePath = realPath2 + newFileName;
 //		
 //		String uploadPath = "http://localhost/nobrand/resources/goods/" + newFileName; 
-//		System.out.println("업로드패스");
+//		System.out.println("�뾽濡쒕뱶�뙣�뒪");
 //		System.out.println(uploadPath);
 //
 //        File file = new File(savePath);
-//		System.out.println("뉴파일");
+//		System.out.println("�돱�뙆�씪");
 //		
 //		uploadFile.transferTo(file);
-//		System.out.println("트랜스퍼");
+//		System.out.println("�듃�옖�뒪�띁");
 //		mav.addObject("uploaded", true);
 ////		mav.addObject("url", realPath2);
 ////		mav.addObject("url", savePath);
@@ -95,7 +95,7 @@ public class UploadController {
 //
 //		for (MultipartFile mf : fileList) {
 //			if (fileList.get(0).getSize() > 0) {
-//				String originFileName = mf.getOriginalFilename(); // 원본 파일 명
+//				String originFileName = mf.getOriginalFilename(); // �썝蹂� �뙆�씪 紐�
 //				String ext = FilenameUtils.getExtension(originFileName);
 //				String newInfImgFileName = "img_" + UUID.randomUUID() + "." + ext;
 //
@@ -128,12 +128,12 @@ public class UploadController {
 						
 			String realPath = "main/webapp/resources/goods/";
 			
-			//임시
-			String realPath2 = "C:/Users/KGA/jdk11/nobrand/src/main/webapp/resources/goods/";			
+			//�엫�떆
+			String realPath2 = "C:/Users/oooon/nobrand/ProjectNoBrand/src/main/webapp/resources/goods/";			
 			String absolutePath = realPath2+ newFileName;
 			//		
 			
-			System.out.println("리얼패스");
+			System.out.println("由ъ뼹�뙣�뒪");
 			System.out.println(realPath);
 			
 			String savePath = realPath + newFileName;
@@ -152,15 +152,15 @@ public class UploadController {
 			
 
 			String uploadPath = "http://localhost/nobrand/resources/goods/" + newFileName;
-			System.out.println("업로드패스");
+			System.out.println("�뾽濡쒕뱶�뙣�뒪");
 			System.out.println(uploadPath);
 
 			File file = new File(absolutePath);
 //			File file = new File(savePath);
-			System.out.println("뉴파일");
+			System.out.println("�돱�뙆�씪");
 
 			uploadFile.transferTo(file);
-			System.out.println("트랜스퍼");
+			System.out.println("�듃�옖�뒪�띁");
 
 			JSONObject json = new JSONObject();
 			json.put("uploaded", true);
@@ -171,7 +171,7 @@ public class UploadController {
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().print(json.toString());
 		} catch (Exception e) {
-	    	System.out.println("오류발생");
+	    	System.out.println("�삤瑜섎컻�깮");
 	    }
 	}
 		
@@ -181,7 +181,7 @@ public class UploadController {
 //		try {
 //	    	final String real_save_path = "/contents/";
 //
-//	    	// 폴더가 없을 경우 생성
+//	    	// �뤃�뜑媛� �뾾�쓣 寃쎌슦 �깮�꽦
 //	    	File saveFolder = new File(real_save_path);
 //    		if(!saveFolder.exists() || saveFolder.isFile()) {
 //    			saveFolder.mkdirs();
@@ -190,7 +190,7 @@ public class UploadController {
 //			final Map<String, MultipartFile> files = multiRequest.getFileMap();
 //			MultipartFile fileload = (MultipartFile)files.get("upload");
 //			
-//		    //filename 취득
+//		    //filename 痍⑤뱷
 //		    String fileName = fileload.getOriginalFilename();
 //
 //		    int index = fileName.lastIndexOf(".");
@@ -198,7 +198,7 @@ public class UploadController {
 //			Random ran = new Random(System.currentTimeMillis());
 //			fileName = System.currentTimeMillis()+"_"+(int)(ran.nextDouble()*10000)+"."+ext;
 //
-//		    //폴더 경로 설정
+//		    //�뤃�뜑 寃쎈줈 �꽕�젙
 //		    String newfilename = real_save_path + File.separator + fileName;
 //		    fileload.transferTo(new File(newfilename));
 //
@@ -209,7 +209,7 @@ public class UploadController {
 //			response.setCharacterEncoding("UTF-8");
 //			response.getWriter().print(outData.toString());
 //	    } catch (Exception e) {
-//	    	System.out.println("오류발생");
+//	    	System.out.println("�삤瑜섎컻�깮");
 //	    }
 //	}
 //	@RequestMapping("/common/fms/getImageForContents.do")
