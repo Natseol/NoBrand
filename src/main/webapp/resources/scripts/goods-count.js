@@ -50,7 +50,6 @@ function sumEvent(){
 	for (let index = 0; index < goodsBox[0].children[0].children[1].textContent; index++) {
 		const price = goodsPriceBox[0].children[0];
 		sum += parseInt(price.textContent);
-		console.log(sum);
 	}
 	let total = totalPrice[0];
 	let totlaSecont = totalPriceSecond[0];

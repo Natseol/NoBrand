@@ -4,10 +4,15 @@ let idLength = [];
 idLength.length = 5;
 let idName = "";
 let idImg = "";
-let idPrice = 3000;
-const array = [];
+let idCount = 0;
+const cookieList = [];
+const parsingList = [];
+let goodsList = [];
+let idList = [];
 
-function test(name, img){
+
+
+function test(name, img, count){
 	const topBox = document.createElement('div');
 	topBox.innerHTML = '<div class="goods-box">'
 +	'<div class="img-box">'
@@ -28,7 +33,7 @@ function test(name, img){
 +			'<div class="counter">'
 +				'<input class="minus" type="button" value="-" oneclick="discount()"/>'
 +				'<div id="result" class="count-position">'
-+					1
++					count
 +				'</div>'
 +				'<input class="plus" type="button" value="+"/>'
 +			'</div>'
@@ -59,15 +64,55 @@ function test(name, img){
 +	'</div>'
 +'</div>';
 	document.querySelector(".goods-list").prepend(topBox);
-	array.push(numberSet);
 	numberSet++;
 }
 
-function addList(){
-	for (let index = 0; index < idLength.length; index++) {
-		test(idName, idImg);
-		document.getElementById("cost").innerHTML = idPrice;
+function getCookieList(){
+	
+	for (let index = 0; index < document.cookie.length-1; index++) {
+		cookieName = "goodsId"+(index+1);
+		cookieList.push(getCookies(cookieName));
+		if(cookieList[index] !== null){
+			parsingList.push(JSON.parse(cookieList[index]))
+		}
+		
+	}
+	for (let index = 0; index < parsingList.length; index++) {
+		idList.push(parsingList[index].goodsId);
 	}
 }
+getCookieList();
 
-addList();
+function getCookies(name){
+	let value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return value? value[2] : null;
+}
+
+
+fetch("http://localhost/nobrand/cart/id", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(
+    {id:idList}
+  ),
+}).then((response) => response.json())
+  .then(data => {	
+	
+})
+.catch(error => {
+	console.error('Error:', error);
+})
+
+
+
+
+// function addList(){
+// 	for (let index = 0; index < parsingList.length; index++) {
+// 		test(goodsItem.);
+// 		document.getElementById("cost").innerHTML = itemParse[index].itemPrice;
+// 	}
+// }
+
+// addList();

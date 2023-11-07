@@ -11,13 +11,10 @@
 	rel="stylesheet"
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
-<script>
-let goodsData = ${requestScope.goodsJson}
-console.log( ${requestScope.goodsJson});
-</script>
 </head>
 <body>
-	<jsp:include page='/WEB-INF/views/toppage.jsp' />
+	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
+	<jsp:include page='/WEB-INF/views/toppage-nobrand.jsp' />
 	<!-- 여기부터 시작 -->
 		<div class="goods-root">
 			<div class="main">
@@ -101,9 +98,7 @@ console.log( ${requestScope.goodsJson});
 									<div class="calculator">
 										<div class="counter">
 											<input class="minus" type="button" value="-"/>
-											<div id="result" class="count-position">
-												1
-											</div>
+											<div id="result" class="count-position">1</div>
 											<input class="plus" type="button" value="+"/>
 										</div>
 									</div>
@@ -122,7 +117,7 @@ console.log( ${requestScope.goodsJson});
 								<div class="like-img">
 									<img class="like-ico" alt="관심있는 상품" src="resources/images/heart.svg">
 								</div>
-								<button class="cart-btn" onclick="createCookie('goodsId', goodsData.id, 30)">장바구니</button>
+								<button class="cart-btn" onclick="createCookie(goodsData.id, 30)">장바구니</button>
 								<button class="buy-btn">
 									<div class="logo-s">
 										<div>S</div>

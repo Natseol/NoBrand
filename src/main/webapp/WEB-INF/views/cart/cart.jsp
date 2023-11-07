@@ -12,9 +12,8 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 </head>
-<%-- 임시로 설정해둔 값이니 푸후 스크립트로 교체하기 --%>
 <script type="text/javascript">
-	var discount = 0;
+	let discount = 0;
 	var goodscount = 0;
 </script>
 <body>
@@ -140,7 +139,7 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="resources/scripts/goodsevent.js"></script>
+	<script type="text/javascript module" src="resources/scripts/goodsevent.js"></script>
 	<!-- 여기부터 끝 -->
 	<jsp:include page='../bottompage.jsp' />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

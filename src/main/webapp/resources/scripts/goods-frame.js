@@ -8,7 +8,7 @@ const goodsMade = document.getElementsByClassName('goods-made');
 const totalOrder = document.getElementsByClassName('total-order');
 const totalOrderSecond = document.getElementsByClassName('total-order-second');
 const contentElem = document.getElementsByClassName('goods-img-box-content');
-
+const goodsBoxElem = document.getElementsByClassName('calculator');
 
 function isGoods(){
     const urlPrams = new URLSearchParams(location.search);
@@ -21,18 +21,21 @@ function isGoods(){
 	}
 }
 
-function createCookie(cname, cvalue, exdays){
+function createCookie( goodsIdJ, exdays){
     let d = new Date();
-
+    let goodsCountJ = goodsBoxElem[0].children[0].children[1].textContent;
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
 
     let expires = "expires="+d.toUTCString();
 
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+    let cookieContent = {goodsId:goodsIdJ, goodsCount:goodsCountJ};
+
+    document.cookie = "goodsId"+ goodsIdJ + "=" + JSON.stringify(cookieContent); + "; " + expires;
+    alert("상품을 장바구니에 담았습니다.");
 }
 
-function dataInput({img ,name, price, standard, volum, info, content}){
-    imgFrame[0].innerHTML = img;
+function dataInput({imgAdress ,name, price, standard, volum, info, content}){
+    imgFrame[0].innerHTML = imgAdress;
     goodsName[0].innerHTML = name;
     goodsNameInfo[0].innerHTML = name;
     goodsPrice[0].innerHTML = price;
@@ -45,5 +48,4 @@ function dataInput({img ,name, price, standard, volum, info, content}){
 }
 
 dataInput(goodsData);
-
 isGoods();

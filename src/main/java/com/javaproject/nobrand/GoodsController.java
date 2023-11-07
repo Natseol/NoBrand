@@ -25,19 +25,11 @@ public class GoodsController {
 	@RequestMapping(value = "/goods", method = RequestMethod.GET)
 	public String goods(HttpServletRequest request, Model model) {
 
-		System.out.println(0);
 		int goodsId = Integer.parseInt(request.getParameter("goodsId"));
-		System.out.println(goodsId);
-		
 		
 		Goods goods = goodsService.getGoods(goodsId);
-		System.out.println(2);
 		
 		JSONObject json = new JSONObject(goods);
-		System.out.println(json);
-//		json.put("goodsData", goods);
-	
-//		System.out.println(json.get("goodsData"));
 		
 		request.setAttribute("goodsJson", json);
 		
