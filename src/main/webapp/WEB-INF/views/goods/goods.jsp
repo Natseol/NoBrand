@@ -12,6 +12,9 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 </head>
+<script>
+	let goodsData = ${requestScope.goodsJson};
+</script>
 <body>
 	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
 	<jsp:include page='/WEB-INF/views/toppage-nobrand.jsp' />

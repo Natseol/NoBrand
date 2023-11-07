@@ -32,7 +32,7 @@ public class GoodsController {
 		JSONObject json = new JSONObject(goods);
 		
 		request.setAttribute("goodsJson", json);
-		
+		System.out.println(json);
 		return "goods/goods";
 	}
 }

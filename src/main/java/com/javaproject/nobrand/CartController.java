@@ -2,6 +2,7 @@ package com.javaproject.nobrand;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -16,6 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.javaproject.nobrand.goods.domain.Goods;
 import com.javaproject.nobrand.goods.service.GoodsService;
 
@@ -38,17 +40,17 @@ public class CartController {
 	@RequestMapping(value = "/cart/id", method = RequestMethod.POST)
 	public String cartId(HttpServletRequest request, HttpServletResponse response, Model model) throws ServletException, IOException{
 		
-		 // JSON µ¥ÀÌÅÍ¸¦ ÀÐ±â À§ÇÑ BufferedReader »ý¼º
+		 // JSON ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ð±ï¿½ ï¿½ï¿½ï¿½ï¿½ BufferedReader ï¿½ï¿½ï¿½ï¿½
         BufferedReader reader = request.getReader();
 
-        // JSON µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ¹®ÀÚ¿­ º¯¼ö
+        // JSON ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½
         StringBuilder jsonContent = new StringBuilder();
         String line;
         while ((line = reader.readLine()) != null) {
             jsonContent.append(line);
         }
 
-        // JSON ÆÄ½Ì
+        // JSON ï¿½Ä½ï¿½
         JSONObject jsonObject = new JSONObject(jsonContent.toString());
         
         JSONArray arr =jsonObject.getJSONArray("id");
@@ -63,10 +65,17 @@ public class CartController {
      		
      		JSONObject json = new JSONObject(goods);
      		
+     		Map<String, Object> jsonMap = json.toMap();
      		request.setAttribute("goodsItem", json);
+//     		
+//     		response.setContentType("application/json");
+//     		response.getWriter().write(json.toString());
      		
+     		ObjectMapper objectMapper = new ObjectMapper();
+     		
+     		response.setContentType("text/html;charset=UTF-8");
      		response.setContentType("application/json");
-     		response.getWriter().write(json.toString());
+            objectMapper.writeValue(response.getWriter(), jsonMap);
 		
         
         System.out.println(request.getAttribute("goodsItem"));
