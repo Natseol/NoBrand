@@ -13,7 +13,7 @@ class UploadAdapter {
 
     _initRequest() {
         const xhr = this.xhr = new XMLHttpRequest();
-        xhr.open('POST', '/nobrand/common/fms/ckeditor5Upload.do', true);
+        xhr.open('POST', '/nobrand/common/ckeditor5Upload.do', true);
         xhr.responseType = 'json';
     }
 

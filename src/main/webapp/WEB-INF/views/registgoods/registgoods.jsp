@@ -29,7 +29,7 @@
     }
 </style>
 <body>
-	<jsp:include page='/WEB-INF/views/toppage.jsp' />
+	<jsp:include page='../toppagessg.jsp' />
 	<!-- 여기부터 시작 -->
 	<div class="registgoods-main">
 		<div class="registgoods-title">
@@ -132,24 +132,6 @@
 		console.error( error );
 	});
 </script>
-
-
-<!-- 업로드컨트롤러 윗부분 -->
-<!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
-<script>
-	ClassicEditor
-	.create(document.querySelector('#editor'), {
-		ckfinder: {
-			uploadUrl : '/nobrand/image/upload'
-		}
-	})
-	.then(editor => {
-		console.log('Editor was initialized');
-	})
-	.catch(error => {
-		console.error(error);
-	});
-</script> -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

@@ -9,7 +9,6 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 
-
     <div class="midle background-color nobrand-title">
 		<div class="nobrand-logo-block">
 			<div class="title-nobrand-box">

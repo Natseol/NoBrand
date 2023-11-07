@@ -36,7 +36,7 @@
 
 .sub-content-items {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .category-title {
@@ -104,8 +104,15 @@
   border: 0px;
 }
 
+.sub-list-area {
+  align-self: center
+}
+
 .sub-list-container {
   display: flex;
+  flex-wrap: wrap;
+  width:1100px;
+  /* justify-content: center; */
 }
 
 .sublist4 {
@@ -114,29 +121,38 @@
 }
 
 .card-text-trans {
-    font-size: 10px;
-    color : gray;
-    font-weight: bold;
+  font-size: 10px;
+  color : gray;
+  font-weight: bold;
 }
 
 .card-text-price {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card-text-won {
-    font-size: 11px;
-    font-weight: bold;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .card-text-score {
-    font-size: smaller;
-    color: lightgray;
+  font-size: smaller;
+  color: lightgray;
 }
 
 .more-items {
-    text-align: center;
-    margin: 0px 0px 150px;
+  text-align: center;
+  margin: 0px 0px 150px;
+}
+
+.menu-item-anchor{
+  text-decoration: none;
+  color: black;
+}
+
+.menu-item-anchor:hover {
+  font-weight: normal;
 }
 
 .button-more-items {
@@ -150,3 +166,4 @@
     font-weight: bold;
     font-size: smaller;
 }
+

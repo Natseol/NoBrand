@@ -34,13 +34,13 @@
 		<div class="sub-content-items">
 			<!--카테고리-->
 			<div>
-				<div>
+				<div class="category-container">
 					<div class="category-title">카테고리</div>
 					<form action="sub" method="get">
 					<div class="category">
 						<ul class="category-item">
-							<li class="menu-item">베스트</button></li>
-							<li class="menu-item">세일중</li>
+							<a href="sub" class="menu-item-anchor"><li class="menu-item">베스트</li></a>
+							<a href="sub?category=세일중" class="menu-item-anchor"><li class="menu-item">세일중</li></a>
 							<li class="menu-item">신선식품
 								<ul class="dropdown">
 									<li><button class="category-button" name="category" value="과일채소양곡">과일/채소/양곡</button></li>
@@ -96,112 +96,8 @@
 			</div>
 
 			<!--상품-->
-			<div>
-
-				<div class="sub-list-container" id="cardContainer">
-
-				<!-- <div class="sublist4">
-						<div class="card-img-box">
-							<a><img src="resources/images/1000014798997_i1_290.jpg"
-								class="card-img-top" alt="썸네일"></a>
-							<div class="card-img-bag rounded-3">
-								<span class="material-symbols-outlined card-img-icon">shopping_bag</span>
-							</div>
-						</div>
-						<div class="card-body">
-							<p class="card-text">
-							<div class="card-text-trans">
-								<img src="resources/images/em.svg"><img
-									src="resources/images/ico_crossarrow.svg" style="width: 1em">새벽배송
-								가능
-							</div>
-							<div>
-								<span class="text-bold">노브랜드</span>상품옵션
-							</div>
-							<div class="card-text-price">
-								가격<span class="card-text-won">원</span>
-							</div>
-							<div class="card-text-score">★ 별점</div>
-							</p>
-						</div>
-					</div>
-
-					<div class="sublist4">
-						<div class="card-img-box">
-							<a><img src="resources/images/1000014798997_i1_290.jpg"
-								class="card-img-top" alt="썸네일"></a>
-							<div class="card-img-bag rounded-3">
-								<span class="material-symbols-outlined card-img-icon">shopping_bag</span>
-							</div>
-						</div>
-						<div class="card-body">
-							<p class="card-text">
-							<div class="card-text-trans">
-								<img src="resources/images/em.svg"><img
-									src="resources/images/ico_crossarrow.svg" style="width: 1rem">새벽배송
-								가능
-							</div>
-							<div>
-								<span class="text-bold">노브랜드</span>상품옵션
-							</div>
-							<div class="card-text-price">
-								가격<span class="card-text-won">원</span>
-							</div>
-							<div class="card-text-score">★ 별점</div>
-							</p>
-						</div>
-					</div>
-					<div class="sublist4">
-						<div class="card-img-box">
-							<a><img src="resources/images/1000014798997_i1_290.jpg"
-								class="card-img-top" alt="썸네일"></a>
-							<div class="card-img-bag rounded-3">
-								<span class="material-symbols-outlined card-img-icon">shopping_bag</span>
-							</div>
-						</div>
-						<div class="card-body">
-							<p class="card-text">
-							<div class="card-text-trans">
-								<img src="resources/images/em.svg"><img
-									src="resources/images/ico_crossarrow.svg" style="width: 1rem">새벽배송
-								가능
-							</div>
-							<div>
-								<span class="text-bold">노브랜드</span>상품옵션
-							</div>
-							<div class="card-text-price">
-								가격<span class="card-text-won">원</span>
-							</div>
-							<div class="card-text-score">★ 별점</div>
-							</p>
-						</div>
-					</div>
-					<div class="sublist4">
-						<div class="card-img-box">
-							<a><img src="resources/images/1000014798997_i1_290.jpg"
-								class="card-img-top" alt="썸네일"></a>
-							<div class="card-img-bag rounded-3">
-								<span class="material-symbols-outlined card-img-icon">shopping_bag</span>
-							</div>
-						</div>
-						<div class="card-body">
-							<p class="card-text">
-							<div class="card-text-trans">
-								<img src="resources/images/em.svg"><img
-									src="resources/images/ico_crossarrow.svg" style="width: 1rem">새벽배송
-								가능
-							</div>
-							<div>
-								<span class="text-bold">노브랜드</span>상품옵션
-							</div>
-							<div class="card-text-price">
-								가격<span class="card-text-won">원</span>
-							</div>
-							<div class="card-text-score">★ 별점</div>
-							</p>
-						</div>
-					</div>
-				</div> -->
+			<div class="sub-list-area">
+				<div class="sub-list-container" id="cardContainer"></div>				
 
 			</div>
 		</div>

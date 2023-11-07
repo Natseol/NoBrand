@@ -25,6 +25,7 @@ function createCard(index) {
   cardImg.innerHTML = goodslist[index].imgAdress
   cardImg.className = "card-img-top";
   cardImg.children[0].children[0].style.width="100%";
+  cardImg.children[0].children[0].style.height="100%";
   const cardImgLink = document.createElement("a");
   cardImgLink.href="goods?goodsId="+goodslist[index].id;
   cardImgLink.appendChild(cardImg);
@@ -100,9 +101,17 @@ function createCard(index) {
 
 function createCardAll() {
   const cardContainer = document.getElementById("cardContainer");
-  for (let i = 0 ; i < goodslist.length ; i++) {
+  if (goodslist.length!=0) {
+    for (let i = 0 ; i < goodslist.length ; i++) {
       cardContainer.appendChild(createCard(i));        
-  }    
+    }
+   } else {
+      const infoMessage = document.createElement("div");
+      infoMessage.innerHTML = "현재 페이지에 상품이 없습니다.<br>더 좋은 상품으로 찾아뵙겠습니다.";
+      infoMessage.className = "infoMessage";
+      infoMessage.style.margin = "auto";
+      cardContainer.appendChild(infoMessage);        
+   }
 }
 
 createCardAll();
