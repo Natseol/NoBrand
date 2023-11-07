@@ -104,10 +104,6 @@
   border: 0px;
 }
 
-.sub-list-area {
-  align-self: center
-}
-
 .sub-list-container {
   display: flex;
   flex-wrap: wrap;

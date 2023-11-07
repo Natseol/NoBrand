@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="resources/css/sub.css" rel="stylesheet" type="text/css">
-<link href="resources/css/index.css" rel="stylesheet" type="text/css">
-<link href="resources/css/main.css" rel="stylesheet" type="text/css">
+<link href="/nobrand/resources/css/sub.css" rel="stylesheet" type="text/css">
+<link href="/nobrand/resources/css/index.css" rel="stylesheet" type="text/css">
+<link href="/nobrand/resources/css/main.css" rel="stylesheet" type="text/css">
 <title>제목</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"

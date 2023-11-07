@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="resources/css/bottompage.css" rel="stylesheet"
+<link href="/nobrand/resources/css/bottompage.css" rel="stylesheet"
 	type="text/css">
 </head>
 <body>

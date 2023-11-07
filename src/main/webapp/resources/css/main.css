@@ -174,62 +174,6 @@ input.rounded {
 	vertical-align: middle;
 }
 
-/* 노브랜드 배너(노브랜드의 시작) */
-
-.middle {
-	height: 100px;
-    line-height: 100px;
-}
-
-/* 로고를 포함한 검색창과 툴 */
-
-.nobrand-logo-block {
-	width: 1280px;
-	margin: 0 auto;
-}
-
-.title-nobrand {
-	max-width: 470px;
-    max-height: 76px;
-    vertical-align: middle;
-}
-
-.nobrand-searchbox {
-	position: relative;
-}
-
-.nobrand-searchbox {
-	float: left;
-    width: 210px;
-    height: 38px;
-    background: #fff;
-    padding: 0 0 0 9px;
-    border: none;
-    border-bottom: 2px solid #222;
-}
-
-
-.search-icon{
-	position: absolute;
-	float: right;
-	background-color: #fff;
-	padding: 7px 7px 5px;
-	border-bottom: 2px solid #222;
-}
-
-.tools {
-	position: relative;
-}
-
-.search-tool {
-	position: absolute;
-	left: 255px;
-	top: 5px;
-	width: 30px;
-	align-items: center;
-	align-items: baseline;
-}
-
 .category-delivery-box {
 	align-items: center;
 	margin: 0 auto;

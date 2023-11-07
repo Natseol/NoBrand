@@ -79,6 +79,12 @@ public class GoodsDAOImpl implements GoodsDAO {
 		return jdbcTemplate.query("select * from GOODS where \"KIND_BOTTOM\"=?", mapper, kind);
 	}
 	@Override
+	public List<Goods> getUsingSearch(String target) {
+		// TODO Auto-generated method stub
+		String queryTarget = "%"+target+"%";
+		return jdbcTemplate.query("select * from GOODS where \"KIND_BOTTOM\" like ? or \"NAME\" like ? or \"OPTION\" like ?", mapper, queryTarget, queryTarget, queryTarget);
+	}
+	@Override
 	public List<Goods> getAll() {
 		// TODO Auto-generated method stub
 		return jdbcTemplate.query("select * from GOODS",mapper);

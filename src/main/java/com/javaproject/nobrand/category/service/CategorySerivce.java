@@ -22,4 +22,9 @@ public class CategorySerivce {
 		List<Goods> goodsList = goodsDAO.getUsingCategory(kind);		
 		return goodsList;
 	}
+	
+	public List<Goods> getTargetList(String target) {
+		List<Goods> goodsList = goodsDAO.getUsingSearch(target);		
+		return goodsList;
+	}
 }

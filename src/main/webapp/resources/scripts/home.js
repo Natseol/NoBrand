@@ -8,7 +8,8 @@ function createCard(index) {
     const cardImg = document.createElement("div");
     cardImg.innerHTML = goodslist[index].imgAdress
     cardImg.className = "card-img-top";
-    cardImg.children[0].children[0].style.width="100%";   
+    cardImg.querySelector("img").style.width="100%";   
+    cardImg.querySelector("img").style.height="100%";  
     const cardImgLink = document.createElement("a");
     cardImgLink.href="goods?goodsId="+goodslist[index].id;
     cardImgLink.appendChild(cardImg);
