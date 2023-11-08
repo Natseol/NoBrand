@@ -13,6 +13,9 @@
 <%String name=(String)session.getAttribute("id");
 String Temp;
 %>
+<script type="text/javascript">
+	var
+</script>
 <div id="popup_container" class="popup_container">
 	<div class="regit_header"><h1>로그인</h1></div>
 <div>
