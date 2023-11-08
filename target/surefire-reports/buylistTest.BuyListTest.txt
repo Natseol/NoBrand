@@ -2,10 +2,15 @@
 Test set: buylistTest.BuyListTest
 -------------------------------------------------------------------------------
 <<<<<<< Upstream, based on develop
+<<<<<<< Upstream, based on develop
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.649 sec
 =======
 Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.697 sec <<< FAILURE!
 add(buylistTest.BuyListTest)  Time elapsed: 1.213 sec  <<< ERROR!
+=======
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.728 sec <<< FAILURE!
+add(buylistTest.BuyListTest)  Time elapsed: 1.249 sec  <<< ERROR!
+>>>>>>> 9373921 tag: login,regist connected
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
 	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
@@ -68,7 +73,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No m
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
 	... 47 more
 
-get(buylistTest.BuyListTest)  Time elapsed: 0.324 sec  <<< ERROR!
+get(buylistTest.BuyListTest)  Time elapsed: 0.322 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
 	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
