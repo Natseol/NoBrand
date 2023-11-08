@@ -19,7 +19,7 @@
 	<jsp:include page='toppagessg.jsp' />
 	<jsp:include page='toppage-nobrand.jsp' />
 	<!-- 여기부터 시작 -->
-	
+	<div class="home-body">
 	<div id="carouselExampleInterval" class="carousel slide carousel-main"
 		data-bs-ride="carousel">
 		<div class="carousel-inner">
@@ -162,7 +162,7 @@
 	</div>
 	
 
-
+	</div>
 	<!-- 여기부터 끝 -->
 <jsp:include page='bottompage.jsp' />
 <script>

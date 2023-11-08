@@ -42,7 +42,7 @@
 
 				<div class="registgoods-input-box"><div class="registgoods-input-info">상품명</div><input class="registgoods-input" name="goods-name"></div>
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">가격</div><input class="registgoods-input" name="goods-price"></div>
+				<div class="registgoods-input-box"><div class="registgoods-input-info">가격</div><input class="registgoods-input" name="goods-price" onkeypress="keyEventFunc(event)" placeholder="숫자만 입력"></div>
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">카테고리</div>
 				<select class="registgoods-input-select" name="goods-kind">
@@ -83,8 +83,7 @@
 			<div class="registgoods-content">
 				<div class="registgoods-container-title">상세페이지</div>
 				<hr class="hr-bold">				
-				<div class="registgoods-input-box"><div class="registgoods-input-info">섬네일</div><input type="file" id="thumbnail" class="registgoods-textarea" name="goods-test"></div>					
-				<hr class="hr-thin">
+				
 				<div class="registgoods-input-box"><div class="registgoods-input-info">썸네일</div><textarea id="thumbnail" class="registgoods-textarea" name="goods-thumbnail"></textarea></div>					
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">내용</div><textarea id="editor" class="registgoods-textarea" name="goods-content"></textarea></div>					
@@ -136,5 +135,6 @@
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="/nobrand/resources/scripts/registgoods.js"></script>
 </body>
 </html>
