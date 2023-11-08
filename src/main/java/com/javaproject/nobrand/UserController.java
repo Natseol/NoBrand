@@ -19,11 +19,20 @@ import com.javaproject.nobrand.user.service.UserService;
 		@Autowired
 		public UserService userService;
 		@RequestMapping(value="/regist",method=RequestMethod.GET)
-		
-		
 		//ȸ������ �������� �̵�(Ȩ������ ��� �ּҿ��� ���)
 		public String regist() {
 			return "/login/regist";
+		}
+		
+		
+		@RequestMapping(value="/loginFailed",method=RequestMethod.GET)
+		public String loginFailed() {
+			return "/login/loginFailed";
+			}
+		@RequestMapping(value="/loginSuccess",method=RequestMethod.GET)
+		//ȸ������ �������� �̵�(Ȩ������ ��� �ּҿ��� ���)
+		public String loginSuccess() {
+			return "/login/loginSuccess";
 		}
 		@RequestMapping(value="/regist",method=RequestMethod.POST)
 		public String registPost(@RequestParam Map<String,String> map) {
@@ -45,23 +54,22 @@ import com.javaproject.nobrand.user.service.UserService;
 		//�α��� ��(�α��� �Ǹ� ���� ������)
 		@RequestMapping(value="/login",method=RequestMethod.POST)
 		public String logInPost(@RequestParam Map<String,String> map,HttpSession session) {
+			String isFailed="redirect:login/loginFalied";
 			User user=new User();
 			user.setUserId(map.get("USERID"));
 			user.setPassword(map.get("PASSWORD"));
 			user =userService.login(user);
-			//���� ���� ���� ���� ������ ����� �ҷ��������� Ȯ�ο�
-			System.out.println(user.getName());
-			if(user!=null) session.setAttribute("id", user.getUserId());
-			//������ �� �������� ����name���� Ȯ�ο�
-			System.out.println(session.getAttribute("id"));
-			
-			return "redirect:/login";
+			if(user!=null) { session.setAttribute("ID", user.getUserId());
+				isFailed= "redirect:/loginSuccess";
+			}else if(user==null) {
+				isFailed="redirect:/loginFailed";
+			}
+			return isFailed;
 		}
 		@RequestMapping(value="/logout",method=RequestMethod.POST)
 		public String logOutPost(@RequestParam Map<String,String> map,HttpSession session) {
-			session.setAttribute("id", null);
+			session.setAttribute("ID", null);
 			return "redirect:/login";
 		}
 	}
-
 
