@@ -19,7 +19,11 @@ import com.javaproject.nobrand.user.service.UserService;
 		@Autowired
 		public UserService userService;
 		@RequestMapping(value="/regist",method=RequestMethod.GET)
+<<<<<<< Upstream, based on develop
 		//È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½(È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¿¡ï¿½ï¿½ ï¿½Ö¼Ò¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)
+=======
+		//È¸¿ø°¡ÀÔ ÆäÀÌÁö·Î ÀÌµ¿(È¨ÆäÀÌÁö µî¿¡¼­ ÁÖ¼Ò¿¬°á ¿ä¸Á)
+>>>>>>> 34a9e67 tag:login
 		public String regist() {
 			return "/login/regist";
 		}
@@ -30,7 +34,11 @@ import com.javaproject.nobrand.user.service.UserService;
 			return "/login/loginFailed";
 			}
 		@RequestMapping(value="/loginSuccess",method=RequestMethod.GET)
+<<<<<<< Upstream, based on develop
 		//È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½(È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¿¡ï¿½ï¿½ ï¿½Ö¼Ò¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)
+=======
+		//È¸¿ø°¡ÀÔ ÆäÀÌÁö·Î ÀÌµ¿(È¨ÆäÀÌÁö µî¿¡¼­ ÁÖ¼Ò¿¬°á ¿ä¸Á)
+>>>>>>> 34a9e67 tag:login
 		public String loginSuccess() {
 			return "/login/loginSuccess";
 		}

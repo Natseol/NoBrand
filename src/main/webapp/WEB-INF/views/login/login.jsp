@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="resources/css/regitstyle.css" type="text/css">
 <meta charset="UTF-8">
 <title>로그인. 믿고 사는 즐거움 SSG.COM - Chrome</title>
-<<<<<<< Upstream, based on develop
 <style type="text/css">
 	.support_pannel {
 	cursor:pointer;
@@ -75,19 +74,13 @@
 
 
 </style>
-=======
->>>>>>> e56036e tag:need login checkbox
 </head>
 <body>
 <%String name=(String)session.getAttribute("id");
 String Temp;
 %>
-<script type="text/javascript">
-	var
-</script>
 <div id="popup_container" class="popup_container">
 	<div class="regit_header"><h1>로그인</h1></div>
-<<<<<<< Upstream, based on develop
 <div style="display: flex;">
 	<form action="/nobrand/login" style="width: 330px" method="post">
 	<div>
@@ -176,8 +169,6 @@ String Temp;
 		</div>
 	</div>
 	
-	
-=======
 <div>
 	<form action="/nobrand/rogin" method="post">
 		<div class="cmem_sec" style="display: inline-block;vertical-align: top;">
@@ -219,18 +210,10 @@ String Temp;
 			</a>
 		</div>
 	</div>
->>>>>>> e56036e tag:need login checkbox
-
-<<<<<<< Upstream, based on develop
 </div>
 </div>
 <script type="text/javascript" src="resources/scripts/popup.js"></script>
-
-=======
 </form>
-</div>
-</div>
->>>>>>> e56036e tag:need login checkbox
 </body>
 </html>
 		
