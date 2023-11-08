@@ -6,7 +6,7 @@ function createCard(index) {
     cardImgBox.className = "card-img-box";
 
     const cardImg = document.createElement("div");
-    cardImg.innerHTML = goodslist[index].imgAdress
+    cardImg.innerHTML = goodslist[index].imgAddress
     cardImg.className = "card-img-top";
     cardImg.children[0].children[0].style.width="100%";   
     const cardImgLink = document.createElement("a");

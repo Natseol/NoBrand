@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.javaproject.nobrand.goods.dao.GoodsDAO;
 import com.javaproject.nobrand.goods.domain.Goods;
 import com.javaproject.nobrand.goods.service.GoodsService;
 
@@ -19,6 +20,8 @@ import com.javaproject.nobrand.goods.service.GoodsService;
 public class GoodsController {
 	@Autowired
 	GoodsService goodsService;
+	@Autowired
+	GoodsDAO goodsDAO;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -34,5 +37,17 @@ public class GoodsController {
 		request.setAttribute("goodsJson", json);
 		System.out.println(json);
 		return "goods/goods";
+	}
+	
+	@RequestMapping(value = "/goodsDelete", method = RequestMethod.GET)
+	public String goodsDelete(HttpServletRequest request, Model model) {
+		System.out.println("시작");
+		int goodsId = Integer.parseInt(request.getParameter("goodsId"));
+		
+		System.out.println(goodsId);
+		System.out.println("중간");
+		goodsDAO.delete(goodsId);
+		System.out.println("끝");
+		return "redirect:/";
 	}
 }

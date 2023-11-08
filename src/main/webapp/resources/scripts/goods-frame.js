@@ -9,11 +9,20 @@ const totalOrder = document.getElementsByClassName('total-order');
 const totalOrderSecond = document.getElementsByClassName('total-order-second');
 const contentElem = document.getElementsByClassName('goods-img-box-content');
 const goodsBoxElem = document.getElementsByClassName('calculator');
+const deletButton = document.getElementById('delet-goods');
+
+const user = "";
+
+function getParameter(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
 function isGoods(){
-    const urlPrams = new URLSearchParams(location.search);
-	if(urlPrams.has('goodsId')){
-		urlPrams.get('goodsId');
+    const urlPrams = getParameter("goodsId");
+	if(urlPrams.indexOf[0] == null){
 	}
 	else{
 		location.replace("http://localhost/nobrand/");
@@ -34,8 +43,8 @@ function createCookie( goodsIdJ, exdays){
     alert("상품을 장바구니에 담았습니다.");
 }
 
-function dataInput({imgAdress ,name, price, standard, volum, info, content}){
-    imgFrame[0].innerHTML = imgAdress;
+function dataInput({imgAddress ,name, price, standard, volum, info, content}){
+    imgFrame[0].innerHTML = imgAddress;
     goodsName[0].innerHTML = name;
     goodsNameInfo[0].innerHTML = name;
     goodsPrice[0].innerHTML = price;
@@ -47,5 +56,20 @@ function dataInput({imgAdress ,name, price, standard, volum, info, content}){
     contentElem[0].innerHTML = content;
 }
 
+if(user == "admin"){
+    deletButton[0].style.display = "block";
+}
+
+function deletButtonBox(){
+    deletButton.addEventListener('click', function(){
+        const paramId = getParameter("goodsId")
+        for (let index = 0; index < 1; index++) {
+            alert("상품이 삭제되었습니다.");
+            location.href="goodsDelete?goodsId="+paramId;
+        }
+    })
+}
+
 dataInput(goodsData);
 isGoods();
+deletButtonBox();

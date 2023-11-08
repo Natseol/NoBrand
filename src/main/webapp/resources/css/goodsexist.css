@@ -1,8 +1,9 @@
 @charset "UTF-8";
+
 @font-face {
   font-family: "opensans";
-  src: url("fonts/fontawesome-webfont.woff2") format("woff2"),
-    url("fonts/fontawesome-webfont.woff") format("woff");
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("../fonts/fontawesome-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -70,6 +71,7 @@
 	position:absolute;
 	right: 0;
 	margin-right: 20px;
+	cursor: pointer;
 }
 
 .list-open-close {
@@ -87,23 +89,32 @@
 .goods-box {
 	display: flex;
 	border-bottom: 1px solid #e9e9e9;
-	justify-content: space-evenly
+	justify-content: space-evenly;
+	padding: 8px 0;
 }
 
 .img-box {
+	display: flex;
 	position:relative;
-	padding: 20px;
 	left: -30px;
+	width: 100px;
+    height: 100px;
+	margin-top: 15px;
 }
+
+.img-box img {
+	width: 100%;
+	height: 100%;
+  }
 
 .img-check {
 	position:absolute;
-	left:20px;
 }
 
 .goods-info {
 	padding: 20px 0;
-	margin-right: 160px;
+	width: 380px;;
+	margin-left: -70px;
 }
 
 .mart-name{
@@ -117,7 +128,6 @@
 
 /* 상품 갯수 박스 */
 .goods-price{
-	margin-right: 40px;
 	border-left: 1px solid #e9e9e9;
 }
 
@@ -171,7 +181,6 @@
 
 .delivery {
 	border-left: 1px solid #e9e9e9;
-	margin-right: 30px;
 }
 
 .delivery-text {
@@ -217,6 +226,11 @@ ol, ul {
 	align-items: center;
 }
 
+.delete-btn {
+	border: none;
+	background-color: white;
+}
+
 .font-center {
 	margin: 0 10px 0 10px;
     color: gray;
@@ -234,6 +248,7 @@ ol, ul {
 
 .card-event-banner {
 	width: 100%;
+	cursor: pointer;
 }
 
 /* 폰트&이미지 사이즈 모음 */
@@ -286,6 +301,7 @@ ol, ul {
 
 .trashcan {
 	width: 20px;
+	cursor: pointer;
 }
 
 .left-arrow {
@@ -294,6 +310,7 @@ ol, ul {
 
 .heart-img {
 	width: 20px;
+	cursor: pointer;
 }
 
 /* 체크 박스 설정 */

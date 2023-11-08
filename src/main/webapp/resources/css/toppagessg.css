@@ -35,10 +35,10 @@ body {
 /* 로그인, 회원가입 등의 가장 상단의 div를 지정 */
 
 .service-box {
-	position: absolute;
 	right: 0;
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 }
 
 .top-common {
@@ -62,7 +62,7 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 16px;
-	padding: 52px 0 20px
+	padding: 38px 0 20px
 }
 
 .logo-box {

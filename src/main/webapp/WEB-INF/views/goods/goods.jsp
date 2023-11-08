@@ -16,6 +16,12 @@
 	let goodsData = ${requestScope.goodsJson};
 </script>
 <body>
+<% 
+	String userId = (String)session.getAttribute("ID"); 
+%>
+<script type="text/javascript">
+	user = "<%=userId%>";
+</script>
 	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
 	<jsp:include page='/WEB-INF/views/toppage-nobrand.jsp' />
 	<!-- 여기부터 시작 -->
@@ -55,7 +61,8 @@
 							<div class="brand">
 								<div class="font-nobrand">노브랜드</div>
 								<div class="arrow-right">></div>
-								<div class="public-store">? 공식스토어 ?</div>
+								<div class="public-store">공식스토어</div>
+								<button id="delet-goods">등록된 상품 삭제하기</button>
 							</div>
 							<div class="goods-name"></div>
 							<div class="goods-star">

@@ -62,7 +62,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 							goods.getName(),
 							goods.getBottomKind(),
 							goods.getInfo(),
-							goods.getImgAdress(),
+							goods.getimgAddress(),
 							goods.getOptions(),
 							goods.getDelivery(),
 							goods.getContent()
@@ -106,7 +106,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 				goods.getName(),
 				goods.getBottomKind(),
 				goods.getInfo(),
-				goods.getImgAdress(),
+				goods.getimgAddress(),
 				goods.getOptions(),
 				goods.getDelivery(),
 				goods.getContent()
@@ -115,5 +115,6 @@ public class GoodsDAOImpl implements GoodsDAO {
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("delete from GOODS where \"ID\"=?");
+		jdbcTemplate.update("delete from GOODS where \"ID\"=?", id);
+		
 	}}

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,7 @@
 	<jsp:include page='../toppagessg.jsp' />
 	<!-- 여기부터 시작 -->
 	<div id="root">
-		<div class="main">
+		<div id="scope" class="main">
 			<div class="main-box-cart">
 				<div class="cart-tip">
 					<div class="cart-tip-box">
@@ -43,7 +44,7 @@
 										</div>
 										<div class="font-size-6">로그인을 하시면 지금 보고있는 상품을 나중에도 확인하실 수 있습니다.</div>
 									</div>
-								<div class="login-btn font-size-7 login-script"><button class="login-right">로그인하기</button></div>
+								<div class="login-btn font-size-7 login-script"><button class="login-right" onclick="location.href='/nobrand/login'">로그인하기</button></div>
 								</div>
 								<div class="genelization">
 									<div class="genelization-box">
@@ -131,15 +132,16 @@
 					</div>
 				</div>
 				<!-- 여기서 목록에 따라 include -->
-				<jsp:include page='goodsexist.jsp' />
-				
-				<div class="footer">
-
+				<div id="exist-cart">
+					<jsp:include page="../cart/goodsexist.jsp"></jsp:include>
+				</div>
+				<div id="null-cart">
+					<jsp:include page="../cart/goodsnull.jsp"></jsp:include>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript module" src="resources/scripts/goodsevent.js"></script>
+	<script type="text/javascript" src="resources/scripts/cart.js"></script>
 	<!-- 여기부터 끝 -->
 	<jsp:include page='../bottompage.jsp' />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
