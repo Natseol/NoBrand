@@ -1,10 +1,14 @@
 @charset "UTF-8";
 @font-face {
   font-family: "opensans";
-  src: url("fonts/fontawesome-webfont.woff2") format("woff2"),
-    url("fonts/fontawesome-webfont.woff") format("woff");
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("../fonts/fontawesome-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+#root-goods-null {
+	display: inline-block;
 }
 
 .left-box {
@@ -19,7 +23,6 @@
 .cart-img-box {
 	width: 110px;
     height: 83px;
-    background: url(../img/order/ico_codr_cart.png) no-repeat;
     background-size: 110px 83px;
 	display: block;
     margin: 0 auto 19px

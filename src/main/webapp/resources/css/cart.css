@@ -1,8 +1,9 @@
 @charset "UTF-8";
+
 @font-face {
   font-family: "opensans";
-  src: url("fonts/fontawesome-webfont.woff2") format("woff2"),
-    url("fonts/fontawesome-webfont.woff") format("woff");
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("../fonts/fontawesome-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -236,6 +237,7 @@ li::before {
     position: relative;
     vertical-align: middle;
     line-height: 17px;
+	cursor: pointer;
 }
 
 .order-btn {

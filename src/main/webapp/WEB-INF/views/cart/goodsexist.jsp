@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <link href="resources/css/goodsexist.css" rel="stylesheet" type="text/css">
 	<div id="root-goods">
 		<div class="left-box">
@@ -9,10 +8,18 @@
 				<div class="goods-select-box">
 					<div class="select-all-delete">
 						<div class="check-box font-select-delete">
-							<input type="checkbox" id="check1" >
+							<script>
+									function selectAll(selectAll){
+										const checkboxes = document.getElementsByName('check-box');
+										checkboxes.forEach((checkbox) => {
+											checkbox.checked = selectAll.checked;
+
+										});
+									}
+							</script>
+							<input type="checkbox" id="check1" name="check-box" onclick="selectAll(this)">
 							 <label for="check1"></label>
 							 전체선택
-						
 						</div>
 						<div class="set-delete">
 							<div class="delete-sold-out font-select-delete">품절상품삭제</div>
@@ -93,5 +100,5 @@
 			</div>
 		</div>
 	</div>
-<script type="text/javascript" src="resources/scripts/goodslist.js"></script>
+	<script type="text/javascript" src="resources/scripts/goodslist.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

@@ -21,13 +21,13 @@ public class GoodsTest {
 		goods.setPrice(5480);
 		goods.setSearchCount(5);
 		goods.setCellCount(6);
-		goods.setName("[³ëºê·£µå] µµ½Ã¶ô ±è 100g (5g*20)");
-		goods.setBottomKind("Å×½ºÆ®");
-		goods.setInfo("Á¤º¸");
-		goods.setImgAdress("resources/images/1000014798997_i1_290.jpg");
-		goods.setOptions("[³ëºê·£µå] µµ½Ã¶ô ±è 100g (5g*20)");
-		goods.setDelivery("¹è´ÞÁÖ¼Ò");
-		goods.setContent("³»¿ë");
+		goods.setName("[ï¿½ï¿½ê·£ï¿½ï¿½] ï¿½ï¿½ï¿½Ã¶ï¿½ ï¿½ï¿½ 100g (5g*20)");
+		goods.setBottomKind("ï¿½×½ï¿½Æ®");
+		goods.setInfo("ï¿½ï¿½ï¿½ï¿½");
+		goods.setimgAddress("resources/images/1000014798997_i1_290.jpg");
+		goods.setOptions("[ï¿½ï¿½ê·£ï¿½ï¿½] ï¿½ï¿½ï¿½Ã¶ï¿½ ï¿½ï¿½ 100g (5g*20)");
+		goods.setDelivery("ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½");
+		goods.setContent("ï¿½ï¿½ï¿½ï¿½");
 		goods.setGoodsCount(4);
 		goodsDAO.add(goods);
 		}

@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -34,9 +35,10 @@ public class CartController {
 	 */
 	@RequestMapping(value = "/cart", method = RequestMethod.GET)
 	public String cart(HttpServletRequest request, Model model) {
-		
+	
 		return "cart/cart";
 	}
+	
 	@RequestMapping(value = "/cart/id", method = RequestMethod.POST)
 	public String cartId(HttpServletRequest request, HttpServletResponse response, Model model) throws ServletException, IOException{
 		
@@ -59,29 +61,39 @@ public class CartController {
         for (int i = 0; i < idArr.length; i++) {
 			idArr[i] = arr.getInt(i);
 		}
-      
-     		
-     		Goods goods = goodsService.getGoods(idArr[0]);
+        
+        Object[] objectArr = new Object[150];
+        String isList = "false"; 
+        
+        for (int i = 0; i < idArr.length; i++) {
+        	Goods goods = new Goods();
+        	
+     		goods = goodsService.getGoods(idArr[i]);
      		
      		JSONObject json = new JSONObject(goods);
      		
-     		Map<String, Object> jsonMap = json.toMap();
-     		request.setAttribute("goodsItem", json);
-//     		
-//     		response.setContentType("application/json");
-//     		response.getWriter().write(json.toString());
+     		objectArr[i] = goods;
      		
-     		ObjectMapper objectMapper = new ObjectMapper();
-     		
-     		response.setContentType("text/html;charset=UTF-8");
-     		response.setContentType("application/json");
-            objectMapper.writeValue(response.getWriter(), jsonMap);
-		
+     		if(idArr[i] != 0) {
+     			isList = "true";
+     		}
+		}
         
-        System.out.println(request.getAttribute("goodsItem"));
+        jsonObject.put("goodsObject", objectArr);
+        
+        Map<String, Object> jsonMap = jsonObject.toMap();
+ 		request.setAttribute("goodsItem", jsonObject);
+ 		
+ 		ObjectMapper objectMapper = new ObjectMapper();
+ 		
+ 		response.setContentType("text/html;charset=UTF-8");
+ 		response.setContentType("application/json");
+        objectMapper.writeValue(response.getWriter(), jsonMap);
+        
+        request.setAttribute("isList", isList);
        
-        
 		return "cart/cart";
 	}
+
 
 }

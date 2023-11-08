@@ -9,13 +9,13 @@ public class Goods{
 	private String name;
 	private String bottomKind;
 	private String info;
-	private String imgAdress;
+	private String imgAddress;
 	private String options;
 	private String delivery;
 	private String content;
 	public Goods() {};
 	public Goods(int id, int price, int searchCount, int cellCount,int goodsCount, String name, String bottomKind, String info,
-			String imgAdress, String options, String delivery, String content) {
+			String imgAddress, String options, String delivery, String content) {
 		this.id = id;
 		this.price = price;
 		this.searchCount = searchCount;
@@ -24,13 +24,13 @@ public class Goods{
 		this.name = name;
 		this.bottomKind = bottomKind;
 		this.info = info;
-		this.imgAdress = imgAdress;
+		this.imgAddress = imgAddress;
 		this.options = options;
 		this.delivery = delivery;
 		this.content = content;
 	}
 	public Goods(int price, int searchCount, int cellCount,int goodsCount, String name, String bottomKind, String info,
-			String imgAdress, String options, String delivery, String content) {
+			String imgAddress, String options, String delivery, String content) {
 		this.price = price;
 		this.searchCount = searchCount;
 		this.cellCount = cellCount;
@@ -38,13 +38,13 @@ public class Goods{
 		this.name = name;
 		this.bottomKind = bottomKind;
 		this.info = info;
-		this.imgAdress = imgAdress;
+		this.imgAddress = imgAddress;
 		this.options = options;
 		this.delivery = delivery;
 		this.content = content;
 	}
 
-	public Goods(String name, int price, String bottomKind, String options, int goodsCount, String delivery, String imgAdress,
+	public Goods(String name, int price, String bottomKind, String options, int goodsCount, String delivery, String imgAddress,
 			String content, String info) {
 		super();
 		this.name = name;
@@ -53,7 +53,7 @@ public class Goods{
 		this.options = options;
 		this.goodsCount = goodsCount;
 		this.delivery = delivery;
-		this.imgAdress = imgAdress;
+		this.imgAddress = imgAddress;
 		this.content = content;
 		this.info = info;
 	}
@@ -86,8 +86,8 @@ public class Goods{
 	public void setInfo(String info) {
 		this.info=info;
 	}
-	public void setImgAdress(String imgAdress) {
-		this.imgAdress=imgAdress;
+	public void setimgAddress(String imgAddress) {
+		this.imgAddress=imgAddress;
 	}
 	public void setOptions(String options) {
 		this.options=options;
@@ -120,8 +120,8 @@ public class Goods{
 	public String getInfo() {
 		return info;
 	}
-	public String getImgAdress() {
-		return imgAdress;
+	public String getimgAddress() {
+		return imgAddress;
 	}
 	
 	public String getOptions() {

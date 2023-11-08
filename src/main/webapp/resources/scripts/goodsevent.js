@@ -15,11 +15,11 @@ function add(){
 	}
 }
 
-function discount(){
+function minus(){
 	for (let index = 0; index < goodsBox.length; index++) {
 			let countBox = goodsBox[index].children[0];
 			const price = goodsBox[index].children[1].children[0];
-			discountEvent(countBox, price);
+			minusEvent(countBox, price);
 	}
 }
 
@@ -37,7 +37,7 @@ function addEvent(count, price) {
 	})
 }
 
-function discountEvent(count, price) {
+function minusEvent(count, price) {
 	let countGoods = 1;
 	const goodsPrice = [];
 	goodsPrice.push(price.textContent);
@@ -92,7 +92,9 @@ function sumResult(){
 	}
 }
 
+alert("실행중");
+
 add();
-discount();
+minus();
 sumEvent();
 sumResult();

@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <link href="resources/css/goodsnull.css" rel="stylesheet" type="text/css">
-	<div id="root">
+	<div id="root-goods-null">
 		<div class="left-box">
 			<div class="nullgoods-box">
 				<div class="cart-img">
@@ -16,7 +16,7 @@
 					</div>
 					<div class="login-btn-null">
 						<div class="font-size-6">
-							<button class="login-btn-left">로그인</button>
+							<button class="login-btn-left" onclick="location.href='/nobrand/login'">로그인</button>
 						</div>
 					</div>
 					<div class="card-event">

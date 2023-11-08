@@ -22,7 +22,7 @@ function createCard(index) {
   cardImgBox.className = "card-img-box";
 
   const cardImg = document.createElement("div");
-  cardImg.innerHTML = goodslist[index].imgAdress
+  cardImg.innerHTML = goodslist[index].imgAddress
   cardImg.className = "card-img-top";
   cardImg.querySelector("img").style.width="225px";
   cardImg.querySelector("img").style.height="225px";
