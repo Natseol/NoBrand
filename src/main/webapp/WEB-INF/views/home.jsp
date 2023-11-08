@@ -166,7 +166,7 @@
 	<!-- 여기부터 끝 -->
 <jsp:include page='bottompage.jsp' />
 <script>
-const userId = '<%=(String)session.getAttribute("id")%>';
+const userId = '<%=(String)session.getAttribute("ID")%>';
 console.log(userId);
 const goodslist = ${requestScope.list};
 console.log(goodslist);

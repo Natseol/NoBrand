@@ -21,8 +21,8 @@ public class RegistGoodsController {
 
 	@RequestMapping(value = "/registgoods", method = RequestMethod.GET)
 	public String registGoods(Model model, HttpSession session) {
-		if (session.getAttribute("id")==null) return "home";
-		if (session.getAttribute("id").equals("admin")) return "registgoods/registgoods";
+		if (session.getAttribute("ID")==null) return "home";
+		if (session.getAttribute("ID").equals("admin")) return "registgoods/registgoods";
 		return "home";
 	}
 	
