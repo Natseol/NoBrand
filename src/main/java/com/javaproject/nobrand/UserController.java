@@ -21,7 +21,7 @@ import com.javaproject.nobrand.user.service.UserService;
 		@RequestMapping(value="/regist",method=RequestMethod.GET)
 		
 		
-		//È¸¿ø°¡ÀÔ ÆäÀÌÁö·Î ÀÌµ¿(È¨ÆäÀÌÁö µî¿¡¼­ ÁÖ¼Ò¿¬°á ¿ä¸Á)
+		//È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½(È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¿¡ï¿½ï¿½ ï¿½Ö¼Ò¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)
 		public String regist() {
 			return "/login/regist";
 		}
@@ -42,24 +42,24 @@ import com.javaproject.nobrand.user.service.UserService;
 			return "/login/login";
 		}
 		
-		//·Î±×ÀÎ ÂÊ(·Î±×ÀÎ µÇ¸é ÀÌÀü ÆäÀÌÁö)
+		//ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½(ï¿½Î±ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 		@RequestMapping(value="/login",method=RequestMethod.POST)
 		public String logInPost(@RequestParam Map<String,String> map,HttpSession session) {
 			User user=new User();
 			user.setUserId(map.get("USERID"));
 			user.setPassword(map.get("PASSWORD"));
 			user =userService.login(user);
-			//¼¼¼Ç ÀúÀå Àü¿¡ À¯Àú Á¤º¸°¡ Á¦´ë·Î ºÒ·¯¿ÍÁ³´ÂÁö È®ÀÎ¿ë
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½Î¿ï¿½
 			System.out.println(user.getName());
-			if(user!=null) session.setAttribute("user", user.getName());
-			//¼¼¼ÇÀÌ Àß ÀúÀå‰ç´ÂÁö À¯ÀúnameÀ¸·Î È®ÀÎ¿ë
-			System.out.println(session.getAttribute("user"));
+			if(user!=null) session.setAttribute("id", user.getUserId());
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½nameï¿½ï¿½ï¿½ï¿½ È®ï¿½Î¿ï¿½
+			System.out.println(session.getAttribute("id"));
 			
 			return "redirect:/login";
 		}
 		@RequestMapping(value="/logout",method=RequestMethod.POST)
 		public String logOutPost(@RequestParam Map<String,String> map,HttpSession session) {
-			session.setAttribute("user", null);
+			session.setAttribute("id", null);
 			return "redirect:/login";
 		}
 	}

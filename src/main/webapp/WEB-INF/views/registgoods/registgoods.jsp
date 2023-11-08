@@ -83,7 +83,9 @@
 			<div class="registgoods-content">
 				<div class="registgoods-container-title">상세페이지</div>
 				<hr class="hr-bold">				
-				<div class="registgoods-input-box"><div class="registgoods-input-info">섬네일</div><textarea id="thumbnail" class="registgoods-textarea" name="goods-thumbnail"></textarea></div>					
+				<div class="registgoods-input-box"><div class="registgoods-input-info">섬네일</div><input type="file" id="thumbnail" class="registgoods-textarea" name="goods-test"></div>					
+				<hr class="hr-thin">
+				<div class="registgoods-input-box"><div class="registgoods-input-info">썸네일</div><textarea id="thumbnail" class="registgoods-textarea" name="goods-thumbnail"></textarea></div>					
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">내용</div><textarea id="editor" class="registgoods-textarea" name="goods-content"></textarea></div>					
 				<hr class="hr-thin">

@@ -20,8 +20,10 @@ public class RegistGoodsController {
 	GoodsDAO goodsDAO;
 
 	@RequestMapping(value = "/registgoods", method = RequestMethod.GET)
-	public String registGoods(Model model) {
-		return "registgoods/registgoods";
+	public String registGoods(Model model, HttpSession session) {
+		if (session.getAttribute("id")==null) return "home";
+		if (session.getAttribute("id").equals("admin")) return "registgoods/registgoods";
+		return "home";
 	}
 	
 	@RequestMapping(value="/registgoods", method=RequestMethod.POST)

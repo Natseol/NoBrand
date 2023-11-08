@@ -9,7 +9,7 @@
 <title>로그인 페이지</title>
 </head>
 <body>
-<%String name=(String)session.getAttribute("user");
+<%String name=(String)session.getAttribute("id");
 String Temp;
 System.out.println(name);
 %>

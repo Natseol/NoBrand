@@ -5,13 +5,13 @@ function createCard(index) {
     const cardImgBox = document.createElement("div");
     cardImgBox.className = "card-img-box";
 
-    const cardImg = document.createElement("div");
+    const cardImg = document.createElement("div");    
     cardImg.innerHTML = goodslist[index].imgAdress
-    cardImg.className = "card-img-top";
-    cardImg.querySelector("img").style.width="100%";   
-    cardImg.querySelector("img").style.height="100%";  
+    cardImg.className = "card-img-top";    
     const cardImgLink = document.createElement("a");
     cardImgLink.href="goods?goodsId="+goodslist[index].id;
+    cardImg.querySelector("img").style.width="288px";   
+    cardImg.querySelector("img").style.height="288px";  
     cardImgLink.appendChild(cardImg);
     cardImgBox.appendChild(cardImgLink);
 
@@ -82,12 +82,43 @@ function createCard(index) {
 
     return card;
   }
-
+  
+  const cardContainer = document.getElementById("cardContainer");
   function createCardAll() {
-    const cardContainer = document.getElementById("cardContainer");
-    for (let i = 0 ; i < goodslist.length ; i++) {
+    if (goodslist.length>4) {
+      for (let i = 0 ; i < 4 ; i++) {
         cardContainer.appendChild(createCard(i));        
-    }    
+      }
+    } else if (goodslist.length>0) {
+      for (let i = 0 ; i < createCard.length ; i++) {
+        cardContainer.appendChild(createCard(i));        
+      }
+    }
+  }
+  createCardAll();
+
+  function createCardMore() {
+    if (goodslist.length>4) {
+      for (let i = 4 ; i < goodslist.length ; i++) {
+        cardContainer.appendChild(createCard(i));
+        
+      }      const moreItem = document.getElementById("more-items");
+      moreItem.innerHTML = "";
+    }
   }
 
-  createCardAll();
+  function checkAdmin() {
+    const adminArea = document.getElementById("admin-area");
+    
+    if(userId=="admin") {
+      const adminButton = document.createElement("button");
+      adminButton.className = "regist-button btn btn-warning";
+      adminButton.innerHTML = "상품등록";
+      adminButton.style.margin = "10px auto";
+      adminButton.onclick= function() {
+        location="/nobrand/registgoods"
+      }            
+      adminArea.appendChild(adminButton);
+    }
+  }
+  checkAdmin();

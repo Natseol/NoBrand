@@ -56,7 +56,7 @@
 				class="visually-hidden">Next</span>
 		</button>
 	</div>
-
+	<div id="admin-area"></div>
 	<div class="index-content">
 		<hr>
 		<div class="index-limited">
@@ -64,112 +64,10 @@
 				<img src="resources/images/2022021713341653781759442275_847.png">
 			</div>
 			<div class="index-limited-items" id="cardContainer">
-
-				<!-- <div class="itemlist4" style="width: 18rem;">
-					<div class="card-img-box">
-						<a><img src="resources/images/1000517346294_i1_290.jpg"
-							class="card-img-top" alt="썸네일"></a>
-						<div class="card-img-bag rounded-3">
-							<span class="card-img-icon material-symbols-outlined">shopping_bag</span>
-						</div>
-					</div>
-					<div class="card-body">
-						<p class="card-text">
-						<div class="card-text-trans">
-							<img src="resources/images/em.svg"><img
-								src="resources/images/ico_crossarrow.svg" style="width: 1rem">새벽배송
-							가능
-						</div>
-						<div>
-							<span class="text-bold">노브랜드</span>상품옵션
-						</div>
-						<div class="card-text-price">
-							가격<span class="card-text-won">원</span>
-						</div>
-						<div class="card-text-score">★ 별점</div>
-						</p>
-					</div>
-				</div> -->
-
-				<!-- <div class="itemlist4" style="width: 18rem;">
-					<div class="card-img-box">
-						<a><img src="resources/images/1000517346294_i1_290.jpg"
-							class="card-img-top" alt="썸네일"></a>
-						<div class="card-img-bag rounded-3">
-							<span class="material-symbols-outlined">shopping_bag</span>
-						</div>
-					</div>
-					<div class="card-body">
-						<p class="card-text">
-						<div class="card-text-trans">
-							<img src="resources/images/em.svg"><img
-								src="resources/images/ico_crossarrow.svg" style="width: 1rem">새벽배송
-							가능
-						</div>
-						<div>
-							<span class="text-bold">노브랜드</span>상품옵션
-						</div>
-						<div class="card-text-price">
-							가격<span class="card-text-won">원</span>
-						</div>
-						<div class="card-text-score">★ 별점</div>
-						</p>
-					</div>
-				</div>
-				<div class="itemlist4" style="width: 18rem;">
-					<div class="card-img-box">
-						<a><img src="resources/images/1000517346294_i1_290.jpg"
-							class="card-img-top" alt="썸네일"></a>
-						<div class="card-img-bag rounded-3">
-							<span class="material-symbols-outlined">shopping_bag</span>
-						</div>
-					</div>
-					<div class="card-body">
-						<p class="card-text">
-						<div class="card-text-trans">
-							<img src="resources/images/em.svg"><img
-								src="resources/images/ico_crossarrow.svg" style="width: 1rem">새벽배송
-							가능
-						</div>
-						<div>
-							<span class="text-bold">노브랜드</span>상품옵션
-						</div>
-						<div class="card-text-price">
-							가격<span class="card-text-won">원</span>
-						</div>
-						<div class="card-text-score">★ 별점</div>
-						</p>
-					</div>
-				</div>
-				<div class="itemlist4" style="width: 18rem;">
-					<div class="card-img-box">
-						<a><img src="resources/images/1000517346294_i1_290.jpg"
-							class="card-img-top" alt="썸네일"></a>
-						<div class="card-img-bag rounded-3">
-							<span class="material-symbols-outlined">shopping_bag</span>
-						</div>
-					</div>
-					<div class="card-body">
-						<p class="card-text">
-						<div class="card-text-trans">
-							<img src="resources/images/em.svg"><img
-								src="resources/images/ico_crossarrow.svg" style="width: 1rem">새벽배송
-							가능
-						</div>
-						<div>
-							<span class="text-bold">노브랜드</span>상품옵션
-						</div>
-						<div class="card-text-price">
-							가격<span class="card-text-won">원</span>
-						</div>
-						<div class="card-text-score">★ 별점</div>
-						</p>
-					</div>
-				</div> -->
-
+				<!-- 카드 추가 스크립트 -->
 			</div>
-			<div class="more-items">
-				<button name="moreItems" class="button-more-items">
+			<div class="more-items" id="more-items">
+				<button name="moreItems" class="button-more-items" onclick='createCardMore()'>
 					<div class="more-items-text">
 						더보기<img src="resources/images/ico_moreitem.svg">
 					</div>
@@ -266,15 +164,17 @@
 
 
 	<!-- 여기부터 끝 -->
-	<jsp:include page='bottompage.jsp' />
+<jsp:include page='bottompage.jsp' />
 <script>
+const userId = '<%=(String)session.getAttribute("id")%>';
+console.log(userId);
 const goodslist = ${requestScope.list};
 console.log(goodslist);
-</script>	
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-		crossorigin="anonymous"></script>
-<script src="resources/scripts/home.js"></script>
+</script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+	crossorigin="anonymous"></script>
+<script src="/nobrand/resources/scripts/home.js"></script>
 </body>
 </html>

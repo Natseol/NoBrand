@@ -59,6 +59,16 @@
 	text-decoration: underline;
 }
 
+.bottompage-menuright {
+    align-self: center;
+}
+
+.bottompage-select{
+    width: 129px;
+    height: 27px;
+    padding: 0px 2px;
+}
+
 .bottompage-sgdotcom {
 	font-size:10px;
 }
@@ -134,6 +144,10 @@
     font-size:9px;
 }
 
+.bottompage-boldtext{
+    cursor: pointer;
+}
+
 .bottompage-icon2 {
     display: flex;
 }
@@ -145,7 +159,7 @@
     height: 30px;
     background-position: 0 -150px;
     display: inline-block;
-}
+    cursor: pointer;}
 
 .bottompage-koreanshop2 {
     background-image: url("../images/sp_cmfooter.webp");
@@ -153,7 +167,7 @@
 	width: 97px;
     height: 30px;
     background-position: 0 -50px;
-    display: inline-block;
+    display: inline-block;    
 }
 
 .bottompage-icon2inner {

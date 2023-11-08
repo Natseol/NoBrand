@@ -25,8 +25,7 @@
 
 .index-limited-items {
 	display: flex;
-	margin: 25px auto;
-	justify-content: space-between;
+	margin: 25px auto;	
     flex-wrap: wrap;
 }
 
@@ -109,4 +108,9 @@
 
 .itemlist4 {
     width: 18rem;
+    margin : 0px 16px;
   }
+
+#admin-area {
+    text-align: center;
+}

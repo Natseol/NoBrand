@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			<div class="bottompage-menuright">
-				<select>
+				<select class="bottompage-select">
 					<option>FAMILY SITE</option>
 					<option>신세계그룹</option>
 					<option>신세계포인트</option>
@@ -119,7 +119,7 @@
 				</div>
 			<div class="bottompage-smalltext">
 				(주)에스에스지닷컴 사이트의 상품/판매자/쇼핑정보, 컨텐츠, UI등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는
-				저작권법, 콘텐츠사업 진흥법 등에 의하여 엄격히 금지됩니다 <a class="text-bold">콘텐츠 산업 진흥법에 따른 표시 ></a>
+				저작권법, 콘텐츠사업 진흥법 등에 의하여 엄격히 금지됩니다 <a class="bottompage-boldtext text-bold">콘텐츠 산업 진흥법에 따른 표시 ></a>
 			</div>
 		</div>
 

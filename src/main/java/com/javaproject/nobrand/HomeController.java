@@ -33,34 +33,17 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model, HttpServletRequest request) {
+	public String home(Model model, HttpServletRequest request) {
 		JSONObject json = new JSONObject();		
 		List<Goods> goodsList = goodsDAO.getAll();
 		json.put("list", goodsList);
 		request.setAttribute("list", json.get("list"));
-		System.out.println(json.get("list"));
 		return "home";
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public String postHome(Locale locale, Model model) {
+	public String postHome(Model model) {
 		return "home";
-	}
-	
-	
-	@RequestMapping(value = "/bottom", method = RequestMethod.GET)
-	public String bottom(Model model) {
-		return "bottompage";
-	}
-
-	@RequestMapping(value = "/top", method = RequestMethod.GET)
-	public String index(Locale locale, Model model) {
-		return "toppage";
-	}
-	
-	@RequestMapping(value = "/cartbanner", method = RequestMethod.GET)
-	public String topPage(Locale locale, Model model) {
-		return "toppagessg";
 	}
 
 }
