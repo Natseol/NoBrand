@@ -115,14 +115,46 @@ dd {
     min-height: 300px;
   }
   .regitButton_output{
-    width: 250px;
-    height: 59px;
+    width: 330px;
+    height: 43px;
+  	border: 1px solid #ff5b59;
+    background: #ff5b59;
+    color: #fff;
+    font-size: medium;
+  }
+   .regitButton_output2{
+    width: 430px;
+    height: 30px;
+  	border: 1px solid #ff5b59;
+    background: #ff5b59;
+    color: #fff;
+    font-size: medium;
+  }
+   .loginButton_output{
+    width: 350px;
+    height: 39px;
   	border: 1px solid #ff5b59;
     background: #ff5b59;
     color: #fff;
     font-size: medium;
   }
   .regitButton {
+      display: inline-block;
+      position: relative;
+      min-width: 263px;
+      height: 52px;
+      padding: 0 5px;
+      font-family: "Spoqa-Regular", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 50px;
+      letter-spacing: -0.3px;
+      color: #222;
+      text-align: center;
+      text-decoration: none;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+    .loginButton {
       display: inline-block;
       position: relative;
       min-width: 263px;
@@ -149,6 +181,12 @@ dd {
     margin-top: 60px;
     font-size: 0;
     text-align: center;
+}
+.login_btnarea{
+    position: relative;
+    margin-top: 60px;
+    font-size: 0;
+    text-align: left;
 }
 .regit_content_dl{
     min-height: 40px;
@@ -273,3 +311,57 @@ input.checkbox, input.radio {
   position: relative;
   vertical-align: top;
 }
+.cmem_chk {
+  position: relative;
+  min-width: 18px;
+  display: inline-block;
+  min-height: 18px;
+  word-wrap: normal;
+  word-break: break-all;
+  vertical-align: top;
+  line-height: 19px;
+}
+.cmem_login_support .cmem_chk {
+  margin-top:5px;
+  float: left;
+  font-size: 11px;
+  color: #4a4a4a;
+}
+.cmem_login_support .login_support_pannel {
+  float: right;
+  font-size: 0;
+}
+.cmem_ct_login .cmem_sec.advertising {
+    width: 253px;
+    height: 345px;
+    margin: 0 0 0 45px;
+    padding-top: 0;
+}
+.cmem_sec.advertising {
+	position:relative;
+    width: 253px;
+    height: 345px;
+    margin: 0 0 0 45px;
+    padding-top: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+.cmem_ct_login .cmem_sec {
+    display: inline-block;
+    width: 330px;
+    vertical-align: top;
+}
+.popup_container{
+	width: 720px;
+    margin-top :30px;
+    margin-left :35px;
+    position: relative;
+    padding: 30px;
+    *zoom: 1;
+}
+
+.login_support_pannel {
+    float: right;
+
+}
+

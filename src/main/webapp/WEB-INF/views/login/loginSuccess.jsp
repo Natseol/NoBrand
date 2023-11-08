@@ -3,10 +3,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+	function toMainPage() {
+		window.close();
+		window.location.href='/nobrand';
+	}
+	toMainPage();
+</script>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인 성공</title>
 </head>
 <body>
+	
+	
+
 
 </body>
 </html>
