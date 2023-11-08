@@ -7,7 +7,7 @@
 	function loginFailed() {
 		window.alert("아이디 혹은 비밀번호를 확인해주세요");
 		window.close();
-		window.location.href="/nobrand/login";
+		window.open('/nobrand/login','로그인',width=672,height=480);
 	}
 	loginFailed();
 </script>
@@ -16,7 +16,6 @@
 </head>
 <body>
 	
-
 
 
 </body>

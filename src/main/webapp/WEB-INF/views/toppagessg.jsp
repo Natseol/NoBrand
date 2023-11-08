@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <link href="resources/css/toppagessg.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>장바구니</title>
@@ -11,10 +12,15 @@
 	<div id="root">
 		<div class="top-banner">
 			<div class="service-box" style="z-index: 998;cursor: pointer;">
-				<div class="user-service top-common"><div class="font-logo" id="login-box">로그인 ·</div></div>
+				<div class="user-service top-common"><div class="font-logo" id="login-box">
+				로그인 ·
+				</div></div>
 				<div class="user-service top-common"><div class="font-logo" id="regit-box">회원가입 ·</div></div>
 				<div class="user-service top-common"><div class="font-logo" id="center">고객센터 |</div></div>
-				<div class="user-heart top-img-margin"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></div>
+				<form action="/nobrand/logout" method="post">
+				<button class="user-heart top-img-margin" id="logout" name="logout"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></button>
+				</form>
+				<!--  <div class="user-heart top-img-margin"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></div>-->
 				<div class="user-user top-img-margin"><img class="top-img-size" alt="유저정보" src="resources/images/user.svg"></div>
 				<div class="user-delivery top-img-margin"><img class="top-img-size" alt="배송정보" src="resources/images/delivery.svg"></div>
 				<div class="user-cart top-img-margin">
@@ -60,8 +66,30 @@
 			</div>
 		</div>
 		<div class="line"></div>
-		<script type="text/javascript" src="resources/scripts/searchbox-border.js"></script>
-		<script type="text/javascript" src="resources/scripts/popup.js"></script>
+
+
 	</div>
+	<script type="text/javascript" src="resources/scripts/searchbox-border.js"></script>
+	<script type="text/javascript" src="resources/scripts/popup.js"></script>
+	<script>
+		let name= <%=(String)session.getAttribute("ID")%>;
+		console.log(name);
+		const regitboxElem=document.getElementById('regit-box');
+		const loginboxElem=document.getElementById('login-box');
+		if(name==null){
+			loginboxElem.innerHTML="로그인 ·"
+		}
+		else if(name!=null){
+			loginboxElem.innerHTML=name+"님 반갑습니다";
+			loginboxElem.id="info-box";
+		}
+		if(regit-box==null){
+			regitboxElem.innerHTML="회원가입 ·"
+		}
+		else if(name!=null){
+			regitboxElem.innerHTML="로그아웃";
+			regitboxElem.id="logout";
+		}
+	</script>
 </body>
 </html>

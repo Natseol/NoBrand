@@ -68,6 +68,7 @@ import com.javaproject.nobrand.user.service.UserService;
 			user.setPassword(map.get("PASSWORD"));
 			user =userService.login(user);
 			if(user!=null) { session.setAttribute("ID", user.getUserId());
+				System.out.println(session.getAttribute("ID"));
 				isFailed= "redirect:/loginSuccess";
 			}else if(user==null) {
 				isFailed="redirect:/loginFailed";
@@ -77,7 +78,7 @@ import com.javaproject.nobrand.user.service.UserService;
 		@RequestMapping(value="/logout",method=RequestMethod.POST)
 		public String logOutPost(@RequestParam Map<String,String> map,HttpSession session) {
 			session.setAttribute("ID", null);
-			return "redirect:/login";
+			return "redirect:/";
 		}
 	}
 
