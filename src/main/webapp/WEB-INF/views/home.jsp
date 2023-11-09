@@ -169,7 +169,11 @@
 	<!-- 여기부터 끝 -->
 <jsp:include page='bottompage.jsp' />
 <script>
+<<<<<<< Upstream, based on develop
 const userId = "<%= (String) session.getAttribute("ID") %>";
+=======
+const userId = "<%=(String)session.getAttribute("ID")%>";
+>>>>>>> cbf0654 tag:review and buylist
 console.log(userId);
 const goodslist = ${requestScope.list};
 console.log(goodslist);

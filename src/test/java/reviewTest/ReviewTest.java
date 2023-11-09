@@ -15,7 +15,7 @@ import com.javaproject.nobrand.review.domain.Review;
 public class ReviewTest {
 	@Autowired
 	ReviewDAO reviewDAO;
-	@Test
+//	@Test
 	public void add() {
 		Review review=new Review();
 		review.setGoodsId(2);

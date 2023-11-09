@@ -61,9 +61,9 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 	@Override
-	public User get(String userId) {
+	public User get(String userID) {
 		try {
-			return jdbctemplate.queryForObject("select * from USERS where \"USERID\"=?", new Object[] { userId },mapper);
+			return jdbctemplate.queryForObject("select * from USERS where \"USERID\"=?", new Object[] { userID },mapper);
 		} catch (Exception e) {
 			// TODO: handle exception
 			return null;
@@ -100,7 +100,11 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
+<<<<<<< Upstream, based on develop
 		jdbctemplate.update("delete from USERS where \"ID\"=?", id);
+=======
+		jdbctemplate.update("delete from USERS where \"ID\"=?",id);
+>>>>>>> cbf0654 tag:review and buylist
 	}
 
 

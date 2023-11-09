@@ -3,43 +3,43 @@ package com.javaproject.nobrand.buyList.domain;
 import java.util.Date;
 
 public class BuyList {
-	private int id;
-	private String name;
+	private int userID;
+	private int goodsID;
 	private int count;
 	private int price;
 	private Date createAt;
 	public BuyList() {}
 	
-	public BuyList(int id, String name, int count, int price, Date createAt) {
-		this.id = id;
-		this.name = name;
+	public BuyList(int userID, int goodsID, int count, int price, Date createAt) {
+		this.userID = userID;
+		this.goodsID = goodsID;
 		this.count = count;
 		this.price = price;
 		this.createAt = createAt;
 	}
-	public BuyList(String name, int count, int price, Date createAt) {
-		this.name = name;
+	public BuyList(int goodsID, int count, int price, Date createAt) {
+		this.goodsID = goodsID;
 		this.count = count;
 		this.price = price;
 		this.createAt = createAt;
 	}
-	public BuyList(String name, int count, int price) {
-		this.name = name;
+	public BuyList(int goodsID, int count, int price) {
+		this.goodsID = goodsID;
 		this.count = count;
 		this.price = price;
 	}
 
-	public int getId() {
-		return id;
+	public int getUserID() {
+		return userID;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setUserID(int userID) {
+		this.userID = userID;
 	}
-	public String getName() {
-		return name;
+	public int getGoodsID() {
+		return goodsID;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setGoodsID(int goodsID) {
+		this.goodsID = goodsID;
 	}
 	public int getCount() {
 		return count;

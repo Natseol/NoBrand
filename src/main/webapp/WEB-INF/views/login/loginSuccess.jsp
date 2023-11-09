@@ -7,6 +7,7 @@
 	function toMainPage() {
 		window.close();
 		window.location.href='/nobrand';
+		window.location.reload();
 	}
 	toMainPage();
 </script>

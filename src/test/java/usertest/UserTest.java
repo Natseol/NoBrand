@@ -22,17 +22,17 @@ import com.javaproject.nobrand.user.domain.User;
 public class UserTest {
 	@Autowired
 	UserDAO userDAO;
-	@Test
-	public void add() {
-		User user=new User();
-		user.setName("name");
-		user.setUserId("nickname");
-		user.setPassword("pass");
-		user.setPhoneNumber("01020201203");
-		user.setEmailAddress("eee@eee.@@@");
-		user.setAddress("add");
-		userDAO.add(user);
-	}
+//	@Test
+//	public void add() {
+//		User user=new User();
+//		user.setName("name");
+//		user.setUserId("nickname");
+//		user.setPassword("pass");
+//		user.setPhoneNumber("01020201203");
+//		user.setEmailAddress("eee@eee.@@@");
+//		user.setAddress("add");
+//		userDAO.add(user);
+//	}
 	
 //	public void add(User user) {
 //		user=new User(

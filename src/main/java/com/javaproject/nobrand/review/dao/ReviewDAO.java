@@ -9,8 +9,8 @@ import com.javaproject.nobrand.review.domain.Review;
 
 public interface ReviewDAO {
 	public void add(Review review);
-	public Review get(int id);
+	public Review get(int userID);
 	public List<Review> getAll();
 	public void update(Review review);
-	public void delete(int id);
+	public void delete(int userID);
 }

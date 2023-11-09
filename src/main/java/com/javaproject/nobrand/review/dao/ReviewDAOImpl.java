@@ -24,10 +24,10 @@ public class ReviewDAOImpl implements ReviewDAO{
 	private RowMapper<Review> mapper=new RowMapper<Review>() {
 		public Review mapRow(ResultSet rs, int rowNum) throws SQLException{
 			return new Review(
-					rs.getInt("GOODSID"),
+					rs.getInt("USER_ID"),
+					rs.getInt("GOODS_ID"),
 					rs.getInt("SCORE"),
-					rs.getInt("COUNT"),
-					rs.getDate("CREATEAT")
+					rs.getInt("COUNT")
 					);
 		}
 	};
@@ -36,17 +36,19 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void add(Review review) {
 		jdbctemplate.update("insert into review ( "
-				+ "\"SCORE\", \"COUNT\") "
-				+ "values(?, ?)",
+				+"\"USER_ID\",\"GOODS_ID\" ,\"SCORE\", \"COUNT\") "
+				+ "values( ?, ?, ?, ?)",
+				review.getUserId(),
+				review.getGoodsId(),
 				review.getScore(),
 				review.getCount()
 				);
 		// TODO Auto-generated method stub
 	}
 	@Override
-	public Review get(int id) {
+	public Review get(int userId) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from review where \"GOODS_ID\"=?", new Object[] { id },mapper);
+		return jdbctemplate.queryForObject("select * from review where \"USER_ID\"=?", new Object[] { userId },mapper);
 	}
 
 	@Override
@@ -59,21 +61,22 @@ public class ReviewDAOImpl implements ReviewDAO{
 	public void update(Review review) {
 		// TODO Auto-generated method stub
 		jdbctemplate.update("update review set("
-				+"\"GOODS_ID\"=?,"
+				+"\"USER_ID\"=?,"
+				+ "\"GOODS_ID\"=?,"
 				+ "\"SCORE\"=?,"
-				+ "\"COUNT\"=?,"
-				+ "\"CREATEAT\"=?) where \"GOODS_ID\"=?",
+				+ "\"COUNT\"=?) where \"USER_ID\"=?",
+				review.getUserId(),
 				review.getGoodsId(),
 				review.getScore(),
 				review.getCount(),
-				review.getCreateAt()
+				review.getUserId()
 				);
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(int userId) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("delete from review where \"GOODS_ID\"=?");
+		jdbctemplate.update("delete from review where \"USER_ID\"=?",userId);
 	}
 
 }

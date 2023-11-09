@@ -26,8 +26,8 @@ public class BuyListDAOImpl implements BuyListDAO {
 	private RowMapper<BuyList> mapper=new RowMapper<BuyList>() {
 		public BuyList mapRow(ResultSet rs, int rowNum) throws SQLException{
 			return new BuyList(
-					rs.getInt("ID"),
-					rs.getString("NAME"),
+					rs.getInt("USER_ID"),
+					rs.getInt("GOODS_ID"),
 					rs.getInt("COUNT"),
 					rs.getInt("PRICE"),
 					rs.getDate("CREATEAT")
@@ -37,18 +37,19 @@ public class BuyListDAOImpl implements BuyListDAO {
 	@Override
 	public void add(BuyList buyList) {
 		jdbctemplate.update("insert into BUYLIST ( "
-				+ "\"NAME\", \"COUNT\",\"PRICE\") "
-				+ "values(?, ?, ?)",
-				buyList.getName(),
+				+ "\"USER_ID\",\"GOODS_ID\", \"COUNT\",\"PRICE\") "
+				+ "values(?, ?, ?, ?)",
+				buyList.getUserID(),
+				buyList.getGoodsID(),
 				buyList.getCount(),
 				buyList.getPrice()
 				);
 	}
 
 	@Override
-	public BuyList get(int id) {
+	public BuyList get(String userId) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from BUYLIST where \"ID\"=?", new Object[] { id },mapper);
+		return jdbctemplate.queryForObject("select * from BUYLIST where \"USER_ID\"=?", new Object[] { userId },mapper);
 	}
 
 	@Override
@@ -60,21 +61,22 @@ public class BuyListDAOImpl implements BuyListDAO {
 	@Override
 	public void update(BuyList buyList) {
 		jdbctemplate.update("update BUYLIST set("
-				+ "\"NAME\"=?,"
+				+ "\"USER_ID\"=?,"
+				+ "\"GOODS_ID\"=?,"
 				+ "\"COUNT\"=?,"
-				+ "\"PRICE\"=?,"
-				+ "\"CREATEAT\"=?) where \"ID\"=?",
-				buyList.getName(),
+				+ "\"PRICE\"=?"
+				+") where \"USER_ID\"=?",
+				buyList.getUserID(),
+				buyList.getGoodsID(),
 				buyList.getCount(),
 				buyList.getPrice(),
-				buyList.getCreateAt()
+				
+				buyList.getUserID()
 				);
-		
 	}
-
 	@Override
-	public void delete(int id) {
-		jdbctemplate.update("delete from BUYLIST where \"ID\"=?");
+	public void delete(String userId) {
+		jdbctemplate.update("delete from BUYLIST where \"USER_ID\"=?",userId);
 		// TODO Auto-generated method stub
 	}
 
