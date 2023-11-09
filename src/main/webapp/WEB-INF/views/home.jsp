@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link href="resources/css/main.css" rel="stylesheet" type="text/css">
 <link href="resources/css/index.css" rel="stylesheet" type="text/css">
-<title>top</title>
+<title>SSG - 노브랜드</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <link
