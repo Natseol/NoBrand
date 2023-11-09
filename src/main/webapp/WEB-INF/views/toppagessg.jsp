@@ -12,16 +12,24 @@
 	<div id="root">
 		<div class="top-banner">
 			<div class="service-box" style="z-index: 998;cursor: pointer;">
-				<div class="user-service top-common"><div class="font-logo" id="login-box">
+			<div class="user-service top-common">
+				<div class="font-logo" id="login-box">
 				로그인 ·
-				</div></div>
-				<div class="user-service top-common"><div class="font-logo" id="regit-box">회원가입 ·</div></div>
-				<div class="user-service top-common"><div class="font-logo" id="center">고객센터 |</div></div>
-				<form action="/nobrand/logout" method="post">
-				<button class="user-heart top-img-margin" id="logout" name="logout"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></button>
+				</div>
+			</div>
+				<div class="user-service top-common" id="regit-box"style="font-size : 10px"><div class="font-logo">회원가입 ·</div></div>
+				<form action="/nobrand/logout" id="logout_box" method="post" style="display: none;">
+					<button class="user-service top-common" name="logout" id="logout" style="border: none; background-color: white;">
+						<div class="font-logo">로그아웃
+						</div>
+					</button>
 				</form>
-				<!--  <div class="user-heart top-img-margin"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></div>-->
-				<div class="user-user top-img-margin"><img class="top-img-size" alt="유저정보" src="resources/images/user.svg"></div>
+				<div class="user-service top-common"><div class="font-logo" id="center">고객센터 |</div></div>
+			<!--	<form action="/nobrand/logout" method="post">
+				<button class="user-heart top-img-margin" id="logout" name="logout"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></button>
+				</form>-->
+				<div class="user-heart top-img-margin"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></div>
+				<div class="user-user top-img-margin" id="userinfo"><img class="top-img-size" alt="유저정보" src="resources/images/user.svg"></div>
 				<div class="user-delivery top-img-margin"><img class="top-img-size" alt="배송정보" src="resources/images/delivery.svg"></div>
 				<div class="user-cart top-img-margin">
 					<a href="/nobrand/cart"><img alt="장바구니" src="resources/images/cart.svg"></a>
@@ -72,23 +80,29 @@
 	<script type="text/javascript" src="resources/scripts/searchbox-border.js"></script>
 	<script type="text/javascript" src="resources/scripts/popup.js"></script>
 	<script>
+			
 		let name= <%=(String)session.getAttribute("ID")%>;
 		console.log(name);
-		const regitboxElem=document.getElementById('regit-box');
-		const loginboxElem=document.getElementById('login-box');
+		var btnElem=document.createElement("button");	
+		btnElem.id="logout";
+		btnElem.name="logout";
+		var regitboxElem=document.getElementById('regit-box');
+		var loginboxElem=document.getElementById('login-box');
+		var logoutbox=document.getElementById('log-out');
+		var logoutbtn=document.getElementById('logout_btn');
+		var form=document.getElementById('logout_box');
 		if(name==null){
 			loginboxElem.innerHTML="로그인 ·"
+			regitboxElem.innerHTML="회원가입 ·"
 		}
 		else if(name!=null){
 			loginboxElem.innerHTML=name+"님 반갑습니다";
 			loginboxElem.id="info-box";
-		}
-		if(regit-box==null){
-			regitboxElem.innerHTML="회원가입 ·"
-		}
-		else if(name!=null){
-			regitboxElem.innerHTML="로그아웃";
-			regitboxElem.id="logout";
+			regitboxElem.style.display="none"
+			form.style.display="";
+			loginboxElem.onclick="";
+			
+
 		}
 	</script>
 </body>
