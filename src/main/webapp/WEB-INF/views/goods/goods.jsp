@@ -21,7 +21,6 @@
 %>
 <script type="text/javascript">
 	const user = "<%=userId%>";
-	console.log(user);
 </script>
 	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
 	<jsp:include page='/WEB-INF/views/toppage-nobrand.jsp' />
@@ -118,12 +117,13 @@
 									<img class="like-ico" alt="관심있는 상품" src="resources/images/heart.svg">
 								</div>
 								<button class="cart-btn" onclick="createCookie(goodsData.id, 30)">장바구니</button>
-								<button class="buy-btn">
+								<button class="buy-btn" onclick="createCookieBuy(goodsData.id, 30), location.href='/nobrand/buy'">
 									<div class="logo-s">
 										<div>S</div>
 									</div>
 									<div>바로구매</div>
 								</button>
+								<div class="go-cart">장바구니로 이동하시겠습니까?<button class="border-none" onclick="location.href='/nobrand/cart'">이동</button></div>
 							</div>
 						</div>
 					</div>

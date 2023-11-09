@@ -265,3 +265,13 @@ li::before {
 	background: black;
 	color: white;
 }
+
+.delete-select {
+	border: none;
+	background-color: white;
+}
+
+.delete-sold-out {
+	border: none;
+	background-color: white;
+}

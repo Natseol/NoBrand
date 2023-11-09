@@ -44,7 +44,7 @@
 										</div>
 										<div class="font-size-6">로그인을 하시면 지금 보고있는 상품을 나중에도 확인하실 수 있습니다.</div>
 									</div>
-								<div class="login-btn font-size-7 login-script"><button class="login-right" onclick="location.href='/nobrand/login'">로그인하기</button></div>
+								<div class="login-btn font-size-7 login-script"><button class="login-right" onclick="login()">로그인하기</button></div>
 								</div>
 								<div class="genelization">
 									<div class="genelization-box">
@@ -104,7 +104,7 @@
 												<div class="total-script-box">
 												 	<div class="font-size-6 font-if-buy">결제예정금액</div>
 													 	<div class=" font-buy">
-													 		<div class="total-cost total-size">
+													 		<div class="total-cost total-size">0
 	
 															</div>
 															<div class="font-if-buy">원</div>

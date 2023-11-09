@@ -7,8 +7,11 @@ const resultPriceBox = document.getElementsByClassName('total-cost');
 const deliveryCost = document.getElementsByClassName('delivery-result');
 const deliveryCostBox = document.getElementsByClassName('cost-plus');
 const keepDelete = document.getElementsByClassName('delete-img');
-const deleteSelect = document.getElementsByClassName('delete-select');
+const deleteSoldOutBtn = document.getElementsByClassName('delete-sold-out');
+const deleteSelect = document.getElementById('delete-selector');
+const allGoodsCount = document.getElementById('goods');
 let parent = document.querySelector('.goods-list');
+
 
 const cookieList = [];
 const parsingList = [];
@@ -105,12 +108,17 @@ fetch("http://localhost/nobrand/cart/id", {
 }).then((response) => response.json())
   .then(data => {	
 	let dataPart = data.goodsObject;
+	let listCount = 0;
 	for (let index = 0; index < dataPart.length; index++) {
 		if(dataPart[index] !== null){
 			createGoodsList(dataPart[index].name, dataPart[index].imgAddress, parsingList[index].goodsCount);
 			document.getElementById('cost').innerHTML = dataPart[index].price * parsingList[index].goodsCount;
+			listCount++;
+			allGoodsCount.innerHTML = listCount;
 		}
 	}
+	
+
 	function add(){
 		for (let index = 0; index < goodsBox.length; index++) {
 			let countBox = goodsBox[index].children[0];
@@ -142,7 +150,6 @@ fetch("http://localhost/nobrand/cart/id", {
 	
 	function minusEvent(count, price) {
 		let countGoods = count.children[1].textContent;
-		console.log(countGoods);
 		const goodsPrice = [];
 		goodsPrice.push(price.textContent/countGoods);
 		count.children[0].addEventListener('click', function(){
@@ -206,25 +213,25 @@ fetch("http://localhost/nobrand/cart/id", {
 		} 
 		
 	}
-	function deleteSelect(){
-		const checkboxes = document.getElementsByName('check-box');
-		for (let index = 0; index < idList.length; index++) {
-			deleteSelect.addEventListener('click', function(){
-				if(checkboxes[index].checked == true){
+	
+	function deleteSoldOut(){
+		deleteSoldOutBtn[0].addEventListener('click', function(){
+			for (let index = 0; index < dataPart.length; index++) {
+				if(dataPart[index].goodsCount == 0){
 					document.cookie = "goodsId"+idList[index] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+					location.reload(true);
 				}
-			});
-		}
-		location.reload(true);
+			}
+			alert("품절된 상품이 삭제되었습니다.");
+		})
 	}
-
 	
 	add();
 	minus();
 	sumEvent();
 	sumResult();
 	deleteCookie();
-	deleteSelect();
+	deleteSoldOut();
 })
 .catch(error => {
 	console.error('페이지 가져오기 오류:', error);
