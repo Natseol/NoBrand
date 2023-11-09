@@ -19,13 +19,10 @@
 	<jsp:include page='toppagessg.jsp' />
 	<jsp:include page='toppage-nobrand.jsp' />
 	<!-- 여기부터 시작 -->
-<<<<<<< Upstream, based on develop
 	<div class="home-body">
-=======
 	<%String name=(String)session.getAttribute("ID");
 	System.out.println(name);
 	%>
->>>>>>> 09f448e tag : mainpage fix
 	<div id="carouselExampleInterval" class="carousel slide carousel-main"
 		data-bs-ride="carousel">
 		<div class="carousel-inner">
