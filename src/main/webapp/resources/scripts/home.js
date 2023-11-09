@@ -5,16 +5,9 @@ function createCard(index) {
     const cardImgBox = document.createElement("div");
     cardImgBox.className = "card-img-box";
 
-<<<<<<< Upstream, based on develop
     const cardImg = document.createElement("div");    
     cardImg.innerHTML = goodslist[index].imgAdress
     cardImg.className = "card-img-top";    
-=======
-    const cardImg = document.createElement("div");
-    cardImg.innerHTML = goodslist[index].imgAddress
-    cardImg.className = "card-img-top";
-    cardImg.children[0].children[0].style.width="100%";   
->>>>>>> b1ea2bf feat: goods delete, checkBox, userId
     const cardImgLink = document.createElement("a");
     cardImgLink.href="goods?goodsId="+goodslist[index].id;
     cardImg.querySelector("img").style.width="288px";   
