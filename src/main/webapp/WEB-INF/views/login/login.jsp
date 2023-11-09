@@ -5,9 +5,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-		reload();
-	</script>
 <link rel="stylesheet" href="resources/css/regitstyle.css" type="text/css">
 <meta charset="UTF-8">
 <title>로그인. 믿고 사는 즐거움 SSG.COM - Chrome</title>
@@ -177,10 +174,5 @@ System.out.println(name);
 </div>
 </div>
 <script type="text/javascript" src="resources/scripts/popup.js"></script>
-<script>
-	function reload(){
-		location.reload();
-	}
-</script>
 </body>
 </html>

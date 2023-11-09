@@ -5,9 +5,9 @@
 <head>
 <script type="text/javascript">
 	function toMainPage() {
+		// window.location.href='/nobrand';
+		window.opener.location.reload();
 		window.close();
-		window.location.href='/nobrand';
-		window.location.reload();
 	}
 	toMainPage();
 </script>
