@@ -31,6 +31,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 					rs.getInt("SELL_COUNT"),
 					rs.getInt("GOODS_COUNT"),
 					rs.getString("NAME"),
+					rs.getString("KIND_TOP"),
 					rs.getString("KIND_BOTTOM"),
 					rs.getString("INFO"),
 					rs.getString("IMAGE"),
@@ -49,17 +50,19 @@ public class GoodsDAOImpl implements GoodsDAO {
 							+ "\"SELL_COUNT\","
 							+ "\"GOODS_COUNT\","
 							+ "\"NAME\","
+							+ "\"KIND_TOP\","
 							+ "\"KIND_BOTTOM\","
 							+ "\"INFO\","
 							+ "\"IMAGE\","
 							+ "\"OPTION\","
 							+ "\"DELIVERY\","
-							+ "\"CONTENT\") values (?, ? ,? ,? ,? ,? ,? ,? ,?, ?, ?)",
+							+ "\"CONTENT\") values (?, ? ,? ,? ,? ,? ,? ,? ,?, ?, ?, ?)",
 							goods.getPrice(),
 							goods.getSearchCount(),
 							goods.getCellCount(),
 							goods.getGoodsCount(),
 							goods.getName(),
+							goods.getTopKind(),
 							goods.getBottomKind(),
 							goods.getInfo(),
 							goods.getImgAddress(),
@@ -75,7 +78,12 @@ public class GoodsDAOImpl implements GoodsDAO {
 		return jdbcTemplate.queryForObject("select * from GOODS where \"ID\"=?", new Object[] { id }, mapper);
 	}
 	@Override
-	public List<Goods> getUsingCategory(String kind) {
+	public List<Goods> getUsingCategory(String category) {
+		// TODO Auto-generated method stub		
+		return jdbcTemplate.query("select * from GOODS where \"KIND_TOP\"=?", mapper, category);
+	}
+	@Override
+	public List<Goods> getUsingKind(String kind) {
 		// TODO Auto-generated method stub		
 		return jdbcTemplate.query("select * from GOODS where \"KIND_BOTTOM\"=?", mapper, kind);
 	}
@@ -100,6 +108,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 				+ "\"SELL_COUNT\"=?,"
 				+ "\"GOODS_COUNT\","
 				+ "\"NAME\"=?,"
+				+ "\"KIND_TOP\"=?,"
 				+ "\"KIND_BOTTOM\"=?,"
 				+ "\"INFO\"=?,"
 				+ "\"IMAGE\"=?,"
@@ -111,6 +120,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 				goods.getCellCount(),
 				goods.getGoodsCount(),
 				goods.getName(),
+				goods.getTopKind(),
 				goods.getBottomKind(),
 				goods.getInfo(),
 				goods.getImgAddress(),

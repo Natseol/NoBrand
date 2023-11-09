@@ -7,6 +7,7 @@ public class Goods{
 	private int cellCount;
 	private int goodsCount;
 	private String name;
+	private String topKind;
 	private String bottomKind;
 	private String info;
 	private String imgAddress;
@@ -14,28 +15,16 @@ public class Goods{
 	private String delivery;
 	private String content;
 	public Goods() {};
-	public Goods(int id, int price, int searchCount, int cellCount,int goodsCount, String name, String bottomKind, String info,
-			String imgAddress, String options, String delivery, String content) {
+	
+	public Goods(int id, int price, int searchCount, int cellCount, int goodsCount, String name, String topKind,
+			String bottomKind, String info, String imgAddress, String options, String delivery, String content) {
 		this.id = id;
 		this.price = price;
 		this.searchCount = searchCount;
 		this.cellCount = cellCount;
-		this.goodsCount=goodsCount;
+		this.goodsCount = goodsCount;
 		this.name = name;
-		this.bottomKind = bottomKind;
-		this.info = info;
-		this.imgAddress = imgAddress;
-		this.options = options;
-		this.delivery = delivery;
-		this.content = content;
-	}
-	public Goods(int price, int searchCount, int cellCount,int goodsCount, String name, String bottomKind, String info,
-			String imgAddress, String options, String delivery, String content) {
-		this.price = price;
-		this.searchCount = searchCount;
-		this.cellCount = cellCount;
-		this.goodsCount=goodsCount;
-		this.name = name;
+		this.topKind = topKind;
 		this.bottomKind = bottomKind;
 		this.info = info;
 		this.imgAddress = imgAddress;
@@ -44,11 +33,28 @@ public class Goods{
 		this.content = content;
 	}
 
-	public Goods(String name, int price, String bottomKind, String options, int goodsCount, String delivery, String imgAddress,
+	public Goods(int price, int searchCount, int cellCount, int goodsCount, String name, String topKind,
+			String bottomKind, String info, String imgAddress, String options, String delivery, String content) {
+		this.price = price;
+		this.searchCount = searchCount;
+		this.cellCount = cellCount;
+		this.goodsCount = goodsCount;
+		this.name = name;
+		this.topKind = topKind;
+		this.bottomKind = bottomKind;
+		this.info = info;
+		this.imgAddress = imgAddress;
+		this.options = options;
+		this.delivery = delivery;
+		this.content = content;
+	}
+
+	public Goods(String name, int price,String topKind, String bottomKind, String options, int goodsCount, String delivery, String imgAddress,
 			String content, String info) {
 		super();
 		this.name = name;
 		this.price = price;
+		this.topKind = topKind;
 		this.bottomKind = bottomKind;
 		this.options = options;
 		this.goodsCount = goodsCount;
@@ -133,5 +139,12 @@ public class Goods{
 	public String getContent() {
 		return content;
 	}
+	public String getTopKind() {
+		return topKind;
+	}
+	public void setTopKind(String topKind) {
+		this.topKind = topKind;
+	}
+	
 
 }

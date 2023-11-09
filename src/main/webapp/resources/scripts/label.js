@@ -100,6 +100,6 @@ const buttons = document.querySelectorAll('.category-button');
 buttons.forEach(button => {
   button.addEventListener('click', function() {
     const selectedCategory = this.value;
-    window.location.href = `/nobrand/sub?category=${selectedCategory}`;
+    window.location.href = `/nobrand/sub?kind=${selectedCategory}`;
   });
 });

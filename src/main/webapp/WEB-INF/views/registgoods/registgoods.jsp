@@ -45,7 +45,15 @@
 				<div class="registgoods-input-box"><div class="registgoods-input-info">가격</div><input class="registgoods-input" name="goods-price" onkeypress="keyEventFunc(event)" placeholder="숫자만 입력"></div>
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">카테고리</div>
-				<select class="registgoods-input-select" name="goods-kind">
+				<select class="registgoods-input-select" id="registgoods-category" onchange="updateOptions()" name="goods-category" >
+					<option>신선식품</option>
+					<option>가공식품</option>
+					<option>생활용품</option>
+					<option>가전인테리어</option>
+					<option>패션잡화</option>
+					<option>스포츠캠핑용품</option>
+				</select>
+				<select class="registgoods-input-select" id="registgoods-kind" name="goods-kind">
 					<option>과일채소양곡</option>
 					<option>축산수산건식품</option>
 					<option>과자초콜릿</option>

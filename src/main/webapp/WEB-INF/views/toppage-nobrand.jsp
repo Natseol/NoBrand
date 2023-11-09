@@ -60,40 +60,40 @@
 			<form actioin="/nobrand/sub" method="GET" class="category-submenu">
 				<div  class="category-submenu-box">
 					<ui class="submenu-dropdown" id="dropdown1">
-						<li class="submenu-list"><button class="category-button" name="category" value="과일채소양곡">과일/채소/양곡</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="축산수산건식품">축산/수산/건식품</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="과일채소양곡">과일/채소/양곡</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="축산수산건식품">축산/수산/건식품</button></li>
 					</ui>
 					<ul class="submenu-dropdown" id="dropdown2">
-						<li class="submenu-list"><button class="category-button" name="category" value="과자초콜릿">과자/초콜릿</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="라면통조림">라면/통조림</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="조미료장류">조미료/장류</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="생수음료">생수/음료</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="커피차">커피/차</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="냉동냉장HMR">냉동냉장/HMR</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="유제품">유제품</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="과자초콜릿">과자/초콜릿</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="라면통조림">라면/통조림</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="조미료장류">조미료/장류</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="생수음료">생수/음료</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="커피차">커피/차</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="냉동냉장HMR">냉동냉장/HMR</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="유제품">유제품</button></li>
 					</ul>
 					<ul class="submenu-dropdown" id="dropdown3">
-						<li class="submenu-list"><button class="category-button" name="category" value="화장지위생용품">화장지/위생용품</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="헤어바디구강용품">헤어/바디/구강용품</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="화장품">화장품</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="세제">세제</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="주방용품일회용품">주방용품/일회용품</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="청소욕실용품">청소/욕실용품</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="화장지위생용품">화장지/위생용품</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="헤어바디구강용품">헤어/바디/구강용품</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="화장품">화장품</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="세제">세제</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="주방용품일회용품">주방용품/일회용품</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="청소욕실용품">청소/욕실용품</button></li>
 					</ul>
 					<ul class="submenu-dropdown" id="dropdown4">
-						<li class="submenu-list"><button class="category-button" name="category" value="생활디지털가전">생활/디지털가전</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="문구완구">문구/완구</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="가구홈데코">가구/홈데코</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="조명공구">조명/공구</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="침구수예">침구/수예</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="자동차용품">자동차용품</button></li>
-						<li class="submenu-list"><button class="category-button" name="category" value="애완">애완</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="생활디지털가전">생활/디지털가전</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="문구완구">문구/완구</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="가구홈데코">가구/홈데코</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="조명공구">조명/공구</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="침구수예">침구/수예</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="자동차용품">자동차용품</button></li>
+						<li class="submenu-list"><button class="category-button" name="kind" value="애완">애완</button></li>
 					</ul>
 					<ul class="submenu-dropdown" id="dropdown5">
-						<li class="submenu-list"><button class="category-button" name="category" value="잡화">잡화</button></li>									
+						<li class="submenu-list"><button class="category-button" name="kind" value="잡화">잡화</button></li>									
 					</ul>
 					<ul class="submenu-dropdown" id="dropdown6">
-						<li class="submenu-list"><button class="category-button" name="category" value="스포츠캠핑용품">스포츠/캠핑용품</button></li>									
+						<li class="submenu-list"><button class="category-button" name="kind" value="스포츠캠핑용품">스포츠/캠핑용품</button></li>									
 					</ul>
 				</div>
 			</form>

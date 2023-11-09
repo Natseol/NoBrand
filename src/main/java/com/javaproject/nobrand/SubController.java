@@ -28,6 +28,10 @@ public class SubController {
 			String kind = request.getParameter("category");
 			goodsList = cs.getCategoryList(kind);
 			json.put("list", goodsList);			
+		} else if (request.getParameter("kind")!=null) {
+			String kind = request.getParameter("kind");
+			goodsList = cs.getKindList(kind);
+			json.put("list", goodsList);			
 		} else if (request.getParameter("target")!=null){
 			String searchStr = request.getParameter("target");
 			goodsList = cs.getTargetList(searchStr);

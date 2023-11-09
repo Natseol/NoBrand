@@ -31,6 +31,7 @@ public class RegistGoodsController {
 		goodsDAO.add(new Goods(
 				map.get("goods-name"),
 				Integer.parseInt(map.get("goods-price")),
+				map.get("goods-category"),
 				map.get("goods-kind"),
 				map.get("goods-options"),
 				Integer.parseInt(map.get("goods-cellcount")),

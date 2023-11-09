@@ -18,8 +18,13 @@ public class CategorySerivce {
 		return goodsList;
 	}
 	
-	public List<Goods> getCategoryList(String kind) {
-		List<Goods> goodsList = goodsDAO.getUsingCategory(kind);		
+	public List<Goods> getCategoryList(String category) {
+		List<Goods> goodsList = goodsDAO.getUsingCategory(category);		
+		return goodsList;
+	}
+	
+	public List<Goods> getKindList(String kind) {
+		List<Goods> goodsList = goodsDAO.getUsingKind(kind);		
 		return goodsList;
 	}
 	

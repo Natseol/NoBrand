@@ -19,14 +19,6 @@ import com.javaproject.nobrand.user.service.UserService;
 		@Autowired
 		public UserService userService;
 		@RequestMapping(value="/regist",method=RequestMethod.GET)
-<<<<<<< Upstream, based on develop
-=======
-		
-		
-<<<<<<< HEAD
->>>>>>> b1ea2bf feat: goods delete, checkBox, userId
-=======
->>>>>>> branch 'cart_list_create' of https://github.com/Natseol/ProjectNoBrand.git
 		//ȸ������ �������� �̵�(Ȩ������ ��� �ּҿ��� ���)
 		public String regist() {
 			return "/login/regist";
@@ -67,25 +59,12 @@ import com.javaproject.nobrand.user.service.UserService;
 			user.setUserId(map.get("USERID"));
 			user.setPassword(map.get("PASSWORD"));
 			user =userService.login(user);
-<<<<<<< HEAD
-<<<<<<< Upstream, based on develop
 			if(user!=null) { session.setAttribute("ID", user.getUserId());
 				isFailed= "redirect:/loginSuccess";
 			}else if(user==null) {
 				isFailed="redirect:/loginFailed";
 			}
 			return isFailed;
-=======
-=======
->>>>>>> branch 'cart_list_create' of https://github.com/Natseol/ProjectNoBrand.git
-			//���� ���� ���� ���� ������ ����� �ҷ��������� Ȯ�ο�
-			System.out.println(user.getName());
-			if(user!=null) session.setAttribute("ID", user.getUserId());
-			//������ �� �������� ����name���� Ȯ�ο�
-			System.out.println(session.getAttribute("ID"));
-			
-			return "redirect:/login";
->>>>>>> b1ea2bf feat: goods delete, checkBox, userId
 		}
 		@RequestMapping(value="/logout",method=RequestMethod.POST)
 		public String logOutPost(@RequestParam Map<String,String> map,HttpSession session) {

@@ -138,6 +138,9 @@
 	background-color: unset;	
 	border: 0px;
 }
+.category-button:hover {
+	font-weight: bold;
+}
 
 .title-searchbox {
 	margin: 0 25% 0 0;

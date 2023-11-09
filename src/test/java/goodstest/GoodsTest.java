@@ -22,15 +22,15 @@ public class GoodsTest {
 		goods.setSearchCount(5);
 		goods.setCellCount(6);
 		goods.setName("[��귣��] ���ö� �� 100g (5g*20)");
+		goods.setTopKind("�׽�Ʈ");
 		goods.setBottomKind("�׽�Ʈ");
 		goods.setInfo("����");
-		goods.setimgAddress("resources/images/1000014798997_i1_290.jpg");
+		goods.setImgAddress("resources/images/1000014798997_i1_290.jpg");
 		goods.setOptions("[��귣��] ���ö� �� 100g (5g*20)");
 		goods.setDelivery("����ּ�");
 		goods.setContent("����");
 		goods.setGoodsCount(4);
 		goodsDAO.add(goods);
-		}
-	
+		}	
 
 }
