@@ -62,11 +62,12 @@ public class GoodsDAOImpl implements GoodsDAO {
 							goods.getName(),
 							goods.getBottomKind(),
 							goods.getInfo(),
-							goods.getimgAddress(),
+							goods.getImgAddress(),
 							goods.getOptions(),
 							goods.getDelivery(),
 							goods.getContent()
 							);
+		
 	}
 	@Override
 	public Goods get(int id) {
@@ -112,7 +113,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 				goods.getName(),
 				goods.getBottomKind(),
 				goods.getInfo(),
-				goods.getimgAddress(),
+				goods.getImgAddress(),
 				goods.getOptions(),
 				goods.getDelivery(),
 				goods.getContent()

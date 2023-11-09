@@ -13,6 +13,7 @@ public class GoodsService {
 	
 	public Goods getGoods(int id) {
 		Goods goods = goodsDAO.get(id);
+
 		return goods;
 	}
 	

@@ -86,7 +86,7 @@ public class Goods{
 	public void setInfo(String info) {
 		this.info=info;
 	}
-	public void setimgAddress(String imgAddress) {
+	public void setImgAddress(String imgAddress) {
 		this.imgAddress=imgAddress;
 	}
 	public void setOptions(String options) {
@@ -120,7 +120,7 @@ public class Goods{
 	public String getInfo() {
 		return info;
 	}
-	public String getimgAddress() {
+	public String getImgAddress() {
 		return imgAddress;
 	}
 	

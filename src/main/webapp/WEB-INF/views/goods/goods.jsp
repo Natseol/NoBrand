@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link href="resources/css/goods.css" rel="stylesheet" type="text/css">
-<title>제목</title>
+<title>상품</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -20,7 +20,8 @@
 	String userId = (String)session.getAttribute("ID"); 
 %>
 <script type="text/javascript">
-	user = "<%=userId%>";
+	const user = "<%=userId%>";
+	console.log(user);
 </script>
 	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
 	<jsp:include page='/WEB-INF/views/toppage-nobrand.jsp' />
@@ -32,18 +33,18 @@
 						<div class="font-top">HOME</div>
 						<div class="center-slash">/</div>
 						<div class="font-top">
-							<div>우유/유제폼</div>
+							<div class="category-top"></div>
 							<div class="arrow-down"></div>
 							</div>
 						</div>
 						<div class="center-slash">/</div>
 						<div class="font-top">
-							<div>우유</div>
+							<div></div>
 							<div class="arrow-down"></div>
 						</div>
 						<div class="center-slash">/</div>
 						<div class="font-top">
-							<div>휜우유</div>
+							<div class="category-boottom"></div>
 							<div class="arrow-down"></div>
 						</div>
 					</div>
@@ -62,7 +63,7 @@
 								<div class="font-nobrand">노브랜드</div>
 								<div class="arrow-right">></div>
 								<div class="public-store">공식스토어</div>
-								<button id="delet-goods">등록된 상품 삭제하기</button>
+								<button id="delete-goods">등록된 상품 삭제하기</button>
 							</div>
 							<div class="goods-name"></div>
 							<div class="goods-star">
@@ -78,13 +79,6 @@
 								<div class="goods-price"></div>
 								<div class="font-won">원</div>
 							</div>
-							<div class="goods-volume">
-								<div class="standard"></div>
-								<div>당</div>
-								<div class="standard-price"></div>
-								<div>원,총 용량:</div>
-								<div class="total-volum"></div>
-							</div>
 							<div class="event-banner">
 								<img class="banner-position" src="resources/images/sale-banner.png">
 							</div>
@@ -97,10 +91,6 @@
 									<div class="cart-check">장바구니에서 신청하실 수 있습니다.</div>
 								</div>
 								<div class="font-more-info">정기배송 더 알아보기></div>
-							</div>
-							<div class="unit">
-								<div>단위/용량</div>
-								<div class="goods-voium-standard"></div>
 							</div>
 							<div class="calculate-box">
 								<div class="goods-name-info font-cal"></div>

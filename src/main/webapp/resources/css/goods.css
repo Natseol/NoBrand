@@ -332,11 +332,7 @@
     width: 930px;
 }
 
-.delet-goods {
-  display: none;
-  border: 1px solid #e0dbdb;
-  background: white;
-  font-size: 12px;
-  padding: 5px 10px;
-  margin-left: 10px;
-}
+.img-box img {
+	width: 100%;
+	height: 100%;
+  }

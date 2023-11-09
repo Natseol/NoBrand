@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>제목</title>
+<title>장바구니</title>
 <link href="resources/css/cart.css" rel="stylesheet" type="text/css">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"

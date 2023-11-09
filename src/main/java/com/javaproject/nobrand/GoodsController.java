@@ -35,7 +35,6 @@ public class GoodsController {
 		JSONObject json = new JSONObject(goods);
 		
 		request.setAttribute("goodsJson", json);
-		System.out.println(json);
 		return "goods/goods";
 	}
 	
@@ -44,10 +43,8 @@ public class GoodsController {
 		System.out.println("시작");
 		int goodsId = Integer.parseInt(request.getParameter("goodsId"));
 		
-		System.out.println(goodsId);
-		System.out.println("중간");
 		goodsDAO.delete(goodsId);
-		System.out.println("끝");
+		
 		return "redirect:/";
 	}
 }

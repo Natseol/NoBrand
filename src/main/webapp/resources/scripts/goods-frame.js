@@ -1,17 +1,16 @@
 const imgFrame = document.getElementsByClassName('img-frame');
+const categoryTop = document.getElementsByClassName('category-top');
+const categoryBottom = document.getElementsByClassName('category-boottom');
 const goodsName = document.getElementsByClassName('goods-name');
 const goodsNameInfo = document.getElementsByClassName('goods-name-info');
 const goodsPrice = document.getElementsByClassName('goods-price');
-const standardPrice = document.getElementsByClassName('standard-price');
-const totalVolum = document.getElementsByClassName('total-volum');
 const goodsMade = document.getElementsByClassName('goods-made');
 const totalOrder = document.getElementsByClassName('total-order');
 const totalOrderSecond = document.getElementsByClassName('total-order-second');
 const contentElem = document.getElementsByClassName('goods-img-box-content');
 const goodsBoxElem = document.getElementsByClassName('calculator');
-const deletButton = document.getElementById('delet-goods');
+const deletButton = document.getElementById('delete-goods');
 
-const user = "";
 
 function getParameter(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -43,21 +42,29 @@ function createCookie( goodsIdJ, exdays){
     alert("상품을 장바구니에 담았습니다.");
 }
 
-function dataInput({imgAddress ,name, price, standard, volum, info, content}){
+function dataInput({bottomKind, imgAddress ,name, price, info, content}){
+    categoryTop[0].innerHTML = bottomKind;
     imgFrame[0].innerHTML = imgAddress;
     goodsName[0].innerHTML = name;
     goodsNameInfo[0].innerHTML = name;
     goodsPrice[0].innerHTML = price;
     totalOrder[0].innerHTML = price;
     totalOrderSecond[0].innerHTML = price;
-    standardPrice[0].innerHTML = standard;
-    totalVolum[0].innerHTML = volum;
     goodsMade[0].innerHTML = info;
     contentElem[0].innerHTML = content;
 }
 
+
 if(user == "admin"){
-    deletButton[0].style.display = "block";
+    deletButton.style.display = 'block';
+    deletButton.style.background = 'white';
+    deletButton.style.border = '1px solid #e0dbdb';
+    deletButton.style.fontSize = '12px';
+    deletButton.style.padding = '5px 10px';
+    deletButton.style.marginLeft = '10px';
+}
+else{
+    deletButton.style.display = 'none';
 }
 
 function deletButtonBox(){
