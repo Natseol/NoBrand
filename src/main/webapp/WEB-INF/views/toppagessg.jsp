@@ -90,10 +90,7 @@
 		var logoutbox=document.getElementById('log-out');
 		var logoutbtn=document.getElementById('logout_btn');
 		var form=document.getElementById('logout_box');
-<<<<<<< Upstream, based on develop
 		
-=======
->>>>>>> cbf0654 tag:review and buylist
 		if(name!="null"){
 			loginboxElem.innerHTML=name+"님 반갑습니다";
 			loginboxElem.id="info-box";

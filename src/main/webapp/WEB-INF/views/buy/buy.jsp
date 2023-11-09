@@ -19,7 +19,7 @@
 			<div class="main-order">
 				<div class="buy"></div>
 				<div class="ordered-goods"></div>
-				<div class=""
+				<div class=""></div>
 			</div>
 		</div>
 	<!-- 여기부터 끝 -->

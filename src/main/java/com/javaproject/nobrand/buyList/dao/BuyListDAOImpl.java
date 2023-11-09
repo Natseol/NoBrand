@@ -51,6 +51,12 @@ public class BuyListDAOImpl implements BuyListDAO {
 		// TODO Auto-generated method stub
 		return jdbctemplate.queryForObject("select * from BUYLIST where \"USER_ID\"=?", new Object[] { userId },mapper);
 	}
+	
+	@Override
+	public List<BuyList> getList(int id) {
+		// TODO Auto-generated method stub
+		return jdbctemplate.query("select * from BUYLIST where \"USER_ID\"=?", new Object[] { id },mapper);
+	}
 
 	@Override
 	public List<BuyList> getAll() {

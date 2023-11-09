@@ -99,3 +99,8 @@
     border-left: 1px solid;
     margin: 0px 20px;
 }
+
+.buylist-anchor {
+    text-decoration: none;
+    color: black;
+}
