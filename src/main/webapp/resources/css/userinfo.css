@@ -1,0 +1,101 @@
+.info-body {
+    width: 1280px;
+    margin: auto;
+}
+
+.info-main-container {
+    display: flex;
+    justify-content: center;    
+}
+
+.info-box {
+    background-color: #f2f2f2;
+    width: 100%;
+    margin: 20px;
+    padding: 30px 20px;
+    height: 200px;   
+}
+
+.info-title {
+    font-weight: bold;
+    font-size: large;
+}
+
+.info-item {
+    font-size: small;
+    padding: 10px;
+}
+
+.hr-bold {
+    height: 2px;
+    background: black;
+    border: 0;
+    opacity: 1;
+}
+
+.hr-thin {
+    height: 1px;
+    background: gray;
+    border: 0;
+}
+
+.info-buylist-title {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.buylist-card {
+    display: flex;    
+    height: 100px;
+    padding: 10px;
+}
+
+.buylist-goods-box {
+    display: flex;
+    width: 800px;
+}
+
+.buylist-goods-iamge {
+    margin : 0px 10px;
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+}
+
+.buylist-goods-info {
+    align-self: center;
+    font-size: small;
+}
+.buylist-goods-nobrand {
+    font-weight: bold;    
+}
+
+.buylist-price-box {
+    width: 260px;
+    align-self: center;
+}
+
+.buylist-price-info {
+    justify-content: right;
+    display: flex;
+    font-size: small;
+}
+
+.buylist-goods-total-price {
+    font-weight: bold;
+    text-align: right;    
+}
+
+.buylist-goods-date-title {
+    font-weight: bold;   
+}
+
+.buylist-goods-date {
+    font-size: small;
+}
+
+.buylist-date-box {
+    padding: 5px 20px;
+    border-left: 1px solid;
+    margin: 0px 20px;
+}

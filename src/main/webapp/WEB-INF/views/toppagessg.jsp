@@ -79,9 +79,8 @@
 	</div>
 	<script type="text/javascript" src="resources/scripts/searchbox-border.js"></script>
 	<script type="text/javascript" src="resources/scripts/popup.js"></script>
-	<script>
-			
-		let name= <%=(String)session.getAttribute("ID")%>;
+	<script>	
+		let name= "<%=(String)session.getAttribute("ID")%>";
 		console.log(name);
 		var btnElem=document.createElement("button");	
 		btnElem.id="logout";
@@ -91,18 +90,13 @@
 		var logoutbox=document.getElementById('log-out');
 		var logoutbtn=document.getElementById('logout_btn');
 		var form=document.getElementById('logout_box');
-		if(name==null){
-			loginboxElem.innerHTML="로그인 ·"
-			regitboxElem.innerHTML="회원가입 ·"
-		}
-		else if(name!=null){
+		
+		if(name!="null"){
 			loginboxElem.innerHTML=name+"님 반갑습니다";
 			loginboxElem.id="info-box";
-			regitboxElem.style.display="none"
+			regitboxElem.style.display="none";
 			form.style.display="";
 			loginboxElem.onclick="";
-			
-
 		}
 	</script>
 </body>
