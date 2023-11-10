@@ -31,15 +31,15 @@ function createCard(index) {
   cardImgLink.appendChild(cardImg);
   cardImgBox.appendChild(cardImgLink);
 
-  const cardImgBag = document.createElement("div");
-  cardImgBag.className = "card-img-bag rounded-3";
+  // const cardImgBag = document.createElement("div");
+  // cardImgBag.className = "card-img-bag rounded-3";
 
-  const cardImgIcon = document.createElement("span");
-  cardImgIcon.className = "card-img-icon material-symbols-outlined";
-  cardImgIcon.innerText = "shopping_bag";
-  cardImgBag.appendChild(cardImgIcon);
+  // const cardImgIcon = document.createElement("span");
+  // cardImgIcon.className = "card-img-icon material-symbols-outlined";
+  // cardImgIcon.innerText = "shopping_bag";
+  // cardImgBag.appendChild(cardImgIcon);
 
-  cardImgBox.appendChild(cardImgBag);
+  // cardImgBox.appendChild(cardImgBag);
   card.appendChild(cardImgBox);
 
   const cardBody = document.createElement("div");
@@ -87,11 +87,11 @@ function createCard(index) {
 
   cardText.appendChild(cardTextPrice);
 
-  const cardTextScore = document.createElement("div");
-  cardTextScore.className = "card-text-score";
-  cardTextScore.innerText = "★ 별점";
+  // const cardTextScore = document.createElement("div");
+  // cardTextScore.className = "card-text-score";
+  // cardTextScore.innerText = "★ 별점";
 
-  cardText.appendChild(cardTextScore);
+  // cardText.appendChild(cardTextScore);
 
   cardBody.appendChild(cardText);
   card.appendChild(cardBody);
