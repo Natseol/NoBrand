@@ -3,10 +3,13 @@ package com.javaproject.nobrand;
 import java.util.Map;
 
 
+
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +19,10 @@ import com.javaproject.nobrand.user.service.UserService;
 
 	@Controller
 	public class UserController {
+		//입력값이 비어있는지 체크해주는 메서드
+		private boolean isEmptyChecker(String value) {
+			return value ==null||value.trim().isEmpty(); 
+		}
 		@Autowired
 		public UserService userService;
 		@RequestMapping(value="/regist",method=RequestMethod.GET)
@@ -33,16 +40,31 @@ import com.javaproject.nobrand.user.service.UserService;
 			return "/login/loginSuccess";
 		}
 		@RequestMapping(value="/regist",method=RequestMethod.POST)
-		public String registPost(@RequestParam Map<String,String> map) {
-			userService.add(new User(
-					map.get("NAME"),
-					map.get("USERID"),
-					map.get("PASSWORD"),
-					map.get("PHONENUMBER"),
-					map.get("EMAILADDRESS"),
-					map.get("ADDRESS")
-					));
+		public String registPost(@RequestParam Map<String,String> map,Model model) {
+			//만약에 값이 비어있다면 리다이렉트 전에 모델에 에러 메세지를 채워서 보낸 뒤, 메인 페이지로 리다이렉트
+			if(	isEmptyChecker(map.get("NAME"))||
+				isEmptyChecker(map.get("USERID"))||
+				isEmptyChecker(map.get("PASSWORD"))||
+				isEmptyChecker(map.get("PHONENUMBER"))||
+				isEmptyChecker(map.get("EMAILADDRESS"))||
+				isEmptyChecker(map.get("ADDRESS"))
+				)
+			{
+			model.addAttribute("error","필수 입력값을 모두 채워주세요");	
+			return "redirect:/regist";
+			}
+			
+			else {
+				userService.add(new User(
+						map.get("NAME"),
+						map.get("USERID"),
+						map.get("PASSWORD"),
+						map.get("PHONENUMBER"),
+						map.get("EMAILADDRESS"),
+						map.get("ADDRESS")
+						));
 			return "redirect:/";
+			}
 		}
 		@RequestMapping(value="/login",method=RequestMethod.GET)
 		public String login() {

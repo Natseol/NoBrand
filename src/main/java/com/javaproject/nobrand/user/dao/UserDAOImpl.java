@@ -102,6 +102,4 @@ public class UserDAOImpl implements UserDAO {
 		// TODO Auto-generated method stub
 		jdbctemplate.update("delete from USERS where \"ID\"=?",id);
 	}
-
-
 }

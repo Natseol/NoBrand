@@ -169,12 +169,33 @@
 
 	</div>
 	<div class="btnarea">
-		<button class="regitButton_output">회원가입</button>
+		<button class="regitButton_output" id="r_btn">회원가입</button>
 	</div>
 		
 </form>
 </div>
 <jsp:include page='/WEB-INF/views/bottompage.jsp' />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script>	
+
+	document.getElementById('r_btn').onclick=function(){
+	var isNameEmpty=document.getElementById('NAME').value;
+	var isIDEmpty=document.getElementById('USERID').value;
+	var isPassWordEmpty=document.getElementById('PASSWORD').value;
+	var isAddressEmpty=document.getElementById('ADDRESS').value;
+	var isPhoneEmpty=document.getElementById('PHONENUMBER').value;
+	var isEmailEmpty=document.getElementById('EMAILADDRESS').value;
+	if	(
+		isNameEmpty.trim()===""||
+		isIDEmpty.trim()===""||
+		isPassWordEmpty.trim()===""||
+		isAddressEmpty.trim()===""||
+		isPhoneEmpty.trim()===""||
+		isEmailEmpty.trim()===""
+		)
+		alert("필수 입력 정보를 전부 입력해주세요")
+	}
+
+</script>	
 </body>
 </html>
