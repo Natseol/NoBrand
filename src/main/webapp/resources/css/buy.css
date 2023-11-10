@@ -21,10 +21,22 @@
 
 .goods-list-visible {
   display: flex;
+  margin-bottom: 30px;
+}
+
+.goods-list-hidden {
+  visibility: hidden;
+}
+
+.select-location {
+  display: flex;
+  flex-direction: column;
 }
 
 .goods-box{
   display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(218, 218, 218);
 }
 
 .total-price {
@@ -33,8 +45,8 @@
 }
 
 .img-box {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 .img-box img {
@@ -42,6 +54,60 @@
   height: 100%;
 }
 
-.goods-count-box {
+.goods-info {
+  width: 600px;
+  padding-left: 30px;
+}
+
+.goods-price {
+  border-left: 1px solid rgb(218, 218, 218);
+  padding: 40px 10px;
+}
+
+.counter-box {
   display: flex;
+}
+
+.cost-position {
+  display: flex;
+}
+
+.more-button {
+  border: 1px solid rgb(134, 134, 134);
+  width: 500px;
+  height: 50px;
+  text-align: center;
+  padding: 13px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.more-button:hover{
+  background: black;
+  color: white;
+}
+
+.close-hidden-box {
+  visibility: hidden;
+  border: 1px solid rgb(134, 134, 134);
+  width: 500px;
+  height: 50px;
+  text-align: center;
+  padding: 13px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close-hidden-box:hover{
+  background: black;
+  color: white;
+}
+
+.title-content {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 23px;
+  border-bottom: 1px solid rgb(218, 218, 218);
 }

@@ -30,9 +30,9 @@
 							<div class="delivery-get-location">
 								<div class="content-text">쓱배송 수령위치</div>
 								<div class="select-location">
-									<li><label for="Q1"><input type="radio" name="Q1" value="문 앞에 놓아주세요"></label></li>
-									<li><label for="Q2"><input type="radio" name="Q2" value="경비실에 맡겨주세요"></label></li>
-									<li><label for="Q3"><input type="radio" name="Q3" value="직접입력"></label></li>
+									<label for="Q1"><input type="radio" name="Q1" >문 앞에 놓아주세요</label>
+									<label for="Q2"><input type="radio" name="Q1" >경비실에 맡겨주세요</label>
+									<label for="Q3"><input class="user-input-hidden" type="radio" name="Q1" >직접입력</label>
 									<input class="user-input-where" type="text">
 								</div>
 							</div>
@@ -55,11 +55,13 @@
 						<div>개</div>
 					</div>
 					<div class="goods-list-visible"></div>
+					<div class="more-button">더보기</div>
 					<div class="goods-list-hidden"></div>
+					<div class="close-hidden-box">닫기</div>
 				</div>
 				<div class="how-buy">
 					<div class="title-content">결제방법</div>
-					<div class="card"></div>
+					<div class="card-box"></div>
 					<div class="basic-card">
 						<div class="card-check">
 							<li><input type="radio">일반결제</li>
@@ -69,13 +71,10 @@
 				<div class="buy-btn">
 					<button class="total-price">결제하기</button>
 				</div>
-				<div class="buy"></div>
-				<div class="ordered-goods"></div>
-				<div class="">
-			</div>
 			</div>
 		</div>
-		<script src="resources/scripts/buy.js"></script>
+	</div>
+	<script src="resources/scripts/buy.js"></script>
 	<!-- 여기부터 끝 -->
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

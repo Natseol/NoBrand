@@ -114,7 +114,7 @@
 											</div>
 											<div class="order-btn-box">
 												<div class="order-btn-box">
-													<button class="order-btn">
+													<button class="order-btn" onclick="location.href='/nobrand/buy'">
 														<div class="font-size-5">주문하기</div>
 													</button>
 												</div>

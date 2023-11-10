@@ -62,7 +62,9 @@
 								<div class="font-nobrand">노브랜드</div>
 								<div class="arrow-right">></div>
 								<div class="public-store">공식스토어</div>
-								<button id="delete-goods">등록된 상품 삭제하기</button>
+								<form id="deleteForm" action="/nobrand/goodsDelete" method="post">
+									<input id="delete-goods" type="submit" value="등록된 상품 삭제하기">
+								</form>
 							</div>
 							<div class="goods-name"></div>
 							<div class="goods-star">

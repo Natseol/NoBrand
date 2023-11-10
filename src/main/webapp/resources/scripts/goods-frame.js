@@ -84,15 +84,20 @@ else{
     deletButton.style.display = 'none';
 }
 
-function deletButtonBox(){
-    deletButton.addEventListener('click', function(){
-        const paramId = getParameter("goodsId")
-        for (let index = 0; index < 1; index++) {
-            alert("상품이 삭제되었습니다.");
-            location.href="goodsDelete?goodsId="+paramId;
-        }
-    })
+
+function goodsDeleteBtn(){
+    document.getElementById("deleteForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        fetch("/nobrand/goodsDelete", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify({id:goodsData.id}),
+        }).then((response) => response.json())
+    })  
 }
+goodsDeleteBtn();
 
 function goCartEvent(){
     for (let index = 0; index < 1; index++) {
@@ -144,6 +149,5 @@ function notLoginBuyBtn(userId) {
 
 
 dataInput(goodsData);
-deletButtonBox();
 goCartEvent();
 ifSoldOut();

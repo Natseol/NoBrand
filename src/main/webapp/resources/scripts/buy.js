@@ -1,5 +1,11 @@
 const allGoodsCount = document.getElementById('goods-count');
-const buyBtnPush = document.getElementsByClassName('total-price')
+const buyBtnPush = document.getElementsByClassName('total-price');
+const costBox = document.getElementsByClassName('cost');
+const moreBtn = document.getElementsByClassName('more-button');
+const hiddenBox = document.getElementsByClassName('goods-list-hidden');
+const closeBox = document.getElementsByClassName('close-hidden-box');
+const checkBox = document.getElementsByClassName('user-input-hidden');
+const disign = document.getElementsByClassName('user-input-where');
 const cookieList = [];
 const parsingList = [];
 const JSONArray = [];
@@ -41,12 +47,14 @@ function createList(img, name, count){
 +	'</div>'
 +	'<div class="goods-price">'
 +		'<div class="goods-count-box">'
-+			'<div class="counter">'
-+				count
++			'<div class="counter-box">'
++				'<div class="counter">'
++					count
++				'</div>'
++				'<div>개</div>'
 +			'</div>'
-+			'<div>개</div>'
 +			'<div class="cost-position">'
-+				'<div id="cost">'
++				'<div class="cost">'
 +				'</div>'
 +				'<div class="font-goods-price">원</div>'
 +			'</div>'
@@ -70,7 +78,10 @@ fetch("http://localhost/nobrand/buy/id", {
 	let listCount = 0;
 	inBox = ".goods-list-visible";
 	createList(dataPart[0].imgAddress, dataPart[0].name, parsingList[0].goodsCount);
-	document.getElementById('cost').innerHTML = dataPart[0].price * parsingList[0].goodsCount;
+	for (let index = 0; index < 1; index++) {
+		costBox[0].innerHTML = dataPart[0].price * parsingList[0].goodsCount;
+	}
+	
 
 	JSONArray.push(parsingList[0]);
 	listCount++;
@@ -79,8 +90,11 @@ fetch("http://localhost/nobrand/buy/id", {
 	for (let index = 1; index < dataPart.length; index++) {
 		if(dataPart[index] !== null){
 			inBox = ".goods-list-hidden";
-			createList(dataPart[index].name, dataPart[index].imgAddress, parsingList[index].goodsCount);
-			document.getElementById('cost').innerHTML = dataPart[index].price * parsingList[index].goodsCount;
+			createList(dataPart[index].imgAddress, dataPart[index].name, parsingList[index].goodsCount);
+			console.log(parsingList[index].goodsCount);
+			console.log(dataPart[index].price);
+			let thisCost = dataPart[index].price * parsingList[index].goodsCount;
+			costBox[index].innerHTML = thisCost;
 
 			JSONArray.push(parsingList[index]);
 			listCount++;
@@ -111,4 +125,38 @@ function buyBtn() {
 	}
 }
 
+function moreGoods(){
+	for (let index = 0; index < 1; index++) {
+		moreBtn[0].addEventListener('click', function(){
+			hiddenBox[0].style.visibility = "visible";
+			moreBtn[0].style.visibility = "hidden";
+			closeBox[0].style.visibility = "visible";
+		})
+	}
+}
+
+function closeGoods(){
+	for (let index = 0; index < 1; index++) {
+		closeBox[0].addEventListener('click', function(){
+			hiddenBox[0].style.visibility = "hidden";
+			moreBtn[0].style.visibility = "visible";
+			closeBox[0].style.visibility = "hidden";
+		})
+	}
+}
+
+function checkUserInput() {
+	for (let index = 0; index < 1; index++) {
+		if(checkBox[0].checked == true){
+			disign[0].style.visibility = "visible";
+		}
+		else{
+			disign[0].style.visibility = "hidden";
+		}
+	}
+}
+
 buyBtn();
+moreGoods();
+closeGoods();
+checkUserInput();

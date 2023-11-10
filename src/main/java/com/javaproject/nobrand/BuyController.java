@@ -18,7 +18,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.javaproject.nobrand.buyList.dao.BuyListDAO;
 import com.javaproject.nobrand.buyList.domain.BuyList;
 import com.javaproject.nobrand.goods.dao.GoodsDAO;
@@ -95,34 +98,28 @@ public class BuyController {
 	@RequestMapping(value = "/buy/buyList", method = RequestMethod.POST)
 	public String buyList(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model) throws ServletException, IOException{
 		
-		BufferedReader reader =request.getReader();
-		StringBuilder jsonContent = new StringBuilder();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            jsonContent.append(line);
-        }
-        
-        JSONObject myObject = new JSONObject(jsonContent.toString());
-        System.out.println(myObject);
-        JSONArray jArray =myObject.getJSONArray("goods");
-        System.out.println(jArray);
+		ObjectMapper mapper = new ObjectMapper();
+		
+		JsonNode node = mapper.readTree(request.getInputStream());
+		
+		JsonNode node1 = node.get("goods");
+		
+		ArrayNode jArray = mapper.createArrayNode();
+		
+		for (JsonNode item : node1) {
+			jArray.add(item);
+		}
         
         String userId = (String)session.getAttribute("ID");
         User user = userDAO.get(userId);
         
-        for (int i = 0; i < jArray.length(); i++) {
+        for (int i = 0; i < jArray.size(); i++) {
         	
         	try {
-        		JSONObject object = (JSONObject)jArray.get(i);
-        		
-        		System.out.println(object);
-    			
-            	Object objectId = (Object)object.get("goodsId");
-            	Object objectCount = (Object)object.get("goodsCount");
-            	String stringId = objectId.toString();
-            	String stringCount = objectCount.toString();
-            	int id = Integer.parseInt(stringId);
-            	int count = Integer.parseInt(stringCount);
+        		JsonNode object = jArray.get(i);
+
+            	int id = object.get("goodsId").asInt();
+            	int count = object.get("goodsCount").asInt();
             	
             	BuyList buyList = new BuyList();
             	
