@@ -100,12 +100,6 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-<<<<<<< Upstream, based on develop
 		jdbctemplate.update("delete from USERS where \"ID\"=?", id);
-=======
-		jdbctemplate.update("delete from USERS where \"ID\"=?",id);
->>>>>>> cbf0654 tag:review and buylist
 	}
-
-
 }
