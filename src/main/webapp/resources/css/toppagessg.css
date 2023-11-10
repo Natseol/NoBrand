@@ -152,12 +152,17 @@ input:focus {
 	align-items: center
 }
 
+.emart-logo {
+	cursor: pointer;
+}
+
 .emart-logo-size{
 	width: 80px;
 }
 
 .ssg-mall-logo{
 	margin: 0 5px 0 5px;
+	cursor: pointer;
 }
 
 .text-color {

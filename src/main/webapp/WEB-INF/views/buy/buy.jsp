@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +15,7 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
 </head>
+
 <body>
 	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
 	<!-- 여기부터 시작 -->
@@ -20,7 +24,9 @@
 				<div class="buy">
 					<div class="title-content">결제하기</div>
 					<div class="user-info">
-						<div class="user-info-middle-font">받는 분 정보</div>
+						<div class="user-info-middle-font">
+							<div>받는 분 정보</div>
+						</div>
 						<div class="user-info-top">
 							<div class="user-info-top-delivery-location">배송지 정보</div>
 							<div class="user-info-all">
@@ -69,7 +75,9 @@
 					</div>
 				</div>
 				<div class="buy-btn">
-					<button class="total-price">결제하기</button>
+					<button class="total-price" onclick="location.href='/nobrand/'">
+							<div class="buy-price"></div>원 결제하기
+					</button>
 				</div>
 			</div>
 		</div>

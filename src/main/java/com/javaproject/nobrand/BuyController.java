@@ -50,7 +50,7 @@ public class BuyController {
 		return "buy/buy";
 	}
 	@RequestMapping(value = "/buy/id", method = RequestMethod.POST)
-	public String buy(HttpServletRequest request, HttpServletResponse response, Model model) throws ServletException, IOException{
+	public String buy(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model) throws ServletException, IOException{
 		
         BufferedReader reader = request.getReader();
 
@@ -92,7 +92,6 @@ public class BuyController {
  		response.setContentType("application/json");
         objectMapper.writeValue(response.getWriter(), myMap);
         
-       
 		return "buy/buy";
 	}
 	@RequestMapping(value = "/buy/buyList", method = RequestMethod.POST)
@@ -121,6 +120,12 @@ public class BuyController {
             	int id = object.get("goodsId").asInt();
             	int count = object.get("goodsCount").asInt();
             	
+            	int nowCount = goodsDAO.get(id).getGoodsCount() - count;
+            	
+            	if(nowCount < 0) {
+            		return "buy/buy";
+            	}
+            	
             	BuyList buyList = new BuyList();
             	
             	buyList.setUserID(user.getId());
@@ -128,6 +133,12 @@ public class BuyController {
             	buyList.setCount(count);
             	buyList.setPrice(goodsDAO.get(id).getPrice());
             	
+            	Goods goods = goodsDAO.get(id);
+            	
+            	goods.setGoodsCount(nowCount);
+            	goods.setCellCount(count);
+            	
+            	goodsDAO.update(goods);
             	buyListDAO.add(buyList);
             	
             	System.out.println("db insert");
@@ -138,6 +149,7 @@ public class BuyController {
         
         response.setContentType("text/html;charset=UTF-8");
  		response.setContentType("application/json");
+ 		
         
 		return "redirect:/";
 	}

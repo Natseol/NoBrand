@@ -1,4 +1,5 @@
 const imgFrame = document.getElementsByClassName('img-frame');
+const thisGoodsBox = document.getElementsByClassName('calculator');
 const categoryTop = document.getElementsByClassName('category-top');
 const categoryBottom = document.getElementsByClassName('category-boottom');
 const goodsKind = document.getElementsByClassName('goods-kind');
@@ -15,7 +16,7 @@ const goBuyBtn = document.getElementsByClassName('buy-btn');
 const goCart = document.getElementsByClassName('go-cart');
 const goBuy = document.getElementsByClassName('go-buy');
 const deletButton = document.getElementById('delete-goods');
-
+let popup;
 
 
 
@@ -58,8 +59,9 @@ function createCookieBuy( goodsIdJ, exdays){
     alert("구매페이지로 이동합니다.");
 }
 
-function dataInput({bottomKind, imgAddress ,name, price, info, content}){
-    categoryTop[0].innerHTML = bottomKind;
+function dataInput({topKind, bottomKind, imgAddress ,name, price, info, content}){
+    categoryTop[0].innerHTML = topKind;
+    categoryBottom[0].innerHTML = bottomKind;
     imgFrame[0].innerHTML = imgAddress;
     goodsName[0].innerHTML = name;
     goodsNameInfo[0].innerHTML = name;
@@ -97,7 +99,6 @@ function goodsDeleteBtn(){
         }).then((response) => response.json())
     })  
 }
-goodsDeleteBtn();
 
 function goCartEvent(){
     for (let index = 0; index < 1; index++) {
@@ -118,6 +119,37 @@ function goCartEvent(){
     
 }
 
+function notEnoughCart(){
+    for (let index = 0; index < 1; index++) {
+        goCartBtn[0].addEventListener('click', function(){
+            console.log(thisGoodsBox[0].children[0].children[1].textContent);
+            console.log(goodsData.goodsCount);
+            if(goodsData.goodsCount < thisGoodsBox[0].children[0].children[1].textContent){
+                alert("남은 상품 수량보다 많습니다.")
+            }
+            else{
+                createCookie(goodsData.id, 30);
+            }
+        })
+    }
+}
+
+function notEnoughBuy(){
+    for (let index = 0; index < 1; index++) {
+        goBuyBtn[0].addEventListener('click', function(){
+            console.log(thisGoodsBox[0].children[0].children[1].textContent);
+            console.log(goodsData.goodsCount);
+            if(goodsData.goodsCount < thisGoodsBox[0].children[0].children[1].textContent){
+                alert("남은 상품 수량보다 많습니다.")
+            }
+            else{
+                notLoginBuyBtn(user)
+            }
+        })
+    }
+}
+
+
 function ifSoldOut(){
     if(goodsData.goodsCount === 0){
         for (let index = 0; index < 1; index++) {
@@ -128,17 +160,13 @@ function ifSoldOut(){
     }
 }
 
-let popup;
+
 
 function notLoginBuyBtn(userId) {
     for (let index = 0; index < 1; index++) {
         if(userId == "null"){
             alert("로그인이 필요합니다.");
-            popup = window.open('/nobrand/login','로그인',width=672,height=480)
-            
-            popup.addEventListener('beforeunload', function(){
-               window.location.reload;
-            })
+            popup = window.open('/nobrand/login','로그인',width=672,height=480);
         }
         else{
             createCookieBuy(goodsData.id, 30);
@@ -147,7 +175,28 @@ function notLoginBuyBtn(userId) {
     }
 }
 
+function topCategoriClick() {
+    for (let index = 0; index < 1; index++) {
+        categoryTop[0].addEventListener('click', function(){
+            location.href="sub?category="+goodsData.topKind;
+        })
+    } 
+}
 
+function bottomCategoriClick() {
+    for (let index = 0; index < 1; index++) {
+        categoryBottom[0].addEventListener('click', function(){
+            location.href="sub?kind="+goodsData.bottomKind;
+        })
+    } 
+}
+
+
+goodsDeleteBtn();
 dataInput(goodsData);
 goCartEvent();
 ifSoldOut();
+topCategoriClick();
+bottomCategoriClick();
+notEnoughCart();
+notEnoughBuy();

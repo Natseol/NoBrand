@@ -102,31 +102,32 @@ public class GoodsDAOImpl implements GoodsDAO {
 	@Override
 	public void update(Goods goods) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("update GOODS set ("
-				+ "\"PRICE\"=?,"
-				+ "\"SEARCH_COUNT\"=?,"
-				+ "\"SELL_COUNT\"=?,"
-				+ "\"GOODS_COUNT\","
-				+ "\"NAME\"=?,"
-				+ "\"KIND_TOP\"=?,"
-				+ "\"KIND_BOTTOM\"=?,"
-				+ "\"INFO\"=?,"
-				+ "\"IMAGE\"=?,"
-				+ "\"OPTION\"=?,"
-				+ "\"DELIVERY\"=?,"
-				+ "\"CONTENT\"=?) where \"ID\"=? ",
+		jdbcTemplate.update("UPDATE \"GOODS\" SET "
+	            + "\"PRICE\"=?,"
+	            + "\"SEARCH_COUNT\"=?,"
+	            + "\"SELL_COUNT\"=?,"
+	            + "\"GOODS_COUNT\"=?,"
+	            + "\"NAME\"=?,"
+	            + "\"KIND_TOP\"=?,"
+	            + "\"KIND_BOTTOM\"=?,"
+	            + "\"INFO\"=?,"
+	            + "\"IMAGE\"=?,"
+	            + "\"OPTION\"=?,"
+	            + "\"DELIVERY\"=?,"
+	            + "\"CONTENT\"=? WHERE \"ID\"=?",
 				goods.getPrice(),
-				goods.getSearchCount(),
-				goods.getCellCount(),
-				goods.getGoodsCount(),
-				goods.getName(),
-				goods.getTopKind(),
-				goods.getBottomKind(),
-				goods.getInfo(),
-				goods.getImgAddress(),
-				goods.getOptions(),
-				goods.getDelivery(),
-				goods.getContent()
+	            goods.getSearchCount(),
+	            goods.getCellCount(),
+	            goods.getGoodsCount(),
+	            goods.getName(),
+	            goods.getTopKind(),
+	            goods.getBottomKind(),
+	            goods.getInfo(),
+	            goods.getImgAddress(),
+	            goods.getOptions(),
+	            goods.getDelivery(),
+	            goods.getContent(),
+	            goods.getId()
 				);
 	}
 	@Override

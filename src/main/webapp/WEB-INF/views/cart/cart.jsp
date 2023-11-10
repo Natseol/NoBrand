@@ -18,6 +18,12 @@
 	var goodscount = 0;
 </script>
 <body>
+<% 
+	String userId = (String)session.getAttribute("ID");
+%>
+<script type="text/javascript">
+	const user = "<%=userId%>";
+</script>
 	<jsp:include page='../toppagessg.jsp' />
 	<!-- 여기부터 시작 -->
 	<div id="root">
@@ -27,9 +33,7 @@
 					<div class="cart-tip-box">
 						<div class="cart-string">
 							<div class="cart-name font-size-4">장바구니</div>
-							<div class="tip-btn-box">
-								<button class="tip-btn button">이용TIP</button>
-							</div>
+							<button class="tip-btn button">이용TIP</button>
 						</div>
 					</div>
 				</div>
@@ -114,7 +118,7 @@
 											</div>
 											<div class="order-btn-box">
 												<div class="order-btn-box">
-													<button class="order-btn" onclick="location.href='/nobrand/buy'">
+													<button class="order-btn">
 														<div class="font-size-5">주문하기</div>
 													</button>
 												</div>

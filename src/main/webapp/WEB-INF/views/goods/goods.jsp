@@ -29,17 +29,12 @@
 			<div class="main">
 				<div class="goods-main">
 					<div class="goods-category">
-						<div class="font-top">HOME</div>
+						<div class="font-top" onclick="location.href='/nobrand/'">HOME</a></div>
 						<div class="center-slash">/</div>
 						<div class="font-top">
-							<div class="category-top"></div>
+							<div class="category-top" onclick="location.href='/nobrand/'"></div>
 							<div class="arrow-down"></div>
 							</div>
-						</div>
-						<div class="center-slash">/</div>
-						<div class="font-top">
-							<div></div>
-							<div class="arrow-down"></div>
 						</div>
 						<div class="center-slash">/</div>
 						<div class="font-top">
@@ -118,8 +113,8 @@
 								<div class="like-img">
 									<img class="like-ico" alt="관심있는 상품" src="resources/images/heart.svg">
 								</div>
-								<button class="cart-btn" onclick="createCookie(goodsData.id, 30)">장바구니</button>
-								<button class="buy-btn" onclick="notLoginBuyBtn(user)">
+								<button class="cart-btn">장바구니</button>
+								<button class="buy-btn">
 									<div class="logo-s">
 										<div>S</div>
 									</div>
@@ -138,7 +133,6 @@
 							</div>
 						</div>
 						<jsp:include page='/WEB-INF/views/goods/goodsinfo.jsp' />
-						<jsp:include page='/WEB-INF/views/goods/review.jsp' />
 						<div class="exchange">
 							<div class="exchange-info">
 								<div class="title-goods">교환 및 반품 안내</div>

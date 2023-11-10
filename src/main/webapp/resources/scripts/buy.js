@@ -1,15 +1,21 @@
 const allGoodsCount = document.getElementById('goods-count');
 const buyBtnPush = document.getElementsByClassName('total-price');
+const buyPrice = document.getElementsByClassName('buy-price');
 const costBox = document.getElementsByClassName('cost');
 const moreBtn = document.getElementsByClassName('more-button');
 const hiddenBox = document.getElementsByClassName('goods-list-hidden');
 const closeBox = document.getElementsByClassName('close-hidden-box');
 const checkBox = document.getElementsByClassName('user-input-hidden');
 const disign = document.getElementsByClassName('user-input-where');
+const loginUser = document.getElementsByClassName('user-info-login');
+const deliveyLocation = document.getElementsByClassName('user-info-address');
+const userName = document.getElementsByClassName('user-info-name');
+const userEmail = document.getElementsByClassName('user-info-email');
 const cookieList = [];
 const parsingList = [];
 const JSONArray = [];
 let idList = [];
+let totalPrice = 0;
 
 function getCookieList(){
 	
@@ -80,9 +86,16 @@ fetch("http://localhost/nobrand/buy/id", {
 	createList(dataPart[0].imgAddress, dataPart[0].name, parsingList[0].goodsCount);
 	for (let index = 0; index < 1; index++) {
 		costBox[0].innerHTML = dataPart[0].price * parsingList[0].goodsCount;
+		totalPrice += (dataPart[0].price * parsingList[0].goodsCount)
+		if(totalPrice > 40000){
+			buyPrice[0].textContent = totalPrice;
+		}
+		else{
+			buyPrice[0].textContent = totalPrice+3000;
+		}
+		
 	}
 	
-
 	JSONArray.push(parsingList[0]);
 	listCount++;
 	allGoodsCount.innerHTML = listCount;
@@ -96,6 +109,13 @@ fetch("http://localhost/nobrand/buy/id", {
 			let thisCost = dataPart[index].price * parsingList[index].goodsCount;
 			costBox[index].innerHTML = thisCost;
 
+			totalPrice += (dataPart[index].price * parsingList[0].goodsCount)
+			if(totalPrice > 40000){
+				buyPrice[0].textContent = totalPrice;
+			}
+			else{
+				buyPrice[0].textContent = totalPrice+3000;
+			}
 			JSONArray.push(parsingList[index]);
 			listCount++;
 			allGoodsCount.innerHTML = listCount;
@@ -154,6 +174,10 @@ function checkUserInput() {
 			disign[0].style.visibility = "hidden";
 		}
 	}
+}
+
+function userInfo(){
+
 }
 
 buyBtn();

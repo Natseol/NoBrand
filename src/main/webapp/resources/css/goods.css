@@ -373,3 +373,11 @@
   width: 100%;
   height: 100%;
 }
+
+.font-top {
+  cursor: pointer;
+}
+
+.goods-info {
+  margin-bottom: 300px;
+}
