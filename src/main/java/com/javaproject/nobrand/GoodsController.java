@@ -35,6 +35,8 @@ public class GoodsController {
 		JSONObject json = new JSONObject(goods);
 		
 		request.setAttribute("goodsJson", json);
+		
+		
 		return "goods/goods";
 	}
 	

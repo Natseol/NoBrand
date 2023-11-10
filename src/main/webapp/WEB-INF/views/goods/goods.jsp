@@ -18,6 +18,7 @@
 <body>
 <% 
 	String userId = (String)session.getAttribute("ID"); 
+	System.out.println(userId);
 %>
 <script type="text/javascript">
 	const user = "<%=userId%>";
@@ -117,7 +118,7 @@
 									<img class="like-ico" alt="관심있는 상품" src="resources/images/heart.svg">
 								</div>
 								<button class="cart-btn" onclick="createCookie(goodsData.id, 30)">장바구니</button>
-								<button class="buy-btn" onclick="createCookieBuy(goodsData.id, 30), location.href='/nobrand/buy'">
+								<button class="buy-btn" onclick="notLoginBuyBtn(user)">
 									<div class="logo-s">
 										<div>S</div>
 									</div>

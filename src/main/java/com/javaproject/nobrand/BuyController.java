@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -20,8 +21,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.javaproject.nobrand.buyList.dao.BuyListDAO;
 import com.javaproject.nobrand.buyList.domain.BuyList;
+import com.javaproject.nobrand.goods.dao.GoodsDAO;
 import com.javaproject.nobrand.goods.domain.Goods;
 import com.javaproject.nobrand.goods.service.GoodsService;
+import com.javaproject.nobrand.user.dao.UserDAO;
+import com.javaproject.nobrand.user.domain.User;
 
 /**
  * Handles requests for the application home page.
@@ -29,9 +33,11 @@ import com.javaproject.nobrand.goods.service.GoodsService;
 @Controller
 public class BuyController {
 	@Autowired
-	GoodsService goodsService;
+	GoodsDAO goodsDAO;
 	@Autowired
 	BuyListDAO buyListDAO;
+	@Autowired
+	UserDAO userDAO;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -65,7 +71,7 @@ public class BuyController {
         for (int i = 0; i < idListGoods.length; i++) {
         	Goods goodsList = new Goods();
         	
-        	goodsList = goodsService.getGoods(idListGoods[i]);
+        	goodsList = goodsDAO.get(idListGoods[i]);
      		
      		JSONObject goodsJson = new JSONObject(goodsList);
      		
@@ -87,7 +93,7 @@ public class BuyController {
 		return "buy/buy";
 	}
 	@RequestMapping(value = "/buy/buyList", method = RequestMethod.POST)
-	public String buyList(HttpServletRequest request, HttpServletResponse response, Model model) throws ServletException, IOException{
+	public String buyList(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model) throws ServletException, IOException{
 		
 		BufferedReader reader =request.getReader();
 		StringBuilder jsonContent = new StringBuilder();
@@ -97,30 +103,37 @@ public class BuyController {
         }
         
         JSONObject myObject = new JSONObject(jsonContent.toString());
-        JSONArray jArrayId =myObject.getJSONArray("id");
+        System.out.println(myObject);
+        JSONArray jArray =myObject.getJSONArray("goods");
+        System.out.println(jArray);
         
-        int[] idListGoods = new int[jArrayId.length()];
-        for (int i = 0; i < idListGoods.length; i++) {
-        	idListGoods[i] = jArrayId.getInt(i);
+        String userId = (String)session.getAttribute("ID");
+        User user = userDAO.get(userId);
+        
+        for (int i = 0; i < jArray.length(); i++) {
+        	
+        	try {
+        		JSONObject object = (JSONObject)jArray.get(i);
+    			
+            	Object objectId = (Object)object.get("goodsId");
+            	Object objectCount = (Object)object.get("goodsCount");
+            	String stringId = objectId.toString();
+            	String stringCount = objectCount.toString();
+            	int id = Integer.parseInt(stringId);
+            	int count = Integer.parseInt(stringCount);
+            	
+            	BuyList buyList = new BuyList();
+            	
+            	buyList.setUserID(user.getId());
+            	buyList.setGoodsID(id);
+            	buyList.setCount(count);
+            	buyList.setPrice(goodsDAO.get(id).getPrice());
+            	System.out.println("db insert");
+        	}catch(NullPointerException e) {
+        		System.out.println(e.getMessage());
+        	}
+        	
 		}
-        JSONArray jArrayCount =myObject.getJSONArray("id");
-        
-        int[] CountListGoods = new int[jArrayCount.length()];
-        for (int i = 0; i < idListGoods.length; i++) {
-        	idListGoods[i] = jArrayCount.getInt(i);
-		}
-        JSONArray jArrayPrice =myObject.getJSONArray("id");
-        
-        int[] priceListGoods = new int[jArrayPrice.length()];
-        for (int i = 0; i < idListGoods.length; i++) {
-        	idListGoods[i] = jArrayPrice.getInt(i);
-		}
-        
-        buyListDAO.add(new BuyList(
-        		));
-        
-        
-        
         
 		return "buy/buy";
 	}

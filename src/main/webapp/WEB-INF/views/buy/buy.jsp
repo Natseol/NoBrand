@@ -13,7 +13,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<jsp:include page='/WEB-INF/views/toppage.jsp' />
+	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
 	<!-- 여기부터 시작 -->
 		<div id="order-root">
 			<div class="main-order">
@@ -67,7 +67,7 @@
 					</div>
 				</div>
 				<div class="buy-btn">
-					<button class="total-price"></button>
+					<button class="total-price">결제하기</button>
 				</div>
 				<div class="buy"></div>
 				<div class="ordered-goods"></div>

@@ -1,6 +1,8 @@
 const allGoodsCount = document.getElementById('goods-count');
+const buyBtnPush = document.getElementsByClassName('total-price')
 const cookieList = [];
 const parsingList = [];
+const JSONArray = [];
 let idList = [];
 
 function getCookieList(){
@@ -29,7 +31,6 @@ function createList(img, name, count){
 	topBox.innerHTML = '<div class="goods-box">'
 +	'<div class="img-box">'
 +			img
-+		'<input class="img-check" name="check-box" type="checkbox">'
 +	'</div>'
 +	'<div class="goods-info">'
 +		'<div class="mart-name">이마트</div>'
@@ -42,7 +43,8 @@ function createList(img, name, count){
 +		'<div class="goods-count-box">'
 +			'<div class="counter">'
 +				count
-+				'</div>'
++			'</div>'
++			'<div>개</div>'
 +			'<div class="cost-position">'
 +				'<div id="cost">'
 +				'</div>'
@@ -70,6 +72,7 @@ fetch("http://localhost/nobrand/buy/id", {
 	createList(dataPart[0].imgAddress, dataPart[0].name, parsingList[0].goodsCount);
 	document.getElementById('cost').innerHTML = dataPart[0].price * parsingList[0].goodsCount;
 
+	JSONArray.push(parsingList[0]);
 	listCount++;
 	allGoodsCount.innerHTML = listCount;
 
@@ -79,6 +82,7 @@ fetch("http://localhost/nobrand/buy/id", {
 			createList(dataPart[index].name, dataPart[index].imgAddress, parsingList[index].goodsCount);
 			document.getElementById('cost').innerHTML = dataPart[index].price * parsingList[index].goodsCount;
 
+			JSONArray.push(parsingList[index]);
 			listCount++;
 			allGoodsCount.innerHTML = listCount;
 		}
@@ -87,15 +91,24 @@ fetch("http://localhost/nobrand/buy/id", {
 
 function getBack() {
 	for (let index = 0; index < parsingList.length; index++) {
-		const totalgoodsData = {id:parsingList[index].goodsId, count:parsingList[index].goodsCount, price:dataPart[index].price * parsingList[index].goodsCount};
-		JSON.stringify(totalgoodsData);
+		const totalgoodsData = {goods:JSONArray};
+		return JSON.stringify(totalgoodsData);
 	}
 }
 
-fetch("http://localhost/nobrand/buy/buyList", {
-	method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: getBack(),
-}).then((response) => response.json())
+function buyBtn() {
+	for (let index = 0; index < 1; index++) {
+		buyBtnPush[0].addEventListener('click', function () {
+			alert("상품을 구매하였습니다.");
+			fetch("http://localhost/nobrand/buy/buyList", {
+				method: "POST",
+				headers: {
+				"Content-Type": "application/json",
+				},
+				body: getBack(),
+			}).then((response) => response.json())
+		})
+	}
+}
+
+buyBtn();

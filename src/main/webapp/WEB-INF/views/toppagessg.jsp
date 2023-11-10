@@ -38,7 +38,7 @@
 			<div class="main-box">
 				<div class="logo-box">
 					<div class="ssg-logo">
-						<img alt="" src="resources/images/ssg_logo.svg">
+						<a href="/nobrand/"><img alt="" src="resources/images/ssg_logo.svg"></a> 
 						<div class="logo-script">
 							<div class="font-weight font-logo">믿고 사는 즐거움</div>
 						</div>

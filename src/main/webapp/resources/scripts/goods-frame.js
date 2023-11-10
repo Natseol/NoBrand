@@ -1,6 +1,7 @@
 const imgFrame = document.getElementsByClassName('img-frame');
 const categoryTop = document.getElementsByClassName('category-top');
 const categoryBottom = document.getElementsByClassName('category-boottom');
+const goodsKind = document.getElementsByClassName('goods-kind');
 const goodsName = document.getElementsByClassName('goods-name');
 const goodsNameInfo = document.getElementsByClassName('goods-name-info');
 const goodsPrice = document.getElementsByClassName('goods-price');
@@ -14,7 +15,6 @@ const goBuyBtn = document.getElementsByClassName('buy-btn');
 const goCart = document.getElementsByClassName('go-cart');
 const goBuy = document.getElementsByClassName('go-buy');
 const deletButton = document.getElementById('delete-goods');
-
 
 
 
@@ -68,6 +68,7 @@ function dataInput({bottomKind, imgAddress ,name, price, info, content}){
     totalOrderSecond[0].innerHTML = price;
     goodsMade[0].innerHTML = info;
     contentElem[0].innerHTML = content;
+    goodsKind[0].innerHTML = bottomKind;
 }
 
 
@@ -95,6 +96,7 @@ function deletButtonBox(){
 
 function goCartEvent(){
     for (let index = 0; index < 1; index++) {
+        goCart[0].style.visibility = 'hidden';
         goCartBtn[0].addEventListener('mousemove', function(){
             goCart[0].style.visibility = 'visible';
         })
@@ -118,6 +120,25 @@ function ifSoldOut(){
             goCartBtn[0].innerHTML = "매진";
         }
        
+    }
+}
+
+let popup;
+
+function notLoginBuyBtn(userId) {
+    for (let index = 0; index < 1; index++) {
+        if(userId == "null"){
+            alert("로그인이 필요합니다.");
+            popup = window.open('/nobrand/login','로그인',width=672,height=480)
+            
+            popup.addEventListener('beforeunload', function(){
+               window.location.reload;
+            })
+        }
+        else{
+            createCookieBuy(goodsData.id, 30);
+            location.href='/nobrand/buy';
+        }
     }
 }
 

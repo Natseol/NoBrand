@@ -11,8 +11,37 @@
 #order-root {
 	width: 930px;
 	height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-content {
+  display: flex;
+}
+
+.goods-list-visible {
+  display: flex;
 }
 
 .goods-box{
+  display: flex;
+}
+
+.total-price {
+  width: 930px;
+  height: 100px;
+}
+
+.img-box {
+  width: 150px;
+  height: 150px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.goods-count-box {
   display: flex;
 }
