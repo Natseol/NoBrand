@@ -99,14 +99,15 @@ function getBack() {
 function buyBtn() {
 	for (let index = 0; index < 1; index++) {
 		buyBtnPush[0].addEventListener('click', function () {
-			alert("상품을 구매하였습니다.");
-			fetch("http://localhost/nobrand/buy/buyList", {
+			fetch("/buyList", {
 				method: "POST",
 				headers: {
 				"Content-Type": "application/json",
 				},
 				body: getBack(),
 			}).then((response) => response.json())
+			alert("상품을 구매하였습니다.");
+			window.location.href="/nobrand/"
 		})
 	}
 }

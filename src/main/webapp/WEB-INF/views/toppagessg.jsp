@@ -81,7 +81,6 @@
 	<script type="text/javascript" src="resources/scripts/popup.js"></script>
 	<script>	
 		let name= "<%=(String)session.getAttribute("ID")%>";
-		console.log(name);
 		var btnElem=document.createElement("button");	
 		btnElem.id="logout";
 		btnElem.name="logout";

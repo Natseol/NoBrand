@@ -7,11 +7,6 @@
 	function toMainPage() {
 		window.opener.location.reload();
 		window.close();
-<<<<<<< Upstream, based on develop
-=======
-	
-		window.opener.location.reload();
->>>>>>> 278dddf feat: db connected
 	}
 	toMainPage();
 </script>

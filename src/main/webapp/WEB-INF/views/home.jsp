@@ -21,7 +21,6 @@
 	<!-- 여기부터 시작 -->
 	<div class="home-body">
 	<%String name=(String)session.getAttribute("ID");
-	System.out.println(name);
 	%>
 	<div id="carouselExampleInterval" class="carousel slide carousel-main"
 		data-bs-ride="carousel">

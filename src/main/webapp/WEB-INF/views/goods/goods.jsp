@@ -17,8 +17,7 @@
 </script>
 <body>
 <% 
-	String userId = (String)session.getAttribute("ID"); 
-	System.out.println(userId);
+	String userId = (String)session.getAttribute("ID");
 %>
 <script type="text/javascript">
 	const user = "<%=userId%>";

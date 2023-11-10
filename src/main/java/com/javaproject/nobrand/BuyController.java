@@ -132,9 +132,11 @@ public class BuyController {
         	}catch(NullPointerException e) {
         		System.out.println(e.getMessage());
         	}
-        	
 		}
         
-		return "buy/buy";
+        response.setContentType("text/html;charset=UTF-8");
+ 		response.setContentType("application/json");
+        
+		return "redirect:/";
 	}
 }
