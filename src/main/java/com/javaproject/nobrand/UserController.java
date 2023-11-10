@@ -19,7 +19,7 @@ import com.javaproject.nobrand.user.service.UserService;
 
 	@Controller
 	public class UserController {
-		//ÀÔ·Â°ªÀÌ ºñ¾îÀÖ´ÂÁö Ã¼Å©ÇØÁÖ´Â ¸Þ¼­µå
+		//ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ Ã¼Å©ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 		private boolean isEmptyChecker(String value) {
 			return value ==null||value.trim().isEmpty(); 
 		}
@@ -28,8 +28,7 @@ import com.javaproject.nobrand.user.service.UserService;
 		@RequestMapping(value="/regist",method=RequestMethod.GET)
 		public String regist() {
 			return "/login/regist";
-		}
-		
+		}		
 		
 		@RequestMapping(value="/loginFailed",method=RequestMethod.GET)
 		public String loginFailed() {
@@ -41,7 +40,7 @@ import com.javaproject.nobrand.user.service.UserService;
 		}
 		@RequestMapping(value="/regist",method=RequestMethod.POST)
 		public String registPost(@RequestParam Map<String,String> map,Model model) {
-			//¸¸¾à¿¡ °ªÀÌ ºñ¾îÀÖ´Ù¸é ¸®´ÙÀÌ·ºÆ® Àü¿¡ ¸ðµ¨¿¡ ¿¡·¯ ¸Þ¼¼Áö¸¦ Ã¤¿ö¼­ º¸³½ µÚ, ¸ÞÀÎ ÆäÀÌÁö·Î ¸®´ÙÀÌ·ºÆ®
+			//ï¿½ï¿½ï¿½à¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì·ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ðµ¨¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì·ï¿½Æ®
 			if(	isEmptyChecker(map.get("NAME"))||
 				isEmptyChecker(map.get("USERID"))||
 				isEmptyChecker(map.get("PASSWORD"))||
@@ -50,7 +49,7 @@ import com.javaproject.nobrand.user.service.UserService;
 				isEmptyChecker(map.get("ADDRESS"))
 				)
 			{
-			model.addAttribute("error","ÇÊ¼ö ÀÔ·Â°ªÀ» ¸ðµÎ Ã¤¿öÁÖ¼¼¿ä");	
+			model.addAttribute("error","ï¿½Ê¼ï¿½ ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");	
 			return "redirect:/regist";
 			}
 			

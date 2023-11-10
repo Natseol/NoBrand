@@ -40,6 +40,6 @@ public class RegistGoodsController {
 				map.get("goods-content"),
 				map.get("goods-info")
 				));
-		return "redirect:/";		
+		return "redirect:/";
 	}
 }

@@ -34,7 +34,7 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model, HttpServletRequest request) {
-		JSONObject json = new JSONObject();		
+		JSONObject json = new JSONObject();
 		List<Goods> goodsList = goodsDAO.getAll();
 		json.put("list", goodsList);
 		request.setAttribute("list", json.get("list"));
