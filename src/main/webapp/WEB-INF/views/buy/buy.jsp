@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="resources/css/main.css" rel="stylesheet" type="text/css">
+<link href="resources/css/buy.css" rel="stylesheet" type="text/css">
 <title>구매</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
