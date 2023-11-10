@@ -114,6 +114,8 @@ public class BuyController {
         	
         	try {
         		JSONObject object = (JSONObject)jArray.get(i);
+        		
+        		System.out.println(object);
     			
             	Object objectId = (Object)object.get("goodsId");
             	Object objectCount = (Object)object.get("goodsCount");
@@ -128,6 +130,9 @@ public class BuyController {
             	buyList.setGoodsID(id);
             	buyList.setCount(count);
             	buyList.setPrice(goodsDAO.get(id).getPrice());
+            	
+            	buyListDAO.add(buyList);
+            	
             	System.out.println("db insert");
         	}catch(NullPointerException e) {
         		System.out.println(e.getMessage());
