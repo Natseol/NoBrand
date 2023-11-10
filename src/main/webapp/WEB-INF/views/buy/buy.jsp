@@ -17,7 +17,6 @@
 	<!-- 여기부터 시작 -->
 		<div id="order-root">
 			<div class="main-order">
-<<<<<<< Upstream, based on develop
 				<div class="buy">
 					<div class="title-content">결제하기</div>
 					<div class="user-info">
@@ -70,12 +69,10 @@
 				<div class="buy-btn">
 					<button class="total-price"></button>
 				</div>
-=======
 				<div class="buy"></div>
 				<div class="ordered-goods"></div>
 				<div class="">
 			</div>
->>>>>>> 00f4c32 tag:regist exception
 			</div>
 		</div>
 		<script src="resources/scripts/buy.js"></script>
