@@ -13,19 +13,28 @@
 	crossorigin="anonymous">
 </head>
 <style>
+	#thumbnail-box>div>div>.ck-editor__editable {
+		width: 350px;
+		height: 300px;
+	}
+
+	#thumbnail-box>div>div>div>div>.ck-toolbar {
+		width: 350px;
+	}
+
     #container {
-        width: 1100px;        
+        width: 300px;
         margin: 20px auto;
     }
-    .ck-editor__editable[role="textbox"] {
-        /* editing area */
-        min-height: 500px;
-        width : 1100px;     
+    #content-box>div>div>.ck-editor__editable {
+        /* editing area */        
+        width : 1100px;
+		min-height: 500px;
     }
     .ck-content .image {
         /* block images */
         max-width: 80%;
-        margin: 10px auto;
+        margin: 5px auto;
     }
 </style>
 <body>
@@ -83,7 +92,7 @@
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">옵션명</div><input class="registgoods-input" name="goods-options"></div>
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">수량</div><input class="registgoods-input" name="goods-cellcount"></div>
+				<div class="registgoods-input-box"><div class="registgoods-input-info">수량</div><input class="registgoods-input" name="goods-cellcount" onkeypress="keyEventFunc(event)" placeholder="숫자만 입력"></div>
 				<hr class="hr-thin">
 				<div class="registgoods-input-box"><div class="registgoods-input-info">배송정보</div><input class="registgoods-input" name="goods-delivery"></div>				
 				<hr class="hr-thin">
@@ -92,9 +101,9 @@
 				<div class="registgoods-container-title">상세페이지</div>
 				<hr class="hr-bold">				
 				
-				<div class="registgoods-input-box"><div class="registgoods-input-info">썸네일</div><textarea id="thumbnail" class="registgoods-textarea" name="goods-thumbnail"></textarea></div>					
+				<div class="registgoods-input-box"><div class="registgoods-input-info">썸네일</div><div id="thumbnail-box"><textarea id="thumbnail" class="registgoods-textarea" name="goods-thumbnail"></textarea></div></div>					
 				<hr class="hr-thin">
-				<div class="registgoods-input-box"><div class="registgoods-input-info">내용</div><textarea id="editor" class="registgoods-textarea" name="goods-content"></textarea></div>					
+				<div class="registgoods-input-box"><div class="registgoods-input-info">내용</div><div id="content-box"><textarea id="editor" class="registgoods-textarea" name="goods-content"></textarea></div></div>					
 				<hr class="hr-thin">
 			</div>			
 			<div class="registgoods-info2">
@@ -112,10 +121,11 @@
 	<!-- 여기부터 끝 -->
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
 
-<!-- simple -->
-<!-- <script src="resources/ckeditor5simple/ckeditor.js"></script> -->
 <script src="resources/scripts/UploadAdapter.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+<script src="resources/ckeditor5/build/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/balloon-block/ckeditor.js"></script> -->
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script> -->
+
 <script>
 	function MyCustomUploadAdapterPlugin(editor) {
 		editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
@@ -123,8 +133,7 @@
 		}
 	}
 
-	ClassicEditor.create(document.querySelector('#editor'), {
-		language:'ko',
+	ClassicEditor.create(document.querySelector('#thumbnail'), {		
 		extraPlugins: [MyCustomUploadAdapterPlugin]
 	}).then(editor => {
 		window.editor = editor;
@@ -132,8 +141,7 @@
 		console.error( error );
 	});
 
-	ClassicEditor.create(document.querySelector('#thumbnail'), {
-		language:'ko',
+	ClassicEditor.create(document.querySelector('#editor'), {		
 		extraPlugins: [MyCustomUploadAdapterPlugin]
 	}).then(editor => {
 		window.editor = editor;

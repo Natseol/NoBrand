@@ -45,6 +45,7 @@
     width: 40%;
     border: lightgray solid 1px;
     height: 35px;
+    padding: 0px 8px;
 }
 
 .registgoods-input-select{

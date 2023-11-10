@@ -90,7 +90,7 @@ function createCard(index) {
         cardContainer.appendChild(createCard(i));        
       }
     } else if (goodslist.length>0) {
-      for (let i = 0 ; i < createCard.length ; i++) {
+      for (let i = 0 ; i < goodslist.length ; i++) {
         cardContainer.appendChild(createCard(i));        
       }
     }

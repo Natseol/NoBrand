@@ -29,7 +29,7 @@
 				<button class="user-heart top-img-margin" id="logout" name="logout"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></button>
 				</form>-->
 				<div class="user-heart top-img-margin"><img class="top-img-size" alt="관심있는 상품" src="resources/images/heart.svg"></div>
-				<div class="user-user top-img-margin" id="userinfo"><img class="top-img-size" alt="유저정보" src="resources/images/user.svg"></div>
+				<div class="user-user top-img-margin" id="userinfo"><a id="user-info"><img class="top-img-size" alt="유저정보" src="resources/images/user.svg"></a></div>
 				<div class="user-delivery top-img-margin"><img class="top-img-size" alt="배송정보" src="resources/images/delivery.svg"></div>
 				<div class="user-cart top-img-margin">
 					<a href="/nobrand/cart"><img alt="장바구니" src="resources/images/cart.svg"></a>
@@ -98,6 +98,16 @@
 			form.style.display="";
 			loginboxElem.onclick="";
 		}
+
+		let userInfoAnchor = document.getElementById("user-info");
+		if (name!="null") {
+			userInfoAnchor.href="/nobrand/userinfo"
+		} else {
+			userInfoAnchor.onclick=function(){
+				window.open('/nobrand/login','로그인',width=672,height=480)	
+			}
+		}
+
 	</script>
 </body>
 </html>

@@ -1,6 +1,3 @@
-console.log(buyList);
-console.log(goodsList);
-
 const userName = document.getElementById("info-item-name");
 userName.innerHTML = userInfo.name + " 님";
 
