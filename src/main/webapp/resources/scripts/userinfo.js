@@ -33,7 +33,6 @@ for (let i = 0; i < buyList.length; i++) {
     imageElement.children[0].children[0].style.height="100%";
     imageElement.children[0].children[0].style.width="100%";
 
-
     // <div.buylist-goods-info 요소 생성
     let goodsInfoElement = document.createElement("div");
     goodsInfoElement.className = "buylist-goods-info";
@@ -56,6 +55,24 @@ for (let i = 0; i < buyList.length; i++) {
     // goodsBoxElement에 imageElement 및 goodsInfoElement 추가
     goodsBoxElement.appendChild(imageElement);
     goodsBoxElement.appendChild(goodsInfoElement);
+
+
+    let buttonBoxElement = document.createElement("div");
+    buttonBoxElement.className = "buylist-button-box"
+
+    let modalButtonElement = document.createElement("button");
+    modalButtonElement.id = "myModal";
+    modalButtonElement.innerText = "리뷰작성하기";
+    modalButtonElement.onclick = function() {
+        const myModalAlternative = new bootstrap.Modal('#reviewModal');
+        console.log(goodsList[i].options);
+        document.getElementById("buylist-review-option").innerText = goodsList[i].options;
+        myModalAlternative.show();
+    };
+    buttonBoxElement.appendChild(modalButtonElement);
+    // buttonBoxElement.data-bs-toggle="modal";
+    // buttonBoxElement.data-bs-target="#exampleModal";
+
 
     // <div.buylist-price-box 요소 생성
     let priceBoxElement = document.createElement("div");
@@ -117,6 +134,7 @@ for (let i = 0; i < buyList.length; i++) {
 
     // cardElement에 goodsBoxElement, priceBoxElement, dateBoxElement 추가
     cardElement.appendChild(goodsBoxElement);
+    cardElement.appendChild(buttonBoxElement);
     cardElement.appendChild(priceBoxElement);
     cardElement.appendChild(dateBoxElement);
 
@@ -125,4 +143,8 @@ for (let i = 0; i < buyList.length; i++) {
 
     // 문서의 body에 anchorElement 추가
     infoBuylistContent.appendChild(anchorElement);    
+}
+
+function modalButton() {
+
 }
