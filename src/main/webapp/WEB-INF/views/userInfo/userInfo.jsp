@@ -15,6 +15,40 @@
 <body>
 	<jsp:include page='../toppagessg.jsp' />
 	<!-- 여기부터 시작 -->
+
+        <!-- Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: bold;">리뷰 작성</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="buylist-review-box">
+                        <div class="buylist-review-option" id="buylist-review-option">옵션</div>
+                        <div class="buylist-review-radio">
+                            <div><input type="radio" name="radio"><span>1</span></div>
+                            <div><input type="radio" name="radio"><span>2</span></div>
+                            <div><input type="radio" name="radio"><span>3</span></div>
+                            <div><input type="radio" name="radio"><span>4</span></div>
+                            <div><input type="radio" name="radio"><span>5</span></div>
+                        </div>
+                        <div class="buylist-review-textarea-box"><textarea class="buylist-review-textarea"></textarea></div>
+                        <input class="goods-id" type="hidden">
+                        <input class="user-id" type="hidden">
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">            
+                <button type="button" class="">Save changes</button>
+                </div>
+            </form>    
+        </div>
+        </div>
+    </div>
+
     <div class="info-body">
         <div class="info-main-container">
             <div class="info-name-box info-box">
@@ -49,7 +83,7 @@
 	<jsp:include page='/WEB-INF/views/bottompage.jsp' />
 
 <script src="resources/scripts/UploadAdapter.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/balloon/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/balloon/ckeditor.js"></script> -->
 <script>
 	let userInfo = ${requestScope.userInfo};
     let buyList = ${requestScope.buyList};
