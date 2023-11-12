@@ -18,32 +18,21 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 public class UploadController {
 	@ResponseBody
 	@RequestMapping(value = "/common/ckeditor5Upload.do", method = RequestMethod.POST)
-    public void fileUpload(MultipartHttpServletRequest multiRequest, HttpServletRequest request, HttpServletResponse response) {
+	public void fileUpload(MultipartHttpServletRequest multiRequest, HttpServletRequest request,
+			HttpServletResponse response) {
 		try {
-
 			MultipartFile uploadFile = multiRequest.getFile("upload");
 
 			String originalFileName = uploadFile.getOriginalFilename();
-
 			String ext = originalFileName.substring(originalFileName.indexOf("."));
-
 			String newFileName = UUID.randomUUID() + ext;
-						
-			String cPath = "C:/upload/"; 
-			
-	    	File saveFolder = new File(cPath);
-    		if(!saveFolder.exists()) {
-    			saveFolder.mkdirs();
-    		}
-					
-//			String realPath2 = "C:/Users/KGA/jdk11/nobrand/src/main/webapp/resources/goods/";	
-//			String realPath2 = "C:/Users/oooon/nobrand/ProjectNoBrand/src/main/webapp/resources/goods/";			
-//			String absolutePath = realPath2+ newFileName;
 
+			String cPath = "C:/upload/";
+			File saveFolder = new File(cPath);
+			if (!saveFolder.exists()) {
+				saveFolder.mkdirs();
+			}
 			String savePath = cPath + newFileName;
-
-
-//			String uploadPath = "http://localhost/nobrand/resources/goods/" + newFileName;
 			String uploadPath = "http://localhost/nobrand/upload/" + newFileName;
 
 			File file = new File(savePath);
@@ -57,7 +46,7 @@ public class UploadController {
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().print(json.toString());
 		} catch (Exception e) {
-	    	System.out.println("�삤瑜섎컻�깮");
-	    }
+			System.out.println("upload error");
+		}
 	}
 }
