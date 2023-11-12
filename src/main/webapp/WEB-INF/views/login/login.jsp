@@ -174,13 +174,10 @@ System.out.println(name);
 </div>
 </div>
 <script type="text/javascript" src="resources/scripts/popup.js"></script>
-<<<<<<< Upstream, based on develop
-=======
 <script>
 	function reload(){
 		location.reload();
 	}	
 </script>
->>>>>>> 6e99b02 fix : main page
 </body>
 </html>
