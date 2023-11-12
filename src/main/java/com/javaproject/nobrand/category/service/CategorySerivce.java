@@ -14,7 +14,7 @@ public class CategorySerivce {
 	private GoodsDAO goodsDAO;
 	
 	public List<Goods> getAllList() {
-		List<Goods> goodsList = goodsDAO.getAll();		
+		List<Goods> goodsList = goodsDAO.getAlldesc();		
 		return goodsList;
 	}
 	

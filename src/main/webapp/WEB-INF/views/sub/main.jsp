@@ -21,7 +21,7 @@
 	<div class="sub-content">
 		<!--제목-->
 		<div class="sub-title">
-			<div class="sub-title-text">베스트</div>
+			<div class="sub-title-text" id="sub-title-text">상품목록</div>
 			<div class="sub-title-info">
 				<div class="sub-title-number">
 					<span id="sub-totalgoods">숫자</span> <span class="sub-title-goods">개의 상품이 있습니다</span>

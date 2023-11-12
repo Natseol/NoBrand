@@ -21,28 +21,39 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: bold;">리뷰 작성</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: bold;">리뷰 쓰기</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form>
+            <form method="post">
                 <div class="modal-body">
                     <div class="buylist-review-box">
-                        <div class="buylist-review-option" id="buylist-review-option">옵션</div>
-                        <div class="buylist-review-radio">
-                            <div><input type="radio" name="radio"><span>1</span></div>
-                            <div><input type="radio" name="radio"><span>2</span></div>
-                            <div><input type="radio" name="radio"><span>3</span></div>
-                            <div><input type="radio" name="radio"><span>4</span></div>
-                            <div><input type="radio" name="radio"><span>5</span></div>
+                        <div class="buylist-review-option">
+                            <div class="buylist-review-nobrand">상품명</div>
+                            <div class="buylist-review-option-text" id="buylist-review-option">옵션</div>
                         </div>
-                        <div class="buylist-review-textarea-box"><textarea class="buylist-review-textarea"></textarea></div>
-                        <input class="goods-id" type="hidden">
-                        <input class="user-id" type="hidden">
+                        <hr class="hr-thin">
+                        <div class="buylist-review-radio">
+                            <div class="buylist-review-radio-title">상품은 만족하셨나요?</div>
+                            <div>
+                                <div><input type="radio" name="score" value="5"><span class="buylist-radio-star">★★★★★</span></div>
+                                <div><input type="radio" name="score" value="4"><span class="buylist-radio-star">★★★★</span></div>
+                                <div><input type="radio" name="score" value="3"><span class="buylist-radio-star">★★★</span></div>
+                                <div><input type="radio" name="score" value="2"><span class="buylist-radio-star">★★</span></div>
+                                <div><input type="radio" name="score" value="1"><span class="buylist-radio-star">★</span></div>
+                            </div>
+                        </div>
+                        <hr class="hr-thin">
+                        <div class="buylist-review-textarea-box">
+                            <div class="buylist-review-textarea-title">어떤 점이 좋았나요?</div>
+                            <div class="buylist-review-texarea-div"><textarea class="buylist-review-textarea" name="context"></textarea></div>
+                        </div>
+                        <input id="buylist-goods" type="hidden" name="goodsId">
+                        <input id="buylist-user" type="hidden" name="userId">
                     </div>
                     
                 </div>
                 <div class="modal-footer">            
-                <button type="button" class="">Save changes</button>
+                <button type="button" class="buylist-review-submit">작성</button>
                 </div>
             </form>    
         </div>

@@ -54,19 +54,21 @@ for (let i = 0; i < buyList.length; i++) {
 
     // goodsBoxElement에 imageElement 및 goodsInfoElement 추가
     goodsBoxElement.appendChild(imageElement);
-    goodsBoxElement.appendChild(goodsInfoElement);
-
+    goodsBoxElement.appendChild(goodsInfoElement);    
 
     let buttonBoxElement = document.createElement("div");
     buttonBoxElement.className = "buylist-button-box"
 
     let modalButtonElement = document.createElement("button");
     modalButtonElement.id = "myModal";
-    modalButtonElement.innerText = "리뷰작성하기";
+    modalButtonElement.className = "butylist-review-button";
+    modalButtonElement.innerText = "리뷰 쓰기";
     modalButtonElement.onclick = function() {
         const myModalAlternative = new bootstrap.Modal('#reviewModal');
         console.log(goodsList[i].options);
         document.getElementById("buylist-review-option").innerText = goodsList[i].options;
+        document.getElementById("buylist-goods").value = buyList[i].goodsID;
+        document.getElementById("buylist-user").value = buyList[i].userID;
         myModalAlternative.show();
     };
     buttonBoxElement.appendChild(modalButtonElement);

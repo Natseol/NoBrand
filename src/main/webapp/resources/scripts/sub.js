@@ -31,15 +31,6 @@ function createCard(index) {
   cardImgLink.appendChild(cardImg);
   cardImgBox.appendChild(cardImgLink);
 
-  // const cardImgBag = document.createElement("div");
-  // cardImgBag.className = "card-img-bag rounded-3";
-
-  // const cardImgIcon = document.createElement("span");
-  // cardImgIcon.className = "card-img-icon material-symbols-outlined";
-  // cardImgIcon.innerText = "shopping_bag";
-  // cardImgBag.appendChild(cardImgIcon);
-
-  // cardImgBox.appendChild(cardImgBag);
   card.appendChild(cardImgBox);
 
   const cardBody = document.createElement("div");
@@ -114,3 +105,16 @@ function createCardAll() {
 }
 
 createCardAll();
+
+function title() {
+  const urlParams = new URL(location.href).searchParams;
+  const titleText = document.getElementById("sub-title-text");
+  if (urlParams.has('category')) {
+    titleText.textContent = urlParams.get("category");
+  }
+  if (urlParams.has('kind')) {
+    titleText.textContent = urlParams.get('kind');
+  }
+  
+}
+title();

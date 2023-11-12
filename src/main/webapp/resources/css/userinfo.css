@@ -52,7 +52,7 @@
 
 .buylist-goods-box {
     display: flex;
-    width: 800px;
+    width: 700px;
 }
 
 .buylist-goods-iamge {
@@ -68,6 +68,59 @@
 }
 .buylist-goods-nobrand {
     font-weight: bold;    
+}
+
+.buylist-button-box {
+    align-self: center;
+}
+
+.buylist-review-nobrand {
+    font-weight: bold;
+    margin: 5px;
+}
+.buylist-review-option-text {
+    margin: 5px;
+}
+
+.butylist-review-button {
+    border: unset;
+    background-color: unset;
+    font-weight: bold;
+}
+
+.buylist-review-radio {
+    margin : 5px;
+}
+
+.buylist-review-radio-title {
+    font-weight: bold;
+}
+
+.buylist-radio-star {
+    margin: 10px;
+    font-size: x-large;
+}
+
+.buylist-review-textarea-title {
+    margin: 5PX;
+    font-weight: bold;
+}
+
+.buylist-review-texarea-div {
+    text-align: center;
+}
+
+.buylist-review-textarea {
+    height: 200px;
+    WIDTH: 85%;
+}
+
+.buylist-review-submit {
+    background-color: #ff5b59;
+    border: unset;
+    color: white;
+    height: 50px;
+    width: 150px;
 }
 
 .buylist-price-box {

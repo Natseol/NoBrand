@@ -13,6 +13,7 @@ public interface GoodsDAO {
 	public List<Goods> getUsingKind(String kind);
 	public List<Goods> getUsingSearch(String kind);
 	public List<Goods> getAll();
+	public List<Goods> getAlldesc();
 	public void update(Goods goods);
 	public void delete(int id);
 	

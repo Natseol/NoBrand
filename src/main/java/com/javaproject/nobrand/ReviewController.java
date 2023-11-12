@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.javaproject.nobrand.buyList.dao.BuyListDAO;
+import com.javaproject.nobrand.review.dao.ReviewDAO;
+import com.javaproject.nobrand.review.domain.Review;
 import com.javaproject.nobrand.user.dao.UserDAO;
 import com.javaproject.nobrand.user.domain.User;
 
@@ -22,15 +24,19 @@ public class ReviewController {
 	UserDAO userDAO;
 	@Autowired
 	BuyListDAO buyListDAO;
+	@Autowired
+	ReviewDAO reviewDAO;
 	
 	@RequestMapping(value = "/review", method = RequestMethod.GET)
-	public String userInfo(@RequestParam Map<String,String> map, HttpServletRequest request, HttpSession session) {		
-		String userId = (String) session.getAttribute("ID");
-		User user = userDAO.get(userId);
+	public String userInfo(HttpServletRequest request, HttpSession session) {		
+		int userId = (Integer) session.getAttribute("userId");
+		int goodsId = (Integer) session.getAttribute("goodsId");
+		int score = (Integer) session.getAttribute("score");
+		String context = (String) session.getAttribute("context");
 		
-		JSONObject json = new JSONObject(user);		
-		request.setAttribute("user", json);
-		System.out.println(json);
+		Review review = new Review();
+		reviewDAO.add(review);		
+		
 		return "review/review";
 	}	
 }
