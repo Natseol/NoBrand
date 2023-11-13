@@ -22,7 +22,8 @@
 							 전체선택
 						</div>
 						<div class="set-delete">
-							<--<button class="delete-sold-out font-select-delete">품절상품삭제</button>
+							<button class="delete-sold-out font-select-delete">품절상품삭제</button>
+							<!--<div class="font-line font-select-delete">|</div>
 							<div class="font-line font-select-delete">|</div>
 							<script>
 								function deleteSelectEvent(){
