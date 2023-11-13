@@ -51,7 +51,9 @@
 					<div class="search-box">
 						<div id="ssg-query">
 							<div>
-								<input class="search-area" type="text" onfocus="this.style.backgraound='none'" autocomplete="off">
+							 	<form action="/nobrand/sub" method="GET">
+									<input class="search-area" type="text" onfocus="this.style.backgraound='none'" autocomplete="off" name="target">
+								</form>
 							</div>
 						</div>
 						
