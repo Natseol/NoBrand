@@ -24,19 +24,19 @@
 						<div class="set-delete">
 							<button class="delete-sold-out font-select-delete">품절상품삭제</button>
 							<div class="font-line font-select-delete">|</div>
-							<script>
+							<!-- <script>
 								function deleteSelectEvent(){
 											alert("실행");
 											const checkboxes = document.getElementsByName('check-box');
 											for (let index = 0; index < checkboxes.length; index++) {
 												if(checkboxes[index].checked == true){
-													document.cookie = "goodsId"+idList[index] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+													document.cookie = idList[index] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 												}
 											}
 											alert("선택한 상품이 삭제되었습니다.");
 											location.reload(true);
 										}
-							</script>
+							</script> -->
 							<button id="delete-selector" class="delete-select font-select-delete" onclick="deleteSelectEvent()">선택삭제</button>
 						</div>	
 					</div>
