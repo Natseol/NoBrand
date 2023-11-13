@@ -84,28 +84,28 @@
 			<div class="itemlist2">
 				<div class="itemlist-item" style="width: 38rem;">
 					<div>
-						<a><img
+						<a class="index-point"><img
 							src="resources/images/2017070610423880420878047087_288.jpg"
 							class="card-img-top" alt="썸네일"></a>
 					</div>
 					<div class="itemlist-body">
 						<p class="card-text">
-						<div class="text-bold">제목</div>
-						내용
+						<div class="text-bold">요즘 대세 노브랜드 식품</div>
+						품질, 가격 가성비 갑<br>간편하게 이용해보세요
 						</p>
 					</div>
 				</div>
 
 				<div class="itemlist" style="width: 38rem;">
 					<div>
-						<a><img
-							src="resources/images/2017070610423880420878047087_288.jpg"
+						<a class="index-point"><img
+							src="resources/images/2021081315044495800854754085_53.jpg"
 							class="card-img-top" alt="썸네일"></a>
 					</div>
 					<div class="itemlist-body">
 						<p class="card-text">
-						<div class="text-bold">제목</div>
-						내용
+						<div class="text-bold">노브랜드 디지털/가전</div>
+						기본 기능이 탄탄한 전기밥솥부터<br>가성비 가전들을 만나보세요
 						</p>
 					</div>
 				</div>
@@ -119,50 +119,49 @@
 		<div class="itemlist3">
 			<div class="itemlist-item" style="width: 25rem;">
 				<div>
-					<a><img
+					<a class="index-point"><img
 						src="resources/images/2017050210160409676670961767_272.jpg"
 						class="card-img-top" alt="썸네일"></a>
 				</div>
 				<div class="itemlist-body">
 					<p class="card-text">
-					<div class="text-bold">제목</div>
-					내용
+					<div class="text-bold">노브랜드 떡볶이</div>
+					매콤한 맛 당길 때<br>간편하게 즐겨요					
 					</p>
 				</div>
 			</div>
 
 			<div class="itemlist" style="width: 25rem;">
 				<div>
-					<a><img
-						src="resources/images/2017050210160409676670961767_272.jpg"
+					<a class="index-point"><img
+						src="resources/images/2017050210171609638750968875_455.jpg"
 						class="card-img-top" alt="썸네일"></a>
 				</div>
 				<div class="itemlist-body">
 					<p class="card-text">
-					<div class="text-bold">제목</div>
-					내용
+					<div class="text-bold">노브랜드 치즈케익</div>
+					크림치즈 42.2%의 위엄<br>꾸덕한 치즈맛
 					</p>
 				</div>
 			</div>
 
 			<div class="itemlist" style="width: 25rem;">
 				<div>
-					<a><img
-						src="resources/images/2017050210160409676670961767_272.jpg"
+					<a class="index-point"><img
+						src="resources/images/2017050210202109611160965116_115.jpg"
 						class="card-img-top" alt="썸네일"></a>
 				</div>
 				<div class="itemlist-body">
 					<p class="card-text">
-					<div class="text-bold">제목</div>
-					내용
+					<div class="text-bold">노브랜드 자색 고구마칩</div>
+					한번만 먹은 사람은 없다는<br>바삭바삭한 간식
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	</div>
-	</div>
-	
+	</div>	
 
 	</div>
 	<!-- 여기부터 끝 -->

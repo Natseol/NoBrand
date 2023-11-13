@@ -114,3 +114,7 @@
 #admin-area {
     text-align: center;
 }
+
+.index-point {
+    cursor: pointer;
+}
