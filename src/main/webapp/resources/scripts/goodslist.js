@@ -117,8 +117,6 @@ function getCookieList(){
 	for (let index = 0; index < goodsCookies.length; index++) {
 		cookieName = "goodsId" + getGoodsIdFromCookie(goodsCookies[index]);
 		cookieList.push(getCookies(cookieName));
-		idList.push(cookieName);
-		console.log(idList[0]);
 		if(cookieList[index] !== null){
 			parsingList.push(JSON.parse(cookieList[index]))
 		}
