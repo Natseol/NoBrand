@@ -135,8 +135,8 @@ public class BuyController {
             	
             	Goods goods = goodsDAO.get(id);
             	
-            	goods.setGoodsCount(goods.getCellCount()+nowCount);
-            	goods.setCellCount(count);
+            	goods.setGoodsCount(nowCount);
+            	goods.setCellCount(goods.getCellCount()+count);
             	
             	goodsDAO.update(goods);
             	buyListDAO.add(buyList);

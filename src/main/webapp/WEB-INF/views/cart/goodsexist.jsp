@@ -23,8 +23,8 @@
 						</div>
 						<div class="set-delete">
 							<button class="delete-sold-out font-select-delete">품절상품삭제</button>
-							<div class="font-line font-select-delete">|</div>
-							<!-- <script>
+							<!-- <div class="font-line font-select-delete">|</div>
+							<script>
 								function deleteSelectEvent(){
 											alert("실행");
 											const checkboxes = document.getElementsByName('check-box');
