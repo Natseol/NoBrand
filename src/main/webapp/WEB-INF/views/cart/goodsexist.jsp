@@ -30,7 +30,7 @@
 											const checkboxes = document.getElementsByName('check-box');
 											for (let index = 0; index < checkboxes.length; index++) {
 												if(checkboxes[index].checked == true){
-													document.cookie = idList[index] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+													document.cookie = "goodsId"+idList[index] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 												}
 											}
 											alert("선택한 상품이 삭제되었습니다.");
