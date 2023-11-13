@@ -22,9 +22,9 @@
 							 전체선택
 						</div>
 						<div class="set-delete">
-							<button class="delete-sold-out font-select-delete">품절상품삭제</button>
+							<--<button class="delete-sold-out font-select-delete">품절상품삭제</button>
 							<div class="font-line font-select-delete">|</div>
-							<!-- <script>
+							<script>
 								function deleteSelectEvent(){
 											alert("실행");
 											const checkboxes = document.getElementsByName('check-box');
@@ -36,8 +36,8 @@
 											alert("선택한 상품이 삭제되었습니다.");
 											location.reload(true);
 										}
-							</script> -->
-							<button id="delete-selector" class="delete-select font-select-delete" onclick="deleteSelectEvent()">선택삭제</button>
+							</script>
+							<button id="delete-selector" class="delete-select font-select-delete" onclick="deleteSelectEvent()">선택삭제</button>-->
 						</div>	
 					</div>
 					<div class="line-bold"></div>
