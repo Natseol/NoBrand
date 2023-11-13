@@ -73,12 +73,50 @@ function createGoodsList(name, img, count){
 	document.querySelector(".goods-list").prepend(topBox);
 }
 
+function getGoodsIdFromCookie(cookieString) {
+	let jsonString = cookieString.split('=')[1];
+  
+	try {
+	  let cookieObject = JSON.parse(jsonString);
+  
+	  return cookieObject.goodsId;
+	} catch (error) {
+	  console.error('Error parsing cookie:', error);
+	  return null;
+	}
+  }
+  
+  function getGoodsCookies() {
+	let allCookies = document.cookie;
+  
+	let cookiesArray = allCookies.split(';');
+  
+	let goodsCookies = [];
+  
+	for (let i = 0; i < cookiesArray.length; i++) {
+	  let cookie = cookiesArray[i].trim();
+  
+	  if (cookie.indexOf('goodsId') === 0) {
+		goodsCookies.push(cookie);
+	  }
+	}
+  
+	return goodsCookies;
+  }
 
+  let goodsCookies = getGoodsCookies();
+  
+  let goodsIds = goodsCookies.map(getGoodsIdFromCookie);
+
+function getCookies(name){
+	let value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return value? value[2] : null;
+}
 
 function getCookieList(){
-	
-	for (let index = 0; index < document.cookie.length-1; index++) {
-		cookieName = "goodsId"+(index+1);
+	for (let index = 0; index < goodsCookies.length; index++) {
+		cookieName = "goodsId" + getGoodsIdFromCookie(goodsCookies[index]);
+		idList.push(cookieName);
 		cookieList.push(getCookies(cookieName));
 		if(cookieList[index] !== null){
 			parsingList.push(JSON.parse(cookieList[index]))
@@ -90,11 +128,6 @@ function getCookieList(){
 	}
 }
 getCookieList();
-
-function getCookies(name){
-	let value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-    return value? value[2] : null;
-}
 
 
 fetch("http://localhost/nobrand/cart/id", {
