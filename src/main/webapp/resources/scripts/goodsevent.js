@@ -92,8 +92,6 @@ function sumResult(){
 	}
 }
 
-alert("실행중");
-
 add();
 minus();
 sumEvent();
