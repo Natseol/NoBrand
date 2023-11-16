@@ -19,16 +19,16 @@ public class GoodsTest {
 	public void add() {
 		Goods goods =new Goods();
 		goods.setPrice(5480);
-		goods.setSearchCount(5);
+		goods.setDelete(5);
 		goods.setCellCount(6);
-		goods.setName("¸ÀÀÖ´Â Á¦ÁÖ±è 100g (5g*20)");
-		goods.setTopKind("½ÄÇ°");
-		goods.setBottomKind("ÇØ»ê¹°");
-		goods.setInfo("¸ÀÀÖ´Â Á¦ÁÖ±è");
+		goods.setName("ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Ö±ï¿½ 100g (5g*20)");
+		goods.setTopKind("ï¿½ï¿½Ç°");
+		goods.setBottomKind("ï¿½Ø»ê¹°");
+		goods.setInfo("ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Ö±ï¿½");
 		goods.setImgAddress("resources/images/1000014798997_i1_290.jpg");
-		goods.setOptions("Á¦ÁÖ»ê Åê 100g (5g*20)");
-		goods.setDelivery("·ÎÁ¨ÅÃ¹è");
-		goods.setContent("¸ÀÀÖ´Â Á¦ÁÖ±èÀÌ¿¡¿ä");
+		goods.setOptions("ï¿½ï¿½ï¿½Ö»ï¿½ ï¿½ï¿½ 100g (5g*20)");
+		goods.setDelivery("ï¿½ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½");
+		goods.setContent("ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Ö±ï¿½ï¿½Ì¿ï¿½ï¿½ï¿½");
 		goods.setGoodsCount(4);
 		goodsDAO.add(goods);
 		}	

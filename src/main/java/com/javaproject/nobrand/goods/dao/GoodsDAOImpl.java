@@ -27,7 +27,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 			return new Goods(
 					rs.getInt("ID"),
 					rs.getInt("PRICE"),
-					rs.getInt("SEARCH_COUNT"),
+					rs.getInt("DELETE"),
 					rs.getInt("SELL_COUNT"),
 					rs.getInt("GOODS_COUNT"),
 					rs.getString("NAME"),
@@ -46,7 +46,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 		// TODO Auto-generated method stub
 		jdbcTemplate.update("insert into GOODS ("
 							+ "\"PRICE\","
-							+ "\"SEARCH_COUNT\","
+							+ "\"DELETE\","
 							+ "\"SELL_COUNT\","
 							+ "\"GOODS_COUNT\","
 							+ "\"NAME\","
@@ -58,7 +58,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 							+ "\"DELIVERY\","
 							+ "\"CONTENT\") values (?, ? ,? ,? ,? ,? ,? ,? ,?, ?, ?, ?)",
 							goods.getPrice(),
-							goods.getSearchCount(),
+							goods.getDelete(),
 							goods.getCellCount(),
 							goods.getGoodsCount(),
 							goods.getName(),
@@ -110,7 +110,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 		// TODO Auto-generated method stub
 		jdbcTemplate.update("UPDATE \"GOODS\" SET "
 	            + "\"PRICE\"=?,"
-	            + "\"SEARCH_COUNT\"=?,"
+	            + "\"DELETE\"=?,"
 	            + "\"SELL_COUNT\"=?,"
 	            + "\"GOODS_COUNT\"=?,"
 	            + "\"NAME\"=?,"
@@ -122,7 +122,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 	            + "\"DELIVERY\"=?,"
 	            + "\"CONTENT\"=? WHERE \"ID\"=?",
 				goods.getPrice(),
-	            goods.getSearchCount(),
+	            goods.getDelete(),
 	            goods.getCellCount(),
 	            goods.getGoodsCount(),
 	            goods.getName(),

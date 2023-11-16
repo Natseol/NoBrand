@@ -3,7 +3,7 @@ package com.javaproject.nobrand.goods.domain;
 public class Goods{
 	private int id;
 	private int price;
-	private int searchCount;
+	private int delete;
 	private int cellCount;
 	private int goodsCount;
 	private String name;
@@ -16,11 +16,11 @@ public class Goods{
 	private String content;
 	public Goods() {};
 	
-	public Goods(int id, int price, int searchCount, int cellCount, int goodsCount, String name, String topKind,
+	public Goods(int id, int price, int delete, int cellCount, int goodsCount, String name, String topKind,
 			String bottomKind, String info, String imgAddress, String options, String delivery, String content) {
 		this.id = id;
 		this.price = price;
-		this.searchCount = searchCount;
+		this.delete = delete;
 		this.cellCount = cellCount;
 		this.goodsCount = goodsCount;
 		this.name = name;
@@ -33,10 +33,10 @@ public class Goods{
 		this.content = content;
 	}
 
-	public Goods(int price, int searchCount, int cellCount, int goodsCount, String name, String topKind,
+	public Goods(int price, int delete, int cellCount, int goodsCount, String name, String topKind,
 			String bottomKind, String info, String imgAddress, String options, String delivery, String content) {
 		this.price = price;
-		this.searchCount = searchCount;
+		this.delete = delete;
 		this.cellCount = cellCount;
 		this.goodsCount = goodsCount;
 		this.name = name;
@@ -71,8 +71,8 @@ public class Goods{
 	public void setPrice(int price) {
 		this.price=price;
 	}
-	public void setSearchCount(int searchCount) {
-		this.searchCount=searchCount;
+	public void setDelete(int delete) {
+		this.delete=delete;
 	}
 	public void setCellCount(int cellCount) {
 		this.cellCount=cellCount;
@@ -110,8 +110,8 @@ public class Goods{
 	public int getPrice() {
 		return price;
 	}
-	public int getSearchCount() {
-		return searchCount;
+	public int getDelete() {
+		return delete;
 	}
 	public int getCellCount() {
 		return cellCount;

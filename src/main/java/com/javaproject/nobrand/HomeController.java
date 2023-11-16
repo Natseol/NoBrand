@@ -36,6 +36,13 @@ public class HomeController {
 	public String home(Model model, HttpServletRequest request) {
 		JSONObject json = new JSONObject();
 		List<Goods> goodsList = goodsDAO.getAll();
+		for(int i = 0; i<goodsList.size(); i++) {
+			if(goodsList.get(i).getDelete() == 1) {
+				System.out.println(goodsList.get(i));
+				goodsList.set(i, null);
+			}
+		}
+		
 		json.put("list", goodsList);
 		request.setAttribute("list", json.get("list"));
 		return "home";

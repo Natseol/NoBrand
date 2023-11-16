@@ -23,12 +23,7 @@
 						</div>
 						<div class="set-delete">
 							<button class="delete-sold-out font-select-delete">품절상품삭제</button>
-<<<<<<< HEAD
 							<!-- <div class="font-line font-select-delete">|</div>
-=======
-							<!--<div class="font-line font-select-delete">|</div>
-							<div class="font-line font-select-delete">|</div>
->>>>>>> branch 'develop' of https://github.com/Natseol/ProjectNoBrand
 							<script>
 								function deleteSelectEvent(){
 											alert("실행");

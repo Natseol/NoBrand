@@ -17,16 +17,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.javaproject.nobrand.buyList.dao.BuyListDAO;
 import com.javaproject.nobrand.buyList.domain.BuyList;
 import com.javaproject.nobrand.goods.dao.GoodsDAO;
 import com.javaproject.nobrand.goods.domain.Goods;
-import com.javaproject.nobrand.goods.service.GoodsService;
 import com.javaproject.nobrand.user.dao.UserDAO;
 import com.javaproject.nobrand.user.domain.User;
 
@@ -94,6 +93,7 @@ public class BuyController {
         
 		return "buy/buy";
 	}
+	
 	@RequestMapping(value = "/buy/buyList", method = RequestMethod.POST)
 	public String buyList(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model) throws ServletException, IOException{
 		
@@ -109,7 +109,7 @@ public class BuyController {
 			jArray.add(item);
 		}
         
-        String userId = (String)session.getAttribute("ID");
+		String userId = (String)session.getAttribute("ID");
         User user = userDAO.get(userId);
         
         for (int i = 0; i < jArray.size(); i++) {
@@ -152,5 +152,19 @@ public class BuyController {
  		
         
 		return "redirect:/";
+	}
+	
+	@RequestMapping(value = "/buy", method = RequestMethod.POST)
+	public String userInfo(HttpSession session) {
+		String userId = (String)session.getAttribute("ID");
+        User user = userDAO.get(userId);
+        
+        StringBuilder sb = new StringBuilder();
+		sb.append("{\"name\":" + user.getName() + ",");
+		sb.append("\"address\":\"" + user.getAddress() + "\",");
+		sb.append("\"emailAddress\":\"" + user.getEmailAddress() + "\",");
+		sb.append("\"phoneNumber\":\"" + user.getPhoneNumber() + "\"}");
+        
+		return sb.toString();
 	}
 }

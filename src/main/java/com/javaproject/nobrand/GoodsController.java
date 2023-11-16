@@ -34,9 +34,13 @@ public class GoodsController {
 	@RequestMapping(value = "/goods", method = RequestMethod.GET)
 	public String goods(HttpServletRequest request, Model model) {
 
-		int goodsId = Integer.parseInt(request.getParameter("goodsId"));
+		int goodsId = Integer.parseInt(request.getParameter("goodsid"));
 		
 		Goods goods = goodsService.getGoods(goodsId);
+		
+		if(goods.getDelete() == 1) {
+			return "/home";
+		}
 		
 		JSONObject json = new JSONObject(goods);
 		
@@ -62,9 +66,13 @@ public class GoodsController {
 		try {
 			
 			int goodsId = node1.asInt();
-			System.out.println("goodsId="+goodsId);
+			System.out.println("goodsId:"+goodsId);
 			
-			goodsDAO.delete(goodsId);
+			Goods goods = goodsDAO.get(goodsId);
+			goods.setDelete(1);
+			goodsDAO.update(goods);
+			
+			System.out.println(goodsDAO.get(goodsId).getDelete());
 			
 			System.out.println("삭제성공");
 			

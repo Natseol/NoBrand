@@ -10,6 +10,7 @@ const keepDelete = document.getElementsByClassName('delete-img');
 const deleteSoldOutBtn = document.getElementsByClassName('delete-sold-out');
 const deleteSelect = document.getElementById('delete-selector');
 const allGoodsCount = document.getElementById('goods');
+const allGoodsCountbox = document.getElementById("all-goods-count");
 let parent = document.querySelector('.goods-list');
 
 
@@ -148,6 +149,7 @@ fetch("http://localhost/nobrand/cart/id", {
 			document.getElementById('cost').innerHTML = dataPart[index].price * parsingList[index].goodsCount;
 			listCount++;
 			allGoodsCount.innerHTML = listCount;
+			allGoodsCountbox.innerHTML = listCount;
 		}
 	}
 	

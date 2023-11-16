@@ -25,7 +25,7 @@
 					<div class="title-content">결제하기</div>
 					<div class="user-info">
 						<div class="user-info-middle-font">
-							<div>받는 분 정보</div>
+							<h3>받는 분 정보</h3>
 						</div>
 						<div class="user-info-top">
 							<div class="user-info-top-delivery-location">배송지 정보</div>
@@ -75,7 +75,7 @@
 					</div>
 				</div>
 				<div class="buy-btn">
-					<button class="total-price" onclick="location.href='/nobrand/'">
+					<button class="total-price">
 							<div class="buy-price"></div>원 결제하기
 					</button>
 				</div>

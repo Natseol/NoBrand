@@ -17,11 +17,51 @@ const JSONArray = [];
 let idList = [];
 let totalPrice = 0;
 
+function getGoodsIdFromCookie(cookieString) {
+	let jsonString = cookieString.split('=')[1];
+  
+	try {
+	  let cookieObject = JSON.parse(jsonString);
+  
+	  return cookieObject.goodsId;
+	} catch (error) {
+	  console.error('Error parsing cookie:', error);
+	  return null;
+	}
+  }
+  
+  function getGoodsCookies() {
+	let allCookies = document.cookie;
+  
+	let cookiesArray = allCookies.split(';');
+  
+	let goodsCookies = [];
+  
+	for (let i = 0; i < cookiesArray.length; i++) {
+	  let cookie = cookiesArray[i].trim();
+  
+	  if (cookie.indexOf('goodsId') === 0) {
+		goodsCookies.push(cookie);
+	  }
+	}
+  
+	return goodsCookies;
+  }
+
+  let goodsCookies = getGoodsCookies();
+  
+  let goodsIds = goodsCookies.map(getGoodsIdFromCookie);
+
+function getCookies(name){
+	let value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return value? value[2] : null;
+}
+
 function getCookieList(){
-	
-	for (let index = 0; index < document.cookie.length-1; index++) {
-		cookieName = "goodsId"+(index+1);
+	for (let index = 0; index < goodsCookies.length; index++) {
+		cookieName = "goodsId" + getGoodsIdFromCookie(goodsCookies[index]);
 		cookieList.push(getCookies(cookieName));
+
 		if(cookieList[index] !== null){
 			parsingList.push(JSON.parse(cookieList[index]))
 		}
@@ -33,10 +73,6 @@ function getCookieList(){
 }
 getCookieList();
 
-function getCookies(name){
-	let value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-    return value? value[2] : null;
-}
 
 function createList(img, name, count, price){
 	const topBox = document.createElement('div');
@@ -71,6 +107,8 @@ function createList(img, name, count, price){
 	document.querySelector(inBox).prepend(topBox);
 }
 
+console.log(idList[0]);
+
 fetch("http://localhost/nobrand/buy/id", {
   method: "POST",
   headers: {
@@ -80,7 +118,7 @@ fetch("http://localhost/nobrand/buy/id", {
     {id:idList}
   ),
 }).then((response) => response.json())
-  .then(data => {	
+  .then(data => {
 	let dataPart = data.goodsObject;
 	let listCount = 0;
 	inBox = ".goods-list-visible";
@@ -105,17 +143,13 @@ fetch("http://localhost/nobrand/buy/id", {
 	for (let index = 1; index < dataPart.length; index++) {
 		if(dataPart[index] !== null){
 			inBox = ".goods-list-hidden";
-			console.log(parsingList[index].goodsCount);
-			console.log(dataPart[index].price);
 			let thisCost = dataPart[index].price * parsingList[index].goodsCount;
-			console.log(thisCost);
 			createList(dataPart[index].imgAddress,
 				 dataPart[index].name,
 				  parsingList[index].goodsCount,
 				  thisCost);
 
 			totalPrice += (thisCost)
-			console.log(totalPrice);
 			if(totalPrice > 40000){
 				buyPrice[0].textContent = totalPrice;
 			}
@@ -127,6 +161,18 @@ fetch("http://localhost/nobrand/buy/id", {
 			allGoodsCount.innerHTML = listCount;
 		}
 	}
+
+	function deleteCookies(){
+		for (let index = 0; index < 1; index++) {
+			buyBtnPush[0].addEventListener('click', function(){
+				for (let index = 0; index < dataPart.length; index++) {
+					console.log(dataPart[index].id);
+					document.cookie = "goodsId"+ dataPart[index].id + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+				}
+			})
+		}
+	}
+	deleteCookies();
 })
 
 function getBack() {
@@ -139,7 +185,6 @@ function getBack() {
 function buyBtn() {
 	for (let index = 0; index < 1; index++) {
 		buyBtnPush[0].addEventListener('click', function () {
-			alert("상품을 구매하였습니다.");
 			fetch("/nobrand/buy/buyList", {
 				method: "POST",
 				headers: {
@@ -147,6 +192,8 @@ function buyBtn() {
 				},
 				body: getBack(),
 			}).then((response) => response.json())
+			location.href ='/nobrand/';
+			alert("상품을 구매하였습니다.");
 		})
 	}
 }
@@ -182,9 +229,6 @@ function checkUserInput() {
 	}
 }
 
-function userInfo(){
-
-}
 
 buyBtn();
 moreGoods();

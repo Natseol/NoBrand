@@ -9,7 +9,7 @@ function createCard(index) {
     cardImg.innerHTML = goodslist[index].imgAddress
     cardImg.className = "card-img-top";    
     const cardImgLink = document.createElement("a");
-    cardImgLink.href="goods?goodsId="+goodslist[index].id;
+    cardImgLink.href="goods?goodsid="+goodslist[index].id;
     cardImg.querySelector("img").style.width="288px";   
     cardImg.querySelector("img").style.height="288px";  
     cardImgLink.appendChild(cardImg);
