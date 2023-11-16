@@ -13,17 +13,18 @@ userAddress.innerHTML = userInfo.address;
 // 구매목록
 const infoBuylistContent = document.getElementById("info-buylist-content");
 for (let i = 0; i < buyList.length; i++) {
-        // <a> 요소 생성
-    let anchorElement = document.createElement("a");
-    anchorElement.className = "buylist-anchor";
+        
+    let anchorElement = document.createElement("div");
+    anchorElement.className = "buylist-container";
 
     // <div.buylist-card 요소 생성
     let cardElement = document.createElement("div");
     cardElement.className = "buylist-card";
 
     // <div.buylist-goods-box 요소 생성
-    let goodsBoxElement = document.createElement("div");
+    let goodsBoxElement = document.createElement("a");
     goodsBoxElement.className = "buylist-goods-box";
+    goodsBoxElement.href="/nobrand/goods?goodsId="+buyList[i].goodsID;
 
     // <div.buylist-goods-iamge 요소 생성
     let imageElement = document.createElement("div");
