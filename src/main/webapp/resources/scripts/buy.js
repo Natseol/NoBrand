@@ -114,7 +114,8 @@ fetch("http://localhost/nobrand/buy/id", {
 				  parsingList[index].goodsCount,
 				  thisCost);
 
-			totalPrice += (dataPart[index].price * parsingList[0].goodsCount)
+			totalPrice += (thisCost)
+			console.log(totalPrice);
 			if(totalPrice > 40000){
 				buyPrice[0].textContent = totalPrice;
 			}
