@@ -38,7 +38,7 @@ function getCookies(name){
     return value? value[2] : null;
 }
 
-function createList(img, name, count){
+function createList(img, name, count, price){
 	const topBox = document.createElement('div');
 	topBox.innerHTML = '<div class="goods-box">'
 +	'<div class="img-box">'
@@ -61,6 +61,7 @@ function createList(img, name, count){
 +			'</div>'
 +			'<div class="cost-position">'
 +				'<div class="cost">'
++					price
 +				'</div>'
 +				'<div class="font-goods-price">원</div>'
 +			'</div>'
@@ -83,6 +84,7 @@ fetch("http://localhost/nobrand/buy/id", {
 	let dataPart = data.goodsObject;
 	let listCount = 0;
 	inBox = ".goods-list-visible";
+	console.log(data);
 	createList(dataPart[0].imgAddress, dataPart[0].name, parsingList[0].goodsCount);
 	for (let index = 0; index < 1; index++) {
 		costBox[0].innerHTML = dataPart[0].price * parsingList[0].goodsCount;
@@ -103,11 +105,14 @@ fetch("http://localhost/nobrand/buy/id", {
 	for (let index = 1; index < dataPart.length; index++) {
 		if(dataPart[index] !== null){
 			inBox = ".goods-list-hidden";
-			createList(dataPart[index].imgAddress, dataPart[index].name, parsingList[index].goodsCount);
 			console.log(parsingList[index].goodsCount);
 			console.log(dataPart[index].price);
 			let thisCost = dataPart[index].price * parsingList[index].goodsCount;
-			costBox[index].innerHTML = thisCost;
+			console.log(thisCost);
+			createList(dataPart[index].imgAddress,
+				 dataPart[index].name,
+				  parsingList[index].goodsCount,
+				  thisCost);
 
 			totalPrice += (dataPart[index].price * parsingList[0].goodsCount)
 			if(totalPrice > 40000){
