@@ -107,7 +107,6 @@ function createList(img, name, count, price){
 	document.querySelector(inBox).prepend(topBox);
 }
 
-console.log(idList[0]);
 
 fetch("http://localhost/nobrand/buy/id", {
   method: "POST",
@@ -122,7 +121,6 @@ fetch("http://localhost/nobrand/buy/id", {
 	let dataPart = data.goodsObject;
 	let listCount = 0;
 	inBox = ".goods-list-visible";
-	console.log(data);
 	createList(dataPart[0].imgAddress, dataPart[0].name, parsingList[0].goodsCount);
 	for (let index = 0; index < 1; index++) {
 		costBox[0].innerHTML = dataPart[0].price * parsingList[0].goodsCount;
@@ -166,7 +164,6 @@ fetch("http://localhost/nobrand/buy/id", {
 		for (let index = 0; index < 1; index++) {
 			buyBtnPush[0].addEventListener('click', function(){
 				for (let index = 0; index < dataPart.length; index++) {
-					console.log(dataPart[index].id);
 					document.cookie = "goodsId"+ dataPart[index].id + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 				}
 			})
@@ -185,15 +182,21 @@ function getBack() {
 function buyBtn() {
 	for (let index = 0; index < 1; index++) {
 		buyBtnPush[0].addEventListener('click', function () {
-			fetch("/nobrand/buy/buyList", {
-				method: "POST",
-				headers: {
-				"Content-Type": "application/json",
-				},
-				body: getBack(),
-			}).then((response) => response.json())
-			location.href ='/nobrand/';
-			alert("상품을 구매하였습니다.");
+			if(user == "null"){
+				alert("로그인이 필요합니다.");
+				popup = window.open('/nobrand/login','로그인',width=672,height=480);
+			}
+			else{
+				fetch("/nobrand/buy/buyList", {
+					method: "POST",
+					headers: {
+					"Content-Type": "application/json",
+					},
+					body: getBack(),
+				}).then((response) => response.json())
+				location.href ='/nobrand/';
+				alert("상품을 구매하였습니다.");
+			}
 		})
 	}
 }

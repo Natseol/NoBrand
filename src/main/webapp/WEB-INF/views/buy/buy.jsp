@@ -17,6 +17,12 @@
 </head>
 
 <body>
+	<% 
+		String userId = (String)session.getAttribute("ID");
+	%>
+	<script type="text/javascript">
+		const user = "<%=userId%>";
+	</script>
 	<jsp:include page='/WEB-INF/views/toppagessg.jsp' />
 	<!-- 여기부터 시작 -->
 		<div id="order-root">

@@ -122,8 +122,6 @@ function goCartEvent(){
 function notEnoughCart(){
     for (let index = 0; index < 1; index++) {
         goCartBtn[0].addEventListener('click', function(){
-            console.log(thisGoodsBox[0].children[0].children[1].textContent);
-            console.log(goodsData.goodsCount);
             if(goodsData.goodsCount < thisGoodsBox[0].children[0].children[1].textContent){
                 alert("남은 상품 수량보다 많습니다.")
             }
@@ -137,8 +135,6 @@ function notEnoughCart(){
 function notEnoughBuy(){
     for (let index = 0; index < 1; index++) {
         goBuyBtn[0].addEventListener('click', function(){
-            console.log(thisGoodsBox[0].children[0].children[1].textContent);
-            console.log(goodsData.goodsCount);
             if(goodsData.goodsCount < thisGoodsBox[0].children[0].children[1].textContent){
                 alert("남은 상품 수량보다 많습니다.")
             }
