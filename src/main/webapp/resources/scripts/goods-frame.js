@@ -90,7 +90,7 @@ else{
 function goodsDeleteBtn(){
     document.getElementById("deleteForm").addEventListener("submit", function (event) {
         event.preventDefault();
-        fetch("/nobrand/goodsDelete", {
+        fetch("/nobrand/goodsdelete", {
             method: "POST",
             headers: {
             "Content-Type": "application/json",

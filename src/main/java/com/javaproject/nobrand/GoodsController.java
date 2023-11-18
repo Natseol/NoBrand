@@ -50,7 +50,7 @@ public class GoodsController {
 		return "goods/goods";
 	}
 	
-	@RequestMapping(value = "/goodsDelete", method = RequestMethod.POST)
+	@RequestMapping(value = "/goodsdelete", method = RequestMethod.POST)
 	public String goodsDelete(HttpServletRequest request, HttpServletResponse response, Model model) throws ServletException, IOException {
 		
 		ObjectMapper mapper = new ObjectMapper();
