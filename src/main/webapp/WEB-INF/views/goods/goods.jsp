@@ -132,7 +132,10 @@
 							<div class="goods-img-box-content">
 							</div>
 						</div>
+
 						<jsp:include page='/WEB-INF/views/goods/goodsinfo.jsp' />
+						<jsp:include page='/WEB-INF/views/goods/review.jsp' />
+
 						<div class="exchange">
 							<div class="exchange-info">
 								<div class="title-goods">교환 및 반품 안내</div>

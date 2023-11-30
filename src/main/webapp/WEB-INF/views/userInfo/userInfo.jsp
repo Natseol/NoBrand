@@ -24,7 +24,7 @@
             <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: bold;">리뷰 쓰기</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="post">
+            <form action="/nobrand/review" method="post" id="review-form">
                 <div class="modal-body">
                     <div class="buylist-review-box">
                         <div class="buylist-review-option">
@@ -45,15 +45,14 @@
                         <hr class="hr-thin">
                         <div class="buylist-review-textarea-box">
                             <div class="buylist-review-textarea-title">어떤 점이 좋았나요?</div>
-                            <div class="buylist-review-texarea-div"><textarea class="buylist-review-textarea" name="context"></textarea></div>
+                            <div class="buylist-review-texarea-div"><textarea class="buylist-review-textarea" name="content"></textarea></div>
                         </div>
                         <input id="buylist-goods" type="hidden" name="goodsId">
                         <input id="buylist-user" type="hidden" name="userId">
-                    </div>
-                    
+                    </div>                    
                 </div>
                 <div class="modal-footer">            
-                <button type="button" class="buylist-review-submit">작성</button>
+                <button type="submit" class="buylist-review-submit">작성</button>
                 </div>
             </form>    
         </div>

@@ -10,13 +10,13 @@ create table USERS (
 );
 
 create table GOODS (
-    "ID" number generated as identity constraint pk_goods_id primary key ,
+    "ID" number generated as identity constraint primary key ,
     "PRICE" number,
     "SEARCH_COUNT" number,
     "SELL_COUNT" number,
     "GOODS_COUNT" number,
     "NAME" VARCHAR2(70),
-    "TOPKIND" VARCHAR2(30),
+    "KIND_TOP" VARCHAR2(30),
     "KIND_BOTTOM" VARCHAR2(20),
     "INFO" varchar2(30),
     "IMAGE" varchar2(1000),
