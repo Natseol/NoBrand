@@ -5,19 +5,19 @@ public class Review {
 	private int goodsId;
 	private int userId;
 	private int score;
-	private int count;
+	private String content;
 	public Review() {}
 	
-	public Review(int userId,int goodsId, int score, int count) {
+	public Review(int userId,int goodsId, int score, String content) {
 		this.userId=userId;
 		this.goodsId = goodsId;
 		this.score = score;
-		this.count = count;
+		this.content = content;
 	}
-	public Review(int goodsId, int score, int count) {
+	public Review(int goodsId, int score, String content) {
 		this.goodsId = goodsId;
 		this.score = score;
-		this.count = count;
+		this.content = content;
 	}
 
 	public int getGoodsId() {
@@ -38,11 +38,11 @@ public class Review {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	public int getCount() {
-		return count;
+	public String getContent() {
+		return content;
 	}
-	public void setCount(int count) {
-		this.count = count;
+	public void setContent(String content) {
+		this.content = content;
 	}
 	
 

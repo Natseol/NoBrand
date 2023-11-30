@@ -67,6 +67,8 @@ for (let i = 0; i < buyList.length; i++) {
     modalButtonElement.onclick = function() {
         const myModalAlternative = new bootstrap.Modal('#reviewModal');
         console.log(goodsList[i].options);
+        console.log(buyList[i].goodsID);
+        console.log(buyList[i].userID);
         document.getElementById("buylist-review-option").innerText = goodsList[i].options;
         document.getElementById("buylist-goods").value = buyList[i].goodsID;
         document.getElementById("buylist-user").value = buyList[i].userID;
@@ -148,6 +150,9 @@ for (let i = 0; i < buyList.length; i++) {
     infoBuylistContent.appendChild(anchorElement);    
 }
 
-function modalButton() {
-
+const reviewForm = document.getElementById("review-form");
+reviewForm.onsubmit=function(e) {
+    console.log("굿즈"+document.getElementById("buylist-goods").value);
+    console.log("유저"+document.getElementById("buylist-user").value);
+    
 }

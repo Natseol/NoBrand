@@ -2,35 +2,20 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <link href="resources/css/review.css" rel="stylesheet" type="text/css">
-<div class="review">
-    <div class="review-count">
-        <div>고객리뷰(</div>
-        <div class="count-review-all"></div>
-        <div>)</div>
+<div class="review-container">
+  <div class="title-goods">리뷰</div>
+  <div class="line-bold"></div>
+  <div class="review-box" id="review-box">
+    <div class="d-flex review-title-box">
+      <div class="review-star">★<span class="review-star-score">갯수</span></div>    
+      <div>|</div>
+      <div class="review-userId">아이디</div>
     </div>
-    <div class="review-box">
-
-    </div>
-    <div class="review-list">
-        <div class="count-review-all count-review-box"></div>
-        <div class="line-bold"></div>
-        <div class="review-box-made"></div>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-        </nav>
-    </div>
+    <div class="review-content">내용</div>
+  </div>
+  <div class="info-line"></div>
+  <script>
+    const reviewBox = document.getElementById("review-box");
+    
+  </script>
 </div>

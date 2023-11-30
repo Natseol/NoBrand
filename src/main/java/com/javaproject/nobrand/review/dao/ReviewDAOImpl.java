@@ -27,7 +27,7 @@ public class ReviewDAOImpl implements ReviewDAO{
 					rs.getInt("USER_ID"),
 					rs.getInt("GOODS_ID"),
 					rs.getInt("SCORE"),
-					rs.getInt("COUNT")
+					rs.getString("CONTENT")
 					);
 		}
 	};
@@ -36,12 +36,12 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void add(Review review) {
 		jdbctemplate.update("insert into review ( "
-				+"\"USER_ID\",\"GOODS_ID\" ,\"SCORE\", \"COUNT\") "
+				+"\"USER_ID\",\"GOODS_ID\" ,\"SCORE\", \"CONTENT\") "
 				+ "values( ?, ?, ?, ?)",
 				review.getUserId(),
 				review.getGoodsId(),
 				review.getScore(),
-				review.getCount()
+				review.getContent()
 				);
 		// TODO Auto-generated method stub
 	}
@@ -64,11 +64,11 @@ public class ReviewDAOImpl implements ReviewDAO{
 				+"\"USER_ID\"=?,"
 				+ "\"GOODS_ID\"=?,"
 				+ "\"SCORE\"=?,"
-				+ "\"COUNT\"=?) where \"USER_ID\"=?",
+				+ "\"CONTENT\"=?) where \"USER_ID\"=?",
 				review.getUserId(),
 				review.getGoodsId(),
 				review.getScore(),
-				review.getCount(),
+				review.getContent(),
 				review.getUserId()
 				);
 	}

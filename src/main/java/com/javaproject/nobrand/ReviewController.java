@@ -27,16 +27,20 @@ public class ReviewController {
 	@Autowired
 	ReviewDAO reviewDAO;
 	
-	@RequestMapping(value = "/review", method = RequestMethod.GET)
-	public String userInfo(HttpServletRequest request, HttpSession session) {		
-		int userId = (Integer) session.getAttribute("userId");
-		int goodsId = (Integer) session.getAttribute("goodsId");
-		int score = (Integer) session.getAttribute("score");
-		String context = (String) session.getAttribute("context");
-		
-		Review review = new Review();
-		reviewDAO.add(review);		
-		
-		return "review/review";
+	@RequestMapping(value = "/review", method = RequestMethod.POST)
+	public String userInfo(@RequestParam Map<String,String> map) {		
+		try {
+			int userId = Integer.parseInt(map.get("userId"));
+			int goodsId = Integer.parseInt(map.get("goodsId"));
+			int score = Integer.parseInt( map.get("score"));
+			String content = map.get("content");
+			
+			Review review = new Review(userId, goodsId, score, content);
+			reviewDAO.add(review);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		return "redirect:userinfo";
 	}	
 }
