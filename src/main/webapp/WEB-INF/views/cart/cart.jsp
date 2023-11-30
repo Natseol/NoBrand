@@ -59,10 +59,9 @@
 												</div>
 												<div class="font-size-6">전체상품</div>
 												<div class="text-gray font-size-6"> : </div>
-												<div id="goodscount" class="font-size-6">
-													<script type="text/javascript">
-														document.getElementById("goodscount").innerHTML = goodscount;
-													</script>개
+												<div class="goodscount" class="font-size-6">
+												<div id="all-goods-count"></div>
+												<div>개</div>
 												</div>
 												
 											</div>

@@ -6,13 +6,16 @@ public class Review {
 	private int userId;
 	private int score;
 	private String content;
+	private String userStrId;
+	
 	public Review() {}
 	
-	public Review(int userId,int goodsId, int score, String content) {
+	public Review(int userId,int goodsId, int score, String content, String userStrId) {
 		this.userId=userId;
 		this.goodsId = goodsId;
 		this.score = score;
 		this.content = content;
+		this.userStrId = userStrId;
 	}
 	public Review(int goodsId, int score, String content) {
 		this.goodsId = goodsId;
@@ -44,6 +47,12 @@ public class Review {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	public String getUserStrId() {
+		return userStrId;
+	}
+	public void setUserStrId(String userStrId) {
+		this.userStrId = userStrId;
+	}
 	
-
+	
 }

@@ -24,7 +24,7 @@ for (let i = 0; i < buyList.length; i++) {
     // <div.buylist-goods-box 요소 생성
     let goodsBoxElement = document.createElement("a");
     goodsBoxElement.className = "buylist-goods-box";
-    goodsBoxElement.href="/nobrand/goods?goodsId="+buyList[i].goodsID;
+    goodsBoxElement.href="/nobrand/goods?goodsid="+buyList[i].goodsID;
 
     // <div.buylist-goods-iamge 요소 생성
     let imageElement = document.createElement("div");

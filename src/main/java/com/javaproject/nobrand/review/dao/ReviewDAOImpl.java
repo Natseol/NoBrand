@@ -27,7 +27,8 @@ public class ReviewDAOImpl implements ReviewDAO{
 					rs.getInt("USER_ID"),
 					rs.getInt("GOODS_ID"),
 					rs.getInt("SCORE"),
-					rs.getString("CONTENT")
+					rs.getString("CONTENT"),
+					rs.getString("USER_STR_ID")
 					);
 		}
 	};
@@ -52,9 +53,10 @@ public class ReviewDAOImpl implements ReviewDAO{
 	}
 
 	@Override
-	public List<Review> getAll() {
+	public List<Review> getAll(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.query("select * from review", mapper);
+		return jdbctemplate.query("select review.*, users.\"USERID\" as \"USER_STR_ID\" from review "
+				+ "join users on review.\"USER_ID\" = users.\"ID\" where \"GOODS_ID\"=?", mapper, id);
 	}
 
 	@Override

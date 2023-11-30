@@ -149,6 +149,7 @@ fetch("http://localhost/nobrand/cart/id", {
 			document.getElementById('cost').innerHTML = dataPart[index].price * parsingList[index].goodsCount;
 			listCount++;
 			allGoodsCount.innerHTML = listCount;
+			console.log(listCount)
 			allGoodsCountbox.innerHTML = listCount;
 		}
 	}

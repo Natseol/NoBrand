@@ -1,6 +1,7 @@
 package com.javaproject.nobrand;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.javaproject.nobrand.goods.dao.GoodsDAO;
 import com.javaproject.nobrand.goods.domain.Goods;
 import com.javaproject.nobrand.goods.service.GoodsService;
+import com.javaproject.nobrand.review.domain.Review;
+import com.javaproject.nobrand.review.service.ReviewService;
 
 /**
  * Handles requests for the application home page.
@@ -28,6 +31,10 @@ public class GoodsController {
 	GoodsService goodsService;
 	@Autowired
 	GoodsDAO goodsDAO;
+	@Autowired
+	ReviewService reviewService;
+	
+	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -37,14 +44,17 @@ public class GoodsController {
 		int goodsId = Integer.parseInt(request.getParameter("goodsid"));
 		
 		Goods goods = goodsService.getGoods(goodsId);
+		List<Review> reviews = reviewService.getAll(goodsId);
 		
 		if(goods.getDelete() == 1) {
 			return "/home";
 		}
 		
 		JSONObject json = new JSONObject(goods);
-		
+		JSONObject reviewJson = new JSONObject();
+		reviewJson.put("list", reviews);
 		request.setAttribute("goodsJson", json);
+		request.setAttribute("reviews", reviewJson.get("list"));
 		
 		
 		return "goods/goods";

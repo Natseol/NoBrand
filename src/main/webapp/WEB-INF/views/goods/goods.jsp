@@ -14,6 +14,7 @@
 </head>
 <script>
 	let goodsData = ${requestScope.goodsJson};
+	let reviews = ${requestScope.reviews};
 </script>
 <body>
 <% 
@@ -135,7 +136,7 @@
 
 						<jsp:include page='/WEB-INF/views/goods/goodsinfo.jsp' />
 						<jsp:include page='/WEB-INF/views/goods/review.jsp' />
-
+						
 						<div class="exchange">
 							<div class="exchange-info">
 								<div class="title-goods">교환 및 반품 안내</div>
