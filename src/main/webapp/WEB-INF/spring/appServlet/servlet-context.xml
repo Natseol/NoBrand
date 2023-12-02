@@ -18,6 +18,9 @@
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 	
+	<!-- Absolute Path for Windows -->
+	<!-- <resources mapping="/upload/**" location="file:///C:/upload/" /> -->
+	
 	<!-- Absolute Path for Ubuntu -->
 	<resources mapping="/upload/**" location="file:///var/lib/tomcat9/webapps/nobrand/resources/goods/" />
 

@@ -131,7 +131,7 @@ function getCookieList(){
 getCookieList();
 
 
-fetch("http://localhost/nobrand/cart/id", {
+fetch("/nobrand/cart/id", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

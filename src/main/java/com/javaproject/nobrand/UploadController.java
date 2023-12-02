@@ -27,13 +27,14 @@ public class UploadController {
 			String ext = originalFileName.substring(originalFileName.indexOf("."));
 			String newFileName = UUID.randomUUID() + ext;
 
-			String cPath = "C:/upload/";
+			String cPath = "/var/lib/tomcat9/webapps/nobrand/resources/goods/";
+//			String cPath = "C:/upload/";
 			File saveFolder = new File(cPath);
 			if (!saveFolder.exists()) {
 				saveFolder.mkdirs();
 			}
 			String savePath = cPath + newFileName;
-			String uploadPath = "http://localhost/nobrand/upload/" + newFileName;
+			String uploadPath = "/nobrand/upload/" + newFileName;
 
 			File file = new File(savePath);
 

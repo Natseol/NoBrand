@@ -108,7 +108,7 @@ function createList(img, name, count, price){
 }
 
 
-fetch("http://localhost/nobrand/buy/id", {
+fetch("/nobrand/buy/id", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
