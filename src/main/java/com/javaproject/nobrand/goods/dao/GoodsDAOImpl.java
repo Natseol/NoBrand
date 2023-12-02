@@ -5,8 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -27,7 +25,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 			return new Goods(
 					rs.getInt("ID"),
 					rs.getInt("PRICE"),
-					rs.getInt("DELETE"),
+					rs.getInt("GOODS_DELETE"),
 					rs.getInt("SELL_COUNT"),
 					rs.getInt("GOODS_COUNT"),
 					rs.getString("NAME"),
@@ -35,7 +33,7 @@ public class GoodsDAOImpl implements GoodsDAO {
 					rs.getString("KIND_BOTTOM"),
 					rs.getString("INFO"),
 					rs.getString("IMAGE"),
-					rs.getString("OPTION"),
+					rs.getString("GOODS_OPTION"),
 					rs.getString("DELIVERY"),
 					rs.getString("CONTENT")
 					);
@@ -45,18 +43,18 @@ public class GoodsDAOImpl implements GoodsDAO {
 	public void add(Goods goods) {
 		// TODO Auto-generated method stub
 		jdbcTemplate.update("insert into GOODS ("
-							+ "\"PRICE\","
-							+ "\"DELETE\","
-							+ "\"SELL_COUNT\","
-							+ "\"GOODS_COUNT\","
-							+ "\"NAME\","
-							+ "\"KIND_TOP\","
-							+ "\"KIND_BOTTOM\","
-							+ "\"INFO\","
-							+ "\"IMAGE\","
-							+ "\"OPTION\","
-							+ "\"DELIVERY\","
-							+ "\"CONTENT\") values (?, ? ,? ,? ,? ,? ,? ,? ,?, ?, ?, ?)",
+							+ "PRICE,"
+							+ "GOODS_DELETE,"
+							+ "SELL_COUNT,"
+							+ "GOODS_COUNT,"
+							+ "NAME,"
+							+ "KIND_TOP,"
+							+ "KIND_BOTTOM,"
+							+ "INFO,"
+							+ "IMAGE,"
+							+ "GOODS_OPTION,"
+							+ "DELIVERY,"
+							+ "CONTENT) values (?, ? ,? ,? ,? ,? ,? ,? ,?, ?, ?, ?)",
 							goods.getPrice(),
 							goods.getDelete(),
 							goods.getCellCount(),
@@ -75,52 +73,52 @@ public class GoodsDAOImpl implements GoodsDAO {
 	@Override
 	public Goods get(int id) {
 		// TODO Auto-generated method stub
-		return jdbcTemplate.queryForObject("select * from GOODS where \"ID\"=?", new Object[] { id }, mapper);
+		return jdbcTemplate.queryForObject("select * from GOODS where ID=?", new Object[] { id }, mapper);
 	}
 	@Override
 	public List<Goods> getUsingCategory(String category) {
 		// TODO Auto-generated method stub		
-		return jdbcTemplate.query("select * from GOODS where \"KIND_TOP\"=?", mapper, category);
+		return jdbcTemplate.query("select * from GOODS where KIND_TOP=? and GOODS_DELETE=0", mapper, category);
 	}
 	@Override
 	public List<Goods> getUsingKind(String kind) {
 		// TODO Auto-generated method stub		
-		return jdbcTemplate.query("select * from GOODS where \"KIND_BOTTOM\"=?", mapper, kind);
+		return jdbcTemplate.query("select * from GOODS where KIND_BOTTOM=? and GOODS_DELETE=0", mapper, kind);
 	}
 	@Override
 	public List<Goods> getUsingSearch(String target) {
 		// TODO Auto-generated method stub
 		String queryTarget = "%"+target+"%";
-		return jdbcTemplate.query("select * from GOODS where \"KIND_BOTTOM\" like ? or \"KIND_TOP\" like ? or\"NAME\" like ? or \"OPTION\" like ?",
+		return jdbcTemplate.query("select * from GOODS where GOODS_DELETE=0 and KIND_BOTTOM like ? or KIND_TOP like ? or NAME like ? or GOODS_OPTION like ?",
 				mapper, queryTarget, queryTarget, queryTarget, queryTarget);
 	}
 	@Override
 	public List<Goods> getAlldesc() {
 		// TODO Auto-generated method stub
-		return jdbcTemplate.query("select * from GOODS order by \"SELL_COUNT\" DESC",mapper);
+		return jdbcTemplate.query("select * from GOODS where GOODS_DELETE=0 order by SELL_COUNT DESC",mapper);
 	}	
 	@Override
 	public List<Goods> getAll() {
 		// TODO Auto-generated method stub
-		return jdbcTemplate.query("select * from GOODS",mapper);
+		return jdbcTemplate.query("select * from GOODS where GOODS_DELETE=0",mapper);
 	}
 	
 	@Override
 	public void update(Goods goods) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("UPDATE \"GOODS\" SET "
-	            + "\"PRICE\"=?,"
-	            + "\"DELETE\"=?,"
-	            + "\"SELL_COUNT\"=?,"
-	            + "\"GOODS_COUNT\"=?,"
-	            + "\"NAME\"=?,"
-	            + "\"KIND_TOP\"=?,"
-	            + "\"KIND_BOTTOM\"=?,"
-	            + "\"INFO\"=?,"
-	            + "\"IMAGE\"=?,"
-	            + "\"OPTION\"=?,"
-	            + "\"DELIVERY\"=?,"
-	            + "\"CONTENT\"=? WHERE \"ID\"=?",
+		jdbcTemplate.update("UPDATE GOODS SET "
+	            + "PRICE=?,"
+	            + "GOODS_DELETE=?,"
+	            + "SELL_COUNT=?,"
+	            + "GOODS_COUNT=?,"
+	            + "NAME=?,"
+	            + "KIND_TOP=?,"
+	            + "KIND_BOTTOM=?,"
+	            + "INFO=?,"
+	            + "IMAGE=?,"
+	            + "GOODS_OPTION=?,"
+	            + "DELIVERY=?,"
+	            + "CONTENT=? WHERE ID=?",
 				goods.getPrice(),
 	            goods.getDelete(),
 	            goods.getCellCount(),
@@ -139,6 +137,6 @@ public class GoodsDAOImpl implements GoodsDAO {
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("delete from GOODS where \"ID\"=?", id);
+		jdbcTemplate.update("delete from GOODS where ID=?", id);
 		
 	}}

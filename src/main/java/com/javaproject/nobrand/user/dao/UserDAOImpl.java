@@ -5,8 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-//import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -39,7 +37,7 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public void add(User user) {
 		jdbctemplate.update("insert into USERS ( "
-				+ "\"NAME\",\"USERID\",\"PASSWORD\",\"PHONENUMBER\",\"EMAILADDRESS\",\"ADDRESS\")"
+				+ "NAME,USERID,PASSWORD,PHONENUMBER,EMAILADDRESS,ADDRESS)"
 				+ "values( ?, ?, ?, ?, ?, ?)",
 				user.getName(),
 				user.getUserId(),
@@ -54,7 +52,7 @@ public class UserDAOImpl implements UserDAO {
 	public User get(int id) {
 		// TODO Auto-generated method stub
 		try {
-			return jdbctemplate.queryForObject("select * from USERS where \"ID\"=?", new Object[] { id },mapper);
+			return jdbctemplate.queryForObject("select * from USERS where ID=?", new Object[] { id },mapper);
 		} catch (Exception e) {
 			// TODO: handle exception
 			return null;
@@ -63,7 +61,7 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public User get(String userID) {
 		try {
-			return jdbctemplate.queryForObject("select * from USERS where \"USERID\"=?", new Object[] { userID },mapper);
+			return jdbctemplate.queryForObject("select * from USERS where USERID=?", new Object[] { userID },mapper);
 		} catch (Exception e) {
 			// TODO: handle exception
 			return null;
@@ -80,13 +78,13 @@ public class UserDAOImpl implements UserDAO {
 	public void update(User user) {
 		// TODO Auto-generated method stub
 		jdbctemplate.update("update USERS set ("
-				+ "\"NAME\"=?,"
-				+ "\"USERID\"=?,"
-				+ "\"PASSWORD\"=?,"
-				+ "\"PHONENUMBER\"=?,"
-				+ "\"EMAILADDRESS\"=?,"
-				+ "\"ADDRESS\"=?,"
-				+ "\"CREATEAT\"=?) where \"ID\"=?"
+				+ "NAME=?,"
+				+ "USERID=?,"
+				+ "PASSWORD=?,"
+				+ "PHONENUMBER=?,"
+				+ "EMAILADDRESS=?,"
+				+ "ADDRESS=?,"
+				+ "CREATEAT=?) where ID=?"
 				,
 				user.getName(),
 				user.getUserId(),
@@ -100,6 +98,6 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("delete from USERS where \"ID\"=?", id);
+		jdbctemplate.update("delete from USERS where ID=?", id);
 	}
 }

@@ -20,7 +20,7 @@ public class ReviewTest {
 		Review review=new Review();
 		review.setGoodsId(2);
 		review.setScore(4);
-		review.setCount(5);
+		review.setContent("5");
 		reviewDAO.add(review);
 	}
 

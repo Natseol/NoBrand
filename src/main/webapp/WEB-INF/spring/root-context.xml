@@ -9,11 +9,10 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-		<property name="driverClass" value="oracle.jdbc.OracleDriver" />
-		<property name="url"
-			value="jdbc:oracle:thin:@localhost:1521/xe" />
-		<property name="username" value="nobrand" />
-		<property name="password" value="qwer" />
+	    class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+	    <property name="url" value="jdbc:mysql://localhost:3306/nobrand" />
+	    <property name="username" value="nobrand" />
+	    <property name="password" value="qwer" />
 	</bean>
 </beans>

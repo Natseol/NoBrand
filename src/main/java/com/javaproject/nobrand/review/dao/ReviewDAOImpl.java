@@ -5,8 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -36,8 +34,8 @@ public class ReviewDAOImpl implements ReviewDAO{
 
 	@Override
 	public void add(Review review) {
-		jdbctemplate.update("insert into review ( "
-				+"\"USER_ID\",\"GOODS_ID\" ,\"SCORE\", \"CONTENT\") "
+		jdbctemplate.update("insert into REVIEW ( "
+				+"USER_ID,GOODS_ID ,SCORE, CONTENT) "
 				+ "values( ?, ?, ?, ?)",
 				review.getUserId(),
 				review.getGoodsId(),
@@ -49,24 +47,24 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public Review get(int userId) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from review where \"USER_ID\"=?", new Object[] { userId },mapper);
+		return jdbctemplate.queryForObject("select * from review where USER_ID=?", new Object[] { userId },mapper);
 	}
 
 	@Override
 	public List<Review> getAll(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.query("select review.*, users.\"USERID\" as \"USER_STR_ID\" from review "
-				+ "join users on review.\"USER_ID\" = users.\"ID\" where \"GOODS_ID\"=?", mapper, id);
+		return jdbctemplate.query("select REVIEW.*, USERS.USERID as USER_STR_ID from REVIEW "
+				+ "join USERS on REVIEW.USER_ID = USERS.ID where GOODS_ID=?", mapper, id);
 	}
 
 	@Override
 	public void update(Review review) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("update review set("
-				+"\"USER_ID\"=?,"
-				+ "\"GOODS_ID\"=?,"
-				+ "\"SCORE\"=?,"
-				+ "\"CONTENT\"=?) where \"USER_ID\"=?",
+		jdbctemplate.update("update REVIEW set("
+				+"USER_ID=?,"
+				+ "GOODS_ID=?,"
+				+ "SCORE=?,"
+				+ "CONTENT=?) where USER_ID=?",
 				review.getUserId(),
 				review.getGoodsId(),
 				review.getScore(),
@@ -78,7 +76,7 @@ public class ReviewDAOImpl implements ReviewDAO{
 	@Override
 	public void delete(int userId) {
 		// TODO Auto-generated method stub
-		jdbctemplate.update("delete from review where \"USER_ID\"=?",userId);
+		jdbctemplate.update("delete from REVIEW where USER_ID=?",userId);
 	}
 
 }

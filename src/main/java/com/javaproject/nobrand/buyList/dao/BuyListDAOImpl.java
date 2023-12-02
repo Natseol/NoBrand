@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -37,7 +35,7 @@ public class BuyListDAOImpl implements BuyListDAO {
 	@Override
 	public void add(BuyList buyList) {
 		jdbctemplate.update("insert into BUYLIST ( "
-				+ "\"USER_ID\",\"GOODS_ID\", \"COUNT\",\"PRICE\") "
+				+ "USER_ID,GOODS_ID, COUNT,PRICE) "
 				+ "values(?, ?, ?, ?)",
 				buyList.getUserID(),
 				buyList.getGoodsID(),
@@ -49,13 +47,13 @@ public class BuyListDAOImpl implements BuyListDAO {
 	@Override
 	public BuyList get(String userId) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.queryForObject("select * from BUYLIST where \"USER_ID\"=?", new Object[] { userId },mapper);
+		return jdbctemplate.queryForObject("select * from BUYLIST where USER_ID=?", new Object[] { userId },mapper);
 	}
 	
 	@Override
 	public List<BuyList> getList(int id) {
 		// TODO Auto-generated method stub
-		return jdbctemplate.query("select * from BUYLIST where \"USER_ID\"=?", new Object[] { id },mapper);
+		return jdbctemplate.query("select * from BUYLIST where USER_ID=?", new Object[] { id },mapper);
 	}
 
 	@Override
@@ -67,11 +65,11 @@ public class BuyListDAOImpl implements BuyListDAO {
 	@Override
 	public void update(BuyList buyList) {
 		jdbctemplate.update("update BUYLIST set("
-				+ "\"USER_ID\"=?,"
-				+ "\"GOODS_ID\"=?,"
-				+ "\"COUNT\"=?,"
-				+ "\"PRICE\"=?"
-				+") where \"USER_ID\"=?",
+				+ "USER_ID=?,"
+				+ "GOODS_ID=?,"
+				+ "COUNT=?,"
+				+ "PRICE=?"
+				+") where USER_ID=?",
 				buyList.getUserID(),
 				buyList.getGoodsID(),
 				buyList.getCount(),
@@ -82,7 +80,7 @@ public class BuyListDAOImpl implements BuyListDAO {
 	}
 	@Override
 	public void delete(String userId) {
-		jdbctemplate.update("delete from BUYLIST where \"USER_ID\"=?",userId);
+		jdbctemplate.update("delete from BUYLIST where USER_ID=?",userId);
 		// TODO Auto-generated method stub
 	}
 

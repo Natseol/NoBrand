@@ -27,7 +27,7 @@ function createCard(index) {
   cardImg.querySelector("img").style.width="225px";
   cardImg.querySelector("img").style.height="225px";
   const cardImgLink = document.createElement("a");
-  cardImgLink.href="goods?goodsId="+goodslist[index].id;
+  cardImgLink.href="goods?goodsid="+goodslist[index].id;
   cardImgLink.appendChild(cardImg);
   cardImgBox.appendChild(cardImgLink);
 
