@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "opensans";
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("../fonts/fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#root-goods-null {
+	display: inline-block;
+}
+
+.left-box {
+	float: left;
+    width: 930px;
+}
+
+.nullgoods-box {
+	padding: 60px 15px;
+}
+
+.cart-img-box {
+	width: 110px;
+    height: 83px;
+    background-size: 110px 83px;
+	display: block;
+    margin: 0 auto 19px
+}
+
+.cart-img{
+	width: 100%;
+}
+
+.cart-img-size {
+	width: 110px;
+}
+
+.cart-script-null {
+	color: #222;
+    font-size: 21px;
+    line-height: 1.52;
+    letter-spacing: -0.3px;
+    text-align: center;
+}
+
+.login-btn-null {
+	position: relative;
+    margin-top: 20px;
+    font-size: 0;
+    text-align: center;
+}
+
+.login-btn-left {
+	 border: none;
+	 padding: 16px 65px 16px 65px;
+}
+
+.login-btn-left:hover {
+	background: black;
+	color: white;
+}
+
+.card-event {
+	margin-top: 80px;
+}
+
+.card-event-banner {
+	width: 100%;
+}

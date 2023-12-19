@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "opensans";
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("../fonts/fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main{
+	width: 100%;
+	min-width: 1280px;
+}
+
+.main-box-cart {
+	width: 1280px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.cart-tip {
+	height: 111px;
+    font-family: "Spoqa-Regular", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif
+}
+
+.cart-tip-box {
+	padding: 56px 0 20px;
+    font-size: 30px;
+    font-weight: normal;
+    color: #222;
+    letter-spacing: -0.3px;
+    line-height: 35px;
+}
+
+.cart-name {
+	display: inline;
+}
+
+.container-box {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+    max-width: 1280px;
+}
+
+
+/* include한 내용 아래쪽 */
+
+
+.info {
+	margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.list-tip {
+	margin-top: 15px; 
+}
+
+
+li::before {
+	position: absolute;
+    top: 7px;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    border: 1px solid #222;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: "";
+}
+
+
+/* 오른쪽 order 반응형*/
+
+.order {
+	position: sticky;
+	top: 0;
+	float: right;
+	width: 300px;
+}
+
+
+.scroll-responsive-buy-menu {
+	position: relative;
+    top: 0;
+    z-index: 120;
+    width: 300px;
+}
+
+.menu-box {
+	border: 2px solid #eee;
+    background: #fff;
+}
+
+.login-box {
+	padding: 19px 19px 20px;
+    background: #f9f9f9;
+}
+
+.genelization{
+	overflow: hidden;
+    overflow-y: auto;
+    min-height: 100px;
+    margin-right: 4px;
+    padding-top: 19px;
+    padding-left: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.genelization-box {
+	display: inline;
+}
+
+.goods-script {
+	display: flex;
+	align-items: center
+}
+
+.all-goods {
+	padding: 0 19px 20px;
+}
+
+.bag-img {
+	width: 20px;
+}
+
+.total {
+	padding: 19px 19px;
+}
+
+.cash-box {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discount-box {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delivery-cost-box {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-script-box {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.won {
+	display: contents;
+}
+
+.order-box {
+	padding: 19px 19px 20px;
+}
+/* 폰트*/
+
+.font-size-4{
+	font-size: 28px;
+	font-weight: 550;
+}
+
+.font-size-5{
+	font-size: 20px;
+}
+
+.font-size-6{
+	font-size: 13px;
+}
+
+.font-size-7{
+	font-size: 10px;
+}
+
+.font-buy {
+	font-size: 15px;
+	display: flex;
+    align-items: center;
+}
+
+.total-size {
+	color: red;
+	font-size: 19px;
+	font-weight: 900;
+}
+
+.login-script{
+	font-weight: bold;
+}
+
+.font-if-buy {
+	color: red;
+}
+
+.text-gray{
+	color: gray;
+}
+/* 버튼 스타일 */
+
+.button {
+	background: white;
+}
+
+.tip-btn {
+	padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    color: #777;
+    font-size: 12px;
+	cursor: pointer;
+	display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 17px;
+}
+
+.tip-btn:hover {
+	background: black;
+	color: white;
+	cursor: pointer;
+}
+
+.login-right {
+	border: none;
+	background: white;
+	outline: 1px solid #cacaca;
+	padding: 9px 103px 9px 103px;
+}
+
+.login-right:hover {
+	background: black;
+	color: white;
+}
+
+
+.tip-btn-box {
+	display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 17px;
+}
+
+.order-btn {
+	border: none;
+	background: red;
+	color: white;
+	padding: 18px 83px 18px 83px;
+}
+
+.order-btn:hover   {
+	background: black;
+	color: white;
+}
+
+.present-btn {
+	border: none;
+	padding: 9px 96px 9px 96px;
+	outline: 1px solid #cacaca;
+    background: white;
+    margin-left: 1px;
+    margin-top: 5px;
+}
+
+.present-btn:hover   {
+	background: black;
+	color: white;
+}
+
+.delete-select {
+	border: none;
+	background-color: white;
+}
+
+.delete-sold-out {
+	border: none;
+	background-color: white;
+}
+
+.cursor-point {
+	cursor: pointer;
+}

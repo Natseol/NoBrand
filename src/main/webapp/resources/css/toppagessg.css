@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "opensans";
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("../fonts/fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+} 
+
+body {
+	margin: 0;
+	font-family: "opensans";
+}
+
+#root {
+	position: relative;
+	max-width: 100%;
+	min-width: 1280px;
+	margin: 0 auto;
+}
+
+/* 배너의 공간을 지정 */
+
+.top-banner {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+}
+
+/* 로그인, 회원가입 등의 가장 상단의 div를 지정 */
+
+.service-box {
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.top-common {
+	display: block;
+	color: rgb(169,169,169);
+	margin: 0 2px 0 2px;
+}
+
+.top-img-margin {
+	margin: 0 5px 0 5px;
+}
+
+.top-img-size {
+	width: 20px;
+}
+
+/* 매인 로고와 검색 박스를 지정 */
+
+.main-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 38px 0 20px
+}
+
+.logo-box {
+	display: flex;
+	padding: 0 0 0 0;
+}
+
+.ssg-logo {
+	position: relative;
+}
+
+.logo-script {
+	position: absolute;
+    bottom: 32px;
+    left: 5px;
+}
+
+.menu-img {
+	width:30px;
+}
+
+/* 폰트따라 굴기가 적용이 될수도, 않을 수도 있으니 추후 조정 예정 */
+.font-weight{
+	font-weight: 900;
+}
+
+.font-mall {
+	font-size: 12px;
+}
+
+.font-and {
+	font-size: 13px;
+}
+
+.font-logo {
+	font-size: 10px;
+}
+
+.search-box-area {
+	display: flex;
+	align-items: center;
+    height: 40px;
+}
+
+.search-box {
+	height: 100%;
+	width: 403px;
+}
+
+
+/* 색의 그라디언트는 아직 구현되어 있지 않음 */
+#ssg-query {
+	position: relative;
+	outline: 1px solid;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.search-area {
+	position: absolute;
+	width: 350px;
+	height: 100%;
+	left: 10px;
+	border: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+.inp-txt {
+	overflow: hidden;
+    position: relative;
+    z-index: 301;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin: 1px 0 0 1px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.emall-logo {
+	position: absolute;
+    right: 0;
+	display: flex;
+	align-items: center
+}
+
+.emart-logo {
+	cursor: pointer;
+}
+
+.emart-logo-size{
+	width: 80px;
+}
+
+.ssg-mall-logo{
+	margin: 0 5px 0 5px;
+	cursor: pointer;
+}
+
+.text-color {
+	color: rgb(169,169,169);
+}
+
+.line {
+	border-top: 1px solid rgb(239,239,239);
+}

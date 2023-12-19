@@ -1,0 +1,120 @@
+/* 노브랜드 배너(노브랜드의 시작) */
+.text-gray {
+	color: gray;
+}
+
+.carousel-main {
+	margin: auto;
+    position: relative;
+}
+.carousel-slide {
+    margin: auto;
+    text-wrap:nowrap;
+    display: flex;
+    justify-content: center;
+}
+.carousel-img {
+    width: 1280px;
+    margin : 0px 20px;
+}
+
+.index-content {
+	width: 1280px;
+    margin: 50px auto;
+}
+
+.index-limited-items {
+	display: flex;
+	margin: 25px auto;	
+    flex-wrap: wrap;
+}
+
+.card-img-box {
+    position: relative;
+}
+
+.card-img-bag {
+    height: 17%;
+    width: 18%;
+    background-color: white;
+    position: absolute;
+    /* margin: -60px 227px; */
+    bottom: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-icon {
+    font-size: 150%;
+}
+
+.card-body {
+    margin: 5px 2px;
+}
+
+.card-text-trans {
+    font-size: 10px;
+    color : gray;
+    font-weight: bold;
+}
+
+.card-text-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text-won {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.card-text-score {
+    font-size: smaller;
+    color: lightgray;
+}
+
+.more-items {
+    text-align: center;
+    margin: 0px 0px 150px;
+}
+
+.button-more-items {
+    background-color: white;
+    padding: 20px;
+    width: 900px;
+    border: 1px solid;
+}
+
+.more-items-text {
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.itemlist-body {
+    text-align: center;
+}
+
+.itemlist2 {
+	display: flex;
+    justify-content: space-between;
+}
+
+.itemlist3 {
+	display: flex;
+    justify-content: space-between;
+}
+
+.itemlist4 {
+    width: 18rem;
+    margin : 0px 16px;
+  }
+
+#admin-area {
+    text-align: center;
+}
+
+.index-point {
+    cursor: pointer;
+}

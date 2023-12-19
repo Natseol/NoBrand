@@ -1,0 +1,180 @@
+.middle {
+	height: 100px;
+	line-height: 100px;
+}
+
+.background-color {
+	background-color: rgb(255, 216, 0);
+}
+
+/* 로고를 포함한 검색창과 툴 */
+.nobrand-logo-block {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.nobrand-search-box {
+	display: flex;
+	background: white;
+    border: 2px solid;
+    height: 37px;
+    padding: 10px;
+    align-items: center;
+}
+
+.nobrand-search-input {
+	background: 0;
+    border: 0px;
+	font-size: small;
+}
+
+.nobrand-serach-button {
+	border: 0;
+    background: 0;
+}
+
+.search-icon {
+	border: 0px;
+    background: 0;
+}
+
+.tools {
+	display: flex;
+    align-items: center;
+}
+
+.search-tool {
+	width: 30px;
+	margin : 0px 20px;
+	cursor: pointer;
+}
+
+.share_windows {
+	cursor: pointer;
+}
+
+
+.category-delivery-box {
+	padding : 0px 0px 23px 0px;
+    align-items: center;
+    margin: 30px auto 0px;
+    display: flex;
+    justify-content: center;
+	width: 1280px;
+}
+ 
+.category-main {
+	margin: 0 auto;
+}
+
+.category-main-anchor {
+    text-decoration: none;
+    color: black;	
+}
+
+.category-main-anchor:hover {
+    text-decoration: none;
+    color: black;	
+}
+
+.category-main-anchor:not(:hover) {
+    text-decoration: none;
+    color: black;	
+}
+
+.category-submenu {
+    display: none;
+    position: absolute;
+    top: 283px;
+    background: rgb(255, 216, 0);    
+    z-index: 1;
+	width: 100%;
+}
+
+.category-submenu-box {
+    width: 900px;
+    margin: auto;
+    display: flex;
+}
+
+.category-submenu .sub-item {
+	padding: 5px 50px;
+}
+
+.list:hover .category-submenu {
+	display: block;
+}
+
+.submenu-dropdown {	
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.submenu-list {
+	margin: 15px 30px;
+}
+
+#dropdown1{
+	display: none;
+}
+#dropdown2{
+	display: none;
+}
+#dropdown3{
+	display: none;
+}
+#dropdown4{
+	display: none;
+}
+#dropdown5{
+	display: none;
+}
+#dropdown6{
+	display: none;
+}
+
+.category-button {
+	background-color: unset;	
+	border: 0px;
+}
+.category-button:hover {
+	font-weight: bold;
+}
+
+.title-searchbox {
+	margin: 0 25% 0 0;
+}
+
+.list {
+	padding: 0 10px 0 10px;
+}
+
+::placeholder {
+	color: gray;
+}
+
+.block {
+	display: inline-block;
+	position: relative;
+}
+
+.nobrand-title {
+	padding: 20px 0px 0px;
+}
+
+.nobrand-logo-block {
+	position: relative;
+	text-align: center;
+}
+
+.title-nobrand {
+	max-height: 76px;
+}
+
+.nobrand-search {
+	position: absolute;
+	display: flex;
+    right: 0;
+    bottom: 13px;
+}

@@ -1,0 +1,170 @@
+.sub-content {
+    width : 1280px;
+    margin: auto;
+}
+
+.sub-title {
+    position: relative;
+    margin: 30px 0px 15px;
+}
+.sub-title-text {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;    
+}
+
+.sub-title-info {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    font-size: smaller;
+}
+.sub-title-number {
+    color : red;
+}
+
+.sub-title-goods {
+    color : gray;
+}
+
+.sub-title-line {
+    height: 2px;
+    width: 1280px;
+    background-color: black;
+    margin: 20px 0px 60px
+}
+
+.sub-content-items {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.category-title {
+  font-weight: bold;
+  margin: 0px 0px 10px;
+  font-size: 14px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.category li {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;  
+}
+
+.category-item>li {
+  border-bottom: 1px solid #f3f1f1;
+}
+
+.category-item>li:last-child {
+  border-bottom: none;
+}
+
+.menu-item {
+  font-size:smaller;
+}
+
+.menu-item:hover {
+  font-weight: bold;
+}
+.menu-item:hover * {
+  font-weight: normal;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font-size: small;
+  margin: 5px 0px 0px;
+  background-color: #f3f3f3;
+}
+
+.category li.active .dropdown {
+  display: block;  
+}
+
+.dropdown>li:hover {
+  text-decoration: underline;
+}
+
+.category-button {
+  border: 0px;
+  background-color: unset;
+}
+
+.sub-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  width:1100px;
+  /* justify-content: center; */
+}
+
+.sublist4 {
+  width: 14rem;
+  margin: 0px 0px 80px 43px;
+}
+
+.card-text-trans {
+  font-size: 10px;
+  color : gray;
+  font-weight: bold;
+}
+
+.card-text-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-text-won {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.card-text-score {
+  font-size: smaller;
+  color: lightgray;
+}
+
+.more-items {
+  text-align: center;
+  margin: 0px 0px 150px;
+}
+
+.menu-item-anchor{
+  text-decoration: none;
+  color: black;
+}
+
+.menu-item-anchor:hover {
+  font-weight: normal;
+}
+
+.button-more-items {
+    background-color: white;
+    padding: 20px;
+    width: 900px;
+    border: 1px solid;
+}
+
+.more-items-text {
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.infoMessage {
+  margin : auto;
+  text-align: center;
+}

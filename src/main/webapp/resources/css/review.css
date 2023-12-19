@@ -1,0 +1,29 @@
+.review-star {
+    font-weight: bold;
+    
+}
+
+.review-star-score {
+    margin: 0 5px;
+}
+
+.review-title-box {
+    margin : 5px;
+}
+
+.review-bar {
+    margin: 0 10px;
+    color : gray;
+}
+
+.review-userId {
+    color : gray;
+}
+
+.review-content {
+    margin: 15px 30px;
+}
+
+.review-container {
+    margin-bottom: 300px;
+}

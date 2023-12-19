@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "opensans";
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("../fonts/fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+} 
+
+body {
+	margin: 0;
+	font-family: "opensans";
+}
+
+/* 최상위 div */
+
+#root {
+	position: relative;
+	max-width: 100%;
+	min-width: 1280px;
+	margin: 0 auto;	
+}
+
+/* 차상위 */
+
+.top {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+/* 신세계몰 베너 */
+
+.top-main {
+	display: inline;
+	max-height: 5%;
+	white-space: nowrap;
+}
+
+
+.title {
+	position: relative;
+	display: flex;
+	width: 1280px;
+	-webkit-box-align: center;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px 0 20px;
+	justify-content: space-between;
+
+}
+
+.title-main {
+	width: auto;
+    height: auto;
+    display: flex;
+    padding: 0 0 0 11px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 11px 0 0;
+}
+
+.title-img {
+	width: 100px;
+}
+
+.title_menu {
+	width: 20px;
+}
+
+.title-left {
+	display: flex;
+}
+
+.title-right {
+	display: flex;
+}
+
+/* 노란 배경이 시작되는 div */
+
+.background-color {
+	background-color: rgb(255, 216, 0);
+}
+
+.event {
+	background-color: rgb(255, 216, 0);
+	max-height: 95%;
+	text-align: center;
+	white-space: nowrap;
+}
+
+input.rounded {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.emart-searchbox {
+	position: relative;
+    width: 320px;
+    height: 40px;
+	margin: 0 27% 0 0;
+}
+
+.emart-delivery {
+	position: relative;
+	padding: 9px 120px 9px 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 234, 60, 0.6);
+}
+
+.img_down {
+	position: absolute;
+	width: 9px;
+	right: 0;
+	margin: 7px 10px 0 0;
+}
+
+.banner {
+	background-color: rgb(255, 207, 2);
+	
+}
+
+.banner-box {
+	position: relative;
+	display: flex;
+	width: 1280px;
+	height: 88px;
+	align-items: center;
+	gap: 12px;
+	margin: 0 auto
+}
+
+/* 배달 카테고리 */
+
+.category-delivery {
+	display: flex;
+    background-color: rgb(255, 207, 2);
+    margin: 3px 0 0 0;
+    height: 50px;
+    align-items: center;
+}
+
+.category-box{
+	display: flex;
+	width: 1280px;
+	margin: 0 auto;
+	align-items: flex-end;
+}
+
+.delivery {
+	display: inline-block;
+	width: 170px;
+	padding: 0 5px 0 5px ;
+}
+
+.store {
+	display: inline-block;
+	width: 170px;
+	height: 50px;
+	padding: 10px 0 10px 0;
+}
+
+.delivery-img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.category-delivery-box {
+	align-items: center;
+	margin: 0 auto;
+	display: flex;
+    justify-content: center;
+	
+}
+
+.category-main {
+	margin: 0 auto;
+}
+
+
+.title-searchbox {
+	margin: 0 25% 0 0;
+}
+
+.list {
+	padding: 0 10px 0 10px;
+}
+
+::placeholder {
+	color: gray;
+}
+
+.block {
+	display: inline-block;
+	position: relative;
+}
